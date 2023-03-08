@@ -14,23 +14,33 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-end navbar-spacing-override pr-4">
-        <a class="navbar-item">
-          Rescue<i class="fa-solid fa-heart pl-2"></i>
-        </a>
+        <div class="navbar-item">
+          <a class="navbar-item">
+            Rescue<i class="fa-solid fa-heart pl-2"></i>
+          </a>
+        </div>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             Learn
           </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Code of Ethics
+            </a>
+            <a class="navbar-item">
+              About
+            </a>
+          </div>
         </div>
         <div class="navbar-item">
           <a class="navbar-item">
-            About
+            Support
           </a>
         </div>
         <div class="navbar-item">
           <%= link_to "Sign up", new_user_registration_path %>
         </div>
-        <div class="navbar-item pr-3">
+        <div class="navbar-item pr-4">
           <%= link_to "Log in", new_user_session_path %>
         </div>
       </div>

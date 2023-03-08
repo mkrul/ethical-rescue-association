@@ -1,41 +1,43 @@
-<h2 class="title">Sign up</h2>
+<div class="container is-max-desktop">
+  <h2 class="title">Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <p class="control has-icons-left has-icons-right">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input", type: "email", placeholder: "Email" %>
-      <span class="icon is-small is-left">
-        <i class="fas fa-envelope"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-check"></i>
-      </span>
-    </p>
-  </div>
+    <div class="field">
+      <p class="control has-icons-left has-icons-right">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input", type: "email", placeholder: "Email" %>
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </p>
+    </div>
 
-  <div class="field">
-    <p class="control has-icons-left has-icons-right">
-      <%= f.password_field :password, autocomplete: "new-password", class: "input", type: "password", placeholder: "Password" %>
-      <span class="icon is-small is-left">
-        <i class="fas fa-lock"></i>
-      </span>
-    </p>
-  </div>
+    <div class="field">
+      <p class="control has-icons-left has-icons-right">
+        <%= f.password_field :password, autocomplete: "new-password", class: "input", type: "password", placeholder: "Password" %>
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div>
 
-  <div class="field">
-    <p class="control has-icons-left has-icons-right">
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input", type: "password", placeholder: "Confirm Password" %>
-      <span class="icon is-small is-left">
-        <i class="fas fa-lock"></i>
-      </span>
-    </p>
-  </div>
+    <div class="field">
+      <p class="control has-icons-left has-icons-right">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input", type: "password", placeholder: "Confirm Password" %>
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up", class: "button is-info" %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= f.submit "Sign up", class: "button is-info" %>
+    </div>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>

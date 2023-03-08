@@ -12,22 +12,24 @@
 
   <body>
     <%= render partial: "shared/navbar" %>
-    <div class="mt-6"></div>
-    <div>
+    <div class="px-6">
+      <div class="mt-6"></div>
+      <div>
 
-      <% if notice %>
-        <div class="notification is-info is-light">
-          <%= notice %>
-        </div>
-      <% end %>
+        <% if notice %>
+          <div class="notification is-info is-light">
+            <%= notice %>
+          </div>
+        <% end %>
 
-      <% if alert %>
-        <div class="notification is-warning is-light">
-          <%= alert %>
-        </div>
-      <% end %>
+        <% if alert %>
+          <div class="notification is-warning is-light">
+            <%= alert %>
+          </div>
+        <% end %>
 
-      <%= yield %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
