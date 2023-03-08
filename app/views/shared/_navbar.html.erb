@@ -1,50 +1,39 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://www.ethicalrescuenetwork.com">
-      ETHICAL RESCUE ASSOCIATION
-    </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-
-      <a class="navbar-item">
-        <i class="fa-solid fa-heart pr-2"></i>Rescue
+<div class="font-gotham">
+  <nav class="navbar py-2" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.ethicalrescueassociation.com">
+        <span class="main-title">ETHICAL RESCUE ASSOCIATION</span>
       </a>
 
-      <%# <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
-        <div class="navbar-dropdown">
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end navbar-spacing-override pr-4">
+        <a class="navbar-item">
+          Rescue<i class="fa-solid fa-heart pl-2"></i>
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Learn
+          </a>
+        </div>
+        <div class="navbar-item">
           <a class="navbar-item">
             About
           </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
         </div>
-      </div> %>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <%= link_to "Sign up", new_user_registration_path, class: "button is-link" %>
-          <%= link_to "Log in", new_user_session_path, class: "button is-light" %>
+        <div class="navbar-item">
+          <%= link_to "Sign up", new_user_registration_path %>
+        </div>
+        <div class="navbar-item pr-3">
+          <%= link_to "Log in", new_user_session_path %>
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>
