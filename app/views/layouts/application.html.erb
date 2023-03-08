@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ern</title>
+    <title>Ethical Rescue Association</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +12,22 @@
 
   <body>
     <%= render partial: "shared/navbar" %>
-    <%= yield %>
+    <div class="mt-6"></div>
+    <div class="container">
+
+      <% if notice %>
+        <div class="notification is-info is-light">
+          <%= notice %>
+        </div>
+      <% end %>
+
+      <% if alert %>
+        <div class="notification is-warning is-light">
+          <%= alert %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+    </div>
   </body>
 </html>
