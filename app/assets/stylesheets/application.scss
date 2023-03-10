@@ -32,13 +32,13 @@
   padding-left: 20px;
 }
 
-.navbar-spacing-override {
-  display: flex;
-  justify-content: space-between;
-  width: 500px;
+.logout-btn {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  cursor: pointer;
 }
 
-.sign-up-btn {
-  background-color: cadetblue;
-  color: white;
+.text-center {
+  text-align: center;
 }

@@ -1,7 +1,7 @@
 <div class="font-gotham">
   <nav class="navbar py-2" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://www.ethicalrescueassociation.com">
+      <a class="navbar-item" href="/">
         <span class="main-title">ETHICAL RESCUE ASSOCIATION</span>
       </a>
 
@@ -13,7 +13,7 @@
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-end navbar-spacing-override pr-4">
+      <div class="navbar-end">
         <div class="navbar-item">
           <a class="navbar-item">
             Rescue<i class="fa-solid fa-heart pl-2"></i>
@@ -21,14 +21,17 @@
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
-            Learn
+            About
           </a>
           <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Mission Statement
+            </a>
             <a class="navbar-item">
               Code of Ethics
             </a>
             <a class="navbar-item">
-              About
+              Who We Are
             </a>
           </div>
         </div>
@@ -38,11 +41,19 @@
           </a>
         </div>
         <div class="navbar-item">
-          <%= link_to "Sign up", new_user_registration_path %>
+          <% user_signed_in? ? 'Log out' : 'Sign up' %>
+          <% if user_signed_in? %>
+            <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham' %>
+          <% else %>
+            <%= link_to 'Sign up', new_user_registration_path %>
+          <% end %>
         </div>
-        <div class="navbar-item pr-4">
-          <%= log_in_text %>
-          <%= link_to "Log in", new_user_session_path %>
+        <div class="navbar-item pr-5">
+          <% if user_signed_in? %>
+            <%= link_to current_user.email, edit_user_registration_path %>
+          <% else %>
+            <%= link_to 'Log in', new_user_session_path %>
+          <% end %>
         </div>
       </div>
     </div>
