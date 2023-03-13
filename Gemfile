@@ -7,6 +7,8 @@ gem "bulma-rails", "~> 0.9.4"
 
 gem "font-awesome-sass", "~> 6.3.0"
 
+gem 'MailchimpMarketing', '~> 3.0', '>= 3.0.80'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
