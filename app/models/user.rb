@@ -4,9 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  after_create :send_sign_up_confirmation_email
-
-  def send_sign_up_confirmation_email
-  end
-
 end
+
