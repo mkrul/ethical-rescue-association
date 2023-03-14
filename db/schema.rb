@@ -10,27 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_13_132050) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_14_101250) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "contacts", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "home_phone"
-    t.string "cell_phone"
-    t.string "email"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "home_phone", null: false
+    t.string "cell_phone", null: false
+    t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "rescues", force: :cascade do |t|
-    t.string "name"
-    t.string "breed"
-    t.string "website_url"
-    t.string "description"
+    t.string "name", null: false
+    t.string "breed", null: false
+    t.string "website_url", null: false
+    t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "visibility", default: "hidden", null: false
+    t.index ["visibility"], name: "index_rescues_on_visibility"
   end
 
   create_table "rescues_contacts", force: :cascade do |t|
