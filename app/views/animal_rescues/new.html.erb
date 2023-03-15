@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="mt-6">
-      <%= if current_user.admin? %>
+      <% if current_user.admin? %>
         <%= f.submit "Create", class: "button is-success" %>
       <%= end %>
       <%= link_to "Cancel", url_for(action: :index), remote: true, class: "button is-light" %>
