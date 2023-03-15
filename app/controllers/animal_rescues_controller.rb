@@ -36,7 +36,7 @@ class AnimalRescuesController < ApplicationController
     if current_user.admin?
       respond_to do |format|
         if @rescue.update(rescue_params)
-          format.html { redirect_to animal_rescue_url(@rescue), notice: "Rescue was successfully created." }
+          format.html { redirect_to animal_rescue_url(@rescue), notice: "Rescue was successfully updated." }
           format.json { render :show, status: :created, location: @rescue }
         else
           flash.now[:alert] = "Unable to create rescue. #{@rescue.errors.full_messages.to_sentence}."
