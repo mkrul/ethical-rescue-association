@@ -1,5 +1,6 @@
 class AnimalRescuesController < ApplicationController
   before_action :set_rescues
+  before_action :set_rescue, only: %i(edit update show destroy)
 
   def index
   end
@@ -16,8 +17,8 @@ class AnimalRescuesController < ApplicationController
         format.html { redirect_to animal_rescue_url(@rescue), notice: "Rescue was successfully created." }
         format.json { render :show, status: :created, location: @rescue }
       else
-        Rails.logger.info "FAILED"
-        format.html { render :new, status: :unprocessable_entity, alert: "Unable to create rescue." }
+        flash.now[:alert] = "Unable to create rescue. #{@rescue.errors.full_messages.to_sentence}."
+        format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @rescue.errors, status: :unprocessable_entity }
       end
     end
@@ -26,10 +27,36 @@ class AnimalRescuesController < ApplicationController
   def edit
   end
 
+  def show
+  end
+
   def update
+    respond_to do |format|
+      if @rescue.update(rescue_params)
+        format.html { redirect_to animal_rescue_url(@rescue), notice: "Rescue was successfully created." }
+        format.json { render :show, status: :created, location: @rescue }
+      else
+        flash.now[:alert] = "Unable to create rescue. #{@rescue.errors.full_messages.to_sentence}."
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @rescue.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    @rescue.delete
+
+    respond_to do |format|
+      format.html { redirect_to animal_rescues_path, notice: "Rescue was successfully deleted." }
+      format.json { render :show, status: :created, location: @rescue }
+    end
   end
 
   private
+
+  def set_rescue
+    @rescue = AnimalRescue.find(params[:id])
+  end
 
   def rescue_params
     params.require(:animal_rescue).permit(
