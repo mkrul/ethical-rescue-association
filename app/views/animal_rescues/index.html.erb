@@ -1,0 +1,43 @@
+<div class="container">
+  <h5 class="title is-4">Rescues</h3>
+
+  <hr class="mb-2">
+
+  <% if current_user.admin? %>
+    <div class="mb-2">
+      <%= link_to 'Add Rescue', new_animal_rescue_path %>
+    </div>
+  <% end %>
+
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Breeds</th>
+          <th>Website URL</th>
+          <th>Description</th>
+          <% if current_user.admin? %>
+            <th>Visibility</th>
+          <% end %>
+        </tr>
+      </thead>
+      <% @rescues.each do |r| %>
+        <tr>
+          <th><%= r.id %></th>
+          <td><%= r.name.truncate(25) %></td>
+          <td><%= r.breed.split(',').join("\n").truncate(25) %></td>
+          <td><%= r.website_url.truncate(30) %></td>
+          <td><%= r.description.truncate(60) %></td>
+          <% if current_user.admin? %>
+            <td><%= r.visibility %></td>
+            <td><%= link_to 'edit' %></td>
+            <td><%= link_to 'delete' %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+

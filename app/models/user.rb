@@ -5,5 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :contact
+
+  def admin?
+    admin == true
+  end
 end
 

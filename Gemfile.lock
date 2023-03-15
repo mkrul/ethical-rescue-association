@@ -49,6 +49,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_interaction (5.2.0)
+      activemodel (>= 5.2, < 8)
+      activesupport (>= 5.2, < 8)
     activejob (7.0.4.2)
       activesupport (= 7.0.4.2)
       globalid (>= 0.3.6)
@@ -238,6 +241,7 @@ PLATFORMS
 
 DEPENDENCIES
   MailchimpMarketing (~> 3.0, >= 3.0.80)
+  active_interaction (~> 5.2)
   bootsnap
   bulma-rails (~> 0.9.4)
   byebug (~> 11.1, >= 11.1.3)
