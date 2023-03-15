@@ -1,0 +1,2 @@
+module AnimalRescueHelper
+end

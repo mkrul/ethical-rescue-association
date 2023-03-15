@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_14_101250) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_14_112928) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "animal_rescues", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "breed", null: false
+    t.string "website_url", null: false
+    t.text "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "visibility", default: "hidden", null: false
+    t.index ["visibility"], name: "index_animal_rescues_on_visibility"
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "first_name", null: false
@@ -22,17 +33,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_101250) do
     t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "rescues", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "breed", null: false
-    t.string "website_url", null: false
-    t.text "description", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "visibility", default: "hidden", null: false
-    t.index ["visibility"], name: "index_rescues_on_visibility"
   end
 
   create_table "rescues_contacts", force: :cascade do |t|
@@ -66,8 +66,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_101250) do
     t.index ["user_id"], name: "index_users_contacts_on_user_id"
   end
 
+  add_foreign_key "rescues_contacts", "animal_rescues", column: "rescue_id"
   add_foreign_key "rescues_contacts", "contacts"
-  add_foreign_key "rescues_contacts", "rescues"
   add_foreign_key "users_contacts", "contacts"
   add_foreign_key "users_contacts", "users"
 end
