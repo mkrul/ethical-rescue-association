@@ -3,7 +3,7 @@
 
   <hr class="mb-2">
 
-  <% if current_user.admin? %>
+  <% if  %>
     <div class="mb-2">
       <%= link_to 'Add Rescue', new_animal_rescue_path %>
     </div>
@@ -18,7 +18,7 @@
           <th>Breeds</th>
           <th>Website URL</th>
           <th>Description</th>
-          <% if current_user.admin? %>
+          <% if logged_in_as_admin? %>
             <th>Visibility</th>
           <% end %>
         </tr>
@@ -30,7 +30,7 @@
           <td><%= r.breed.split(',').join("\n").truncate(25) %></td>
           <td><%= r.website_url.truncate(30) %></td>
           <td><%= r.description.truncate(60) %></td>
-          <% if current_user.admin? %>
+          <% if logged_in_as_admin? %>
             <td><%= r.visibility %></td>
             <td><%= link_to 'edit', edit_animal_rescue_path(r), remote: true %></td>
             <td><%= link_to 'delete', animal_rescue_path(r), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this rescue?" } %></td>
