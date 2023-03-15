@@ -24,8 +24,12 @@
       </div>
     <% end %>
     <div class="mt-6 d-flex">
-      <%= link_to "Edit", edit_animal_rescue_path(@rescue), remote: true, class: "button is-info mr-2" %>
+      <%= if current_user.admin? %>
+        <%= link_to "Edit", edit_animal_rescue_path(@rescue), remote: true, class: "button is-info mr-2" %>
+      <% end %>
       <%= link_to "Cancel", animal_rescues_path, remote: true, class: "button is-light mr-2" %>
-      <%= link_to "Delete", animal_rescue_path(@rescue), class: "button is-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this rescue?" } %>
+      <%= if current_user.admin? %>
+        <%= link_to "Delete", animal_rescue_path(@rescue), class: "button is-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this rescue?" } %>
+      <% end %>
     </div>
 </div>
