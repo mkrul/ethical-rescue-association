@@ -11,7 +11,7 @@
     </div>
     <div class="field">
       <%= label_tag :website_url, 'Website URL:', class: 'label' %>
-      <%= link_to @rescue.website_url, target: '_blank' %>
+      <%= link_to @rescue.website_url, @rescue.website_url, target: '_blank' %>
     </div>
     <div class="field">
       <%= label_tag :description, 'Description:', class: 'label' %>
