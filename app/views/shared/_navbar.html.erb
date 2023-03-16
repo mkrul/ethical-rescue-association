@@ -38,15 +38,13 @@
             Support
           </a>
         </div>
-        <div class="navbar-item">
-          <% user_signed_in? ? 'Log out' : 'Sign up' %>
-          <% if user_signed_in? %>
+        <% user_signed_in? ? 'Log out' : nil %>
+        <% if user_signed_in? %>
+          <div class="navbar-item">
             <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham' %>
-          <% else %>
-            <%= link_to 'Sign up', new_user_registration_path %>
-          <% end %>
-        </div>
-        <div class="navbar-item pr-5">
+          </div>
+        <% end %>
+        <div class="navbar-item pr-6">
           <% if user_signed_in? %>
             <%= link_to current_user.email, edit_user_registration_path %>
           <% else %>
