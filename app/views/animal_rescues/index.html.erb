@@ -27,7 +27,7 @@
         <tr>
           <th><%= r.id %></th>
           <td><%= r.name.truncate(25) %></td>
-          <td><%= r.breed.split(',').join("\n").truncate(25) %></td>
+          <td><%= r.breed.truncate(25) %></td>
           <td><%= r.website_url.truncate(30) %></td>
           <td><%= r.description.truncate(60) %></td>
           <% if logged_in_as_admin? %>
