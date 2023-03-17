@@ -12,24 +12,21 @@
 
   <body>
     <%= render partial: "shared/navbar" %>
-    <div class="px-6">
-      <div class="mt-6"></div>
-      <div>
+    <div class="white-bar"></div>
+    <div class="container is-fullhd">
+      <% if notice %>
+        <div class="notification is-success is-light text-center">
+          <%= notice %>
+        </div>
+      <% end %>
 
-        <% if notice %>
-          <div class="notification is-success is-light text-center">
-            <%= notice %>
-          </div>
-        <% end %>
+      <% if alert %>
+        <div class="notification is-danger is-light text-center">
+          <%= alert %>
+        </div>
+      <% end %>
 
-        <% if alert %>
-          <div class="notification is-danger is-light text-center">
-            <%= alert %>
-          </div>
-        <% end %>
-
-        <%= yield %>
-      </div>
+      <%= yield %>
     </div>
   </body>
 </html>

@@ -12,12 +12,12 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbarBasicExample" class="navbar-menu f-14 navbar-container">
       <div class="navbar-end">
-        <div class="navbar-item">
-            <%= link_to 'Rescues', animal_rescues_path, class: "mr-4" %>
+        <div class="navbar-item pr-5">
+            <%= link_to 'Rescues', animal_rescues_path %>
         </div>
-        <div class="navbar-item has-dropdown is-hoverable">
+        <div class="navbar-item has-dropdown is-hoverable pr-2">
           <a class="navbar-link">
             Resources
           </a>
@@ -30,18 +30,16 @@
             </a>
           </div>
         </div>
-        <div class="navbar-item">
-          <a class="navbar-item">
-            Apply to Join
-          </a>
+        <div class="navbar-item pr-5">
+          <%= link_to 'Apply to Join', apply_path %>
         </div>
         <% user_signed_in? ? 'Log out' : nil %>
         <% if user_signed_in? %>
-          <div class="navbar-item">
+          <div class="navbar-item pr-5">
             <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham' %>
           </div>
         <% end %>
-        <div class="navbar-item pr-6">
+        <div class="navbar-item pr-5">
           <% if user_signed_in? %>
             <%= link_to current_user.email, edit_user_registration_path %>
           <% else %>
