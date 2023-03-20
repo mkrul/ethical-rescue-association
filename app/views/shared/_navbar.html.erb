@@ -15,13 +15,16 @@
     <div id="navbarBasicExample" class="navbar-menu f-14 navbar-container">
       <div class="navbar-end">
         <div class="navbar-item pr-5">
-            <%= link_to 'Rescues', animal_rescues_path %>
+          <%= link_to 'Apply to Join', apply_path %>
         </div>
         <div class="navbar-item has-dropdown is-hoverable pr-2">
           <a class="navbar-link">
-            Resources
+            About
           </a>
           <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Why Join ERA?
+            </a>
             <a class="navbar-item">
               Code of Ethics
             </a>
@@ -30,22 +33,52 @@
             </a>
           </div>
         </div>
-        <div class="navbar-item pr-5">
-          <%= link_to 'Apply to Join', apply_path %>
-        </div>
-        <% user_signed_in? ? 'Log out' : nil %>
-        <% if user_signed_in? %>
-          <div class="navbar-item pr-5">
-            <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham' %>
+        <div class="navbar-item has-dropdown is-hoverable pr-2">
+          <a class="navbar-link">
+            Resources
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Spay & Neuter
+            </a>
+            <a class="navbar-item">
+              Muzzles
+            </a>
+            <a class="navbar-item">
+              Microchipping
+            </a>
+            <a class="navbar-item">
+              Fencing
+            </a>
+            <a class="navbar-item">
+              Leashes & Harnesses
+            </a>
           </div>
-        <% end %>
-        <div class="navbar-item pr-5">
-          <% if user_signed_in? %>
-            <%= link_to current_user.email, edit_user_registration_path %>
-          <% else %>
-            <%= link_to 'Log in', new_user_session_path %>
-          <% end %>
         </div>
+          <% if user_signed_in? %>
+            <div class="navbar-item has-dropdown is-hoverable pr-2">
+              <a class="navbar-link" href=<%"#{edit_user_registration_path}"%>>
+                <%= current_user.email %>
+              </a>
+              <div class="navbar-dropdown">
+                <% if logged_in_as_admin? %>
+                  <a class="navbar-item">
+                    Admin Area
+                  </a>
+                <% end %>
+                <a class="navbar-item">
+                  Profile Settings
+                </a>
+                <div class="navbar-item">
+                  <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham' %>
+                </div>
+              </div>
+            </div>
+          <% else %>
+            <div class="navbar-item pr-5">
+              <%= link_to 'Log in', new_user_session_path %>
+            </div>
+          <% end %>
       </div>
     </div>
   </nav>
