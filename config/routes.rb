@@ -8,5 +8,12 @@ Rails.application.routes.draw do
 
   get '/apply', to: 'join_us#index'
 
+  # resources pages
+  get '/spay_and_neuter', to: 'resource_pages#spay_and_neuter'
+  get '/muzzles', to: 'resource_pages#muzzles'
+  get '/microchipping', to: 'resource_pages#microchipping'
+  get '/fencing', to: 'resource_pages#fencing'
+  get '/leashes_and_harnasses', to: 'resource_pages#leashes_and_harnasses'
+
   resources :animal_rescues
 end

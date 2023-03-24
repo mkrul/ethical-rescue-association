@@ -4,12 +4,6 @@
       <a class="navbar-item" href="/">
         <span class="main-title">ETHICAL RESCUE ASSOCIATION</span>
       </a>
-
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu f-14 navbar-container">
@@ -38,21 +32,21 @@
             Resources
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item">
-              Spay & Neuter
-            </a>
-            <a class="navbar-item">
-              Muzzles
-            </a>
-            <a class="navbar-item">
-              Microchipping
-            </a>
-            <a class="navbar-item">
-              Fencing
-            </a>
-            <a class="navbar-item">
-              Leashes & Harnesses
-            </a>
+            <div class="navbar-item">
+              <%= link_to "Spay & Neuter", spay_and_neuter_path %>
+            </div>
+            <div class="navbar-item">
+              <%= link_to "Muzzles", muzzles_path %>
+            </div>
+            <div class="navbar-item">
+              <%= link_to "Microchipping", microchipping_path %>
+            </div>
+            <div class="navbar-item">
+              <%= link_to "Fencing", fencing_path %>
+            </div>
+            <div class="navbar-item">
+              <%= link_to "Leashes and Harnasses", leashes_and_harnasses_path %>
+            </div>
           </div>
         </div>
           <% if user_signed_in? %>
@@ -62,9 +56,9 @@
               </a>
               <div class="navbar-dropdown">
                 <% if logged_in_as_admin? %>
-                  <a class="navbar-item">
-                    Admin Area
-                  </a>
+                  <div class="navbar-item">
+                    <%= link_to "Rescues", animal_rescues_path %>
+                  </div>
                 <% end %>
                 <a class="navbar-item">
                   Profile Settings
