@@ -63,6 +63,9 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'byebug', '~> 11.1', '>= 11.1.3'
+  gem 'rspec', '~> 3.12'
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+  gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
 end
 
 group :development do
