@@ -4,6 +4,11 @@
       <a class="navbar-item" href="/">
         <span class="main-title">ETHICAL RESCUE ASSOCIATION</span>
       </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu f-14 navbar-container">
@@ -77,3 +82,12 @@
     </div>
   </nav>
 </div>
+
+<script>
+  $(document).ready(function() {
+    $(".navbar-burger").click(function() {
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
+    })
+  })
+</script>
