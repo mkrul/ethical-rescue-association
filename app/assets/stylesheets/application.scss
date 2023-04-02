@@ -4,7 +4,7 @@
 @import url('https://fonts.cdnfonts.com/css/roboto');
 @import url('https://fonts.cdnfonts.com/css/gotham-black');
 @import url('https://fonts.cdnfonts.com/css/gotham-bold');
-@import "../stylesheets/join_us/join_us.scss";
+@import "../stylesheets/main/main.scss";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -52,6 +52,9 @@
 .white-bar {
   background-color: white;
   height: 35px;
+  @media only screen and (max-width: $FULLSCREEN) {
+    display: none;
+  }
 }
 
 /* NAVBAR */
