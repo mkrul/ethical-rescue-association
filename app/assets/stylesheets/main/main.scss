@@ -13,6 +13,13 @@
   width: 1344px;
   position: absolute;
   object-fit: cover;
+
+  @media only screen and (max-width: $TABLET) {
+    object-position: 60% 10%;
+  }
+  @media only screen and (max-width: $MOBILE) {
+    object-position: 70% 10%;
+  }
 }
 
 .banner-content-container {
