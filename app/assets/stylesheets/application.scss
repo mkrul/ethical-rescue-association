@@ -84,8 +84,16 @@
   position: relative;
   min-height: 100%;
   height: 100vh;
+  @media only screen and (max-width: $MOBILE) {
+
+  }
 }
 
 .coming-soon {
-
+  @media only screen and (max-width: $TABLET) {
+    height: fit-content;
+  }
+  @media only screen and (max-width: $MOBILE) {
+    height: fit-content;
+  }
 }
