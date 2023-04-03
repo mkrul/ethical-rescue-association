@@ -12,21 +12,24 @@
   </head>
 
   <body>
-    <%= render partial: "shared/navbar" %>
-    <div>
-      <% if notice %>
-        <div class="notification is-success is-light text-center">
-          <%= notice %>
-        </div>
-      <% end %>
+    <% if logged_in_as_admin? %>
+      <%= render partial: "shared/navbar" %>
+      <div>
+        <% if notice %>
+          <div class="notification is-success is-light text-center">
+            <%= notice %>
+          </div>
+        <% end %>
 
-      <% if alert %>
-        <div class="notification is-danger is-light text-center">
-          <%= alert %>
-        </div>
-      <% end %>
-
-      <%= yield %>
-    </div>
+        <% if alert %>
+          <div class="notification is-danger is-light text-center">
+            <%= alert %>
+          </div>
+        <% end %>
+        <%= yield %>
+      </div>
+    <% else %>
+      <%= image_tag "promotional/coming-soon.jpg", class: "coming-soon" %>
+    <% end %>
   </body>
 </html>

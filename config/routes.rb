@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root 'main#index'
+  # root 'main#index'
+  root 'main#home'
 
   # resources pages
   get '/spay_and_neuter', to: 'resource_pages#spay_and_neuter'
