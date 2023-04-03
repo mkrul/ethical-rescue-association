@@ -29,52 +29,54 @@
             </a>
           </div>
         </div>
-        <div class="navbar-item has-dropdown is-hoverable pr-2">
-          <a class="navbar-link">
-            Resources
-          </a>
-          <div class="navbar-dropdown">
-            <div class="navbar-item">
-              <%= link_to "Spay & Neuter", spay_and_neuter_path %>
-            </div>
-            <div class="navbar-item">
-              <%= link_to "Muzzles", muzzles_path %>
-            </div>
-            <div class="navbar-item">
-              <%= link_to "Microchipping", microchipping_path %>
-            </div>
-            <div class="navbar-item">
-              <%= link_to "Fencing", fencing_path %>
-            </div>
-            <div class="navbar-item">
-              <%= link_to "Leashes & Harnasses", leashes_and_harnasses_path %>
-            </div>
-          </div>
-        </div>
-          <% if user_signed_in? %>
-            <div class="navbar-item has-dropdown is-hoverable pr-2">
-              <a class="navbar-link" href=<%"#{edit_user_registration_path}"%>>
-                <%= current_user.email %>
-              </a>
-              <div class="navbar-dropdown">
-                <% if logged_in_as_admin? %>
-                  <div class="navbar-item">
-                    <%= link_to "Rescues", animal_rescues_path %>
-                  </div>
-                <% end %>
-                <a class="navbar-item">
-                  Profile Settings
-                </a>
-                <div class="navbar-item">
-                  <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham' %>
-                </div>
+        <% if logged_in_as_admin? %>
+          <div class="navbar-item has-dropdown is-hoverable pr-2">
+            <a class="navbar-link">
+              Resources
+            </a>
+            <div class="navbar-dropdown">
+              <div class="navbar-item">
+                <%= link_to "Spay & Neuter", spay_and_neuter_path %>
+              </div>
+              <div class="navbar-item">
+                <%= link_to "Muzzles", muzzles_path %>
+              </div>
+              <div class="navbar-item">
+                <%= link_to "Microchipping", microchipping_path %>
+              </div>
+              <div class="navbar-item">
+                <%= link_to "Fencing", fencing_path %>
+              </div>
+              <div class="navbar-item">
+                <%= link_to "Leashes & Harnasses", leashes_and_harnasses_path %>
               </div>
             </div>
-          <% else %>
-            <div class="navbar-item pr-5">
-              <%= link_to 'Log in', new_user_session_path %>
+          </div>
+        <% end %>
+        <% if user_signed_in? %>
+          <div class="navbar-item has-dropdown is-hoverable pr-2">
+            <a class="navbar-link" href=<%"#{edit_user_registration_path}"%>>
+              <%= current_user.email %>
+            </a>
+            <div class="navbar-dropdown">
+              <% if logged_in_as_admin? %>
+                <div class="navbar-item">
+                  <%= link_to "Rescues", animal_rescues_path %>
+                </div>
+              <% end %>
+              <a class="navbar-item">
+                Profile Settings
+              </a>
+              <div class="navbar-item">
+                <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham' %>
+              </div>
             </div>
-          <% end %>
+          </div>
+        <% else %>
+          <div class="navbar-item pr-5">
+            <%= link_to 'Log in', new_user_session_path %>
+          </div>
+        <% end %>
       </div>
     </div>
   </nav>

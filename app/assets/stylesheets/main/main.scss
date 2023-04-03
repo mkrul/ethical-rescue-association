@@ -10,7 +10,7 @@
 
 .banner-img {
   height: 500px;
-  width: 1344px;
+  width: 100%;
   position: absolute;
   object-fit: cover;
 
@@ -26,7 +26,7 @@
   display: flex;
   position: relative;
   height: 100%;
-  margin: 0 60px;
+  margin: 0 10vw;
   flex-direction: column;
   justify-content: end;
   padding-bottom: 60px;
@@ -42,11 +42,11 @@
 
 .tagline-primary {
   color: white;
-  font-size: 56px;
+  font-size: 62px;
   line-height: 66px;
   padding: 10px 0 40px;
-  width: 680px;
-  max-width: 675px;
+  width: 750px;
+  max-width: 750px;
 
   @media only screen and (max-width: $FULLSCREEN) {
     width: 52vw;
@@ -71,7 +71,7 @@
 
 .tagline-secondary {
   color: white;
-  font-size: 17px;
+  font-size: 20px;
   height: 40px;
 
   @media only screen and (max-width: $MOBILE) {
