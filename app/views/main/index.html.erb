@@ -5,6 +5,10 @@
     <h3 class="tagline-primary font-gotham-bold">
       Be part of a new ERA of animal rescue
     </h3>
-    <%= link_to 'Apply Today', 'https://forms.gle/MeuWpkQyCRj2ky63A', class: 'button is-info call-to-action', target: '_blank' %>
+    <button class="payment-prompt-trigger button is-info call-to-action" data-target="payment-prompt">
+      Apply Today
+    </button>
   </div>
 <div>
+
+<%= render 'payment_prompt' %>

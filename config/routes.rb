@@ -4,15 +4,19 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root 'main#index'
-  root 'main#home'
+  root 'main#index'
+  # root 'main#home'
 
   # resources pages
   get '/spay_and_neuter', to: 'resource_pages#spay_and_neuter'
-  get '/muzzles', to: 'resource_pages#muzzles'
+  get '/products', to: 'resource_pages#products'
   get '/microchipping', to: 'resource_pages#microchipping'
   get '/fencing', to: 'resource_pages#fencing'
-  get '/leashes_and_harnasses', to: 'resource_pages#leashes_and_harnasses'
+
+  # about pages
+  get '/code_of_ethics', to: 'about_pages#code_of_ethics'
+  get '/who_we_are', to: 'about_pages#who_we_are'
+  get '/faq', to: 'about_pages#faq'
 
   resources :animal_rescues
 end

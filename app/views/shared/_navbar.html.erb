@@ -18,15 +18,15 @@
             About
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item">
-              Why Join ERA?
-            </a>
-            <a class="navbar-item">
-              Member Benefits
-            </a>
-            <a class="navbar-item">
-              Code of Ethics
-            </a>
+            <div class="navbar-item">
+              <%= link_to "Code of Ethics", code_of_ethics_path %>
+            </div>
+            <div class="navbar-item">
+              <%= link_to "Who We Are", who_we_are_path %>
+            </div>
+            <div class="navbar-item">
+              <%= link_to "FAQ", faq_path %>
+            </div>
           </div>
         </div>
         <% if logged_in_as_admin? %>
@@ -39,16 +39,13 @@
                 <%= link_to "Spay & Neuter", spay_and_neuter_path %>
               </div>
               <div class="navbar-item">
-                <%= link_to "Muzzles", muzzles_path %>
+                <%= link_to "Products", products_path %>
               </div>
               <div class="navbar-item">
                 <%= link_to "Microchipping", microchipping_path %>
               </div>
               <div class="navbar-item">
                 <%= link_to "Fencing", fencing_path %>
-              </div>
-              <div class="navbar-item">
-                <%= link_to "Leashes & Harnasses", leashes_and_harnasses_path %>
               </div>
             </div>
           </div>

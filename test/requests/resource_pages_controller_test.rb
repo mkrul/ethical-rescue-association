@@ -11,10 +11,10 @@ RSpec.describe ResourcePagesController, type: :request do
     end
   end
 
-  describe "#muzzles" do
+  describe "#products" do
     context "when accessed" do
       it 'returns 200' do
-        get muzzles_path
+        get products_path
 
         expect(response.status).to eq 200
       end
@@ -35,16 +35,6 @@ RSpec.describe ResourcePagesController, type: :request do
     context "when accessed" do
       it 'returns 200' do
         get fencing_path
-
-        expect(response.status).to eq 200
-      end
-    end
-  end
-
-  describe "#leashes_and_harnesses" do
-    context "when accessed" do
-      it 'returns 200' do
-        get leashes_and_harnasses_path
 
         expect(response.status).to eq 200
       end

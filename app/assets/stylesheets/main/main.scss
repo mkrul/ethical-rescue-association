@@ -97,3 +97,12 @@
     border-radius: 6px;
   }
 }
+
+/* PAYMENT PROMPT MODAL */
+
+.modal-container {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
