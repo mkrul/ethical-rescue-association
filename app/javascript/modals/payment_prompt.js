@@ -1,4 +1,9 @@
+document.onload = (event) => {
+  console.log("page is fully loaded");
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('derp');
   // Functions to open and close a modal
   function openModal($el) {
     $el.classList.add('is-active');

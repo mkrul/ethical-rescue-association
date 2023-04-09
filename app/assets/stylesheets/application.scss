@@ -1,10 +1,12 @@
 @import "bulma";
 @import "font-awesome";
-@import url("https://fonts.cdnfonts.com/css/gotham-ssm");
 @import url('https://fonts.cdnfonts.com/css/roboto');
 @import url('https://fonts.cdnfonts.com/css/gotham-black');
 @import url('https://fonts.cdnfonts.com/css/gotham-bold');
+@import url("https://fonts.cdnfonts.com/css/gotham-ssm");
+@import url('https://fonts.cdnfonts.com/css/gotham');
 @import "../stylesheets/main/main.scss";
+@import "../stylesheets/about_pages/code_of_ethics.scss";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -19,7 +21,6 @@
  *
  //= require jquery3
  //= require jquery_ujs
- *= require_tree .
  *= require_self
  */
 
@@ -34,7 +35,11 @@
 }
 
 .font-gotham-bold {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: 'Gotham Bold','Verdana','Arial',sans-serif;
+}
+
+.font-gotham-regular {
+  font-family: 'Gotham','Verdana','Arial',sans-serif;
 }
 
 /* MISC */
