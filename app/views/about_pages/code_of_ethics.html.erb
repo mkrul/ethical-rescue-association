@@ -1,0 +1,77 @@
+<div class="code-of-ethics-container">
+  <div class="banner-container">
+    <%= image_tag "code_of_ethics/code-of-ethics-banner.jpg", class: "banner-img", title: "Image by Freepik" %>
+    <div class="banner-content-container ">
+      <h3 class="tagline-primary font-gotham-bold">
+        Code of Ethics
+      </h3>
+      <h3 class="tagline-secondary font-gotham-regular">
+        The standards that govern ERA-accredited rescue operations
+      </h3>
+    </div>
+  <div>
+
+  <div class="container font-roboto pt-5">
+    <div class="accordion">
+      <div class="wrapper">
+      <h1></h1>
+      <div class="half">
+        <div class="tab">
+          <input id="tab-one" type="checkbox" name="tabs">
+          <label for="tab-one">I. Welfare Concepts</label>
+          <div class="tab-content">
+            <p>
+              <%= render 'welfare_concepts' %>
+            </p>
+          </div>
+        </div>
+        <div class="tab">
+          <input id="tab-two" type="checkbox" name="tabs">
+          <label for="tab-two">II. Humane Care and Treatment</label>
+          <div class="tab-content">
+            <p>
+              <%= render 'humane_care_and_treatment' %>
+            </p>
+          </div>
+        </div>
+        <div class="tab">
+          <input id="tab-three" type="checkbox" name="tabs">
+          <label for="tab-three">III. Ethical Placement</label>
+          <div class="tab-content">
+            <p>
+              <%= render 'ethical_placement' %>
+            </p>
+          </div>
+        </div>
+        <div class="tab">
+          <input id="tab-four" type="checkbox" name="tabs">
+          <label for="tab-four">IV. Funding Transparency</label>
+          <div class="tab-content">
+            <p>
+              <%= render 'funding_transparency' %>
+            </p>
+          </div>
+        </div>
+        <div class="tab">
+          <input id="tab-five" type="checkbox" name="tabs">
+          <label for="tab-five">V. Ethical Public Presence</label>
+          <div class="tab-content">
+            <p>
+              <%= render 'ethical_public_presence' %>
+            </p>
+          </div>
+        </div>
+        <div class="tab">
+          <input id="tab-six" type="checkbox" name="tabs">
+          <label for="tab-six">VI. Community Care and Support</label>
+          <div class="tab-content">
+            <p>
+              <%= render 'community_care_and_support' %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
