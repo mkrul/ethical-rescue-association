@@ -88,6 +88,16 @@
     }
   }
 
+  /* message from President */
+
+  .president-img {
+    max-height: 550px;
+  }
+
+  .coe-statement {
+    line-height: 1.8em;
+  }
+
   /* ACCORDION */
 
   .accordion {
@@ -105,6 +115,7 @@
     }
     .li
     .tab {
+      font-size: 1.2em;
       position: relative;
       margin-bottom: 1px;
       width: 100%;
@@ -119,7 +130,7 @@
     label {
       position: relative;
       display: block;
-      padding: 0 0 0 1em;
+      padding: 0 0 0 1.2em;
       background: $DARKGRAY;
       color: white;
       font-weight: bold;
@@ -185,7 +196,7 @@
       padding: 0;
     }
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Roboto', sans-serif;
     }
     h2 {
       font-weight: normal;
