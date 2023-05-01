@@ -7,31 +7,40 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= favicon_link_tag asset_path("favicon.png") %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <% if logged_in_as_admin? %>
-      <%= render partial: "shared/navbar" %>
-      <div>
-        <% if notice %>
-          <div class="notification is-success is-light text-center">
-            <%= notice %>
-          </div>
-        <% end %>
+  <% if !logged_in_as_admin? %>
+    <body>
+      <div class="body-container">
+        <%= render partial: "shared/navbar" %>
+        <div class="top-bar"></div>
+        <div>
+          <% if notice %>
+            <div class="notification is-success is-light text-center">
+              <%= notice %>
+            </div>
+          <% end %>
 
-        <% if alert %>
-          <div class="notification is-danger is-light text-center">
-            <%= alert %>
-          </div>
-        <% end %>
-        <%= yield %>
+          <% if alert %>
+            <div class="notification is-danger is-light text-center">
+              <%= alert %>
+            </div>
+          <% end %>
+          <%= yield %>
+        </div>
+        <footer id="footer">
+          <%= render "shared/footer" %>
+        </footer>
       </div>
-    <% else %>
+    </body>
+  <% else %>
+    <body>
       <div class="promo-container">
         <%= video_tag "https://i.imgur.com/RePuY5c.mp4", autoplay: true, loop: false, controls: true %>
       </div>
-    <% end %>
-  </body>
+    </body>
+  <% end %>
 </html>

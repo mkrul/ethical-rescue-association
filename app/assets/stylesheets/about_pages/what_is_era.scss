@@ -1,0 +1,112 @@
+@import "../application_config.scss";
+
+.what-is-era-container {
+
+  /* BANNER */
+
+  .banner-container {
+    position: relative;
+    text-align: left;
+    height: 350px;
+    width: 100%;
+  }
+
+  .banner-img {
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+
+    @media only screen and (max-width: $TABLET) {
+      object-position: 30% 10%;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      object-position: 30% 10%;
+    }
+  }
+
+  .banner-content-container {
+    display: flex;
+    position: relative;
+    height: 100%;
+    margin: 0 10vw;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+
+    @media only screen and (max-width: $TABLET) {
+      margin: 0 40px;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      margin: 0 10px;
+    }
+  }
+
+  .tagline-primary {
+    color: white;
+    font-size: 62px;
+    line-height: 50px;
+    padding: 10px 0 40px;
+    width: 750px;
+    max-width: 750px;
+    text-align: right;
+
+    @media only screen and (max-width: $FULLSCREEN) {
+      width: 70vw;
+    }
+    @media only screen and (max-width: $TABLET) {
+      font-size: 45px;
+      line-height: 15px;
+      width: 100%;
+      text-align: center;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      font-size: 35px;
+      line-height: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .tagline-secondary {
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    text-align: right;
+    text-shadow: $DARK-GRAY 0 0 7px;
+
+    @media only screen and (max-width: $TABLET) {
+      text-align: center;
+      width: 100%;
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      text-align: center;
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+
+  .section {
+    padding-top: 30px;
+  }
+  .era-logo-container {
+    width: 320px;
+  }
+
+  .column-content {
+    min-height: 250px;
+  }
+
+  .blue-vertical-divider {
+    border-left: 1px solid $BRAND-BLUE;
+  }
+
+  /* MISSION STATEMENT */
+
+  .mission-statement {
+    font-style: italic;
+    font-size: 25px;
+  }
+}

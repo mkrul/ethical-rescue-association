@@ -1,0 +1,74 @@
+<footer class="footer p-0 mt-6">
+  <div class="footer-container font-gotham-regular">
+    <div class="footer-top-container">
+      <div class="container is-widescreen footer-wrapper">
+        <div class="content">
+          <div class="columns footer-columns">
+            <div class="column is-one-fifth is-flex-direction-column">
+              <div class="column-one">
+                <div class="m-auto has-text-centered">
+                  <%= image_tag "logos/era-logo-white", class: "era-logo" %>
+                  <div class="social-media-icons">
+                    <%= link_to ApplicationHelper::ERA_FACEBOOK_URL, target: "_blank" do %>
+                      <i class="fab fa-facebook-f fa-lg"></i>
+                    <% end %>
+                    <%= link_to ApplicationHelper::ERA_INSTAGRAM_URL, target: "_blank" do %>
+                      <i class="fab fa-instagram fa-lg"></i>
+                    <% end %>
+                    <%= link_to ApplicationHelper::ERA_TIKTOK_URL, target: "_blank" do %>
+                      <i class="fa-brands fa-tiktok"></i>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="column-two">
+                <p class="bd-footer-link">
+                  <a href=<%= root_url %>>
+                      <span class="icon-text">
+                        <span>Home</span>
+                      </span>
+                    </a>
+                  <br />
+                  <a href=<%= new_user_session_path %>>
+                      <span class="icon-text">
+                        <span>Log In</span>
+                      </span>
+                    </a>
+                  <br />
+                  <a href=<%= new_user_registration_path %>>
+                      <span class="icon-text">
+                        <span>Sign Up</span>
+                      </span>
+                    </a>
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="column-three">
+                <div>
+                  What is ERA?
+                </div>
+                <div>
+                  Code of Ethics
+                </div>
+                <div>
+                  FAQ
+                </div>
+                <div>
+                  <%= mail_to ApplicationHelper::ERA_MAILTO, "Contact Us" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-container">
+        <div class="pt-2">
+          Ethical Rescue Association is a 501(c)(3) non-profit organization | EIN #92-3601277
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

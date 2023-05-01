@@ -2,15 +2,18 @@
 @import "../application_config.scss";
 
 .code-of-ethics-container {
+
+  /* BANNER */
+
   .banner-container {
     position: relative;
     text-align: left;
-    height: 500px;
+    height: 350px;
     width: 100%;
   }
 
   .banner-img {
-    height: 500px;
+    height: 350px;
     width: 100%;
     position: absolute;
     object-fit: cover;
@@ -49,7 +52,7 @@
     width: 750px;
     max-width: 750px;
     text-align: right;
-    text-shadow: $DARKGRAY 0 0 7px;
+    text-shadow: $DARK-GRAY 0 0 7px;
 
     @media only screen and (max-width: $FULLSCREEN) {
       width: 70vw;
@@ -73,12 +76,12 @@
     font-size: 20px;
     height: 40px;
     text-align: right;
-    text-shadow: $DARKGRAY 0 0 7px;
+    text-shadow: $DARK-GRAY 0 0 7px;
 
     @media only screen and (max-width: $TABLET) {
       text-align: center;
       width: 100%;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     @media only screen and (max-width: $MOBILE) {
@@ -92,13 +95,41 @@
 
   .president-img {
     max-height: 550px;
+    padding-right: 1em;
+    padding-top: 7px;
+  }
+
+  .coe-statement-container {
+    padding-left: 1em;
+  }
+
+  .coe-statement-title {
+    font-size: 22px;
+    @media only screen and (max-width: $TABLET) {
+      font-size: 20px;
+      padding-top: 1.2em;
+      text-align: center;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      font-size: 18px;
+      padding-top: 1em;
+      padding-bottom: 0;
+      text-align: center;
+    }
   }
 
   .coe-statement {
     line-height: 1.8em;
+    font-size: 1.2em;
   }
 
   /* ACCORDION */
+
+  .accordion-container{
+    height: fit-content;
+    display: inline-block;
+    padding-bottom: 3.25em;
+  }
 
   .accordion {
     body {
@@ -131,7 +162,7 @@
       position: relative;
       display: block;
       padding: 0 0 0 1.2em;
-      background: $DARKGRAY;
+      background: $DARK-GRAY;
       color: white;
       font-weight: bold;
       line-height: 3;
@@ -233,6 +264,18 @@
     .card h2:first-child,
     .card p:first-child {
       margin-top: 0;
+    }
+  }
+
+  .content-container {
+    padding: 2em 3em 3em 3em;
+
+    @media only screen and (max-width: $TABLET) {
+      padding: 1.5em 3em 3em 3em;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      padding: 1em 3em 3em 3em;
     }
   }
 }

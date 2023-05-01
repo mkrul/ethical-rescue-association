@@ -7,6 +7,7 @@
 @import url('https://fonts.cdnfonts.com/css/gotham');
 @import "../stylesheets/main/main.scss";
 @import "../stylesheets/about_pages/code_of_ethics.scss";
+@import "../stylesheets/about_pages/what_is_era.scss";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -23,6 +24,14 @@
  //= require jquery_ujs
  *= require_self
  */
+
+/* DEFULT */
+
+.body-container {
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
 
 /* FONT */
 
@@ -42,14 +51,10 @@
   font-family: 'Gotham','Verdana','Arial',sans-serif;
 }
 
-/* MISC */
+/* DISPLAY */
 
 .d-flex {
   display: flex;
-}
-
-.text-center {
-  text-align: center;
 }
 
 /* NAVBAR */
@@ -65,7 +70,7 @@
 
 .main-title {
   font-size: 15px;
-  color: #485fc7;
+  color: $BRAND-BLUE;
   padding-left: 20px;
 }
 
@@ -79,6 +84,11 @@
 /* BANNERS */
 
 /* MAIN */
+
+.top-bar {
+  height: 3.5em;
+  background-color: $BRAND-BLUE;
+}
 
 .promo-container {
   background: black;
@@ -101,4 +111,94 @@
   @media only screen and (max-width: $MOBILE) {
     height: fit-content;
   }
+}
+
+/* FOOTER */
+
+#footer {
+
+}
+
+.footer-container {
+  .footer-wrapper {
+    height: 200px;
+  }
+
+  .footer-top-container {
+    background-color: $BRAND-BLUE;
+    height: 200px;
+  }
+
+  .footer-bottom-container {
+    background-color: $BRAND-DARK-BLUE;
+    color: white;
+    height: 4.3em;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .footer-columns {
+    height: 100%;
+    font-size: 14px;
+    padding: 15px 0 15px 60px;
+    line-height: 23px;
+    color: $LIGHT-BLUE;
+
+    a {
+      color: $LIGHT_BLUE;
+    }
+    a:hover {
+      color: white;
+    }
+  }
+
+  .era-logo {
+    height: 110px;
+    width: 110px;
+  }
+
+  .content {
+    margin: 0 200px;
+    height: 100%;
+  }
+
+  .column-one {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+  }
+
+  .column-two {
+    padding-left: 60px;
+    line-height: 23px;
+  }
+
+  .column-three {
+    padding-left: 60px;
+    line-height: 23px;
+  }
+
+  .social-media-icons {
+    text-align: center;
+    i {
+      padding: 0 2px;
+    }
+  }
+}
+
+/* FONT STYLING */
+
+.font-lg {
+  font-size: 35px;
+}
+
+.font-md {
+  font-size: 25px;
+}
+
+.text-center {
+  text-align: center;
 }

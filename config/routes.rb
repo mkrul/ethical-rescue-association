@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # about pages
   get '/code_of_ethics', to: 'about_pages#code_of_ethics'
-  get '/who_we_are', to: 'about_pages#who_we_are'
+  get '/what_is_era', to: 'about_pages#what_is_era'
   get '/faq', to: 'about_pages#faq'
 
   resources :animal_rescues

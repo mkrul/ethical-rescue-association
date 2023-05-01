@@ -1,6 +1,6 @@
 <div class="code-of-ethics-container">
   <div class="banner-container">
-    <%= image_tag "code_of_ethics/code-of-ethics-banner.jpg", class: "banner-img", title: "Image by Freepik" %>
+    <%= image_tag "about_pages/code_of_ethics/code-of-ethics-banner.jpg", class: "banner-img", title: "Image by Freepik" %>
     <div class="banner-content-container ">
       <h3 class="tagline-primary font-gotham-bold">
         Code of Ethics
@@ -12,96 +12,102 @@
   <div>
 
   <div class="container is-widescreen font-roboto pt-5">
-    <div class="p-6">
+    <div class="content-container">
       <div class="columns is-gapless">
         <div class="column has-text-centered">
-          <%= image_tag "code_of_ethics/janelle.jpg", class: "president-img pt-2 pr-5" %>
+          <%= image_tag "about_pages/code_of_ethics/janelle.jpg", class: "president-img" %>
         </div>
         <div class="column">
-          <div class="is-size-4 font-gotham pb-3">
-            <strong>A Message From Our President</strong>
-          </div>
-          <div class="is-size-5 coe-statement pt-4">
-            <div>
-              This Code of Ethics was written as the foundation of ERA so that we can uphold a
-              standard of care for the animals in our organizations as well as the communities
-              we serve. These categories are what have been shown to be lacking within the
-              rescue community in recent years.
+          <div class="coe-statement-container">
+            <div class="coe-statement-title font-gotham">
+              <strong>A Message From Our President</strong>
             </div>
-            <div class="pt-4">
-              This is not an all inclusive or limiting
-              guideline of ethics, but rather a reminder of the greater good we must be working
-              towards for the betterment of animal welfare and all animals in our communities.
-              All ERA Accredited Rescues agree to uphold this Code of Ethics to the best of their
-              abilities and to work towards bettering their weaknesses and bolstering their strengths.
-            </div>
-            <div class="pt-4">
-
+            <div class="coe-statement pt-4">
+              <div>
+                This Code of Ethics was written as the foundation of ERA so that we can uphold a
+                standard of care for the animals in our organizations as well as the communities
+                we serve. These categories are what have been shown to be lacking within the
+                rescue community in recent years.
+              </div>
+              <div class="pt-4">
+                This is not an all inclusive or limiting guideline of ethics, but rather a reminder
+                of the greater good we must be working towards for the betterment of animal welfare
+                and all animals in our communities. All ERA Accredited Rescues agree to uphold this
+                Code of Ethics to the best of their abilities and to work towards bettering their
+                weaknesses and bolstering their strengths.
+              </div>
+              <div class="pt-4">
+                <div>Janelle Newton</div>
+                <div>President</div>
+                <div>Ethical Rescue Association</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="accordion pt-4">
-      <div class="wrapper">
-      <h1></h1>
-      <div class="half">
-        <div class="tab">
-          <input id="tab-one" type="checkbox" name="tabs">
-          <label for="tab-one font-gotham">I. Welfare Concepts</label>
-          <div class="tab-content">
-            <p>
-              <%= render 'welfare_concepts' %>
-            </p>
+    <div class="accordion-container">
+      <div class="accordion">
+        <div class="wrapper">
+        <h1></h1>
+        <div class="half">
+          <div class="tab">
+            <input id="tab-one" type="checkbox" name="tabs">
+            <label for="tab-one">I. Welfare Concepts</label>
+            <div class="tab-content">
+              <p>
+                <%= render 'welfare_concepts' %>
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <input id="tab-two" type="checkbox" name="tabs">
+            <label for="tab-two">II. Humane Care and Treatment</label>
+            <div class="tab-content">
+              <p>
+                <%= render 'humane_care_and_treatment' %>
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <input id="tab-three" type="checkbox" name="tabs">
+            <label for="tab-three">III. Ethical Placement</label>
+            <div class="tab-content">
+              <p>
+                <%= render 'ethical_placement' %>
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <input id="tab-four" type="checkbox" name="tabs">
+            <label for="tab-four">IV. Funding Transparency</label>
+            <div class="tab-content">
+              <p>
+                <%= render 'funding_transparency' %>
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <input id="tab-five" type="checkbox" name="tabs">
+            <label for="tab-five">V. Ethical Public Presence</label>
+            <div class="tab-content">
+              <p>
+                <%= render 'ethical_public_presence' %>
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <input id="tab-six" type="checkbox" name="tabs">
+            <label for="tab-six">VI. Community Care and Support</label>
+            <div class="tab-content">
+              <p>
+                <%= render 'community_care_and_support' %>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="tab">
-          <input id="tab-two" type="checkbox" name="tabs">
-          <label for="tab-two">II. Humane Care and Treatment</label>
-          <div class="tab-content">
-            <p>
-              <%= render 'humane_care_and_treatment' %>
-            </p>
-          </div>
-        </div>
-        <div class="tab">
-          <input id="tab-three" type="checkbox" name="tabs">
-          <label for="tab-three">III. Ethical Placement</label>
-          <div class="tab-content">
-            <p>
-              <%= render 'ethical_placement' %>
-            </p>
-          </div>
-        </div>
-        <div class="tab">
-          <input id="tab-four" type="checkbox" name="tabs">
-          <label for="tab-four">IV. Funding Transparency</label>
-          <div class="tab-content">
-            <p>
-              <%= render 'funding_transparency' %>
-            </p>
-          </div>
-        </div>
-        <div class="tab">
-          <input id="tab-five" type="checkbox" name="tabs">
-          <label for="tab-five">V. Ethical Public Presence</label>
-          <div class="tab-content">
-            <p>
-              <%= render 'ethical_public_presence' %>
-            </p>
-          </div>
-        </div>
-        <div class="tab">
-          <input id="tab-six" type="checkbox" name="tabs">
-          <label for="tab-six">VI. Community Care and Support</label>
-          <div class="tab-content">
-            <p>
-              <%= render 'community_care_and_support' %>
-            </p>
-          </div>
-        </div>
-      </div>
 
+      </div>
     </div>
   </div>
 </div>

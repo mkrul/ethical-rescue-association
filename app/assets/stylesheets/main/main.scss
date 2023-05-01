@@ -5,12 +5,12 @@
   .banner-container {
     position: relative;
     text-align: left;
-    height: 500px;
+    height: 650px;
     width: 100%;
   }
 
   .banner-img {
-    height: 500px;
+    height: 650px;
     width: 100%;
     position: absolute;
     object-fit: cover;
@@ -27,10 +27,10 @@
     display: flex;
     position: relative;
     height: 100%;
-    margin: 0 10vw;
+    margin: 0 8vw;
     flex-direction: column;
     justify-content: end;
-    padding-bottom: 60px;
+    padding-bottom: 8em;
     align-items: flex-start;
 
     @media only screen and (max-width: $TABLET) {
@@ -45,26 +45,26 @@
     color: white;
     font-size: 62px;
     line-height: 66px;
-    padding: 10px 0 40px;
-    width: 750px;
+    padding: 18px 0 40px;
+    width: 45vw;
     max-width: 750px;
+    text-shadow: $DARK-GRAY 0 0 7px;
 
-    @media only screen and (max-width: $FULLSCREEN) {
-      width: 52vw;
-    }
     @media only screen and (max-width: $TABLET) {
-      font-size: 45px;
-      line-height: 52px;
-      width: 57vw;
+      font-size: 62px;
+      line-height: 66px;
+      width: 75vw;
     }
     @media only screen and (max-width: $TABLET-SM) {
-      font-size: 40px;
-      line-height: 45px;
-      width: 62vw;
+      font-size: 57px;
+      line-height: 60px;
+      width: 100%;
+      padding: 10px 0 40px;
+      text-align: center;
     }
     @media only screen and (max-width: $MOBILE) {
       font-size: 40px;
-      line-height: 45px;
+      line-height: 44px;
       width: 100%;
       text-align: center;
     }
@@ -74,9 +74,17 @@
     color: white;
     font-size: 20px;
     height: 40px;
+    text-shadow: $DARK-GRAY 0 0 7px;
+
+    @media only screen and (max-width: $TABLET-SM) {
+      width: 100%;
+      font-size: 18px;
+      text-align: center;
+    }
 
     @media only screen and (max-width: $MOBILE) {
       text-align: center;
+      font-size: 16px;
       width: 100%;
     }
   }
@@ -85,17 +93,23 @@
     background-color: #3e8ed0;
     border-color: transparent;
     color: #fff;
-    font-size: 18px;
-    width: 170px;
-    height: 50px;
+    font-size: 21px;
+    width: 180px;
+    height: 55px;
+    font-weight: normal;
 
-    @media only screen and (max-width: $MOBILE) {
+    @media only screen and (max-width: $TABLET-SM) {
+      margin: 0 auto;
       text-align: center;
       width: 220px;
       height: 65px;
       align-self: center;
-      font-size: 22px;
+      font-size: 24px;
       border-radius: 6px;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      margin: 0 auto;
     }
   }
 

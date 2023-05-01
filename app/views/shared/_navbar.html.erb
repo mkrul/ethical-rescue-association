@@ -1,82 +1,86 @@
-<div class="font-gotham">
-  <nav class="navbar py-2" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://www.ethicalrescueassociation.com">
-        <span class="main-title">ETHICAL RESCUE ASSOCIATION</span>
-      </a>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
+<div class="navbar-container">
+  <div class="font-gotham">
+    <nav class="navbar py-2" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href=<%= root_url %>>
+          <span class="main-title">ETHICAL RESCUE ASSOCIATION</span>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-    <div id="navbarBasicExample" class="navbar-menu f-14 navbar-container">
-      <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable pr-2">
-          <a class="navbar-link">
-            About
-          </a>
-          <div class="navbar-dropdown">
-            <div class="navbar-item">
-              <%= link_to "Code of Ethics", code_of_ethics_path %>
-            </div>
-            <div class="navbar-item">
-              <%= link_to "Who We Are", who_we_are_path %>
-            </div>
-            <div class="navbar-item">
-              <%= link_to "FAQ", faq_path %>
-            </div>
-          </div>
-        </div>
-        <% if logged_in_as_admin? %>
+      <div id="navbarBasicExample" class="navbar-menu f-14 navbar-container">
+        <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable pr-2">
             <a class="navbar-link">
-              Resources
+              About
             </a>
             <div class="navbar-dropdown">
               <div class="navbar-item">
-                <%= link_to "Spay & Neuter", spay_and_neuter_path %>
+                <%= link_to "What is ERA?", what_is_era_path %>
               </div>
               <div class="navbar-item">
-                <%= link_to "Products", products_path %>
+                <%= link_to "Code of Ethics", code_of_ethics_path %>
               </div>
               <div class="navbar-item">
-                <%= link_to "Microchips", microchipping_path %>
-              </div>
-              <div class="navbar-item">
-                <%= link_to "Fencing", fencing_path %>
+                <%= link_to "FAQ", faq_path %>
               </div>
             </div>
           </div>
-        <% end %>
-        <% if user_signed_in? %>
-          <div class="navbar-item has-dropdown is-hoverable pr-2">
-            <a class="navbar-link" href=<%"#{edit_user_registration_path}"%>>
-              <%= current_user.email %>
-            </a>
-            <div class="navbar-dropdown">
-              <% if logged_in_as_admin? %>
-                <div class="navbar-item">
-                  <%= link_to "Rescues", animal_rescues_path %>
+          <% if logged_in_as_admin? %>
+            <% if false %>
+              <div class="navbar-item has-dropdown is-hoverable pr-2">
+                <a class="navbar-link">
+                  Resources
+                </a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item">
+                    <%= link_to "Spay & Neuter", spay_and_neuter_path %>
+                  </div>
+                  <div class="navbar-item">
+                    <%= link_to "Products", products_path %>
+                  </div>
+                  <div class="navbar-item">
+                    <%= link_to "Microchips", microchipping_path %>
+                  </div>
+                  <div class="navbar-item">
+                    <%= link_to "Fencing", fencing_path %>
+                  </div>
                 </div>
-              <% end %>
-              <a class="navbar-item">
-                Profile Settings
+              </div>
+            <% end %>
+          <% end %>
+          <% if user_signed_in? %>
+            <div class="navbar-item has-dropdown is-hoverable pr-2">
+              <a class="navbar-link" href=<%"#{edit_user_registration_path}"%>>
+                <%= current_user.email %>
               </a>
-              <div class="navbar-item">
-                <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham' %>
+              <div class="navbar-dropdown">
+                <% if logged_in_as_admin? %>
+                  <div class="navbar-item">
+                    <%= link_to "Rescues", animal_rescues_path %>
+                  </div>
+                <% end %>
+                <a class="navbar-item">
+                  Profile Settings
+                </a>
+                <div class="navbar-item">
+                  <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham' %>
+                </div>
               </div>
             </div>
-          </div>
-        <% else %>
-          <div class="navbar-item pr-5">
-            <%= link_to 'Log in', new_user_session_path %>
-          </div>
-        <% end %>
+          <% else %>
+            <div class="navbar-item pr-5">
+              <%= link_to 'Log in', new_user_session_path %>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </div>
 
 <script>
