@@ -1,22 +1,22 @@
 <div class="container" id="app">
-  <div id="payment-prompt" class="modal">
+  <div id="payment-prompt" class="modal vertical-navbar-hidden">
     <div class="modal-background"></div>
-    <div class="modal-content">
-     <div class="modal-card">
+    <div class="modal-content" style="overflow-x: hidden;">
+     <div class="modal-card m-0">
     <header class="modal-card-head">
       <p class="modal-card-title">Attention</p>
     </header>
     <section class="modal-card-body">
       <div class="modal-container">
-        <div>
+        <p>
           Applying for ERA accreditation requires a one-time nonrefundable fee of <strong>$75</strong>.
-        </div>
-        <div>
+        </p>
+        <p>
           After processing your payment, you may click "Continue" below to proceed
           to the application.  You will need to provide a screenshot of your payment
           confirmation as proof of the transaction.
-        </div>
-        <div>
+        </p>
+        <p>
           Payment can be made through any one of the following applications:
           <ul class="pl-4 py-2">
             <li>
@@ -32,7 +32,7 @@
               <%= link_to 'PayPal', @paypal_url, target: '_blank' %>
             </li>
           </ul>
-        </div>
+        </p>
         <div>
           Thank you for being part of the next ERA of animal rescue.
         </div>

@@ -87,7 +87,7 @@
 
 .top-bar {
   height: 3.5em;
-  background-color: $BRAND-BLUE;
+  background-color: $OFFWHITE;
 }
 
 .promo-container {
@@ -113,82 +113,6 @@
   }
 }
 
-/* FOOTER */
-
-#footer {
-
-}
-
-.footer-container {
-  .footer-wrapper {
-    height: 200px;
-  }
-
-  .footer-top-container {
-    background-color: $BRAND-BLUE;
-    height: 200px;
-  }
-
-  .footer-bottom-container {
-    background-color: $BRAND-DARK-BLUE;
-    color: white;
-    height: 4.3em;
-    justify-content: center;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    font-size: 13px;
-  }
-
-  .footer-columns {
-    height: 100%;
-    font-size: 14px;
-    padding: 15px 0 15px 60px;
-    line-height: 23px;
-    color: $LIGHT-BLUE;
-
-    a {
-      color: $LIGHT_BLUE;
-    }
-    a:hover {
-      color: white;
-    }
-  }
-
-  .era-logo {
-    height: 110px;
-    width: 110px;
-  }
-
-  .content {
-    margin: 0 200px;
-    height: 100%;
-  }
-
-  .column-one {
-    display: flex;
-    width: fit-content;
-    height: 100%;
-  }
-
-  .column-two {
-    padding-left: 60px;
-    line-height: 23px;
-  }
-
-  .column-three {
-    padding-left: 60px;
-    line-height: 23px;
-  }
-
-  .social-media-icons {
-    text-align: center;
-    i {
-      padding: 0 2px;
-    }
-  }
-}
-
 /* FONT STYLING */
 
 .font-lg {
@@ -202,3 +126,38 @@
 .text-center {
   text-align: center;
 }
+
+/* FOOTER */
+
+.era-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+
+  .era-logo {
+    background-image: url("logos/era-logo-colored.png");
+    background-size: 9rem;
+    height: 9rem;
+    width: 9rem;
+  }
+}
+
+.social-media-icons {
+  text-align: center;
+  width: 6rem;
+  margin: 0 auto;
+  i {
+    padding: 0 2px;
+  }
+}
+
+.footer-height {
+  height: 22rem;
+}
+
+.ein-info {
+  font-size: 0.8rem;
+  margin: 1.5rem;
+}
+
+/* MODALS */

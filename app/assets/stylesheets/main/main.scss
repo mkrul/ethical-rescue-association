@@ -1,124 +1,84 @@
 
 @import "../application_config.scss";
 
-.home-container {
+.main-container {
+  .hero-content {
+    @media only screen and (max-width: $TABLET) {
+      text-align: center;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      text-align: center;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   .banner-container {
     position: relative;
     text-align: left;
-    height: 650px;
+    height: 430px;
     width: 100%;
   }
 
   .banner-img {
-    height: 650px;
+    background-image: url("main/main-banner.jpg");
+    height: 430px;
     width: 100%;
     position: absolute;
     object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    @media only screen and (max-width: $TABLET-LG) {
+      background-image: url("main/main-banner-tablet-lg.jpg");
+    }
     @media only screen and (max-width: $TABLET) {
-      object-position: 60% 10%;
+      background-image: url("main/main-banner-tablet-mobile.jpg");
     }
     @media only screen and (max-width: $MOBILE) {
-      object-position: 70% 10%;
+      background-image: url("main/main-banner-tablet-mobile.jpg");
     }
   }
 
-  .banner-content-container {
-    display: flex;
-    position: relative;
-    height: 100%;
-    margin: 0 8vw;
-    flex-direction: column;
-    justify-content: end;
-    padding-bottom: 8em;
-    align-items: flex-start;
+  .banner-content {
+    padding: 0 5rem;
+    width: 45rem;
 
+    @media only screen and (max-width: $TABLET-LG) {
+      padding: 0 3rem;
+      width: 34rem;
+      font-size-adjust: 0.47;
+    }
     @media only screen and (max-width: $TABLET) {
-      margin: 0 40px;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      margin: 0 10px;
-    }
-  }
-
-  .tagline-primary {
-    color: white;
-    font-size: 62px;
-    line-height: 66px;
-    padding: 18px 0 40px;
-    width: 45vw;
-    max-width: 750px;
-    text-shadow: $DARK-GRAY 0 0 7px;
-
-    @media only screen and (max-width: $TABLET) {
-      font-size: 62px;
-      line-height: 66px;
-      width: 75vw;
-    }
-    @media only screen and (max-width: $TABLET-SM) {
-      font-size: 57px;
-      line-height: 60px;
-      width: 100%;
-      padding: 10px 0 40px;
-      text-align: center;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      font-size: 40px;
-      line-height: 44px;
-      width: 100%;
-      text-align: center;
-    }
-  }
-
-  .tagline-secondary {
-    color: white;
-    font-size: 20px;
-    height: 40px;
-    text-shadow: $DARK-GRAY 0 0 7px;
-
-    @media only screen and (max-width: $TABLET-SM) {
-      width: 100%;
-      font-size: 18px;
-      text-align: center;
-    }
-
-    @media only screen and (max-width: $MOBILE) {
-      text-align: center;
-      font-size: 16px;
-      width: 100%;
-    }
-  }
-
-  .call-to-action {
-    background-color: #3e8ed0;
-    border-color: transparent;
-    color: #fff;
-    font-size: 21px;
-    width: 180px;
-    height: 55px;
-    font-weight: normal;
-
-    @media only screen and (max-width: $TABLET-SM) {
       margin: 0 auto;
-      text-align: center;
-      width: 220px;
-      height: 65px;
-      align-self: center;
-      font-size: 24px;
-      border-radius: 6px;
+      padding: 0 1rem;
+      font-size-adjust: 0.43;
+      line-height: 1rem;
     }
-
     @media only screen and (max-width: $MOBILE) {
       margin: 0 auto;
+      padding: 0;
+      font-size-adjust: 0.43;
+      line-height: 1rem;
     }
   }
+}
 
-  /* PAYMENT PROMPT MODAL */
+/* PAYMENT PROMPT MODAL */
 
-  .modal-container {
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.modal-container {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vertical-scrollbar-hidden {
+  overflow-x: hidden;
 }
