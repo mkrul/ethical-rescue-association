@@ -5,50 +5,83 @@
 
   /* BANNER */
 
+  .hero-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @media only screen and (max-width: $TABLET-LG) {
+      margin-left: 0;
+    }
+    @media only screen and (max-width: $TABLET) {
+      margin-left: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      margin-left: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
   .banner-container {
     position: relative;
     text-align: left;
-    height: 350px;
+    height: 430px;
     width: 100%;
   }
 
   .banner-img {
-    height: 350px;
+    background-image: url("about_pages/code_of_ethics/code-of-ethics-banner.jpg");
+    height: 430px;
     width: 100%;
     position: absolute;
     object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    @media only screen and (max-width: $TABLET-LG) {
+      background-image: url("about_pages/code_of_ethics/code-of-ethics-banner-tablet-lg.jpg");
+    }
     @media only screen and (max-width: $TABLET) {
-      object-position: 30% 10%;
+      background-image: url("about_pages/code_of_ethics/code-of-ethics-banner-tablet-mobile.jpg");
     }
     @media only screen and (max-width: $MOBILE) {
-      object-position: 30% 10%;
+      background-image: url("about_pages/code_of_ethics/code-of-ethics-banner-tablet-mobile.jpg");
     }
   }
 
-  .banner-content-container {
+  .banner-content {
     display: flex;
     position: relative;
-    height: 100%;
-    margin: 0 10vw;
+    height: inherit;
+    margin: 0 8rem;
     flex-direction: column;
     justify-content: end;
-    padding-bottom: 60px;
     align-items: flex-end;
 
+    @media only screen and (max-width: $TABLET-LG) {
+      margin: 0 5rem;
+    }
     @media only screen and (max-width: $TABLET) {
-      margin: 0 40px;
+      margin: 0 10px;
     }
     @media only screen and (max-width: $MOBILE) {
-      margin: 0 10px;
+      margin: 0;
     }
   }
 
   .tagline-primary {
     color: white;
-    font-size: 62px;
+    font-size: 60px;
     line-height: 50px;
-    padding: 10px 0 40px;
+    padding: 10px 0 25px;
     width: 750px;
     max-width: 750px;
     text-align: right;
@@ -57,15 +90,18 @@
     @media only screen and (max-width: $FULLSCREEN) {
       width: 70vw;
     }
+    @media only screen and (max-width: $TABLET-LG) {
+      font-size: 50px;
+      width: 70vw;
+    }
     @media only screen and (max-width: $TABLET) {
-      font-size: 45px;
-      line-height: 15px;
+      font-size: 43px;
       width: 100%;
       text-align: center;
     }
     @media only screen and (max-width: $MOBILE) {
-      font-size: 35px;
-      line-height: 10px;
+      padding: 10px 0 22px;
+      font-size: 34px;
       width: 100%;
       text-align: center;
     }
@@ -78,13 +114,20 @@
     text-align: right;
     text-shadow: $DARK-GRAY 0 0 7px;
 
+    @media only screen and (max-width: $TABLET-LG) {
+      height: inherit;
+      text-align: right;
+      width: 100%;
+      font-size: 18px;
+    }
     @media only screen and (max-width: $TABLET) {
+      height: inherit;
       text-align: center;
       width: 100%;
-      font-size: 20px;
+      font-size: 18px;
     }
-
     @media only screen and (max-width: $MOBILE) {
+      height: inherit;
       text-align: center;
       width: 100%;
       font-size: 18px;
