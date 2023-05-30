@@ -151,19 +151,17 @@
 
   /* CONTENT */
 
-  .section {
-    padding-top: 30px;
-  }
   .era-logo-container {
-    width: 320px;
-  }
-
-  .column-content {
-    min-height: 250px;
+    max-width: 368px;
   }
 
   .blue-vertical-divider {
-    border-left: 1px solid $BRAND-BLUE;
+    border-right: 1px solid $BRAND-BLUE;
+    border-radius: 0;
+
+    @media only screen and (max-width: $TABLET) {
+      border-right: 0;
+    }
   }
 
   /* MISSION STATEMENT */

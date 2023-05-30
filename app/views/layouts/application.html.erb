@@ -2,7 +2,7 @@
 <html>
   <head>
   <title>Ethical Rescue Association</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -26,13 +26,13 @@
       <div class="top-bar"></div>
     <div>
       <% if notice %>
-      <div class="notification is-success is-light text-center">
+      <div class="notification is-success is-light has-text-centered">
         <%= notice %>
       </div>
       <% end %>
 
       <% if alert %>
-      <div class="notification is-danger is-light text-center">
+      <div class="notification is-danger is-light has-text-centered">
         <%= alert %>
       </div>
       <% end %>
