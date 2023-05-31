@@ -6,39 +6,176 @@
           <h3 class="tagline-primary font-gotham-bold">
             What is ERA?
           </h3>
+          <h3 class="tagline-secondary font-gotham-regular">
+            The mission, principles, and humans who power the movement
+          </h3>
         </div>
       </div>
     </div>
   </div>
 
-  <div>
-    <section class="container pt-5">
-      <div class="sandbox font-standard-body">
-        <div class="tile is-ancestor mt-4">
-          <div class="tile is-parent is-shady">
-            <article class="tile is-child notification is-white py-0 blue-vertical-divider">
-              <div class="content is-flex is-justify-content-center">
-                <div class="era-logo-container mb-0">
-                  <%= image_tag "logos/era-logo-colored.png" %>
+  <section class="container pt-5">
+    <div class="sandbox font-standard-body">
+      <div class="tile is-ancestor mt-4">
+        <div class="tile is-parent is-shady">
+          <article class="tile is-child notification is-white py-0 blue-vertical-divider">
+            <div class="content is-flex is-justify-content-center">
+              <div class="era-logo-container mb-0">
+                <%= image_tag "logos/era-logo-colored.png" %>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="tile is-parent is-8 is-shady">
+          <article class="tile is-child notification is-white mission-statement">
+            <div class="content">
+              <p>
+                <span class="font-size-22">The Ethical Rescue Association</span> is an accrediting body <%= @lorem %>
+              </p>
+              <p>
+                <span class="font-size-22">Our Mission</span> is to <%= @lorem %>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div>
+      <span>ethical</span><span>adjective</span>
+      <div>
+      ˈe-thi-kəl
+      </div>
+      <div>
+        1: of or relating to ethics
+      </div>
+      <div>
+        2: conforming to accepted professional standards of conduct
+      </div>
+      <div>
+        Merriam-Webster's Collegiate Dictionary, Eleventh Edition
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container has-text-centered">
+      <h2 class="title">Board of Directors</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+
+      <div class="columns is-centered" style="padding: 2rem">
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <%= image_tag "about_pages/what_is_era/janelle.jpg", class: "board-of-directors-photo janelle" %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Janelle Newton</p>
+                  <p class="subtitle is-6">President</p>
                 </div>
               </div>
-            </article>
+            </div>
           </div>
-          <div class="tile is-parent is-8 is-shady">
-            <article class="tile is-child notification is-white pt-0">
-              <div class="content">
-                <p>
-                  <span class="font-size-22">The Ethical Rescue Association</span> is an accrediting body <%= @lorem %>
-                </p>
-                <p>
-                  <span class="font-size-22">Our Mission</span> is to <%= @lorem %>
-                </p>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <%= image_tag "about_pages/what_is_era/angela.jpg", class: "board-of-directors-photo angela" %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Angela Curry</p>
+                  <p class="subtitle is-6">Vice President</p>
+                </div>
               </div>
-            </article>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <%= image_tag "about_pages/what_is_era/diane.jpg", class: "board-of-directors-photo diane" %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Diane Orenchuk</p>
+                  <p class="subtitle is-6">Communications</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+      <div class="columns is-centered" style="padding: 0 2rem">
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <%= image_tag "about_pages/what_is_era/brittnea.jpg", class: "board-of-directors-photo brittnea" %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Brittnea Atwood</p>
+                  <p class="subtitle is-6">Conduct Enforcement</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <%= image_tag "about_pages/what_is_era/bri.jpg", class: "board-of-directors-photo bri" %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Bri Benton</p>
+                  <p class="subtitle is-6">Ethical Breeder Liason</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <%= image_tag "about_pages/what_is_era/misha.jpg", class: "board-of-directors-photo misha" %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Misha Krul</p>
+                  <p class="subtitle is-6">Secretary</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </div>
