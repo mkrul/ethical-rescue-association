@@ -42,20 +42,11 @@
     </div>
   </section>
 
-  <section class="container">
-    <div>
-      <span>ethical</span><span>adjective</span>
+  <section class="container has-text-centered">
+    <div class="ethical-definition">
+      <strong>ethical</strong> / 'e-thi-kəl / <i>adjective</i>
       <div>
-      ˈe-thi-kəl
-      </div>
-      <div>
-        1: of or relating to ethics
-      </div>
-      <div>
-        2: conforming to accepted professional standards of conduct
-      </div>
-      <div>
-        Merriam-Webster's Collegiate Dictionary, Eleventh Edition
+        a set of moral principles that guide conduct.
       </div>
     </div>
   </section>
@@ -68,13 +59,14 @@
         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
-
       <div class="columns is-centered" style="padding: 2rem">
         <div class="column">
           <div class="card">
             <div class="card-image">
               <figure class="image is-2by1">
-                <%= image_tag "about_pages/what_is_era/janelle.jpg", class: "board-of-directors-photo janelle" %>
+                <button class="modal-prompt-trigger is-transparent" data-target="janelle-modal-prompt">
+                  <%= image_tag "about_pages/what_is_era/janelle.jpg", class: "board-of-directors-photo janelle" %>
+                </button>
               </figure>
             </div>
             <div class="card-content">
@@ -91,7 +83,9 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-2by1">
-                <%= image_tag "about_pages/what_is_era/angela.jpg", class: "board-of-directors-photo angela" %>
+                <button class="modal-prompt-trigger is-transparent" data-target="angela-modal-prompt">
+                  <%= image_tag "about_pages/what_is_era/angela.jpg", class: "board-of-directors-photo angela" %>
+                </button>
               </figure>
             </div>
             <div class="card-content">
@@ -108,7 +102,9 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-2by1">
-                <%= image_tag "about_pages/what_is_era/diane.jpg", class: "board-of-directors-photo diane" %>
+                <button class="modal-prompt-trigger is-transparent" data-target="diane-modal-prompt">
+                  <%= image_tag "about_pages/what_is_era/diane.jpg", class: "board-of-directors-photo diane" %>
+                </button>
               </figure>
             </div>
             <div class="card-content">
@@ -127,7 +123,9 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-2by1">
-                <%= image_tag "about_pages/what_is_era/brittnea.jpg", class: "board-of-directors-photo brittnea" %>
+                <button class="modal-prompt-trigger is-transparent" data-target="brittnea-modal-prompt">
+                  <%= image_tag "about_pages/what_is_era/brittnea.jpg", class: "board-of-directors-photo brittnea" %>
+                </button>
               </figure>
             </div>
             <div class="card-content">
@@ -144,7 +142,9 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-2by1">
-                <%= image_tag "about_pages/what_is_era/bri.jpg", class: "board-of-directors-photo bri" %>
+                <button class="modal-prompt-trigger is-transparent" data-target="bri-modal-prompt">
+                  <%= image_tag "about_pages/what_is_era/bri.jpg", class: "board-of-directors-photo bri" %>
+                </button>
               </figure>
             </div>
             <div class="card-content">
@@ -161,7 +161,9 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-2by1">
-                <%= image_tag "about_pages/what_is_era/misha.jpg", class: "board-of-directors-photo misha" %>
+                <button class="modal-prompt-trigger is-transparent" data-target="misha-modal-prompt">
+                  <%= image_tag "about_pages/what_is_era/misha.jpg", class: "board-of-directors-photo misha" %>
+                </button>
               </figure>
             </div>
             <div class="card-content">
@@ -179,3 +181,10 @@
   </section>
 
 </div>
+
+<%= render "about_pages/janelle" %>
+<%= render "about_pages/angela" %>
+<%= render "about_pages/diane" %>
+<%= render "about_pages/brittnea" %>
+<%= render "about_pages/bri" %>
+<%= render "about_pages/misha" %>

@@ -3,7 +3,6 @@ document.onload = (event) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('derp');
   // Functions to open and close a modal
   function openModal($el) {
     $el.classList.add('is-active');
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Add a click event on buttons to open a specific modal
-  (document.querySelectorAll('.payment-prompt-trigger') || []).forEach(($trigger) => {
+  (document.querySelectorAll('.modal-prompt-trigger') || []).forEach(($trigger) => {
     const modal = $trigger.dataset.target;
     const $target = document.getElementById(modal);
 

@@ -142,22 +142,23 @@
   }
 
   .ethical-definition {
-
+    padding: 2rem;
   }
 
   .board-of-directors-photo {
     object-fit: none;
+    cursor: pointer;
 
     &.janelle {
       object-position: 50% 30%;
     }
     &.angela {
       object-fit: cover;
-      object-position: 50% 0%;
+      object-position: 50% 70%;
     }
     &.diane {
       object-fit: cover;
-      object-position: 50% 7%;
+      object-position: 50% 11%;
     }
     &.brittnea {
       object-fit: cover;
@@ -169,7 +170,7 @@
     }
     &.misha {
       object-fit: cover;
-      object-position: 50% 0;
+      object-position: 50% 60%;
     }
   }
 
@@ -185,5 +186,28 @@
       border-right: 0;
     }
   }
+}
 
+/* MODALS */
+
+.board-of-directors-modal {
+  background-color: white;
+  border-radius: 6px;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: auto;
+  padding: 20px;
+
+  & img {
+    border-radius: 6px;
+    height: 389px;
+    display: flex;
+    margin: auto;
+  }
+
+  &.tab {
+    width: 10px;
+  }
 }
