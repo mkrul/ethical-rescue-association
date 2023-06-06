@@ -1,3 +1,4 @@
+<% tab = '&nbsp &nbsp &nbsp'.html_safe %>
 <div class="what-is-era-container">
   <div class="banner-container">
     <div class="banner-img">
@@ -14,7 +15,7 @@
     </div>
   </div>
 
-  <section class="container pt-5">
+  <section class="container pt-5 container-section">
     <div class="sandbox font-standard-body">
       <div class="tile is-ancestor mt-4">
         <div class="tile is-parent is-shady">
@@ -30,10 +31,24 @@
           <article class="tile is-child notification is-white mission-statement">
             <div class="content">
               <p>
-                <span class="font-size-22">The Ethical Rescue Association</span> is an accrediting body <%= @lorem %>
+                <%= tab %><span class="font-size-22">The Ethical Rescue Association</span> (ERA), is an
+                accrediting body that seeks to bring about much-needed grassroots reform in the world
+                of animal rescue. With a team of dedicated volunteers, ERA strives to foster
+                a compassionate and transparent environment within the rescue community.
+                Through our rigorous accreditation process, we assess and recognize rescues and
+                shelters that demonstrate a commitment to ethical practices, responsible governance,
+                and animal welfare. Moreover, ERA takes on the vital
+                responsibility of educating the public on ethical rescue principles, empowering
+                individuals to make informed decisions and support reputable organizations that
+                align with these values.
               </p>
               <p>
-                <span class="font-size-22">Our Mission</span> is to <%= @lorem %>
+                <%= tab %><span class="font-size-22">Our Mission</span> is to provide ethical guidelines
+                for animal welfare organizations to promote humane and ethical treatment of the animals
+                in their care, as well as putting public health and safety back at the forefront.
+                By distancing from animal rights activism, the Ethical Rescue Association will promote
+                true progress in the battle against the animal welfare crisis that is spreading
+                across the United States.
               </p>
             </div>
           </article>
@@ -42,22 +57,59 @@
     </div>
   </section>
 
-  <section class="container has-text-centered">
-    <div class="ethical-definition">
-      <strong>ethical</strong> / 'e-thi-kəl / <i>adjective</i>
-      <div>
-        a set of moral principles that guide conduct.
+  <section class="section container-section">
+    <div class="container has-text-centered">
+      <h2 class="title">Our Values</h2>
+      <p class="has-text-justified">
+        <%= tab %>ERA's foundational principles are the bedrock on which the organization stands, shaping
+        its mission and driving its actions. These values serve as the compass that directs every aspect of
+        the organization's work. An unwavering commitment to upholding these principles establishes a
+        framework for reform and paves the way for a more ethical future in animal rescue.
+      </p>
+      <div class="columns is-centered" style="padding: 2rem">
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column core-value-cards-container">
+        <div class="core-value-overlay">
+          <div class="core-value-banner partnership">
+            PARTNERSHIP
+          </div>
+        </div>
+        <div class="core-value-overlay">
+          <div class="core-value-banner accountability">
+            ACCOUNTABILITY
+          </div>
+        </div>
+        <div class="core-value-overlay">
+          <div class="core-value-banner trust">
+            TRUST
+          </div>
+        </div>
+        <div class="core-value-overlay">
+          <div class="core-value-banner respect">
+            RESPECT
+          </div>
+        </div>
+        <div class="core-value-overlay">
+          <div class="core-value-banner integrity">
+            INTEGRITY
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section container-section">
     <div class="container has-text-centered">
       <h2 class="title">Board of Directors</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <p class="has-text-justified">
+        <%= tab %>At the heart of ERA's mission is its Board of Directors, a collective
+        of passionate individuals with a shared vision for positive change. Drawing from diverse
+        backgrounds and expertise, the board oversees the organization's strategic direction and
+        decision-making processes. With extensive expertise in animal welfare, governance, and
+        advocacy, the board ensures that ERA's accreditation process recognizes rescues and shelters
+        that exemplify ethical practices and prioritize the welfare of animals.
       </p>
       <div class="columns is-centered" style="padding: 2rem">
         <div class="column">
