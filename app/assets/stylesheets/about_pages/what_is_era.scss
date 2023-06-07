@@ -233,7 +233,7 @@
 
 .core-value-banner {
   height: 192px;
-  width: 80%;
+  width: 95%;
   margin: auto;
   text-align: center;
   height: 100%;
@@ -250,6 +250,7 @@
   position: relative;
 
   @media only screen and (max-width: $TABLET) {
+    width: 90%;
     font-size: 24px;
     letter-spacing: 0.3rem;
     font-weight: 500;
@@ -257,6 +258,7 @@
   }
 
   @media only screen and (max-width: $MOBILE) {
+    width: 90%;
     font-size: 20px;
     letter-spacing: 0.15rem;
     font-weight: 500;
