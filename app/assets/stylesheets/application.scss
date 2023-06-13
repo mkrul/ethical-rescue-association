@@ -63,9 +63,66 @@
 .navbar-container {
   font-style: normal;
   letter-spacing: 0.005em;
+
+  .negative-margin {
+    margin-bottom: -25px;
+    padding-right: 15px;
+    @media only screen and (max-width: $TABLET-LG) {
+      padding-right: 0;
+    }
+    @media only screen and (max-width: $TABLET) {
+      padding-right: 0;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      padding-right: 0;
+    }
+  }
+
+  .become-a-member {
+    border-color: transparent;
+    color: $BRAND-BLUE;
+    outline: 0;
+    outline-style: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    @media only screen and (max-width: $TABLET-LG) {
+      height: fit-content;
+      padding: 0;
+    }
+    @media only screen and (max-width: $TABLET) {
+      height: fit-content;
+      padding: 0;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      height: fit-content;
+      padding: 0;
+    }
+  }
+
+  .become-a-member:hover {
+    border-color: transparent;
+    color: $BRAND-BLUE;
+    outline: 0;
+    outline-style: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .become-a-member:focus {
+    border-color: transparent;
+    color: $BRAND-BLUE;
+    outline: none;
+    outline-style: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .nav-link {
+    color: $BRAND-BLUE;
+  }
 }
 
-.f-14 {
+.font-size-14 {
   font-size: 14px;
 }
 
@@ -107,9 +164,6 @@
   position: relative;
   min-height: 100%;
   height: 100vh;
-  @media only screen and (max-width: $MOBILE) {
-
-  }
 }
 
 .coming-soon {
@@ -128,8 +182,8 @@
   font-size: 16px;
 }
 
-.font-size-22 {
-  font-size: 22px;
+.font-size-14 {
+  font-size: 14px;
 }
 
 .font-size-16 {
@@ -138,6 +192,10 @@
 
 .font-size-18 {
   font-size: 18px;
+}
+
+.font-size-22 {
+  font-size: 22px;
 }
 
 /* FOOTER */
@@ -176,6 +234,3 @@
   font-size: 0.8rem;
   margin: 1.5rem;
 }
-
-/* MODALS */
-

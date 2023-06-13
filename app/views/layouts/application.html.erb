@@ -19,7 +19,7 @@
   <%= javascript_importmap_tags %>
   </head>
 
-  <% if !logged_in_as_admin? %>
+  <% if !logged_in_as_admin? || white_listed_ip_address? %>
   <body>
     <div class="body-container">
       <%= render partial: "shared/navbar" %>

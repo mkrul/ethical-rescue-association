@@ -1,7 +1,7 @@
 
 <div class="navbar-container">
   <div class="font-gotham">
-    <nav class="navbar py-2" role="navigation" aria-label="main navigation">
+    <nav class="navbar py-2 negative-margin" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href=<% ApplicationRecord::ROOT_URL %>>
           <span class="main-title">ETHICAL RESCUE ASSOCIATION</span>
@@ -13,25 +13,41 @@
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu f-14 navbar-container">
+      <div id="navbarBasicExample" class="navbar-menu font-size-14 navbar-container">
         <div class="navbar-end">
-          <div class="navbar-item has-dropdown is-hoverable pr-2">
-            <a class="navbar-link">
-              About
-            </a>
-            <div class="navbar-dropdown">
-              <div class="navbar-item">
-                <%= link_to "What is ERA?", what_is_era_path %>
-              </div>
-              <div class="navbar-item">
-                <%= link_to "Code of Ethics", code_of_ethics_path %>
-              </div>
-              <div class="navbar-item">
-                <%= link_to "FAQ", faq_path %>
-              </div>
+          <div class="navbar-item is-hoverable pr-2">
+            <div class="navbar-item">
+              <button class="modal-prompt-trigger button font-gotham font-size-14 become-a-member" style="font-size: 14px;" data-target="payment-prompt">
+                Become a Member
+              </button>
             </div>
+            <div class="navbar-item">
+              <%= link_to "What is ERA?", what_is_era_path, class: 'nav-link' %>
+            </div>
+            <div class="navbar-item">
+              <%= link_to "Code of Ethics", code_of_ethics_path, class: 'nav-link' %>
+            </div>
+            <div class="navbar-item">
+              <%= link_to "FAQ", faq_path, class: 'nav-link' %>
+            </div>
+
+            <% if false %>
+              <!-- TEMPORARY -->
+              <div class="navbar-dropdown">
+                <div class="navbar-item">
+                  <%= link_to "What is ERA?", what_is_era_path, class: 'nav-link' %>
+                </div>
+                <div class="navbar-item">
+                  <%= link_to "Code of Ethics", code_of_ethics_path, class: 'nav-link' %>
+                </div>
+                <div class="navbar-item">
+                  <%= link_to "FAQ", faq_path, class: 'nav-link' %>
+                </div>
+              </div>
+            <% end %>
           </div>
-          <% if logged_in_as_admin? %>
+
+          <% if logged_in_as_admin? || white_listed_ip_address? %>
             <% if false %>
               <div class="navbar-item has-dropdown is-hoverable pr-2">
                 <a class="navbar-link">
@@ -39,45 +55,49 @@
                 </a>
                 <div class="navbar-dropdown">
                   <div class="navbar-item">
-                    <%= link_to "Spay & Neuter", spay_and_neuter_path %>
+                    <%= link_to "Spay & Neuter", spay_and_neuter_path, class: 'nav-link' %>
                   </div>
                   <div class="navbar-item">
-                    <%= link_to "Products", products_path %>
+                    <%= link_to "Products", products_path, class: 'nav-link' %>
                   </div>
                   <div class="navbar-item">
-                    <%= link_to "Microchips", microchipping_path %>
+                    <%= link_to "Microchips", microchipping_path, class: 'nav-link' %>
                   </div>
                   <div class="navbar-item">
-                    <%= link_to "Fencing", fencing_path %>
+                    <%= link_to "Fencing", fencing_path, class: 'nav-link' %>
                   </div>
                 </div>
               </div>
             <% end %>
           <% end %>
+
           <% if user_signed_in? %>
             <div class="navbar-item has-dropdown is-hoverable pr-2">
               <a class="navbar-link" href=<%"#{edit_user_registration_path}"%>>
                 <%= current_user.email %>
               </a>
               <div class="navbar-dropdown">
-                <% if logged_in_as_admin? %>
+                <% if logged_in_as_admin? || white_listed_ip_address? %>
                   <div class="navbar-item">
-                    <%= link_to "Rescues", animal_rescues_path %>
+                    <%= link_to "Rescues", animal_rescues_path, class: 'nav-link' %>
                   </div>
                 <% end %>
                 <a class="navbar-item">
                   Profile Settings
                 </a>
                 <div class="navbar-item">
-                  <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham' %>
+                  <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham nav-link' %>
                 </div>
               </div>
             </div>
           <% else %>
-            <div class="navbar-item pr-5">
-              <%= link_to 'Log in', new_user_session_path %>
-            </div>
+            <% if !white_listed_ip_address? %>
+              <div class="navbar-item pr-5">
+                <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
+              </div>
+            <% end %>
           <% end %>
+
         </div>
       </div>
     </nav>
@@ -92,3 +112,5 @@
     })
   })
 </script>
+
+<%= render 'main/payment_prompt' %>

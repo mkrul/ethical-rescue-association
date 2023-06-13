@@ -205,7 +205,7 @@
       position: relative;
       display: block;
       padding: 0 0 0 1.2em;
-      background: $DARK-GRAY;
+      background: $BRAND-BLUE;
       color: white;
       font-weight: bold;
       line-height: 3;
@@ -243,18 +243,22 @@
       height: 3em;
       line-height: 3;
       text-align: center;
+      transform: rotate(270deg);
       -webkit-transition: all .35s;
       -o-transition: all .35s;
       transition: all .35s;
     }
     input[type=checkbox] + label::after {
-      content: "+";
+      content: "›";
+      font-size: 25px;
+      position: absolute;
+      top: -12px;
     }
     input[type=radio] + label::after {
       content: "\25BC";
     }
     input[type=checkbox]:checked + label::after {
-      transform: rotate(315deg);
+      transform: rotate(90deg);
     }
     input[type=radio]:checked + label::after {
       transform: rotateX(180deg);
@@ -321,4 +325,7 @@
       padding: 1em 3em 3em 3em;
     }
   }
+}
+.ethics-category {
+  font-style: $FONT-GOTHAM;
 }
