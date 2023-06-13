@@ -1,0 +1,364 @@
+@import "../application_config.scss";
+
+.what-is-era-container {
+
+  /* BANNER */
+
+  .hero-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @media only screen and (max-width: $TABLET-LG) {
+      margin-left: 0;
+    }
+    @media only screen and (max-width: $TABLET) {
+      margin-left: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      margin-left: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  .banner-container {
+    position: relative;
+    text-align: left;
+    height: 430px;
+    width: 100%;
+  }
+
+  .banner-img {
+    background-image: url("about_pages/what_is_era/what-is-era-banner.jpg");
+    height: 430px;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      background-image: url("about_pages/what_is_era/what-is-era-banner-tablet-lg.jpg");
+    }
+    @media only screen and (max-width: $TABLET) {
+      background-image: url("about_pages/what_is_era/what-is-era-banner-tablet-mobile.jpg");
+    }
+    @media only screen and (max-width: $MOBILE) {
+      background-image: url("about_pages/what_is_era/what-is-era-banner-tablet-mobile.jpg");
+    }
+  }
+
+  .banner-content {
+    display: flex;
+    position: relative;
+    height: inherit;
+    margin: 0 8rem;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      margin: 0 5rem;
+    }
+    @media only screen and (max-width: $TABLET) {
+      margin: 0 10px;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      margin: 0;
+    }
+  }
+
+  .tagline-primary {
+    color: white;
+    font-size: 60px;
+    line-height: 50px;
+    padding: 10px 0 25px;
+    width: 750px;
+    max-width: 750px;
+    text-align: right;
+    text-shadow: $DARK-GRAY 0 0 7px;
+
+    @media only screen and (max-width: $FULLSCREEN) {
+      width: 70vw;
+    }
+    @media only screen and (max-width: $TABLET-LG) {
+      font-size: 50px;
+      width: 70vw;
+    }
+    @media only screen and (max-width: $TABLET) {
+      font-size: 43px;
+      width: 100%;
+      text-align: center;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      padding: 10px 0 22px;
+      font-size: 34px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .tagline-secondary {
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    text-align: right;
+    text-shadow: $DARK-GRAY 0 0 7px;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      height: inherit;
+      text-align: right;
+      width: 100%;
+      font-size: 18px;
+    }
+    @media only screen and (max-width: $TABLET) {
+      height: inherit;
+      text-align: center;
+      width: 100%;
+      font-size: 18px;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      height: inherit;
+      text-align: center;
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+
+  /* CONTENT */
+
+  .container-section {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .mission-statement {
+    @media only screen and (max-width: $TABLET) {
+      padding: 0 2rem;
+    }
+  }
+
+  .ethical-definition {
+    padding: 2rem;
+  }
+
+  .board-of-directors-photo {
+    object-fit: none;
+    cursor: pointer;
+
+    &.janelle {
+      object-position: 50% 30%;
+    }
+    &.angela {
+      object-fit: cover;
+      object-position: 50% 70%;
+    }
+    &.diane {
+      object-fit: cover;
+      object-position: 50% 11%;
+    }
+    &.brittnea {
+      object-fit: cover;
+      object-position: 50% 25%;
+    }
+    &.bri {
+      object-fit: cover;
+      object-position: 50% 12%;
+    }
+    &.misha {
+      object-fit: cover;
+      object-position: 50% 60%;
+    }
+  }
+
+  .era-logo-container {
+    max-width: 368px;
+  }
+
+  .blue-vertical-divider {
+    border-right: 1px solid $BRAND-BLUE;
+    border-radius: 0;
+
+    @media only screen and (max-width: $TABLET) {
+      border-right: 0;
+    }
+  }
+}
+
+/* MODALS */
+
+.board-of-directors-modal {
+  background-color: white;
+  border-radius: 6px;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: auto;
+  padding: 20px;
+
+  & img {
+    border-radius: 6px;
+    height: 389px;
+    display: flex;
+    margin: auto;
+    object-fit: cover;
+  }
+
+  &.tab {
+    width: 10px;
+  }
+}
+
+// OUR VALUES
+
+.core-value-banners-container {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.core-value-banner-container {
+  height: 120px;
+  margin: 7px 0;
+}
+
+.core-value-banner {
+  height: 192px;
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.5rem;
+  text-shadow: #000000 0 0 7px;
+  border-radius: 10px;
+  background-position-x: 40%;
+  position: relative;
+
+  @media only screen and (max-width: $TABLET) {
+    width: 90%;
+    font-size: 24px;
+    letter-spacing: 0.3rem;
+    font-weight: 500;
+    line-height: 1rem;
+  }
+
+  @media only screen and (max-width: $MOBILE) {
+    width: 90%;
+    font-size: 20px;
+    letter-spacing: 0.15rem;
+    font-weight: 500;
+  }
+
+  .frame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .frame span {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .frame:hover .first {
+    opacity: 0;
+
+    @media only screen and (max-width: $MOBILE) {
+      opacity: 1;
+    }
+  }
+
+  .second {
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 16px;
+    letter-spacing: 0;
+    position: absolute;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 10px 80px;
+
+    @media only screen and (max-width: $TABLET) {
+      padding: 10px 30px;
+      font-size: 14px;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      display: none;
+    }
+  }
+
+  .frame:hover .second {
+    opacity: 1;
+  }
+
+  &.partnership {
+    background-image: url("about_pages/what_is_era/partnership.jpg");
+    background-position: 55% 7%;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      background-position: 30% 7%;
+    }
+  }
+
+  &.accountability {
+    background-image: url("about_pages/what_is_era/accountability.jpg");
+    background-position: 50% 33%;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      background-position: 30% 33%;
+    }
+  }
+
+  &.trust {
+    background-image: url("about_pages/what_is_era/trust.jpg");
+    background-position: 30% 33%;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      background-position: 50% 33%;
+    }
+  }
+
+  &.respect {
+    background-image: url("about_pages/what_is_era/respect.jpg");
+    background-position: 45% 33%;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      background-position: 40% 33%;
+    }
+  }
+
+  &.integrity {
+    background-image: url("about_pages/what_is_era/integrity.jpg");
+    background-position: 0% 33%;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      background-position: 50% 33%;
+    }
+  }
+}

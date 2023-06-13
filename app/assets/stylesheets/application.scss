@@ -7,6 +7,8 @@
 @import url('https://fonts.cdnfonts.com/css/gotham');
 @import "../stylesheets/main/main.scss";
 @import "../stylesheets/about_pages/code_of_ethics.scss";
+@import "../stylesheets/about_pages/what_is_era.scss";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -23,6 +25,14 @@
  //= require jquery_ujs
  *= require_self
  */
+
+/* DEFULT */
+
+.body-container {
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
 
 /* FONT */
 
@@ -42,14 +52,10 @@
   font-family: 'Gotham','Verdana','Arial',sans-serif;
 }
 
-/* MISC */
+/* DISPLAY */
 
 .d-flex {
   display: flex;
-}
-
-.text-center {
-  text-align: center;
 }
 
 /* NAVBAR */
@@ -57,15 +63,72 @@
 .navbar-container {
   font-style: normal;
   letter-spacing: 0.005em;
+
+  .negative-margin {
+    margin-bottom: -25px;
+    padding-right: 15px;
+    @media only screen and (max-width: $TABLET-LG) {
+      padding-right: 0;
+    }
+    @media only screen and (max-width: $TABLET) {
+      padding-right: 0;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      padding-right: 0;
+    }
+  }
+
+  .become-a-member {
+    border-color: transparent;
+    color: $BRAND-BLUE;
+    outline: 0;
+    outline-style: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    @media only screen and (max-width: $TABLET-LG) {
+      height: fit-content;
+      padding: 0;
+    }
+    @media only screen and (max-width: $TABLET) {
+      height: fit-content;
+      padding: 0;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      height: fit-content;
+      padding: 0;
+    }
+  }
+
+  .become-a-member:hover {
+    border-color: transparent;
+    color: $BRAND-BLUE;
+    outline: 0;
+    outline-style: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .become-a-member:focus {
+    border-color: transparent;
+    color: $BRAND-BLUE;
+    outline: none;
+    outline-style: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .nav-link {
+    color: $BRAND-BLUE;
+  }
 }
 
-.f-14 {
+.font-size-14 {
   font-size: 14px;
 }
 
 .main-title {
   font-size: 15px;
-  color: #485fc7;
+  color: $BRAND-BLUE;
   padding-left: 20px;
 }
 
@@ -76,9 +139,21 @@
   cursor: pointer;
 }
 
+/* LOGIN / SIGN UP */
+
+.login-and-signup-container {
+  width: 500px;
+  height: 53vh;
+}
+
 /* BANNERS */
 
 /* MAIN */
+
+.top-bar {
+  height: 3.5em;
+  background-color: $OFFWHITE;
+}
 
 .promo-container {
   background: black;
@@ -89,9 +164,6 @@
   position: relative;
   min-height: 100%;
   height: 100vh;
-  @media only screen and (max-width: $MOBILE) {
-
-  }
 }
 
 .coming-soon {
@@ -101,4 +173,64 @@
   @media only screen and (max-width: $MOBILE) {
     height: fit-content;
   }
+}
+
+/* FONT STYLING */
+
+.font-standard-body {
+  line-height: 1.8em;
+  font-size: 16px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-22 {
+  font-size: 22px;
+}
+
+/* FOOTER */
+
+.era-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+
+  .era-logo {
+    background-image: url("logos/era-logo-colored.png");
+    background-size: 9rem;
+    height: 9rem;
+    width: 9rem;
+  }
+}
+
+.logo-and-social-media-icons-container {
+  min-width: fit-content;
+}
+
+.social-media-icons {
+  text-align: center;
+  width: 6rem;
+  margin: 0 auto;
+  i {
+    padding: 0 2px;
+  }
+}
+
+.footer-height {
+  height: fit-content;
+}
+
+.ein-info {
+  font-size: 0.8rem;
+  margin: 1.5rem;
 }

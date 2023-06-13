@@ -1,0 +1,64 @@
+<footer class="footer footer-height pt-5" style="padding-bottom: 5px;">
+  <div class="container">
+    <div class="columns m-0">
+      <div class="column is-2 is-offset-2 logo-and-social-media-icons-container">
+        <h2><strong></strong></h2>
+        <ul>
+          <li class="era-logo-container">
+            <a href=<% ApplicationRecord::ROOT_URL %>>
+              <div class="era-logo"></div>
+            </a>
+          </li>
+          <li>
+            <div class="social-media-icons">
+              <%= link_to ApplicationHelper::ERA_FACEBOOK_URL, target: "_blank" do %>
+                <i class="fab fa-facebook-f fa-lg"></i>
+              <% end %>
+              <%= link_to ApplicationHelper::ERA_INSTAGRAM_URL, target: "_blank" do %>
+                <i class="fab fa-instagram fa-lg"></i>
+              <% end %>
+              <%= link_to ApplicationHelper::ERA_TIKTOK_URL, target: "_blank" do %>
+                <i class="fa-brands fa-tiktok"></i>
+              <% end %>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="column is-3">
+        <h2><strong>Quick Links</strong></h2>
+        <ul>
+          <li><%= link_to "Log in", new_session_path(User) %></li>
+          <li><%= link_to "Sign up", new_registration_path(User) %></li>
+        </ul>
+      </div>
+      <div class="column is-4">
+        <h2><strong>Information</strong></h2>
+        <ul>
+          <li><%= link_to "What is ERA?", what_is_era_path %></li>
+          <li><%= link_to "Code of Ethics", code_of_ethics_path %></li>
+          <li><%= link_to "FAQ", faq_path %></li>
+          <li><%= mail_to ApplicationHelper::ERA_MAILTO, "Contact Us" %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content has-text-centered">
+      <p class="mb-1">
+        <a class="icon" href="https://github.com/BulmaTemplates/bulma-templates">
+          <i class="fa fa-github"></i>
+        </a>
+      </p>
+      <div class="control level-item">
+        <a href="https://github.com/BulmaTemplates/bulma-templates">
+          <div class="tags has-addons">
+            <span class="tag is-dark">Bulma Templates</span>
+            <span class="tag is-info">MIT license</span>
+          </div>
+        </a>
+      </div>
+      <div class="ein-info">
+        Ethical Rescue Association is a 501(c)(3) non-profit organization | EIN #92-3601277
+      </div>
+    </div>
+  </div>
+</footer>
+

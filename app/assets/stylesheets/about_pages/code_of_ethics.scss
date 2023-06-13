@@ -2,67 +2,106 @@
 @import "../application_config.scss";
 
 .code-of-ethics-container {
+
+  /* BANNER */
+
+  .hero-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @media only screen and (max-width: $TABLET-LG) {
+      margin-left: 0;
+    }
+    @media only screen and (max-width: $TABLET) {
+      margin-left: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      margin-left: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
   .banner-container {
     position: relative;
     text-align: left;
-    height: 500px;
+    height: 430px;
     width: 100%;
   }
 
   .banner-img {
-    height: 500px;
+    background-image: url("about_pages/code_of_ethics/code-of-ethics-banner.jpg");
+    height: 430px;
     width: 100%;
     position: absolute;
     object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    @media only screen and (max-width: $TABLET-LG) {
+      background-image: url("about_pages/code_of_ethics/code-of-ethics-banner-tablet-lg.jpg");
+    }
     @media only screen and (max-width: $TABLET) {
-      object-position: 30% 10%;
+      background-image: url("about_pages/code_of_ethics/code-of-ethics-banner-tablet-mobile.jpg");
     }
     @media only screen and (max-width: $MOBILE) {
-      object-position: 30% 10%;
+      background-image: url("about_pages/code_of_ethics/code-of-ethics-banner-tablet-mobile.jpg");
     }
   }
 
-  .banner-content-container {
+  .banner-content {
     display: flex;
     position: relative;
-    height: 100%;
-    margin: 0 10vw;
+    height: inherit;
+    margin: 0 8rem;
     flex-direction: column;
     justify-content: end;
-    padding-bottom: 60px;
     align-items: flex-end;
 
+    @media only screen and (max-width: $TABLET-LG) {
+      margin: 0 5rem;
+    }
     @media only screen and (max-width: $TABLET) {
-      margin: 0 40px;
+      margin: 0 10px;
     }
     @media only screen and (max-width: $MOBILE) {
-      margin: 0 10px;
+      margin: 0;
     }
   }
 
   .tagline-primary {
     color: white;
-    font-size: 62px;
+    font-size: 60px;
     line-height: 50px;
-    padding: 10px 0 40px;
+    padding: 10px 0 25px;
     width: 750px;
     max-width: 750px;
     text-align: right;
-    text-shadow: $DARKGRAY 0 0 7px;
+    text-shadow: $DARK-GRAY 0 0 7px;
 
     @media only screen and (max-width: $FULLSCREEN) {
       width: 70vw;
     }
+    @media only screen and (max-width: $TABLET-LG) {
+      font-size: 50px;
+      width: 70vw;
+    }
     @media only screen and (max-width: $TABLET) {
-      font-size: 45px;
-      line-height: 15px;
+      font-size: 43px;
       width: 100%;
       text-align: center;
     }
     @media only screen and (max-width: $MOBILE) {
-      font-size: 35px;
-      line-height: 10px;
+      padding: 10px 0 22px;
+      font-size: 34px;
       width: 100%;
       text-align: center;
     }
@@ -73,15 +112,22 @@
     font-size: 20px;
     height: 40px;
     text-align: right;
-    text-shadow: $DARKGRAY 0 0 7px;
+    text-shadow: $DARK-GRAY 0 0 7px;
 
+    @media only screen and (max-width: $TABLET-LG) {
+      height: inherit;
+      text-align: right;
+      width: 100%;
+      font-size: 18px;
+    }
     @media only screen and (max-width: $TABLET) {
+      height: inherit;
       text-align: center;
       width: 100%;
       font-size: 18px;
     }
-
     @media only screen and (max-width: $MOBILE) {
+      height: inherit;
       text-align: center;
       width: 100%;
       font-size: 18px;
@@ -92,13 +138,41 @@
 
   .president-img {
     max-height: 550px;
+    padding-right: 1em;
+    padding-top: 7px;
+  }
+
+  .coe-statement-container {
+    padding-left: 1em;
+  }
+
+  .coe-statement-title {
+    font-size: 22px;
+    @media only screen and (max-width: $TABLET) {
+      font-size: 20px;
+      padding-top: 1.2em;
+      text-align: center;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      font-size: 18px;
+      padding-top: 1em;
+      padding-bottom: 0;
+      text-align: center;
+    }
   }
 
   .coe-statement {
     line-height: 1.8em;
+    font-size: 18px;
   }
 
   /* ACCORDION */
+
+  .accordion-container{
+    height: fit-content;
+    display: inline-block;
+    padding-bottom: 3.25em;
+  }
 
   .accordion {
     body {
@@ -131,7 +205,7 @@
       position: relative;
       display: block;
       padding: 0 0 0 1.2em;
-      background: $DARKGRAY;
+      background: $BRAND-BLUE;
       color: white;
       font-weight: bold;
       line-height: 3;
@@ -169,18 +243,22 @@
       height: 3em;
       line-height: 3;
       text-align: center;
+      transform: rotate(270deg);
       -webkit-transition: all .35s;
       -o-transition: all .35s;
       transition: all .35s;
     }
     input[type=checkbox] + label::after {
-      content: "+";
+      content: "›";
+      font-size: 25px;
+      position: absolute;
+      top: -12px;
     }
     input[type=radio] + label::after {
       content: "\25BC";
     }
     input[type=checkbox]:checked + label::after {
-      transform: rotate(315deg);
+      transform: rotate(90deg);
     }
     input[type=radio]:checked + label::after {
       transform: rotateX(180deg);
@@ -235,4 +313,19 @@
       margin-top: 0;
     }
   }
+
+  .content-container {
+    padding: 2em 3em 3em 3em;
+
+    @media only screen and (max-width: $TABLET) {
+      padding: 1.5em 3em 3em 3em;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      padding: 1em 3em 3em 3em;
+    }
+  }
+}
+.ethics-category {
+  font-style: $FONT-GOTHAM;
 }
