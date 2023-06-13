@@ -6,7 +6,8 @@ module ApplicationHelper
   ERA_MAILTO = "ethicalrescueassociation@gmail.com"
 
   def white_listed_ip_address?
-    return true if request.remote_ip == '71.77.179.72'
+    return true if request.ip == '127.0.0.1'
+    return true if request.ip == '71.77.179.72'
     return false
   end
 
