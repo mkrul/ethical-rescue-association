@@ -5,6 +5,8 @@ ruby "3.1.2"
 
 gem "bulma-rails", "~> 0.9.4"
 
+gem 'cloudflare-rails', '~> 3.0'
+
 gem "font-awesome-sass", "~> 6.3.0"
 
 gem 'MailchimpMarketing', '~> 3.0', '>= 3.0.80'
