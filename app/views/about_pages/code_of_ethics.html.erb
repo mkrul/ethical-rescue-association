@@ -28,7 +28,7 @@
             <div class="coe-statement pt-4">
               <div>
                 This Code of Ethics was written as the foundation of ERA so that we can uphold a
-                standard of care for the animals in our organizations as well as the communities
+                standard of care for the animals in our organizations and the communities that
                 we serve. These categories are what have been shown to be lacking within the
                 rescue community in recent years.
               </div>
@@ -50,67 +50,81 @@
       </div>
     </div>
     <div class="accordion-container">
-      <div class="accordion">
-        <div class="wrapper">
-        <h1></h1>
-        <div class="half">
-          <div class="tab">
-            <input id="tab-one" type="checkbox" name="tabs">
-            <label for="tab-one" class="ethics-category">I. Welfare Concepts</label>
-            <div class="tab-content">
-              <p>
-                <%= render 'welfare_concepts' %>
-              </p>
-            </div>
-          </div>
-          <div class="tab">
-            <input id="tab-two" type="checkbox" name="tabs">
-            <label for="tab-two" class="ethics-category">II. Humane Care and Treatment</label>
-            <div class="tab-content">
-              <p>
-                <%= render 'humane_care_and_treatment' %>
-              </p>
-            </div>
-          </div>
-          <div class="tab">
-            <input id="tab-three" type="checkbox" name="tabs">
-            <label for="tab-three" class="ethics-category">III. Ethical Placement</label>
-            <div class="tab-content">
-              <p>
-                <%= render 'ethical_placement' %>
-              </p>
-            </div>
-          </div>
-          <div class="tab">
-            <input id="tab-four" type="checkbox" name="tabs">
-            <label for="tab-four" class="ethics-category">IV. Funding Transparency</label>
-            <div class="tab-content">
-              <p>
-                <%= render 'funding_transparency' %>
-              </p>
-            </div>
-          </div>
-          <div class="tab">
-            <input id="tab-five" type="checkbox" name="tabs">
-            <label for="tab-five" class="ethics-category">V. Ethical Public Presence</label>
-            <div class="tab-content">
-              <p>
-                <%= render 'ethical_public_presence' %>
-              </p>
-            </div>
-          </div>
-          <div class="tab">
-            <input id="tab-six" type="checkbox" name="tabs">
-            <label for="tab-six" class="ethics-category">VI. Community Care and Support</label>
-            <div class="tab-content">
-              <p>
-                <%= render 'community_care_and_support' %>
-              </p>
-            </div>
-          </div>
+      <div class="columns accordion-columns">
+        <div class="column">
+          <article class="accordion">
+            <section>
+              <header class="top-tab">
+                <h5 class="d-flex is-justify-content-space-between">Welfare Concepts</h5>
+              </header>
+              <div class="accord-content">
+                <p><%= render 'welfare_concepts' %></p>
+              </div>
+            </section>
+            <section>
+              <header>
+                <h5 class="d-flex is-justify-content-space-between">Humane Care and Treatment</h5>
+              </header>
+              <div class="accord-content">
+                <p><%= render 'humane_care_and_treatment' %></p>
+              </div>
+            </section>
+            <section>
+              <header>
+                <h5 class="d-flex is-justify-content-space-between">Adoption and Foster Placement</h5>
+              </header>
+              <div class="accord-content">
+                <p><%= render 'adoption_and_foster_placement' %></p>
+              </div>
+            </section>
+            <section>
+              <header>
+                <h5 class="d-flex is-justify-content-space-between">Public Presence</h5>
+              </header>
+              <div class="accord-content">
+                <p><%= render 'public_presence' %></p>
+              </div>
+            </section>
+            <section>
+              <header>
+                <h5 class="d-flex is-justify-content-space-between">Funding Transparency</h5>
+              </header>
+              <div class="accord-content">
+                <p><%= render 'funding_transparency' %></p>
+              </div>
+            </section>
+            <section>
+              <header>
+                <h5 class="d-flex is-justify-content-space-between">Community Care and Support</h5>
+              </header>
+              <div class="accord-content">
+                <p><%= render 'community_care_and_support' %></p>
+              </div>
+              <div class="bottom-tab"></div>
+            </section>
+          </article>
         </div>
-
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+    var allPanels = $('.accord-content').hide();
+    var heads = $('.accordion header');
+    $(heads).on('click', function() {
+      $this = $(this);
+      $target =  $this.parent().find('div.accord-content');
+      if (!$target.hasClass('active')) {
+        heads.removeClass('selected');
+        $this.addClass('selected');
+        allPanels.removeClass('active').slideUp();
+        $target.addClass('active').slideDown();
+      } else {
+        heads.removeClass('selected');
+        allPanels.removeClass('active').slideUp();
+      }
+    });
+  });
+</script>

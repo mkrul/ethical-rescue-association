@@ -85,6 +85,8 @@
     outline-style: none;
     -webkit-box-shadow: none;
     box-shadow: none;
+    padding: 8px 5px;
+
     @media only screen and (max-width: $TABLET-LG) {
       height: fit-content;
       padding: 0;

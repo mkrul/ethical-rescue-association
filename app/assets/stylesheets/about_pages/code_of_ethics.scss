@@ -163,155 +163,92 @@
 
   .coe-statement {
     line-height: 1.8em;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   /* ACCORDION */
 
   .accordion-container{
     height: fit-content;
-    display: inline-block;
     padding-bottom: 3.25em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .accordion-columns {
+    width: 100%;
+    padding: 0 5%;
   }
 
   .accordion {
-    body {
-      color: #2c3e50;
-      background: #ecf0f1;
-    }
-    h1 {
-      text-align: center;
-    }
-    .half {
-      float: left;
-      width: 100%;
-      padding: 0 1em;
-    }
-    .li
-    .tab {
-      font-size: 1.2em;
-      position: relative;
-      margin-bottom: 1px;
-      width: 100%;
-      color: #fff;
-      overflow: hidden;
-    }
-    input {
-      position: absolute;
-      opacity: 0;
-      z-index: -1;
-    }
-    label {
-      position: relative;
-      display: block;
-      padding: 0 0 0 1.2em;
-      background: $BRAND-BLUE;
-      color: white;
-      font-weight: bold;
-      line-height: 3;
-      cursor: pointer;
-    }
-    .blue label {
-      background: #2980b9;
-    }
-    .tab-content {
-      max-height: 0;
-      overflow: hidden;
-      color: black;
-      background: white;
-      -webkit-transition: max-height .35s;
-      -o-transition: max-height .35s;
-      transition: max-height .35s;
-    }
-    .blue .tab-content {
-      background: #3498db;
-    }
-    .tab-content p {
-      margin: 1em;
-    }
-    /* :checked */
-    input:checked ~ .tab-content {
-      max-height: fit-content;
-    }
-    /* Icon */
-    label::after {
-      position: absolute;
-      right: 0;
-      top: 0;
-      display: block;
-      width: 3em;
-      height: 3em;
-      line-height: 3;
-      text-align: center;
-      transform: rotate(270deg);
-      -webkit-transition: all .35s;
-      -o-transition: all .35s;
-      transition: all .35s;
-    }
-    input[type=checkbox] + label::after {
-      content: "›";
-      font-size: 25px;
-      position: absolute;
-      top: -12px;
-    }
-    input[type=radio] + label::after {
-      content: "\25BC";
-    }
-    input[type=checkbox]:checked + label::after {
-      transform: rotate(90deg);
-    }
-    input[type=radio]:checked + label::after {
-      transform: rotateX(180deg);
-    }
+    margin: 0 auto;
+    width: 100%;
+  }
 
-    *, *:before, *:after {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-    h2 {
-      font-weight: normal;
-    }
-    ol {
-      padding: 0 40px;
-    }
-    ol.lower-alpha {
-      list-style-type: lower-alpha;
-    }
-    ol.lower-roman {
-      list-style-type: lower-roman;
-    }
-    a {
-      display: inline-block;
-      padding: .5em;
-      font-size: 0.75em;
-      color: #fff;
-      background: rgba(0,0,0,0.2);
-      text-decoration: none;
-    }
-    .wrapper {
-      margin: auto;
-      width: 90%;
-    }
+  .accordion section {
+    display: block;
+    // background-color: aliceblue;
+  }
 
-    .card {
-      padding: 1em;
-      color: #333;
-      background: #fff;
-      -webkit-box-shadow: 0 0 10px rgba(0,0,0,.25);
-      box-shadow: 0 0 10px rgba(0,0,0,.25);
-    }
-    .card h2:first-child,
-    .card p:first-child {
-      margin-top: 0;
-    }
+  .accordion section header {
+    cursor: pointer;
+    padding: 22px;
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    color: $BRAND-BLUE;
+    transition: background 1s ease-in-out;
+    line-height: 30px;
+  }
+
+  .top-tab {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .bottom-tab {
+    border-bottom: 1px solid lightgray;
+  }
+
+  .accordion section header h5 {
+    font-size: 16px;
+    font-family: $FONT-GOTHAM;
+  }
+
+  .accordion section header h5:after {
+    content: "›";
+    font-size: 25px;
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+  .accordion section .selected h5:after {
+    content: "›";
+    font-size: 25px;
+    transform: rotate(270deg);
+    padding: 0 2px 3px;
+  }
+  .accordion section .accord-content {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 60px 40px;
+    padding-top: 0px;
+    padding-right: 60px;
+    padding-bottom: 40px;
+    padding-left: 60px;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+  }
+
+  .accordion section .accord-content {
+    background-image: linear-gradient(to top, aliceblue 50%, transparent 100%);
+  }
+
+  .accordion section .accord-content p {
+    margin-bottom: 0;
   }
 
   .content-container {
@@ -326,6 +263,12 @@
     }
   }
 }
+
 .ethics-category {
-  font-style: $FONT-GOTHAM;
+  p {
+    padding: 0 0 20px;
+  }
+  li {
+    padding: 0 0 10px;
+  }
 }
