@@ -138,38 +138,6 @@
     }
   }
 
-  /* message from President */
-
-  .president-img {
-    max-height: 550px;
-    padding-right: 1em;
-    padding-top: 7px;
-  }
-
-  .coe-statement-container {
-    padding-left: 1em;
-  }
-
-  .coe-statement-title {
-    font-size: 22px;
-    @media only screen and (max-width: $TABLET) {
-      font-size: 20px;
-      padding-top: 1.2em;
-      text-align: center;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      font-size: 18px;
-      padding-top: 1em;
-      padding-bottom: 0;
-      text-align: center;
-    }
-  }
-
-  .coe-statement {
-    line-height: 1.8em;
-    font-size: 16px;
-  }
-
   /* ACCORDION */
 
   .accordion-container{
@@ -183,7 +151,17 @@
 
   .accordion-columns {
     width: 100%;
-    padding: 0 5%;
+    padding: 0 10%;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      padding: 0 5%;
+    }
+    @media only screen and (max-width: $TABLET) {
+      padding: 0 5%;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      padding: 0;
+    }
   }
 
   .accordion {
@@ -206,22 +184,36 @@
   }
 
   .accordion section header h5 {
-    font-size: 16px;
+    font-size: 18px;
     font-family: $FONT-GOTHAM;
   }
 
-  .accordion section header h5:after {
+  .accordion section header div {
+    font-size: 18px;
+    font-family: $FONT-GOTHAM;
+  }
+
+  .carrot {
+    padding-left: 20px;
+  }
+
+  .accordion section header div:after {
     content: "›";
     font-size: 25px;
     display: inline-block;
     transform: rotate(90deg);
   }
 
-  .accordion section .selected h5:after {
+  .accordion section .selected div:after {
     content: "›";
     font-size: 25px;
     transform: rotate(270deg);
     padding: 0 6px 0 0;
+  }
+
+  .accordion section header {
+    display: flex;
+    justify-content: space-between;
   }
 
   .accordion section .accord-content {
@@ -242,11 +234,11 @@
     padding: 2em 3em 3em 3em;
 
     @media only screen and (max-width: $TABLET) {
-      padding: 1.5em 3em 3em 3em;
+      padding: 1.5em 1em 3em 1em;
     }
 
     @media only screen and (max-width: $MOBILE) {
-      padding: 1em 3em 3em 3em;
+      padding: 1em 1em 3em 1em;
     }
   }
 }

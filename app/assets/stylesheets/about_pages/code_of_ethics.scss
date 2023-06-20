@@ -213,7 +213,7 @@
   }
 
   .accordion section header h5 {
-    font-size: 16px;
+    font-size: 18px;
     font-family: $FONT-GOTHAM;
   }
 
@@ -243,10 +243,6 @@
     border-right: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     border-left: 1px solid lightgray;
-  }
-
-  .accordion section .accord-content {
-    background-image: linear-gradient(to top, $BRAND-LIGHT-BLUE 10%, transparent 100%);
   }
 
   .accordion section .accord-content p {
