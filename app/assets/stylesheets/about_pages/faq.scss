@@ -1,7 +1,7 @@
 
 @import "../application_config.scss";
 
-.code-of-ethics-container {
+.faq-container {
 
   /* BANNER */
 
@@ -38,7 +38,7 @@
   }
 
   .banner-img {
-    background-image: url("about_pages/code_of_ethics/code-of-ethics-banner.jpg");
+    background-image: url("about_pages/faq/faq-banner.jpg");
     height: 430px;
     width: 100%;
     position: absolute;
@@ -47,13 +47,13 @@
     background-repeat: no-repeat;
 
     @media only screen and (max-width: $TABLET-LG) {
-      background-image: url("about_pages/code_of_ethics/code-of-ethics-banner-tablet-lg.jpg");
+      background-image: url("about_pages/faq/faq-banner-tablet-lg.jpg");
     }
     @media only screen and (max-width: $TABLET) {
-      background-image: url("about_pages/code_of_ethics/code-of-ethics-banner-tablet-mobile.jpg");
+      background-image: url("about_pages/faq/faq-banner-tablet-mobile.jpg");
     }
     @media only screen and (max-width: $MOBILE) {
-      background-image: url("about_pages/code_of_ethics/code-of-ethics-banner-tablet-mobile.jpg");
+      background-image: url("about_pages/faq/faq-banner-tablet-mobile.jpg");
     }
   }
 
@@ -82,27 +82,30 @@
     font-size: 60px;
     line-height: 50px;
     padding: 10px 0 25px;
-    width: 750px;
-    max-width: 750px;
+    width: 900px;
+    max-width: 900px;
     text-align: right;
-    text-shadow: $DARKER-GRAY 0 0 12px;
+    text-shadow: $DARK-GRAY 0 0 12px;
 
     @media only screen and (max-width: $FULLSCREEN) {
-      width: 70vw;
+      width: 100%;
     }
     @media only screen and (max-width: $TABLET-LG) {
       font-size: 50px;
-      width: 70vw;
+      line-height: 55px;
+      width: 100%;
     }
     @media only screen and (max-width: $TABLET) {
-      font-size: 43px;
+      font-size: 50px;
+      line-height: 55px;
       width: 100%;
       text-align: center;
     }
     @media only screen and (max-width: $MOBILE) {
       padding: 10px 0 22px;
-      font-size: 34px;
+      font-size: 40px;
       width: 100%;
+      line-height: 40px;
       text-align: center;
     }
   }
@@ -113,6 +116,7 @@
     height: 40px;
     text-align: right;
     text-shadow: $DARKER-GRAY 0 0 12px;
+    display: none;
 
     @media only screen and (max-width: $TABLET-LG) {
       height: inherit;
@@ -195,20 +199,9 @@
   .accordion section header {
     cursor: pointer;
     padding: 22px;
-    border-top: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-    border-left: 1px solid lightgray;
     color: $BRAND-BLUE;
     transition: background 1s ease-in-out;
     line-height: 30px;
-  }
-
-  .top-tab {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-
-  .bottom-tab {
     border-bottom: 1px solid lightgray;
   }
 
@@ -235,21 +228,13 @@
     display: none;
     width: 100%;
     box-sizing: border-box;
-    padding: 0 60px 40px;
+    padding: 0 25px 12px;
     padding-top: 0px;
     padding-right: 60px;
-    padding-bottom: 40px;
-    padding-left: 60px;
-    border-right: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-    border-left: 1px solid lightgray;
-  }
-
-  .accordion section .accord-content {
-    background-image: linear-gradient(to top, $BRAND-LIGHT-BLUE 10%, transparent 100%);
   }
 
   .accordion section .accord-content p {
+    padding: 25px 0 0px;
     margin-bottom: 0;
   }
 
@@ -263,14 +248,5 @@
     @media only screen and (max-width: $MOBILE) {
       padding: 1em 3em 3em 3em;
     }
-  }
-}
-
-.ethics-category {
-  p {
-    padding: 0 0 20px;
-  }
-  li {
-    padding: 0 0 10px;
   }
 }
