@@ -1,3 +1,5 @@
+<% tab = '&nbsp &nbsp &nbsp'.html_safe %>
+
 <div class="code-of-ethics-container">
   <div class="banner-container">
     <div class="banner-img">
@@ -14,20 +16,20 @@
     </div>
   </div>
 
-  <div class="container is-widescreen font-roboto py-5">
-    <div class="content-container">
+  <div class="container is-widescreen py-5">
+    <div class="content-container p-6">
       <div class="columns is-gapless">
-        <div class="column has-text-centered">
+        <div class="column is-two-fifths">
           <%= image_tag "about_pages/code_of_ethics/janelle.jpg", class: "president-img" %>
         </div>
         <div class="column">
           <div class="coe-statement-container">
-            <div class="coe-statement-title font-gotham">
+            <div class="title coe-statement-title font-gotham">
               <strong>A Message From Our President</strong>
             </div>
             <div class="coe-statement pt-4">
               <div>
-                This Code of Ethics was written as the foundation of ERA so that we can uphold a
+                The Code of Ethics was written as the foundation of ERA so that we can uphold a
                 standard of care for the animals in our organizations and the communities that
                 we serve. These categories are what have been shown to be lacking within the
                 rescue community in recent years.
@@ -49,9 +51,28 @@
         </div>
       </div>
     </div>
-    <div class="accordion-container">
-      <div class="columns accordion-columns">
-        <div class="column">
+
+    <section class="section container py-0">
+      <hr/>
+    </section>
+
+    <section class="section container-section pt-6 pb-1">
+      <div class="container has-text-centered">
+        <h2 class="title font-gotham">The ERA Code of Ethics</h2>
+        <p class="has-text-justified core-values-statement">
+          <%= tab %>The following is an abridged outline of the Ethical Rescue Association's Code of Ethics.
+          These entail a commitment to upholding and promoting ethical practices, responsible governance, and
+          the welfare of animals in our care. These standards are designed to assist us in assessing and
+          recognizing rescues and shelters that demonstrate this commitment. ERA strongly encourages other
+          animal welfare organizations to adopt these principles, fostering a collective effort towards
+          creating a more compassionate and responsible landscape for animal rescue.
+        </p>
+      </div>
+    </section>
+
+    <div class="accordion-container px-6">
+      <div class="columns accordion-columns px-0 pt-6">
+        <div class="column px-0">
           <article class="accordion">
             <section>
               <header class="top-tab">

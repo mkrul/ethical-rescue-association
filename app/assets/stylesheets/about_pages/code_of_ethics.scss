@@ -137,13 +137,18 @@
   /* message from President */
 
   .president-img {
-    max-height: 550px;
-    padding-right: 1em;
     padding-top: 7px;
   }
 
   .coe-statement-container {
-    padding-left: 1em;
+    padding-left: 8%;
+
+    @media only screen and (max-width: $TABLET) {
+      padding-left: 0;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      padding-left: 0;
+    }
   }
 
   .coe-statement-title {
@@ -250,7 +255,6 @@
   }
 
   .content-container {
-    padding: 2em 3em 3em 3em;
 
     @media only screen and (max-width: $TABLET) {
       padding: 1.5em 3em 3em 3em;
