@@ -111,7 +111,7 @@
     font-size: 20px;
     height: 40px;
     text-align: right;
-    text-shadow: $DARK-GRAY 0 0 7px;
+    text-shadow: $DARKER-GRAY 0 0 12px;
 
     @media only screen and (max-width: $TABLET-LG) {
       height: inherit;
@@ -149,6 +149,12 @@
 
   .ethical-definition {
     padding: 2rem;
+  }
+
+  // BOARD OF DIRECTORS
+
+  .board-statement {
+    padding: 0 30px;
   }
 
   .board-of-directors-photo {
@@ -220,6 +226,10 @@
 }
 
 // OUR VALUES
+
+.core-values-statement {
+  padding: 0 30px;
+}
 
 .core-value-banners-container {
   display: flex;
