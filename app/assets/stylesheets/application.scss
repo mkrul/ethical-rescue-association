@@ -238,3 +238,24 @@
   font-size: 0.8rem;
   margin: 1.5rem;
 }
+
+/* LOGO SEPARATOR */
+
+.logo-separator {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+
+  img {
+    height: 50px;
+  }
+
+  .line {
+    height: 1px;
+    width: 100px;
+    background-color: $BRAND-GOLD;
+    margin: auto 0;
+    margin-right: 0px;
+    margin-right: 15px;
+  }
+}

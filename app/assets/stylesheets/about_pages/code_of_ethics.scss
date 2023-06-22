@@ -166,111 +166,21 @@
     }
   }
 
-  .coe-statement {
+  .presidents-coe-statement {
     line-height: 1.8em;
     font-size: 16px;
   }
 
-  /* ACCORDION */
-
-  .accordion-container{
-    height: fit-content;
-    padding-bottom: 3.25em;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+  .core-values-statement {
+    margin-top: 1.5em;
+    margin-bottom: 1.1em;
   }
 
-  .accordion-columns {
-    width: 100%;
-    padding: 0 5%;
+  .ethics-category {
+    line-height: 1.45em;
   }
 
-  .accordion {
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .accordion section {
-    display: block;
-    // background-color: aliceblue;
-  }
-
-  .accordion section header {
-    cursor: pointer;
-    padding: 22px;
-    border-top: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-    border-left: 1px solid lightgray;
-    color: $BRAND-BLUE;
-    transition: background 1s ease-in-out;
-    line-height: 30px;
-  }
-
-  .top-tab {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-
-  .bottom-tab {
-    border-bottom: 1px solid lightgray;
-  }
-
-  .accordion section header h5 {
-    font-size: 18px;
-    font-family: $FONT-GOTHAM;
-  }
-
-  .accordion section header h5:after {
-    content: "›";
-    font-size: 25px;
-    display: inline-block;
-    transform: rotate(90deg);
-  }
-
-  .accordion section .selected h5:after {
-    content: "›";
-    font-size: 25px;
-    transform: rotate(270deg);
-    padding: 0 6px 0 0;
-  }
-
-  .accordion section .accord-content {
-    display: none;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 60px 40px;
-    padding-top: 0px;
-    padding-right: 60px;
-    padding-bottom: 40px;
-    padding-left: 60px;
-    border-right: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-    border-left: 1px solid lightgray;
-  }
-
-  .accordion section .accord-content p {
-    margin-bottom: 0;
-  }
-
-  .content-container {
-
-    @media only screen and (max-width: $TABLET) {
-      padding: 1.5em 3em 3em 3em;
-    }
-
-    @media only screen and (max-width: $MOBILE) {
-      padding: 1em 3em 3em 3em;
-    }
-  }
-}
-
-.ethics-category {
-  p {
-    padding: 0 0 20px;
-  }
-  li {
-    padding: 0 0 10px;
+  .ethics-category-photo {
+    object-fit: cover;
   }
 }
