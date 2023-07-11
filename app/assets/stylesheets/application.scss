@@ -53,6 +53,10 @@
   font-family: 'Gotham','Verdana','Arial',sans-serif;
 }
 
+.color-black {
+  color: $BLACK;
+}
+
 /* DISPLAY */
 
 .d-flex {
@@ -160,7 +164,7 @@
 }
 
 .promo-container {
-  background: black;
+  background: $BLACK;
   display: flex;
   justify-content: center;
   align-items: unset;
@@ -207,13 +211,13 @@
 .era-logo-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.6em;
 
   .era-logo {
     background-image: url("logos/era-logo-colored.png");
-    background-size: 9rem;
-    height: 9rem;
-    width: 9rem;
+    background-size: 9em;
+    height: 9em;
+    width: 9em;
   }
 }
 
@@ -223,7 +227,7 @@
 
 .social-media-icons {
   text-align: center;
-  width: 6rem;
+  width: 6em;
   margin: 0 auto;
   i {
     padding: 0 2px;
@@ -235,8 +239,8 @@
 }
 
 .ein-info {
-  font-size: 0.8rem;
-  margin: 1.5rem;
+  font-size: 0.8em;
+  margin: 1.5em;
 }
 
 /* LOGO SEPARATOR */
