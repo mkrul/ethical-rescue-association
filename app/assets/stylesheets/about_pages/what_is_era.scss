@@ -301,7 +301,7 @@
     }
   }
 
-  .frame:hover .first {
+  .frame:hover &:active .first {
     opacity: 0;
 
     @media only screen and (max-width: $MOBILE) {
@@ -430,5 +430,11 @@
     &:hover {
       opacity: 0.75;;
     }
+  }
+}
+
+.mission-statement-content {
+  @media only screen and (max-width: $TABLET) {
+    padding-top: 2em;
   }
 }
