@@ -134,36 +134,57 @@
     }
   }
 
+  .content-container {
+    padding: 1.5em 0;
+  }
+
   /* message from President */
 
-  .president-img {
-    padding-top: 7px;
+  .president-statement-container {
+    @media only screen and (max-width: $TABLET-LG) {
+      padding: 0 2em;
+    }
+  }
+
+  .president-photo-container {
+    @media only screen and (max-width: $TABLET) {
+      display: flex;
+      justify-content: center;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .coe-statement-container {
-    padding-left: 8%;
+    padding-left: 6%;
 
     @media only screen and (max-width: $TABLET) {
-      padding-left: 0;
+      padding: 0;
     }
+
     @media only screen and (max-width: $MOBILE) {
-      padding-left: 0;
+      padding: 0;
     }
   }
 
   .coe-statement-title {
     font-size: 22px;
+
     @media only screen and (max-width: $TABLET) {
-      font-size: 20px;
-      padding-top: 1.2em;
+      padding-top: 2em;
       text-align: center;
     }
+
     @media only screen and (max-width: $MOBILE) {
-      font-size: 18px;
-      padding-top: 1em;
-      padding-bottom: 0;
+      padding-top: 2em;
       text-align: center;
     }
+  }
+
+  .coe-title {
+    line-height: 1.3em;
   }
 
   .presidents-coe-statement {
@@ -171,9 +192,34 @@
     font-size: 16px;
   }
 
-  .core-values-statement {
+  .coe-ethics-statement {
     margin-top: 1.5em;
-    margin-bottom: 1.1em;
+    margin-bottom: 2em;
+    color: $BLACK;
+    line-height: 1.8em;
+  }
+
+  .coe-card-content {
+    height: 16em;
+
+    @media only screen and (max-width: 1407px) {
+      height: 19em;
+    }
+    @media only screen and (max-width: 1215px) {
+      height: 22em;
+    }
+    @media only screen and (max-width: 1023px) {
+      height: 25em;
+    }
+    @media only screen and (max-width: 810px) {
+      height: 28em;
+    }
+    @media only screen and (max-width: $TABLET) {
+      height: auto;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      height: auto;
+    }
   }
 
   .ethics-category {

@@ -1,6 +1,6 @@
 <% tab = '&nbsp &nbsp &nbsp'.html_safe %>
 
-<div class="code-of-ethics-container">
+<div class="code-of-ethics-container mb-4">
   <div class="banner-container">
     <div class="banner-img">
       <div class="hero-body hero-content">
@@ -16,10 +16,10 @@
     </div>
   </div>
 
-  <div class="container is-widescreen py-5">
-    <div class="content-container pt-6 pb-5">
-      <div class="columns is-gapless">
-        <div class="column is-two-fifths">
+  <div class="container py-6">
+    <div class="content-container">
+      <div class="columns is-gapless president-statement-container">
+        <div class="column is-two-fifths president-photo-container">
           <%= image_tag "about_pages/code_of_ethics/janelle.jpg", class: "president-img" %>
         </div>
         <div class="column">
@@ -27,7 +27,7 @@
             <div class="title coe-statement-title font-gotham">
               <strong>A Message From Our President</strong>
             </div>
-            <div class="presidents-coe-statement pt-4">
+            <div class="presidents-coe-statement text-black">
               <div>
                 The Code of Ethics was written as the foundation of ERA so that we can uphold a
                 standard of care for the animals in our organizations and the communities that
@@ -58,7 +58,7 @@
 
     <section class="section container-section pt-5 pb-1">
       <div class="container has-text-centered">
-        <h2 class="title font-gotham mb-5">The Official ERA Code of Ethics</h2>
+        <h2 class="title font-gotham mb-5 coe-title">The Official ERA Code of Ethics</h2>
         <div class="logo-separator mb-4">
           <div class="line mr-4"></div>
           <div class="logo-simplified">
@@ -66,7 +66,7 @@
           </div>
           <div class="line ml-4"></div>
         </div>
-        <p class="has-text-justified core-values-statement">
+        <p class="has-text-justified coe-ethics-statement">
           <%= tab %>The following is an abridged overview of the Ethical Rescue Association's Code of Ethics.
           These entail a commitment to upholding and promoting ethical practices, responsible governance, and
           the welfare of animals in our care. These standards are designed to assist us in assessing and
@@ -78,7 +78,7 @@
         </p>
 
         <!-- ROW 1 -->
-        <div class="columns is-centered" style="padding: 2rem">
+        <div class="columns is-centered">
           <div class="column">
             <div class="card">
               <div class="card-image">
@@ -88,16 +88,17 @@
                   </button>
                 </figure>
               </div>
-              <div class="card-content">
+              <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
                     <p class="title is-4">Welfare Concepts</p>
                     <p class="is-6 has-text-justified ethics-category">
                       <%= tab %>Animal welfare advocacy is not about the singular individual in front of us, but
                       rather the welfare and care of all around us. We must understand the difference from Animal
-                      Rights activism. Rescues should focus on the quality of care and not the quantity of animals.
-                      Understanding and acting on a deep, scientific understanding of physical, mental, and emotional
-                      health and wellbeing will lead to accountability for every animal that is placed in a home.
+                      Rights activism. While the impulse to save as many animals as possible is commendable, it is
+                      vital to shift our attention from the quantity of animals saved to the quality of care provided.
+                      Acting on a deep, scientific understanding of physical, mental, and emotional health and
+                      wellbeing will lead to accountability for every animal that is placed in a home.
                     </p>
                   </div>
                 </div>
@@ -113,14 +114,14 @@
                   </button>
                 </figure>
               </div>
-              <div class="card-content">
+              <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
                     <p class="title is-4">Adoption and Foster Placement</p>
                     <p class="is-6 has-text-justified ethics-category">
                       <%= tab %>Equal opportunities for adoption and placement of animals should be
-                      attainable, fair, and reasonable. Permanent foster situations have their time and place
-                      for hospice cases. Biosecurity should be a primary focus for any and all animals within
+                      attainable, fair, and reasonable. Permanent foster situations are appropriate for
+                      hospice cases. Biosecurity should be a primary focus for any and all animals within
                       rescue care. Honesty must become a forefront consideration when placing animals in
                       homes, as we should be focused on setting the animal and the family up for success,
                       and not a repeated reentry into the system and a drain on rescue resources.
@@ -133,7 +134,7 @@
         </div>
 
         <!-- ROW 2 -->
-        <div class="columns is-centered" style="padding: 2rem">
+        <div class="columns is-centered">
           <div class="column">
             <div class="card">
               <div class="card-image">
@@ -143,7 +144,7 @@
                   </button>
                 </figure>
               </div>
-              <div class="card-content">
+              <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
                     <p class="title is-4">Humane Care and Treatment</p>
@@ -168,7 +169,7 @@
                   </button>
                 </figure>
               </div>
-              <div class="card-content">
+              <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
                     <p class="title is-4">Public Presence</p>
@@ -188,7 +189,7 @@
         </div>
 
         <!-- ROW 3 -->
-        <div class="columns is-centered" style="padding: 2rem">
+        <div class="columns is-centered">
           <div class="column">
             <div class="card">
               <div class="card-image">
@@ -198,7 +199,7 @@
                   </button>
                 </figure>
               </div>
-              <div class="card-content">
+              <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
                     <p class="title is-4">Funding Transparency</p>
@@ -224,7 +225,7 @@
                   </button>
                 </figure>
               </div>
-              <div class="card-content">
+              <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
                     <p class="title is-4">Community Care and Support</p>

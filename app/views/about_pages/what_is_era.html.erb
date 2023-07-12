@@ -1,6 +1,6 @@
 <% tab = '&nbsp &nbsp &nbsp'.html_safe %>
 
-<div class="what-is-era-container mb-6">
+<div class="what-is-era-container mb-4">
   <div class="banner-container">
     <div class="banner-img">
       <div class="hero-body hero-content">
@@ -63,7 +63,7 @@
   <section class="section container py-4">
     <div class="sandbox font-standard-body">
       <div class="has-text-centered mb-4">
-        <h2 class="title">Our Values</h2>
+        <h2 class="title font-gotham">Our Values</h2>
         <p class="has-text-justified core-values-statement">
           <%= tab %>ERA's foundational principles are the bedrock on which it stands, shaping its mission
           and driving its actions. These values serve as the compass that directs every aspect of
@@ -75,68 +75,78 @@
       </div>
       <div class="columns is-centered">
         <div class="column core-value-banners-container">
-          <div class="core-value-banner-container transitions">
-            <div class="core-value-banner partnership transitions">
-              <div class="frame transitions transitions">
-                <span class="first transitions">
-                  PARTNERSHIP
-                </span>
-                <span class="second transitions">
-                  By fostering a partnership with ethical breeders, communities, shelters, and our
-                  fellow ethical rescues, we will create the changes that we want to see in the world.
-                </span>
+          <div id="partnership" onClick="animateFrame('partnership');">
+            <div class="core-value-banner-container transitions">
+              <div class="core-value-banner partnership transitions">
+                <div class="frame transitions transitions">
+                  <span class="first transitions">
+                    PARTNERSHIP
+                  </span>
+                  <span class="second transitions">
+                    By fostering a partnership with ethical breeders, communities, shelters, and our
+                    fellow ethical rescues, we will create the changes that we want to see in the world.
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="core-value-banner-container">
-            <div class="core-value-banner accountability transitions">
-              <div class="frame transitions">
-                <span class="first transitions">
-                  ACCOUNTABILITY
-                </span>
-                <span class="second transitions">
-                  Holding ourselves and those around us in animal welfare accountable to a higher standard
-                  fosters transparency and inspires confidence within the rescue community.
-                </span>
+          <div id="accountability" onClick="animateFrame('accountability');">
+            <div class="core-value-banner-container">
+              <div class="core-value-banner accountability transitions">
+                <div class="frame transitions">
+                  <span class="first transitions">
+                    ACCOUNTABILITY
+                  </span>
+                  <span class="second transitions">
+                    Holding ourselves and those around us in animal welfare accountable to a higher standard
+                    fosters transparency and inspires confidence within the rescue community.
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="core-value-banner-container transitions">
-            <div class="core-value-banner trust transitions">
-              <div class="frame transitions">
-                <span class="first transitions">
-                  TRUST
-                </span>
-                <span class="second transitions">
-                  Animal welfare organizations must work to regain the trust of the communities that they
-                  serve and support in the responsible placement of animals in homes.
-                </span>
+          <div id="trust" onClick="animateFrame('trust');">
+            <div class="core-value-banner-container transitions">
+              <div class="core-value-banner trust transitions">
+                <div class="frame transitions">
+                  <span class="first transitions">
+                    TRUST
+                  </span>
+                  <span class="second transitions">
+                    Animal welfare organizations must work to regain the trust of the communities that they
+                    serve and support in the responsible placement of animals in homes.
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="core-value-banner-container transitions">
-            <div class="core-value-banner respect transitions">
-              <div class="frame transitions">
-                <span class="first transitions">
-                  RESPECT
-                </span>
-                <span class="second transitions">
-                  Respect for one another, and respect between rescues and shelters, is vital if we are to
-                  present a united front in the face of the animal welfare crisis.
-                </span>
+          <div id="respect" onClick="animateFrame('respect');">
+            <div class="core-value-banner-container transitions">
+              <div class="core-value-banner respect transitions">
+                <div class="frame transitions">
+                  <span class="first transitions">
+                    RESPECT
+                  </span>
+                  <span class="second transitions">
+                    Respect for one another, and respect between rescues and shelters, is vital if we are to
+                    present a united front in the face of the animal welfare crisis.
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="core-value-banner-container transitions">
-            <div class="core-value-banner integrity transitions">
-              <div class="frame transitions transitions">
-                <span class="first transitions">
-                  INTEGRITY
-                </span>
-                <span class="second transitions">
-                  If we are truly acting as a voice for the voiceless, striving to do right by them at all
-                  times is paramount to behaving ethically in animal welfare.
-                </span>
+          <div id="integrity" onClick="animateFrame('integrity');">
+            <div class="core-value-banner-container transitions">
+              <div class="core-value-banner integrity transitions">
+                <div class="frame transitions transitions">
+                  <span class="first transitions">
+                    INTEGRITY
+                  </span>
+                  <span class="second transitions">
+                    If we are truly acting as a voice for the voiceless, striving to do right by them at all
+                    times is paramount to behaving ethically in animal welfare.
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -152,7 +162,7 @@
   <section class="section container py-4">
     <div class="sandbox font-standard-body">
       <div class="has-text-centered mb-6">
-        <h2 class="title">Board of Directors</h2>
+        <h2 class="title font-gotham">Board of Directors</h2>
         <p class="has-text-justified core-values-statement">
         <%= tab %>At the heart of ERA's mission is its Board of Directors, a collective
         of passionate individuals with a shared vision for positive change. Drawing from diverse
@@ -292,3 +302,27 @@
 <%= render "about_pages/brittnea" %>
 <%= render "about_pages/bri" %>
 <%= render "about_pages/misha" %>
+
+<script>
+  const animateFrame = (val) => {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      const element = document.getElementById(val);
+      let timer = setTimeout(() => {
+        let firstFrame = element.querySelector(".first");
+        let secondFrame = element.querySelector(".second");
+
+        if (element.classList.contains("is-active")) {
+          document.getElementsByClassName(val)[0].style = "opacity: 1;";
+          firstFrame.style = "opacity: 1;";
+          secondFrame.style = "opacity: 0;";
+          element.classList.remove("is-active");
+        } else {
+          document.getElementsByClassName(val)[0].style = "opacity: 0.75;";
+          firstFrame.style = "opacity: 0;";
+          secondFrame.style = "opacity: 1;";
+          element.classList.add("is-active");
+        }
+      }, 0);
+    }
+  }
+</script>
