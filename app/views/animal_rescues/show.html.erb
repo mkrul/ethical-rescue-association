@@ -17,18 +17,18 @@
       <%= label_tag :description, 'Description:', class: 'label' %>
       <%= @rescue.description %>
     </div>
-    <% if logged_in_as_admin? || white_listed_ip_address? %>
+    <% if session_access_key_set? ? %>
       <div class="field">
         <%= label_tag :visibility, 'Visibility:', class: 'label' %>
         <%= @rescue.visibility %>
       </div>
     <% end %>
     <div class="mt-6 d-flex">
-      <% if logged_in_as_admin? || white_listed_ip_address? %>
+      <% if session_access_key_set? ? %>
         <%= link_to "Edit", edit_animal_rescue_path(@rescue), remote: true, class: "button is-info mr-2" %>
       <% end %>
       <%= link_to "Cancel", animal_rescues_path, remote: true, class: "button is-light mr-2" %>
-      <% if logged_in_as_admin? || white_listed_ip_address? %>
+      <% if session_access_key_set? ? %>
         <%= link_to "Delete", animal_rescue_path(@rescue), class: "button is-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this rescue?" } %>
       <% end %>
     </div>

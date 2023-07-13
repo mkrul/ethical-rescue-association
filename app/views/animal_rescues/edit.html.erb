@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="mt-6">
-      <% if logged_in_as_admin? || white_listed_ip_address? %>
+      <% if session_access_key_set? ? %>
         <%= f.submit "Save", class: "button is-success" %>
       <% end %>
       <%= link_to "Cancel", url_for(action: :index), remote: true, class: "button is-light" %>

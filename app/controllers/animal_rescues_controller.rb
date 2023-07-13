@@ -10,7 +10,7 @@ class AnimalRescuesController < ApplicationController
   end
 
   def create
-    if logged_in_as_admin?
+    if session_access_key_set?
       @rescue = AnimalRescue.new(rescue_params)
 
       respond_to do |format|
@@ -33,7 +33,7 @@ class AnimalRescuesController < ApplicationController
   end
 
   def update
-    if logged_in_as_admin?
+    if session_access_key_set?
       respond_to do |format|
         if @rescue.update(rescue_params)
           format.html { redirect_to animal_rescue_url(@rescue), notice: "Rescue was successfully updated." }
@@ -48,7 +48,7 @@ class AnimalRescuesController < ApplicationController
   end
 
   def destroy
-    if logged_in_as_admin?
+    if session_access_key_set?
       @rescue.delete
 
       respond_to do |format|
@@ -71,7 +71,7 @@ class AnimalRescuesController < ApplicationController
   end
 
   def set_rescues
-    if logged_in_as_admin?
+    if session_access_key_set?
       @rescues = AnimalRescue.all.order('id ASC')
     else
       @rescues = AnimalRescue.is_public.order('id ASC')

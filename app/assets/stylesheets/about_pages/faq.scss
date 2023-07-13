@@ -142,7 +142,7 @@
 
   .accordion-container{
     height: fit-content;
-    padding-bottom: 3.25em;
+    padding-bottom: 1.25em;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -151,17 +151,6 @@
 
   .accordion-columns {
     width: 100%;
-    padding: 0 10%;
-
-    @media only screen and (max-width: $TABLET-LG) {
-      padding: 0 5%;
-    }
-    @media only screen and (max-width: $TABLET) {
-      padding: 0 5%;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      padding: 0;
-    }
   }
 
   .accordion {
@@ -171,7 +160,6 @@
 
   .accordion section {
     display: block;
-    // background-color: aliceblue;
   }
 
   .accordion section header {
@@ -231,7 +219,7 @@
   }
 
   .content-container {
-    padding: 2em 3em 3em 3em;
+    padding: 4em 3em 3em 3em;
 
     @media only screen and (max-width: $TABLET) {
       padding: 1.5em 1em 3em 1em;
@@ -239,6 +227,36 @@
 
     @media only screen and (max-width: $MOBILE) {
       padding: 1em 1em 3em 1em;
+    }
+  }
+
+  .faq-inquiry-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .faq-inquiry {
+    width: 60%;
+    text-align: center;
+    padding-bottom: 1em;
+
+    p {
+      padding-bottom: 1.25em;
+    }
+
+    @media only screen and (max-width: $TABLET-LG) {
+      width: 80%;
+      padding: 0 3em 2em;
+    }
+
+    @media only screen and (max-width: $TABLET) {
+      width: 100%;
+      padding: 0 3em 2em;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      width: 100%;
+      padding: 0 3em 2em;
     }
   }
 }

@@ -11,4 +11,10 @@ class MainController < ApplicationController
 
   end
 
+  def phantom
+    session[:era] = true
+
+    redirect_to root_url
+  end
+
 end

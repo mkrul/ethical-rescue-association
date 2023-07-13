@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'main#index'
+
+  get '/phantom', to: 'main#phantom'
   # root 'main#home'
 
   # resources pages
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
   get '/code_of_ethics', to: 'about_pages#code_of_ethics'
   get '/what_is_era', to: 'about_pages#what_is_era'
   get '/faq', to: 'about_pages#faq'
+  get '/contact_us', to: 'about_pages#contact_us'
 
   resources :animal_rescues
 end

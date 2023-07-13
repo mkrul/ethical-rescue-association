@@ -47,7 +47,7 @@
             <% end %>
           </div>
 
-          <% if logged_in_as_admin? || white_listed_ip_address? %>
+          <% if session_access_key_set? %>
             <% if false %>
               <div class="navbar-item has-dropdown is-hoverable pr-2">
                 <a class="navbar-link">
@@ -77,7 +77,7 @@
                 <%= current_user.email %>
               </a>
               <div class="navbar-dropdown">
-                <% if logged_in_as_admin? || white_listed_ip_address? %>
+                <% if session_access_key_set? %>
                   <div class="navbar-item">
                     <%= link_to "Rescues", animal_rescues_path, class: 'nav-link' %>
                   </div>
@@ -91,7 +91,7 @@
               </div>
             </div>
           <% else %>
-            <% if !white_listed_ip_address? %>
+            <% if false %>
               <div class="navbar-item pr-5">
                 <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
               </div>

@@ -3,7 +3,7 @@
     <%= link_to "Log in", new_session_path(resource_name) %><br />
   <% end %>
 
-  <%- if logged_in_as_admin? && devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%- if session_access_key_set? && devise_mapping.registerable? && controller_name != 'registrations' %>
     <%= link_to "Sign up", new_registration_path(resource_name) %><br />
   <% end %>
 
