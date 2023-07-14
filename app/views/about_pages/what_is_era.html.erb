@@ -308,27 +308,10 @@
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       const element = document.getElementById(val);
       let timer = setTimeout(() => {
-        let firstFrame = element.querySelector(".first");
-        let firstFrameText = document.getElementById(`${val}-first`);
-
-        let secondFrame = element.querySelector(".second");
-        let secondFrameText = document.getElementById(`${val}-second`);
-
-        let frameBackground = document.getElementsByClassName(val)[0];
-
         if !(element.classList.contains("is-active")) {
-          firstFrame.style = "opacity: 0;";
-          firstFrameText.style = "opacity: 0;";
-          frameBackground.style = "opacity: 0.75";
-          secondFrame.style = "opacity: 1;";
-          secondFrameText.style = "opacity: 1;";
           element.classList.add("is-active");
+          $('div').addClass('hover');
         } else {
-          firstFrame.style = "opacity: 1;";
-          firstFrameText.style = "opacity: 1;";
-          frameBackground.style = "opacity: 1";
-          secondFrame.style = "opacity: 0;";
-          secondFrameText.style = "opacity: 0;";
           element.classList.remove("is-active");
         }
       }, 0);
