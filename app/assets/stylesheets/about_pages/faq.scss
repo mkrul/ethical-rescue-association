@@ -80,7 +80,7 @@
   .tagline-primary {
     color: $WHITE;
     font-size: 60px;
-    line-height: 50px;
+    line-height: 1.25em;
     padding: 10px 0 25px;
     width: 900px;
     max-width: 900px;
@@ -92,12 +92,12 @@
     }
     @media only screen and (max-width: $TABLET-LG) {
       font-size: 50px;
-      line-height: 55px;
+      line-height: 1.25em;
       width: 100%;
     }
     @media only screen and (max-width: $TABLET) {
       font-size: 50px;
-      line-height: 55px;
+      line-height: 1.25em;
       width: 100%;
       text-align: center;
     }
