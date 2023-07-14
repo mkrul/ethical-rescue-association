@@ -312,18 +312,22 @@
         let secondFrame = element.querySelector(".second");
         let firstFrameText = document.getElementById(`${val}-first`);
         let secondFrameText = document.getElementById(`${val}-second`);
+        let firstFrameBackground = document.getElementsByClassName(val)[0];
+        let secondFrameBackground = document.getElementsByClassName(val)[0];
 
         if (element.classList.contains("is-active")) {
-          document.getElementsByClassName(val)[0].style = "opacity: 1;";
+          secondFrameBackground.style = "opacity: 1";
           firstFrameText.style = "opacity: 0;";
-          firstFrame.style = "opacity: 1;";
-          secondFrame.style = "opacity: 0;";
-          element.classList.remove("is-active");
-        } else {
-          document.getElementsByClassName(val)[0].style = "opacity: 0.75;";
-          secondFrameText.style = "opacity: 1;";
           firstFrame.style = "opacity: 0;";
           secondFrame.style = "opacity: 1;";
+          secondFrameText.style = "opacity: 1;";
+          element.classList.remove("is-active");
+        } else {
+          firstFrameBackground.style = "opacity: 0.75;"
+          firstFrameText.style = "opacity: 0;";
+          secondFrameText.style = "opacity: 1;";
+          firstFrame.style = "opacity: 1;";
+          secondFrame.style = "opacity: 0;";
           element.classList.add("is-active");
         }
       }, 0);
