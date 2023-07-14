@@ -5,38 +5,6 @@
 
   /* BANNER */
 
-  .hero-content {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    @media only screen and (max-width: $TABLET-LG) {
-      margin-left: 0;
-    }
-    @media only screen and (max-width: $TABLET) {
-      margin-left: 0;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      margin-left: 0;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-  }
-
-  .banner-container {
-    position: relative;
-    text-align: left;
-    height: 430px;
-    width: 100%;
-  }
-
   .banner-img {
     background-image: url("about_pages/faq/faq-banner.jpg");
     height: 430px;
@@ -57,85 +25,8 @@
     }
   }
 
-  .banner-content {
-    display: flex;
-    position: relative;
-    height: inherit;
-    margin: 0 8em;
-    flex-direction: column;
-    justify-content: end;
-    align-items: flex-end;
-
-    @media only screen and (max-width: $TABLET-LG) {
-      margin: 0 5em;
-    }
-    @media only screen and (max-width: $TABLET) {
-      margin: 0 10px;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      margin: 0;
-    }
-  }
-
-  .tagline-primary {
-    color: $WHITE;
-    font-size: 60px;
-    line-height: 1.25em;
-    padding: 10px 0 25px;
-    width: 900px;
-    max-width: 900px;
-    text-align: right;
-    text-shadow: $DARK-GRAY 0 0 12px;
-
-    @media only screen and (max-width: $FULLSCREEN) {
-      width: 100%;
-    }
-    @media only screen and (max-width: $TABLET-LG) {
-      font-size: 50px;
-      line-height: 1.25em;
-      width: 100%;
-    }
-    @media only screen and (max-width: $TABLET) {
-      font-size: 50px;
-      line-height: 1.25em;
-      width: 100%;
-      text-align: center;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      padding: 10px 0 22px;
-      font-size: 40px;
-      width: 100%;
-      line-height: 40px;
-      text-align: center;
-    }
-  }
-
   .tagline-secondary {
-    color: $WHITE;
-    font-size: 20px;
-    height: 40px;
-    text-align: right;
-    text-shadow: $DARKER-GRAY 0 0 12px;
     display: none;
-
-    @media only screen and (max-width: $TABLET-LG) {
-      height: inherit;
-      text-align: right;
-      width: 100%;
-      font-size: 18px;
-    }
-    @media only screen and (max-width: $TABLET) {
-      height: inherit;
-      text-align: center;
-      width: 100%;
-      font-size: 18px;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      height: inherit;
-      text-align: center;
-      width: 100%;
-      font-size: 18px;
-    }
   }
 
   /* ACCORDION */
@@ -219,7 +110,7 @@
   }
 
   .content-container {
-    padding: 4em 3em 3em 3em;
+    padding: 2em 3em 3em 3em;
 
     @media only screen and (max-width: $TABLET) {
       padding: 1.5em 1em 3em 1em;
