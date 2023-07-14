@@ -124,10 +124,10 @@
             <div class="core-value-banner-container transitions">
               <div class="core-value-banner respect transitions">
                 <div class="frame transitions">
-                  <span class="first transitions">
+                  <span class="first transitions" id="respect-first">
                     RESPECT
                   </span>
-                  <span class="second transitions">
+                  <span class="second transitions" id="respect-second">
                     Respect for one another, and respect between rescues and shelters, is vital if we are to
                     present a united front in the face of the animal welfare crisis.
                   </span>
@@ -310,14 +310,18 @@
       let timer = setTimeout(() => {
         let firstFrame = element.querySelector(".first");
         let secondFrame = element.querySelector(".second");
+        let firstFrameText = document.getElementById(`${val}-first`);
+        let secondFrameText = document.getElementById(`${val}-second`);
 
         if (element.classList.contains("is-active")) {
           document.getElementsByClassName(val)[0].style = "opacity: 1;";
+          firstFrameText.style = "opacity: 0;";
           firstFrame.style = "opacity: 1;";
           secondFrame.style = "opacity: 0;";
           element.classList.remove("is-active");
         } else {
           document.getElementsByClassName(val)[0].style = "opacity: 0.75;";
+          secondFrameText.style = "opacity: 1;";
           firstFrame.style = "opacity: 0;";
           secondFrame.style = "opacity: 1;";
           element.classList.add("is-active");
