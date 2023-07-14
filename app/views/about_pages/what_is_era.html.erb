@@ -75,23 +75,21 @@
       </div>
       <div class="columns is-centered">
         <div class="column core-value-banners-container">
-          <div id="partnership">
-            <a>
-              <div class="core-value-banner-container transitions">
-                <div class="core-value-banner partnership transitions">
-                  <div class="frame transitions transitions">
-                    <span class="first transitions" id="partnership-first">
-                      PARTNERSHIP
-                    </span>
-                    <span class="second transitions" id="partnership-second">
-                      By fostering a partnership with ethical breeders, communities, shelters, and our
-                      fellow ethical rescues, we will create the changes that we want to see in the world.
-                    </span>
-                  </div>
+          <button class="invisible-btn">
+            <div class="core-value-banner-container transitions">
+              <div class="core-value-banner partnership transitions" id="partnership">
+                <div class="frame transitions transitions">
+                  <span class="first transitions" id="partnership-first">
+                    PARTNERSHIP
+                  </span>
+                  <span class="second transitions" id="partnership-second">
+                    By fostering a partnership with ethical breeders, communities, shelters, and our
+                    fellow ethical rescues, we will create the changes that we want to see in the world.
+                  </span>
                 </div>
               </div>
-            </a>
-          </div>
+            </div>
+          </button>
           <div id="accountability">
             <a>
               <div class="core-value-banner-container">
@@ -312,20 +310,3 @@
 <%= render "about_pages/brittnea" %>
 <%= render "about_pages/bri" %>
 <%= render "about_pages/misha" %>
-
-<script>
-  // const animateFrame = (val) => {
-  //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  //     const element = document.getElementById(val);
-  //     let timer = setTimeout(() => {
-  //       if !(element.classList.contains("is-active")) {
-  //         element.classList.add("is-active");
-  //         $(element).addClass("hover");
-  //       } else {
-  //         element.classList.remove("is-active");
-  //         $(element).removeClass("hover");
-  //       }
-  //     }, 0);
-  //   }
-  // }
-</script>
