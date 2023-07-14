@@ -1,12 +1,10 @@
-<% tab = '&nbsp &nbsp &nbsp'.html_safe %>
-
-<div class="code-of-ethics-container mb-4">
+<div class="faq-container">
   <div class="banner-container">
     <div class="banner-img">
       <div class="hero-body hero-content">
         <div class="banner-content">
           <h3 class="tagline-primary font-gotham-bold">
-            Code of Ethics
+            Frequently Asked Questions
           </h3>
           <h3 class="tagline-secondary font-gotham-regular">
             The standards that govern ERA-accredited rescue operations
@@ -16,236 +14,233 @@
     </div>
   </div>
 
-  <div class="container py-6">
+  <div class="container font-roboto">
     <div class="content-container">
-      <div class="columns is-gapless president-statement-container">
-        <div class="column is-two-fifths president-photo-container">
-          <%= image_tag "about_pages/code_of_ethics/janelle.jpg", class: "president-img" %>
-        </div>
-        <div class="column">
-          <div class="coe-statement-container">
-            <div class="title coe-statement-title font-gotham">
-              <strong>A Message From Our President</strong>
-            </div>
-            <div class="presidents-coe-statement text-black">
-              <div>
-                <%= tab %> The Code of Ethics was written as the foundation of ERA so that we can uphold a
-                standard of care for the animals in our organizations and the communities that
-                we serve. These categories are what have been shown to be lacking within the
-                rescue community in recent years.
-              </div>
-              <div class="pt-4">
-                <%= tab %> This is not an all inclusive or limiting guideline of ethics, but rather a reminder
-                of the greater good we must be working towards for the betterment of animal welfare
-                and all animals in our communities. All ERA Accredited Rescues agree to uphold this
-                Code of Ethics to the best of their abilities and to work towards bettering their
-                weaknesses and bolstering their strengths.
-              </div>
-              <div class="pt-4">
-                <%= image_tag "about_pages/code_of_ethics/janelle-sig.jpg", class: 'president-sig' %> 
-                <div>Janelle Newton</div>
-                <div>President</div>
-                <div>Ethical Rescue Association</div>
-              </div>
-            </div>
+      <div class="accordion-container">
+        <div class="columns accordion-columns is-justify-content-center p-0">
+          <div class="column">
+            <article class="accordion">
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    How can a rescue apply for ERA accreditation?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    Applying for ERA accreditation is a multi-step process.
+                  </p>
+                  <p>
+                    1) Send a one-time fee of $75 to ERA via <%= link_to 'PayPal', @paypal_url, target: '_blank' %>, <%= link_to 'Venmo', @venmo_url, target: '_blank' %>, or <%= link_to 'CashApp', @cashapp_url, target: '_blank' %>
+                  </p>
+                  <p>
+                    2) Fill out and submit your <%= link_to 'application', 'https://forms.gle/MeuWpkQyCRj2ky63A', target: '_blank' %>.
+                    Don't forget to include tax status documentation and a screenshot proving that that you have paid the application fee.
+                  </p>
+                  <p>
+                    3) Wait for ERA to contact you.  It can take up to two weeks for our volunteers to review your application.
+                  </p>
+                  <p>
+                    4) Your rescue will be awarded accreditation status if the organization is found to
+                    be sufficiently aligned with ERA's <%= link_to "Code of Ethics", code_of_ethics_path %>.  If the organization does not meet
+                    ERA's criteria, you may re-apply at any time once the necessary improvements have been made.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    What are ERA's qualifications to set the standard of ethics?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    The qualifications of our Board members are listed under their biographies
+                    on the <strong><%= link_to "What is ERA?", what_is_era_path %></strong> page. Our Board of Directors currently consists of a rescue director
+                    and veterinary technician, two professional trainers, an ethical breeder, and an animal
+                    control officer.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    Will ERA be international?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    ERA is only based in the U.S. at this time.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    Does ERA only support R+ trainers?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    We are believers in <%= link_to 'the humane hierarchy', 'https://pawsandreward.com/episode47/' %>, but we also believe in being realistic and
+                    respectful of the fact that resources in rescue are limited, and that balanced training
+                    is sometimes necessary.  However, we do not condone compulsion training in any form.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    Will the grading system be made public?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    The <%= link_to "Code of Ethics", code_of_ethics_path %> has been published in an abriged form, but the grading system will remain closed
+                    to the public in order to maintain a level of integrity for applicants. A breakdown of the Bronze,
+                    Silver, and Gold-level certifications will be made publicly available (coming soon).
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    How will ERA help to address the issue of rescues doing unethical things?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    While we are not able to police individual rescues for unethical behavior, ERA-accredited rescues will be at risk of losing their accreditation
+                    status if they are found to be in violation of the <%= link_to "Code of Ethics", code_of_ethics_path %>.  The website will have a reporting
+                    form if there is an ethical concern surrounding an ERA-accredited rescue (coming soon).
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    How will ERA address mislabeling of dog breeds?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    We will be cross-referencing their answers to publicly viewable information such as
+                    social media and adoption websites. Intentionally misleading the public with regard
+                    to breed makeup is frowned upon by our organization and will be discouraged.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    What animals are included?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    Only dogs at this time, but as we grow and get established, we hope to expand first to cats,
+                    and then to other species as those more knowledgeable show interest and we have a committee
+                    qualified to perform the same accreditation duties for other companion animals.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    What does it cost to fill out an application and how will the funds be used?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    At this time the application fee is set at $75. This will be utilized to pay for operational
+                    expenses, and we hope to distribute excess funds back to the community. How this will be accomplished
+                    is undetermined at this time, but it is being discussed.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    Will ERA strive for government backing?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    At the moment, no. This is a 100% grass-roots movement. Government has failed to address these issues
+                    time and again. We believe that if change is going to happen, it needs to start from the ground up.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    How many strikes does a rescue get before having their accreditation revoked?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    This is on a case-by-case basis.  If there are enough concerns raised within a calendar year, a
+                    rescue or shelter goes into a probationary period.  If a rescue or shelter gets an infraction, this
+                    could bump their accreditation status down or have their accreditation revoked entirely depending
+                    on the severity of the offense.
+                  </p>
+                  <p>
+                    Each violation will be examined in context, with focus on assisting
+                    the rescue with making more ethical decisions in the future rather than punishing them. We want to
+                    ensure that any type of report we receive is a valid infraction and not retaliatory in nature.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    What can the community do to get local organizations to apply?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    While we cannot require any rescue to have ERA certification, we hope that ERA gains enough
+                    positive reputation that organizations will influence one another to join, and there will
+                    be numerous perks and benefits of joining ERA (coming soon).
+                  </p>
+                </div>
+              </section>
+            </article>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <section class="section container py-0">
-      <hr/>
-    </section>
-
-    <section class="section container-section pt-5 pb-1">
-      <div class="container has-text-centered">
-        <h2 class="title font-gotham mb-5 coe-title">The Official ERA Code of Ethics</h2>
-        <div class="logo-separator mb-4">
-          <div class="line mr-4"></div>
-          <div class="logo-simplified">
-            <%= image_tag "logos/logo-simplified.jpg" %>
-          </div>
-          <div class="line ml-4"></div>
-        </div>
-        <p class="has-text-justified coe-ethics-statement">
-          <%= tab %>The following is an abridged overview of the Ethical Rescue Association's Code of Ethics.
-          These entail a commitment to upholding and promoting ethical practices, responsible governance, and
-          the welfare of animals in our care. These standards are designed to assist us in assessing and
-          recognizing rescues and shelters that demonstrate this commitment. ERA strongly encourages other
-          animal welfare organizations to adopt these principles, fostering a collective effort towards
-          creating a more compassionate and responsible landscape for animal rescue. Each principle holds
-          immense importance in promoting integrity-driven approaches and accountable management within the
-          rescue community.
-        </p>
-
-        <!-- ROW 1 -->
-        <div class="columns is-centered">
-          <div class="column">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-2by1">
-                  <button class="modal-prompt-trigger is-transparent">
-                    <%= image_tag "about_pages/code_of_ethics/welfare-concepts.jpg", class: "ethics-category-photo" %>
-                  </button>
-                </figure>
-              </div>
-              <div class="card-content coe-card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">Welfare Concepts</p>
-                    <p class="is-6 has-text-justified ethics-category">
-                      <%= tab %>Animal welfare advocacy is not about the singular individual in front of us, but
-                      rather the welfare and care of all around us. We must understand the difference from Animal
-                      Rights activism. While the impulse to save as many animals as possible is commendable, it is
-                      vital to shift our attention from the quantity of animals saved to the quality of care provided.
-                      Acting on a deep, scientific understanding of physical, mental, and emotional health and
-                      wellbeing will lead to accountability for every animal that is placed in a home.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-2by1">
-                  <button class="modal-prompt-trigger is-transparent">
-                    <%= image_tag "about_pages/code_of_ethics/adoption-and-foster-placement.jpg", class: "ethics-category-photo" %>
-                  </button>
-                </figure>
-              </div>
-              <div class="card-content coe-card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">Adoption and Foster Placement</p>
-                    <p class="is-6 has-text-justified ethics-category">
-                      <%= tab %>Equal opportunities for adoption and placement of animals should be
-                      attainable, fair, and reasonable. Permanent foster situations are appropriate for
-                      hospice cases. Biosecurity should be a primary focus for any and all animals within
-                      rescue care. Honesty must become a forefront consideration when placing animals in
-                      homes, as we should be focused on setting the animal and the family up for success,
-                      and not a repeated reentry into the system and a drain on rescue resources.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ROW 2 -->
-        <div class="columns is-centered">
-          <div class="column">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-2by1">
-                  <button class="modal-prompt-trigger is-transparent">
-                    <%= image_tag "about_pages/code_of_ethics/humane-care-and-treatment.jpg", class: "ethics-category-photo" %>
-                  </button>
-                </figure>
-              </div>
-              <div class="card-content coe-card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">Humane Care and Treatment</p>
-                    <p class="is-6 has-text-justified ethics-category">
-                      <%= tab %>Euthanasia is an unfortunate reality in rescue for a variety of reasons including emotional
-                      and behavioral, which must be considered as important as physical health. Providing this
-                      compassionate care is hard on us at times, but animal welfare is not easy. As such, we need
-                      to lead by example to do right by these animals no matter how it makes us feel. Not every
-                      case can be a success story, but the care of every animal can be successful and ethical.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-2by1">
-                  <button class="modal-prompt-trigger is-transparent">
-                    <%= image_tag "about_pages/code_of_ethics/public-presence.jpg", class: "ethics-category-photo" %>
-                  </button>
-                </figure>
-              </div>
-              <div class="card-content coe-card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">Public Presence</p>
-                    <p class="is-6 has-text-justified ethics-category">
-                      <%= tab %>Rescues should maintain a professional public presence both in person and
-                      on social media. When discussing cases, there should be only factual statements presented,
-                      not embellished stories to garner donor generosity. Appropriate and supportive partnerships
-                      with shelters is a must.  Following all local laws, even when it is not what we want to do,
-                      sets an example for those around us. Being positive and uplifting to all animal professionals
-                      is vital to maintain an ethical public presence.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ROW 3 -->
-        <div class="columns is-centered">
-          <div class="column">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-2by1">
-                  <button class="modal-prompt-trigger is-transparent">
-                    <%= image_tag "about_pages/code_of_ethics/funding-transparency.jpg", class: "ethics-category-photo" %>
-                  </button>
-                </figure>
-              </div>
-              <div class="card-content coe-card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">Funding Transparency</p>
-                    <p class="is-6 has-text-justified ethics-category">
-                      <%= tab %>Accountability to our donor base, who help to keep our proverbial doors open,
-                      should not be taken lightly. Animals should not be brought into rescue care if there is a
-                      large outstanding medical debt. Offering thorough explanation of needs with evidential
-                      documentation such as invoices and estimates should be done without prompting or request.
-                      If at any time a donor requests a detailed history of use of funds, it should be made
-                      available to them within a timely manner.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-2by1">
-                  <button class="modal-prompt-trigger is-transparent">
-                    <%= image_tag "about_pages/code_of_ethics/community-care-and-support.jpg", class: "ethics-category-photo" %>
-                  </button>
-                </figure>
-              </div>
-              <div class="card-content coe-card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">Community Care and Support</p>
-                    <p class="is-6 has-text-justified ethics-category">
-                      <%= tab %>Pet retention should be a priority whenever possible within an organization’s abilities.
-                      Offering some sort of pet retention program, such as wellness care, emergent care support, or
-                      microchipping, will strengthen our bonds with the communities that we serve. We must abide
-                      by local laws and continue to educate the public on the changes and intricacies of those laws.
-                      Rescues should educate the public on animal welfare and all that goes into it, both the
-                      good and the bad.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="container font-gotham pb-2">
+    <div class="columns is-gapless">
+      <div class="column">
+        <div class="font-gotham faq-inquiry-container">
+          <div class="faq-inquiry">
+            <p>
+              <strong>Have a question about ERA</strong> that isn't listed here?
+              Please out to us via our contact form and share your thoughts, questions, or inquiries.
+            </p>
+            <p>
+              We value your input and look forward to hearing from you!
+            </p>
+            <p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </div>
 
@@ -259,10 +254,12 @@
       if (!$target.hasClass('active')) {
         heads.removeClass('selected');
         $this.addClass('selected');
+        $('.carrot').addClass('selected');
         allPanels.removeClass('active').slideUp();
         $target.addClass('active').slideDown();
       } else {
         heads.removeClass('selected');
+        $('.carrot').removeClass('selected');
         allPanels.removeClass('active').slideUp();
       }
     });
