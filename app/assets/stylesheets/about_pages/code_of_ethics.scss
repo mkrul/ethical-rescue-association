@@ -65,12 +65,12 @@
     line-height: 1.5em;
 
     @media only screen and (max-width: $TABLET) {
-      padding-top: 2em;
+      padding-top: 1.75em;
       text-align: center;
     }
 
     @media only screen and (max-width: $MOBILE) {
-      padding-top: 2em;
+      padding-top: 1.75em;
       text-align: center;
     }
   }
@@ -84,9 +84,13 @@
     font-size: 16px;
   }
 
+  .president-sig-container {
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+  }
+
   .president-sig {
-    padding-top: 1em;
-    width: 200px;
+    width: 12em;
   }
 
   .coe-ethics-statement {
