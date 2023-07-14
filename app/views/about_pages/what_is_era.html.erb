@@ -79,10 +79,10 @@
             <div class="core-value-banner-container transitions">
               <div class="core-value-banner partnership transitions">
                 <div class="frame transitions transitions">
-                  <span class="first transitions">
+                  <span class="first transitions" id="partnership-first">
                     PARTNERSHIP
                   </span>
-                  <span class="second transitions">
+                  <span class="second transitions" id="partnership-second">
                     By fostering a partnership with ethical breeders, communities, shelters, and our
                     fellow ethical rescues, we will create the changes that we want to see in the world.
                   </span>
@@ -94,10 +94,10 @@
             <div class="core-value-banner-container">
               <div class="core-value-banner accountability transitions">
                 <div class="frame transitions">
-                  <span class="first transitions">
+                  <span class="first transitions" id="accountability-first">
                     ACCOUNTABILITY
                   </span>
-                  <span class="second transitions">
+                  <span class="second transitions" id="accountability-second">
                     Holding ourselves and those around us in animal welfare accountable to a higher standard
                     fosters transparency and inspires confidence within the rescue community.
                   </span>
@@ -108,11 +108,11 @@
           <div id="trust" onClick="animateFrame('trust');">
             <div class="core-value-banner-container transitions">
               <div class="core-value-banner trust transitions">
-                <div class="frame transitions">
+                <div class="frame transitions" id="trust-first">
                   <span class="first transitions">
                     TRUST
                   </span>
-                  <span class="second transitions">
+                  <span class="second transitions" id="trust-second">
                     Animal welfare organizations must work to regain the trust of the communities that they
                     serve and support in the responsible placement of animals in homes.
                   </span>
@@ -138,11 +138,11 @@
           <div id="integrity" onClick="animateFrame('integrity');">
             <div class="core-value-banner-container transitions">
               <div class="core-value-banner integrity transitions">
-                <div class="frame transitions transitions">
+                <div class="frame transitions transitions" id="integrity-first">
                   <span class="first transitions">
                     INTEGRITY
                   </span>
-                  <span class="second transitions">
+                  <span class="second transitions" id="integrity-second">
                     If we are truly acting as a voice for the voiceless, striving to do right by them at all
                     times is paramount to behaving ethically in animal welfare.
                   </span>
@@ -326,7 +326,7 @@
           secondFrame.style = "opacity: 1;";
           element.classList.add("is-active");
         }
-      }, 1000);
+      }, 0);
     }
   }
 </script>
