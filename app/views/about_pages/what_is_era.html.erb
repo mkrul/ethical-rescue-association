@@ -310,7 +310,7 @@
       let timer = setTimeout(() => {
         if !(element.classList.contains("is-active")) {
           element.classList.add("is-active");
-          $('div').addClass('hover');
+          $(element).addClass('hover');
         } else {
           element.classList.remove("is-active");
         }
