@@ -1,9 +1,5 @@
 class ApplicationRecord < ActiveRecord::Base
+  include Rails.application.routes.url_helpers
   primary_abstract_class
-
-  LOCALHOST = "localhost:3000"
-  PRODUCTION_ROOT_URL = "https://www.ethicalrescueassociation.com"
-
-  ROOT_URL = Rails.env.development? ? LOCALHOST : PRODUCTION_ROOT_URL
 
 end
