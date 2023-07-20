@@ -2,6 +2,18 @@
 
 .what-is-era-container {
 
+  .standard-padding {
+    @media only screen and (max-width: $TABLET-LG) {
+      padding-top: 2em;
+    }
+    @media only screen and (max-width: $TABLET) {
+      padding-top: 2em;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      padding-top: 2em;
+    }
+  }
+
   /* BANNER */
 
   .banner-img {
@@ -32,7 +44,20 @@
     padding: 1em 0;
   }
 
+  .mission-statement-content {
+    padding-right: 0.75em;
+    padding-left: 1.5em;
+
+    @media only screen and (max-width: $TABLET) {
+      padding: 2em 0.75em 0.75em;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      padding: 2em 0.75em 0.75em;
+    }
+  }
+
   .mission-statement {
+
     @media only screen and (max-width: $TABLET) {
       padding: 0 2em;
     }
@@ -78,12 +103,34 @@
   }
 
   .era-logo-container {
-    max-width: 368px;
+    @media only screen and (max-width: $TABLET) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .era-logo {
+    width: 300px;
+    padding-right: 1.75em;
+
+    @media only screen and (max-width: $TABLET) {
+      padding: 0;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      padding: 0;
+    }
   }
 
   .blue-vertical-divider {
     border-right: 1px solid $BRAND-BLUE;
     border-radius: 0;
+    padding: 0;
 
     @media only screen and (max-width: $TABLET) {
       border-right: 0;
@@ -120,7 +167,7 @@
 
 .core-values-statement {
   color: $BLACK;
-  line-height: 1.8em;
+  ;
 }
 
 .core-value-banners-container {
@@ -348,12 +395,6 @@
     &:active {
       opacity: 0.75;
     }
-  }
-}
-
-.mission-statement-content {
-  @media only screen and (max-width: $TABLET) {
-    padding-top: 2em;
   }
 }
 

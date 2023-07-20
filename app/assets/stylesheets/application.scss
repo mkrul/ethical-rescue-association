@@ -46,12 +46,12 @@ a {
   -ms-user-select: none;
   user-select: none;
 }
-
 html, body {
   overflow-x: hidden;
 }
 body {
-  position: relative
+  position: relative;
+  line-height: 1.7em!important;
 }
 
 
@@ -86,6 +86,20 @@ body {
 }
 
 /* DISPLAY */
+
+.standard-padding {
+  padding-top: 4em !important;
+  padding-bottom: 4em !important;
+
+  @media only screen and (max-width: $TABLET) {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+  }
+  @media only screen and (max-width: $MOBILE) {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+  }
+}
 
 .d-flex {
   display: flex;
@@ -346,11 +360,6 @@ body {
 
 /* FONT STYLING */
 
-.font-standard-body {
-  line-height: 1.8em;
-  font-size: 16px;
-}
-
 .font-size-14 {
   font-size: 14px;
 }
@@ -369,13 +378,13 @@ body {
 
 /* FOOTER */
 
-.era-logo-container {
+.era-logo-container-footer {
   display: flex;
   justify-content: center;
   margin-bottom: 0.6em;
 }
 
-.era-logo {
+.era-logo-footer {
   background-image: url("logos/era-logo-colored.png");
   background-size: 9em;
   height: 9em;
