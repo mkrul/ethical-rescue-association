@@ -233,10 +233,6 @@
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-
-    @media only screen and (max-width: $MOBILE) {
-      transition: none;
-    }
   }
 
   .frame:hover .first {
@@ -289,17 +285,11 @@
     }
   }
 
-  .frame:active .second {
-    pointer-events: none;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+  .frame:hover .second {
     opacity: 1;
   }
 
-  .frame:hover .second {
-    pointer-events: none;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+  .frame:active .second {
     opacity: 1;
   }
 
