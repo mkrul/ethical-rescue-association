@@ -290,10 +290,16 @@
   }
 
   .frame:hover .second {
+    pointer-events: none;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     opacity: 1;
   }
 
-  .frame:active .second {
+  .frame:hover .second {
+    pointer-events: none;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     opacity: 1;
   }
 
