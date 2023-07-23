@@ -304,26 +304,26 @@
 <%= render "about_pages/misha" %>
 
 <script>
-  const animateFrame = (val) => {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      const element = document.getElementById(val);
-      let timer = setTimeout(() => {
-        let firstFrame = element.querySelector(".first");
-        let secondFrame = element.querySelector(".second");
+  // const animateFrame = (val) => {
+  //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  //     const element = document.getElementById(val);
+  //     let timer = setTimeout(() => {
+  //       let firstFrame = element.querySelector(".first");
+  //       let secondFrame = element.querySelector(".second");
 
-        if (element.classList.contains("is-active")) {
-          document.getElementsByClassName(val)[0].style = "opacity: 1;";
-          document.getElementsByClassName(val)[0].style = "border: 1px solid red;";
-          firstFrame.style = "opacity: 1;";
-          secondFrame.style = "opacity: 0;";
-          element.classList.remove("is-active");
-        } else {
-          document.getElementsByClassName(val)[0].style = "opacity: 0.75;";
-          firstFrame.style = "opacity: 0;";
-          secondFrame.style = "opacity: 1;";
-          element.classList.add("is-active");
-        }
-      }, 0);
-    }
-  }
+  //       if (element.classList.contains("is-active")) {
+  //         document.getElementsByClassName(val)[0].style = "opacity: 1;";
+  //         document.getElementsByClassName(val)[0].style = "border: 1px solid red;";
+  //         firstFrame.style = "opacity: 1;";
+  //         secondFrame.style = "opacity: 0;";
+  //         element.classList.remove("is-active");
+  //       } else {
+  //         document.getElementsByClassName(val)[0].style = "opacity: 0.75;";
+  //         firstFrame.style = "opacity: 0;";
+  //         secondFrame.style = "opacity: 1;";
+  //         element.classList.add("is-active");
+  //       }
+  //     }, 0);
+  //   }
+  // }
 </script>
