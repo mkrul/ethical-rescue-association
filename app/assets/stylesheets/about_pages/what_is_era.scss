@@ -289,7 +289,7 @@
     }
   }
 
-  .frame:hover .second {
+  .frame:active .second {
     pointer-events: none;
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
