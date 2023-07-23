@@ -313,6 +313,7 @@
 
         if (element.classList.contains("is-active")) {
           document.getElementsByClassName(val)[0].style = "opacity: 1;";
+          document.getElementsByClassName(val)[0].style = "border: 1px solid red;";
           firstFrame.style = "opacity: 1;";
           secondFrame.style = "opacity: 0;";
           element.classList.remove("is-active");

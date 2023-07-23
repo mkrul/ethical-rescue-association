@@ -14,8 +14,8 @@
     </div>
   </div>
 
-  <div class="container font-roboto">
-    <div class="content-container">
+  <section class="container standard-padding">
+    <div class="content-container py-0">
       <div class="accordion-container">
         <div class="columns accordion-columns is-justify-content-center p-0">
           <div class="column">
@@ -222,9 +222,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container font-gotham pb-2">
+  <section class="container pb-2">
     <div class="columns is-gapless">
       <div class="column">
         <div class="font-gotham faq-inquiry-container">
@@ -241,24 +241,24 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 
 <script>
   $(document).ready(function() {
     var allPanels = $('.accord-content').hide();
-    var heads = $('.accordion header');
-    $(heads).on('click', function() {
+    var headers = $('.accordion header');
+    $(headers).on('click', function() {
       $this = $(this);
       $target =  $this.parent().find('div.accord-content');
       if (!$target.hasClass('active')) {
-        heads.removeClass('selected');
+        headers.removeClass('selected');
         $this.addClass('selected');
         $('.carrot').addClass('selected');
         allPanels.removeClass('active').slideUp();
         $target.addClass('active').slideDown();
       } else {
-        heads.removeClass('selected');
+        headers.removeClass('selected');
         $('.carrot').removeClass('selected');
         allPanels.removeClass('active').slideUp();
       }
