@@ -226,28 +226,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  .transitions {
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .frame:hover .first {
-    opacity: 0;
-
-    @media only screen and (max-width: $MOBILE) {
+    &:hover {
+      content: "derp";
       opacity: 1;
     }
   }
 
-  .frame:active .first {
-    opacity: 0;
+  // .transitions {
+  //   -webkit-transition: all 0.5s ease-in-out;
+  //   -moz-transition: all 0.5s ease-in-out;
+  //   -o-transition: all 0.5s ease-in-out;
+  //   transition: all 0.5s ease-in-out;
+
+  // }
+
+  .frame:hover .first {
+    opacity: 1;
+    content: "derp";
+    opacity: 1;
 
     @media only screen and (max-width: $MOBILE) {
       opacity: 1;
+      content: "derp";
+    opacity: 1;
     }
   }
 
@@ -283,14 +285,6 @@
       display: none;
       line-height: 1.2;
     }
-  }
-
-  .frame:hover .second {
-    opacity: 1;
-  }
-
-  .frame:active .second {
-    opacity: 1;
   }
 
   &.partnership {
@@ -402,4 +396,31 @@
   height: fit-content;
   margin: 0;
   cursor: pointer;
+}
+
+#test {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  content: 'NEW';
+  color: black;
+  border: 2px solid red;
+
+
+}
+
+.blue {
+  background-color: blue;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.red {
+  background-color: red;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
