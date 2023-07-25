@@ -304,11 +304,11 @@
   // const animateFrame = (val) => {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       // const element = document.getElementById(val);
-      $('#test').addClass('blue').tap(function() {
+      $('#test').addClass('blue').on("tap", function() {
         console.log('clicked');
         $(this).stop(true,false).removeAttr('style').addClass('red');
       })
-      .tap(function(){
+      .on("tap", function() {
         $(this).stop(true,false).removeAttr('style').removeClass('red');
       });
     } else {
