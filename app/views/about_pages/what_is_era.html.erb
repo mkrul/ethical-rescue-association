@@ -74,20 +74,11 @@
         </p>
       </div>
       <div class="columns is-centered">
-        <div id="test"></div>
         <div class="column core-value-banners-container">
-          <div id="partnership" onClick="animateFrame('partnership');">
-            <div class="core-value-banner-container transitions">
-              <div class="core-value-banner partnership transitions">
-                <div class="frame transitions transitions">
-                  <span class="first transitions">
-                    PARTNERSHIP
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div id="partnership" class="core-value-banner partnership">
+            <noscript>PARTNERSHIP</noscript>
           </div>
-          <div id="accountability" onClick="animateFrame('accountability');">
+          <%# <div id="accountability" onClick="animateFrame('accountability');">
             <div class="core-value-banner-container">
               <div class="core-value-banner accountability transitions">
                 <div class="frame transitions">
@@ -146,7 +137,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> %>
         </div>
       </div>
     </div>
@@ -301,22 +292,55 @@
 <%= render "about_pages/misha" %>
 
 <script>
-  // const animateFrame = (val) => {
-      // const element = document.getElementById(val);
-      $('#test').addClass('blue').on("tap", function() {
-        console.log('clicked');
-        $(this).stop(true,false).removeAttr('style').addClass('red');
+  // get all elements with class of "core-value-banner" in jquery
+  // for each element, get the ID and set the HTML to the value of the ID
+  $(document).ready(function() {
+    $('.core-value-banner').each(function() {
+      let id = $(this).attr('id');
+      $(`#${id}`).html(id.toUpperCase());
+    });
+  });
+
+  const initializeCoreValueFrames = () => {
+    const coreValues = ['partnership', 'accountability', 'trust', 'respect', 'integrity'];
+    coreValues.forEach((val) => {
+      $(`#${val}`).mouseover(function() {
+        console.log('mouseover');
+        // if the value is "partnership", set the HTML to "partnership"
+        switch(val) {
+          case "partnership":
+            console.log('partnership');
+            console.log(this)
+            debugger;
+            $(this).fadeOut(function() {
+              console.log(this);
+              $(this).text(`<%= @partnership %>`).fadeIn();
+            });
+            break;
+        default:
+          //
+        }
+        $(this).stop(true,false).removeAttr('style').addClass('second-frame');
       })
-      .on("tap", function() {
-        $(this).stop(true,false).removeAttr('style').removeClass('red');
-      });
-      $('#test').addClass('blue').mouseover(function() {
-        console.log('clicked');
-        $(this).stop(true,false).removeAttr('style').addClass('red');
-      })
-      .mouseout(function(){
-        $(this).stop(true,false).removeAttr('style').removeClass('red');
-      });
+    })
+  }
+
+  initializeCoreValueFrames();
+
+  $('#test').addClass('blue').on("tap", function() {
+    console.log('clicked');
+    $(this).stop(true,false).removeAttr('style').addClass('red');
+  })
+  .on("tap", function() {
+    $(this).stop(true,false).removeAttr('style').removeClass('red');
+  });
+  $('#test').addClass('blue').mouseover(function() {
+    console.log('clicked');
+    $(this).stop(true,false).removeAttr('style').addClass('red');
+  })
+  .mouseout(function(){
+    $(this).stop(true,false).removeAttr('style').removeClass('red');
+  });
 
 
       // let timer = setTimeout(() => {

@@ -4,6 +4,7 @@ class AboutPagesController < ApplicationController
   end
 
   def what_is_era
+    @partnership = "By fostering a partnership with ethical breeders, communities, shelters, and our fellow ethical rescues, we will create the changes that we want to see in the world."
   end
 
   def faq

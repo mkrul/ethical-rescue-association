@@ -176,17 +176,12 @@
   height: fit-content;
 }
 
-.core-value-banner-container {
-  height: 120px;
-  margin: 0.75em 0;
-}
 
 .core-value-banner {
-  height: 192px;
+  height: 120px;
   width: 100%;
   margin: auto;
   text-align: center;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -199,6 +194,11 @@
   background-position-x: 40%;
   position: relative;
   background-size: cover;
+  width: 100%;
+
+  &:hover {
+    opacity: 1;
+  }
 
   @media only screen and (max-width: $TABLET-LG) {
     font-size: 30px;
@@ -220,41 +220,8 @@
     font-weight: 500;
   }
 
-  .frame {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-      content: "derp";
-      opacity: 1;
-    }
-  }
-
-  // .transitions {
-  //   -webkit-transition: all 0.5s ease-in-out;
-  //   -moz-transition: all 0.5s ease-in-out;
-  //   -o-transition: all 0.5s ease-in-out;
-  //   transition: all 0.5s ease-in-out;
-
-  // }
-
-  .frame:hover .first {
+  .second-frame {
     opacity: 1;
-    content: "derp";
-    opacity: 1;
-
-    @media only screen and (max-width: $MOBILE) {
-      opacity: 1;
-      content: "derp";
-    opacity: 1;
-    }
-  }
-
-  .second {
-    opacity: 0;
     transition: opacity 1s;
     font-size: 18px;
     letter-spacing: 0;
