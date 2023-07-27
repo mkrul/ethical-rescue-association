@@ -75,69 +75,21 @@
       </div>
       <div class="columns is-centered">
         <div class="column core-value-banners-container">
-          <div id="partnership" class="core-value-banner partnership">
-            <div id="partnership-first">PARTNERSHIP</div>
+          <div id="partnership" class="mb-3 core-value-banner  partnership">
+            <div id="partnership-first" class="first-frame">PARTNERSHIP</div>
           </div>
-          <%# <div id="accountability" onClick="animateFrame('accountability');">
-            <div class="core-value-banner-container">
-              <div class="core-value-banner accountability transitions">
-                <div class="frame transitions">
-                  <span class="first transitions">
-                    ACCOUNTABILITY
-                  </span>
-                  <span class="second transitions">
-                    Holding ourselves and those around us in animal welfare accountable to a higher standard
-                    fosters transparency and inspires confidence within the rescue community.
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div id="accountability" class="mb-3 core-value-banner  accountability">
+            <div id="accountability-first" class="first-frame">ACCOUNTABILITY</div>
           </div>
-          <div id="trust" onClick="animateFrame('trust');">
-            <div class="core-value-banner-container transitions">
-              <div class="core-value-banner trust transitions">
-                <div class="frame transitions">
-                  <span class="first transitions">
-                    TRUST
-                  </span>
-                  <span class="second transitions">
-                    Animal welfare organizations must work to regain the trust of the communities that they
-                    serve and support in the responsible placement of animals in homes.
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div id="trust" class="mb-3 core-value-banner  trust">
+            <div id="trust-first" class="first-frame">TRUST</div>
           </div>
-          <div id="respect" onClick="animateFrame('respect');">
-            <div class="core-value-banner-container transitions">
-              <div class="core-value-banner respect transitions">
-                <div class="frame transitions">
-                  <span class="first transitions">
-                    RESPECT
-                  </span>
-                  <span class="second transitions">
-                    Respect for one another, and respect between rescues and shelters, is vital if we are to
-                    present a united front in the face of the animal welfare crisis.
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div id="respect" class="mb-3 core-value-banner  respect">
+            <div id="respect-first" class="first-frame">RESPECT</div>
           </div>
-          <div id="integrity" onClick="animateFrame('integrity');">
-            <div class="core-value-banner-container transitions">
-              <div class="core-value-banner integrity transitions">
-                <div class="frame transitions transitions">
-                  <span class="first transitions">
-                    INTEGRITY
-                  </span>
-                  <span class="second transitions">
-                    If we are truly acting as a voice for the voiceless, striving to do right by them at all
-                    times is paramount to behaving ethically in animal welfare.
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div> %>
+          <div id="integrity" class="mb-3 core-value-banner  integrity">
+            <div id="integrity-first" class="first-frame">INTEGRITY</div>
+          </div>
         </div>
       </div>
     </div>
@@ -292,126 +244,60 @@
 <%= render "about_pages/misha" %>
 
 <script>
-  // get all elements with class of "core-value-banner" in jquery
+  // get all elements with class of "mb-3 core-value-banner " in jquery
   // for each element, get the ID and set the HTML to the value of the ID
   $(document).ready(function() {
-
     const initCoreValueFrameAnimations = () => {
-      const coreValues = ['partnership', 'integrity', 'transparency', 'accountability', 'respect', 'education']
-      $(".core-value-banner, .partnership").mouseover(function () {
-        console.log('derp')
-        $("#partnership-first").fadeOut(function() {
-          $(this).text(`<%= @partnership %>`).fadeIn();
+      const coreValues = [
+        ["partnership", "By fostering a partnership with ethical breeders, communities, shelters, and our fellow ethical rescues, we will create the changes that we want to see in the world."],
+        ["accountability", "Holding ourselves and those around us in animal welfare accountable to a higher standard fosters transparency and inspires confidence within the rescue community."],
+        ["trust", "Animal welfare organizations must work to regain the trust of the communities that they serve and support in the responsible placement of animals in homes."],
+        ["respect", "Respect for one another, and respect between rescues and shelters, is vital if we are to present a united front in the face of the animal welfare crisis."],
+        ["integrity", "If we are truly acting as a voice for the voiceless, striving to do right by them at all times is paramount to behaving ethically in animal welfare."]
+      ]
+      for (const val of coreValues) {
+        const coreValue = val[0];
+        const statement = val[1];
+        $(`.core-values-container, .${coreValue}`).mouseenter(function () {
+          $(this).fadeTo(100, 0.8, function() {
+            $(`#${coreValue}-first`).fadeOut(250, function() {
+              $(this).removeClass("first-frame");
+              $(this).addClass("second-frame");
+              $(this).text(statement).fadeIn(250);
+            });
+          });
         });
-      });
-      $(".core-value-banner, .partnership").mouseout(function () {
-        $("#partnership-first").fadeOut(function() {
-          $(this).text('PARTNERSHIP').fadeIn();
+        $(`.${coreValue}`).mouseleave(function () {
+          $(this).fadeTo(100, 1.0, function() {
+            $(`#${coreValue}-first`).fadeOut(250, function() {
+              $(this).removeClass("second-frame");
+              $(this).addClass("first-frame");
+              $(this).text(coreValue.toUpperCase()).fadeIn(250);
+            });
+          });
         });
-      });
 
-      $(".core-value-banner, .partnership").on("tap", function () {
-        console.log('derp')
-        $("#partnership-first").fadeOut(function() {
-          $(this).text(`<%= @partnership %>`).fadeIn();
+        // MOBILE
+        $(`.core-values-container, .${coreValue}`).on("tap", function () {
+          $(this).fadeTo(100, 0.8, function() {
+            $(`#${coreValue}-first`).fadeOut(250, function() {
+              $(this).removeClass("first-frame");
+              $(this).addClass("second-frame");
+              $(this).text(statement).fadeIn(250);
+            });
+          });
         });
-      });
-      $(".core-value-banner, .partnership").on("tap", function () {
-        $("#partnership-first").fadeOut(function() {
-          $(this).text('PARTNERSHIP').fadeIn();
+        $(`.${coreValue}`).on("tap", function () {
+          $(this).fadeTo(100, 1.0, function() {
+            $(`#${coreValue}-first`).fadeOut(250, function() {
+              $(this).removeClass("second-frame");
+              $(this).addClass("first-frame");
+              $(this).text(coreValue.toUpperCase()).fadeIn(250);
+            });
+          });
         });
-      });
-
-      // coreValues.forEach((val) => {
-      //   console.log(val)
-      //   $(`#${val}-first`).mouseover(function () {
-
-      //   })
-      // });
-      // $('#test').addClass('blue').mouseover(function() {
-      //   console.log('clicked');
-      //   $(this).stop(true,false).removeAttr('style').addClass('red');
-      // })
-      // .mouseout(function(){
-      //   $(this).stop(true,false).removeAttr('style').removeClass('red');
-      // });
-    };
-
+      }
+    }
     initCoreValueFrameAnimations();
   });
-
-
-        // $(`#${id}`).mouseover(function () {
-        //   debugger;
-        //   $('div.first').fadeIn(1500).removeClass('hidden');
-        //   $(this).children().fadeOut(100, function(){
-        //     $(this).children().remove();
-        //   });
-        //   console.log('mouseover');
-          // if the value is "partnership", set the HTML to "partnership"
-          // $(`#${val}`).children().fadeOut(1000, function() {
-              // $(this).text("World")
-            // }).fadeIn();
-
-          // switch(val) {
-          //   case "partnership":
-          //     console.log('partnership');
-              // console.log(element)
-              // debugger;
-              // element.fadeOut(function() {
-                // element.animate({'opacity': 0}, 1000, function () {
-                //     element.text("Replaced!")
-                // }).animate({'opacity': 1}, 1000);
-                // $(this).text(`<%= @partnership %>`).fadeIn();
-              // });
-          //     break;
-          // default:
-            //
-          // }
-          // $(this).stop(true,false).removeAttr('style').addClass('second-frame');
-    //     })
-    //   })
-    // }
-
-
-
-    // $('#test').addClass('blue').on("tap", function() {
-    //   console.log('clicked');
-    //   $(this).stop(true,false).removeAttr('style').addClass('red');
-    // })
-    // .on("tap", function() {
-    //   $(this).stop(true,false).removeAttr('style').removeClass('red');
-    // });
-    // $('#test').addClass('blue').mouseover(function() {
-    //   console.log('clicked');
-    //   $(this).stop(true,false).removeAttr('style').addClass('red');
-    // })
-    // .mouseout(function(){
-    //   $(this).stop(true,false).removeAttr('style').removeClass('red');
-    // });
-
-
-        // let timer = setTimeout(() => {
-
-        // }, 0);
-          // let frame = element.querySelector(".test");
-          // let firstFrame = element.querySelector(".first");
-          // let secondFrame = element.querySelector(".second");
-
-          // if (element.classList.contains("is-active")) {
-          //   document.getElementsByClassName(val)[0].style = "opacity: 1;";
-          //   document.getElementsByClassName(val)[0].style = "border: 1px solid red;";
-          //   firstFrame.style = "opacity: 1;";
-          //   secondFrame.style = "opacity: 0;";
-          //   element.classList.remove("is-active");
-          // } else {
-          //   document.getElementsByClassName(val)[0].style = "opacity: 0.75;";
-          //   firstFrame.style = "opacity: 0;";
-          //   secondFrame.style = "opacity: 1;";
-          //   element.classList.add("is-active");
-          // }
-      //   }, 0);
-      // }
-    // }
-  // });
 </script>

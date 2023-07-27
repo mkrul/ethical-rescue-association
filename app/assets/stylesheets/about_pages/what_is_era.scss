@@ -185,44 +185,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  font-weight: 500;
   color: $WHITE;
-  letter-spacing: 0.25em;
   text-shadow: $BLACK 0 0 12px;
   border-radius: 25px;
   background-position-x: 40%;
   position: relative;
   background-size: cover;
-  width: 100%;
 
-  &:hover {
-    opacity: 1;
-  }
-
-  @media only screen and (max-width: $TABLET-LG) {
+  .first-frame {
     font-size: 30px;
+    font-weight: 500;
     letter-spacing: 0.25em;
-    font-weight: 500;
-    line-height: 1em;
-  }
 
-  @media only screen and (max-width: $TABLET) {
-    font-size: 26px;
-    letter-spacing: 0.25em;
-    font-weight: 500;
-    line-height: 1em;
-  }
+    @media only screen and (max-width: $TABLET-LG) {
+      line-height: 1em;
+    }
 
-  @media only screen and (max-width: $MOBILE) {
-    font-size: 22px;
-    letter-spacing: 0.1em;
-    font-weight: 500;
+    @media only screen and (max-width: $TABLET) {
+      font-size: 26px;
+      line-height: 1em;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      font-size: 22px;
+      letter-spacing: 0.1em;
+    }
   }
 
   .second-frame {
-    opacity: 1;
-    transition: opacity 1s;
     font-size: 18px;
     letter-spacing: 0;
     position: absolute;
@@ -280,12 +270,6 @@
     @media only screen and (max-width: $TABLET-LG) {
       background-position: 30% 33%;
     }
-    &:hover {
-      opacity: 0.75;
-    }
-    &:active {
-      opacity: 0.75;
-    }
   }
 
   &.trust {
@@ -299,12 +283,6 @@
 
     @media only screen and (max-width: $TABLET-LG) {
       background-position: 50% 33%;
-    }
-    &:hover {
-      opacity: 0.75;;
-    }
-    &:active {
-      opacity: 0.75;
     }
   }
 
@@ -320,12 +298,6 @@
     @media only screen and (max-width: $TABLET-LG) {
       background-position: 40% 33%;
     }
-    &:hover {
-      opacity: 0.75;
-    }
-    &:active {
-      opacity: 0.75;
-    }
   }
 
   &.integrity {
@@ -340,36 +312,7 @@
     @media only screen and (max-width: $TABLET-LG) {
       background-position: 50% 33%;
     }
-    &:hover {
-      opacity: 0.75;
-    }
-    &:active {
-      opacity: 0.75;
-    }
   }
 }
 
-.invisible-btn {
-  background: transparent;
-  border: none;
-  font-size: 0;
-  width: 100%;
-  height: fit-content;
-  margin: 0;
-  cursor: pointer;
-}
 
-#test {
-  position: relative;
-  height: 100px;
-  width: 100px;
-  content: 'NEW';
-  color: black;
-  border: 2px solid red;
-
-
-}
-
-.hidden {
-  display: none;
-}
