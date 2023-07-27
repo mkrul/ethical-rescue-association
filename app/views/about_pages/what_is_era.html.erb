@@ -236,12 +236,12 @@
 
 </div>
 
-<%= render "about_pages/janelle" %>
-<%= render "about_pages/angela" %>
-<%= render "about_pages/diane" %>
-<%= render "about_pages/brittnea" %>
-<%= render "about_pages/bri" %>
-<%= render "about_pages/misha" %>
+<%= render "about_pages/janelle", locals: { tab: tab } %>
+<%= render "about_pages/angela", locals: { tab: tab } %>
+<%= render "about_pages/diane", locals: { tab: tab } %>
+<%= render "about_pages/brittnea", locals: { tab: tab } %>
+<%= render "about_pages/bri", locals: { tab: tab } %>
+<%= render "about_pages/misha", locals: { tab: tab } %>
 
 <script>
   $(document).ready(function() {
