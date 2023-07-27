@@ -266,12 +266,6 @@
     @media only screen and (max-width: $TABLET-LG) {
       background-position: 30% 7%;
     }
-    &:hover {
-      opacity: 0.75;
-    }
-    &:active {
-      opacity: 0.75;
-    }
   }
 
   &.accountability {
@@ -376,18 +370,6 @@
 
 }
 
-.blue {
-  background-color: blue;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.red {
-  background-color: red;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+.hidden {
+  display: none;
 }
