@@ -9,7 +9,7 @@ class AboutPagesController < ApplicationController
   def faq
   end
 
-  def contact_us
+  def contact
   end
 
 end
