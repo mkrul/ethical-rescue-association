@@ -26,15 +26,7 @@
   }
 
   .content-container {
-    padding: 1.5em 0;
-  }
-
-  /* message from President */
-
-  .president-statement-container {
-    @media only screen and (max-width: $TABLET-LG) {
-      padding: 0 2em;
-    }
+    padding: 2em 0;
   }
 
   .president-photo-container {
@@ -62,7 +54,7 @@
 
   .coe-statement-title {
     font-size: 22px;
-    line-height: 1.25em;
+    line-height: 1.5em;
 
     @media only screen and (max-width: $TABLET) {
       padding-top: 1.75em;
@@ -80,7 +72,6 @@
   }
 
   .presidents-coe-statement {
-    ;
     font-size: 16px;
   }
 
@@ -97,34 +88,10 @@
     margin-top: 1.5em;
     margin-bottom: 2em;
     color: $BLACK;
-    ;
-  }
-
-  .coe-card-content {
-    height: 16em;
-
-    @media only screen and (max-width: 1407px) {
-      height: 19em;
-    }
-    @media only screen and (max-width: 1215px) {
-      height: 22em;
-    }
-    @media only screen and (max-width: 1023px) {
-      height: 25em;
-    }
-    @media only screen and (max-width: 810px) {
-      height: 28em;
-    }
-    @media only screen and (max-width: $TABLET) {
-      height: auto;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      height: auto;
-    }
   }
 
   .ethics-category {
-    line-height: 1.45em;
+    line-height: 1.7em;
   }
 
   .ethics-category-photo {
