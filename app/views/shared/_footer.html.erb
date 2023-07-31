@@ -25,9 +25,17 @@
       <div class="column is-3">
         <h2><strong>Quick Links</strong></h2>
         <ul>
-          <li><%= link_to "Log in", new_session_path(User) %></li>
-          <li><%= link_to "Sign up", new_registration_path(User) %></li>
+          <li>
+            <%= link_to "Get Accredited", "https://forms.gle/MeuWpkQyCRj2ky63A", target: "_blank" %>
+          </li>
+          <li><%= link_to "Contact Us", contact_path %></li>
         </ul>
+        <% if false %>
+          <ul>
+            <li><%= link_to "Log in", new_session_path(User) %></li>
+            <li><%= link_to "Sign up", new_registration_path(User) %></li>
+          </ul>
+        <% end %>
       </div>
       <div class="column is-4">
         <h2><strong>Information</strong></h2>
@@ -35,7 +43,6 @@
           <li><%= link_to "What is ERA?", what_is_era_path %></li>
           <li><%= link_to "Code of Ethics", code_of_ethics_path %></li>
           <li><%= link_to "FAQ", faq_path %></li>
-          <li><%= link_to "Contact Us", contact_path %></li>
         </ul>
       </div>
     </div>
@@ -59,4 +66,3 @@
     </div>
   </div>
 </footer>
-
