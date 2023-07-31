@@ -189,6 +189,7 @@ body {
   color: $BRAND-BLUE;
   margin: auto 0;
   width: 100%;
+  min-width: fit-content;
 }
 
 .logout-btn {

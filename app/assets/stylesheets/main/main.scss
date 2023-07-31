@@ -3,7 +3,11 @@
 
 .main-container {
   .main-hero-content {
-    margin-left:3em;
+    margin-left: 3em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
     @media only screen and (max-width: $TABLET-LG) {
       margin-left: 0;
     }
@@ -55,33 +59,71 @@
   .main-banner-content {
     padding: 0 5em;
     width: 45em;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-shadow: $DARKER-GRAY 0 0 12px;
+    line-height: 1em;
 
-    @media only screen and (max-width: $TABLET-LG) {
-      padding: 0 3em;
-      width: 34em;
-      font-size-adjust: 0.47;
-    }
     @media only screen and (max-width: $TABLET) {
       margin: 0 auto;
       padding: 0 1em;
-      font-size-adjust: 0.43;
-      line-height: 1em;
     }
     @media only screen and (max-width: $MOBILE) {
       margin: 0 auto;
       padding: 0;
-      font-size-adjust: 0.43;
-      line-height: 1em;
+    }
+
+    h1 {
+      font-weight: 600;
+      line-height: 1.15;
+      text-shadow: $DARKER-GRAY 0 0 12px;
+      font-size: 55px;
+
+      @media only screen and (max-width: $TABLET) {
+        padding: 0 30px;
+        font-size: 50px;
+      }
+      @media only screen and (max-width: $MOBILE) {
+        padding: 0 20px;
+        font-size: 40px;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+      padding-top: 20px;
+      text-shadow: $DARKER-GRAY 0 0 12px;
+
+      @media only screen and (max-width: $TABLET) {
+        font-weight: 400;
+        padding: 0;
+      }
+      @media only screen and (max-width: $MOBILE) {
+        font-weight: 400;
+        padding: 0;
+        font-size: 17px;
+      }
+    }
+
+    button {
+      width: 160px;
+      margin-top: 16px;
+
+      @media only screen and (max-width: $TABLET) {
+        align-self: center;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        align-self: center;
+      }
     }
   }
 }
 
 .font-size-14 {
   font-size: 14px;
-}
-
-.text-shadow {
-  text-shadow: $DARKER-GRAY 0 0 12px;
 }
 
 /* PAYMENT PROMPT MODAL */
@@ -95,4 +137,155 @@
 
 .vertical-scrollbar-hidden {
   overflow-x: hidden;
+}
+
+.about-item{
+	i{
+		font-size: 50px;
+	}
+	a{
+		color: $BRAND-BLUE;
+		font-weight: 500;
+	}
+	.icon{
+		float: left;
+		height: unset;
+		width: unset;
+	}
+
+	.content{
+		padding-left:80px;
+	}
+
+}
+
+
+
+//  Process
+.process{
+	position: relative;
+
+	&:before{
+		position: absolute;
+		content:"";
+		right: 0px;
+		top:0px;
+		width: 100%;
+		height: 100%;
+		background: url("../images/bg/bg-half.png")no-repeat;
+		background-position: top right;
+	}
+
+}
+
+
+
+.icon-block{
+	padding:50px 40px;
+	background: $light;
+	border-radius: 10px;
+	box-shadow: 0px 0px 40px 0px rgba(85, 128, 255, 0.2);
+
+	i{
+		font-size: 35px;
+		background: rgba(239, 50, 58,.08);
+		width: 70px;
+		height: 70px;
+		text-align: center;
+		padding-top: 16px;
+		border-radius: 10px;
+		display: inline-block;
+		color: $BRAND-BLUE;
+	}
+
+	h5{
+		margin-top: 25px;
+		margin-bottom: 15px;
+	}
+	p{
+		margin-bottom: 0px;
+	}
+}
+
+
+// About Pages
+
+
+.feature-list{
+	ul li {
+		margin-bottom: 15px;
+		color: $black;
+
+		i{
+			color: $BRAND-BLUE;
+		}
+	}
+}
+
+
+.video-img{
+	position: relative;
+	.video-play{
+		position: absolute;
+		content:"";
+		left: 0px;
+		right:0px;
+		top:50%;
+		width: 100%;
+		height: 100%;
+		margin:0 auto;
+		margin-top: -50px;
+		text-align: center;
+
+		i{
+			font-size: 30px;
+			width: 100px;
+			height: 100px;
+			background: $light;
+			color: $BRAND-BLUE;
+			border-radius:100%;
+			text-align: center;
+			display: inline-block;
+			line-height: 100px;
+			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.04);
+		}
+	}
+}
+
+
+// Awards
+
+.award-img-block{
+	height: 160px;
+	border:1px solid #eee;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	background: $light;
+}
+
+
+//  Video
+//
+
+.video-play:hover{
+	cursor: pointer;
+}
+
+.mt-30 {
+	margin-top: 30px;
+}
+
+@include tablet {
+	.custom-grid {
+		.mt-30 {
+			margin-top: 0 !important;
+		}
+		.pb-0 {
+			padding-bottom: 15px !important;
+		}
+		.pt-0 {
+			padding-top: 15px !important;
+		}
+	}
 }
