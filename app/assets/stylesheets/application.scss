@@ -9,6 +9,7 @@
 @import "../stylesheets/about_pages/code_of_ethics.scss";
 @import "../stylesheets/about_pages/what_is_era.scss";
 @import "../stylesheets/about_pages/faq.scss";
+@import "../stylesheets/about_pages/contact.scss";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -339,6 +340,7 @@ body {
 }
 
 .phantom {
+  display: none;
   height: fit-content;
   color: transparent;
   right: 0;
