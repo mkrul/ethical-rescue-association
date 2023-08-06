@@ -7,19 +7,12 @@ Rails.application.routes.draw do
   root 'main#index'
 
   get '/phantom', to: 'main#phantom'
-  # root 'main#home'
-
-  # resources pages
-  get '/spay_and_neuter', to: 'resource_pages#spay_and_neuter'
-  get '/products', to: 'resource_pages#products'
-  get '/microchipping', to: 'resource_pages#microchipping'
-  get '/fencing', to: 'resource_pages#fencing'
 
   # about pages
-  get '/code_of_ethics', to: 'about_pages#code_of_ethics'
-  get '/what_is_era', to: 'about_pages#what_is_era'
-  get '/faq', to: 'about_pages#faq'
-  get '/contact', to: 'about_pages#contact'
+  get '/code_of_ethics', to: 'code_of_ethics#index'
+  get '/what_is_era', to: 'what_is_era#index'
+  get '/faq', to: 'faq#index'
+  get '/contact_us', to: 'contact_us#index'
+  post '/contact_us', to: 'contact_us#create'
 
-  resources :animal_rescues
 end

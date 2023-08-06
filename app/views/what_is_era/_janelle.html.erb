@@ -1,0 +1,37 @@
+<% tab = '&nbsp &nbsp &nbsp'.html_safe %>
+
+<div class="container" id="app">
+  <div id="janelle-modal-prompt" class="modal vertical-navbar-hidden">
+    <div class="modal-background"></div>
+    <div class="modal-content board-of-directors-modal">
+      <%= image_tag "what_is_era/janelle.jpg" %>
+      <div class="has-text-centered pt-4">
+        <div class="title is-size-4">
+          Janelle Newton
+        </div>
+        <div class="subtitle is-size-6 mb-0">
+          President
+        </div>
+        <div class="has-text-left p-3">
+          <p>
+            <%= tab %>Janelle founded Redstone Husky Rescue in 2021 and has been a veterinary
+            technician since 2006. After seeing the severe lack of ethics in animal welfare in the rescue community,
+            she opened Redstone in an attempt to do as much as she could with the resources she could build. Through
+            TikTok, she met the other board members of ERA and saw that she was not alone in the desire to hold rescues
+            accountable to a code of ethics while empowering the public through education.
+          </p>
+          <p class="mt-4">
+            <%= tab %>After connecting with these other dog community creators, she created a video discussing
+            how government offices could never do the job the right way to where it would actually make a difference.
+            This video would lead to the dawn of a new ERA in which ethical rescues hold each other accountable and educate
+            the public about Animal Welfare, with the goals of fighting back against Animal Rights Activism and putting the animals'
+            humane care over human desires.
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+</div>
+
+<%= javascript_include_tag "modals/modal_prompt.js" %>

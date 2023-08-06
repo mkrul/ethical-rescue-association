@@ -1,0 +1,37 @@
+<% tab = '&nbsp &nbsp &nbsp'.html_safe %>
+
+<div class="container" >
+  <div id="bri-modal-prompt" class="modal vertical-navbar-hidden">
+    <div class="modal-background"></div>
+    <div class="modal-content board-of-directors-modal">
+      <%= image_tag "what_is_era/bri.jpg", class: "obj-pos-right" %>
+      <div class="has-text-centered pt-4">
+        <div class="title is-size-4">
+          Bri Benton
+        </div>
+        <div class="subtitle is-size-6 mb-0">
+          Ethical Breeder Liaison
+        </div>
+        <div class="has-text-left p-3">
+          <p>
+            <%= tab %>Being a dog trainer and Dock Diving instructor by profession, dogs are a
+            huge part of Bri's life and career. Today she runs Southern Star Border Collies as a trainer,
+            competitor, and breeder while managing a lively homestead of 14 dogs.  All of her dogs are
+            trained with the basics of Service Dog work, Public Access training, disc, agility and dock.
+          </p>
+          <p class="mt-4">
+            <%= tab %>As an ethical breeder, Bri does not take her responsibility lightly, and
+            strives to ensure that every puppy she produces gets placed in the perfect home.  All of the
+            dogs in her program must be structurally and mentally sound before being considered for breeding.
+            Her commitment to responsible breeding practices makes her a valuable ally in the ongoing
+            efforts to address the challenges posed by animal overpopulation and promote a more compassionate
+            approach to animal welfare.
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+</div>
+
+<%= javascript_include_tag "modals/modal_prompt.js" %>

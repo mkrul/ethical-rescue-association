@@ -1,0 +1,66 @@
+
+@import "../application_config.scss";
+
+.contact-container {
+
+  /* BANNER */
+
+  .banner-img {
+    background-image: url("contact_us/contact-us-banner.jpg");
+    height: 430px;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      background-image: url("contact_us/contact-us-banner-tablet-lg.jpg");
+    }
+    @media only screen and (max-width: $TABLET) {
+      background-image: url("contact_us/contact-us-banner-tablet-mobile.jpg");
+    }
+    @media only screen and (max-width: $MOBILE) {
+      background-image: url("contact_us/contact-us-banner-tablet-mobile.jpg");
+    }
+  }
+
+  .tagline-secondary {
+    display: none;
+  }
+
+  .content-container {
+    padding: 1em 3em 3em 3em;
+
+    @media only screen and (max-width: $TABLET) {
+      padding: 1.5em 1em 3em 1em;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      padding: 1em 1em 3em 1em;
+    }
+  }
+
+  .contact-inquiry-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-inquiry {
+    width: 60%;
+    text-align: center;
+    padding-bottom: 2em;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      width: 80%;
+    }
+
+    @media only screen and (max-width: $TABLET) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      width: 100%;
+    }
+  }
+}

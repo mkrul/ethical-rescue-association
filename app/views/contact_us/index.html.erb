@@ -1,0 +1,86 @@
+<div class="contact-container">
+  <div class="banner-container">
+    <div class="banner-img">
+      <div class="hero-body hero-content">
+        <div class="banner-content">
+          <h3 class="tagline-primary font-gotham-bold">
+            Contact ERA
+          </h3>
+          <h3 class="tagline-secondary font-gotham-regular">
+            The standards that govern ERA-accredited rescue operations
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section container">
+    <section class="content-container">
+      <div class="container">
+        <h2 class="title font-gotham mb-5 coe-title d-flex justify-center">Contact us</h2>
+
+        <section class="container">
+          <div class="columns is-gapless">
+            <div class="column">
+              <div class="font-gotham contact-inquiry-container">
+                <div class="contact-inquiry">
+                  <p>
+                    Our team is here to help and answer any questions you might have.  We look forward to hearing from you. 😊
+                  <p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <%= form_with url: contact_us_path, method: :post, data: {turbo: false} do |form| %>
+          <div class="field">
+            <%= form.label :name, class: "label has-text-weight-light" %>
+            <div class="control has-icons-left">
+              <%= form.text_field :name, id: "name", class: "input", placeholder: "Name", autofocus: true, required: true %>
+              <span class="icon is-left">
+                <i class="fa fa-user"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <%= form.label :email, class: "label has-text-weight-light" %>
+            <div class="control has-icons-left">
+              <%= form.email_field :email, id: "email", class: "input", placeholder: "Email", required: true %>
+              <span class="icon is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <%= form.label :message, class: "label has-text-weight-light" %>
+            <%= form.text_area :message, id: "Message", rows: 5, class: "textarea", placeholder: "Message", required: true %>
+          </div>
+          <%= form.submit "Submit", class: "button is-success" %>
+        <% end %>
+      </div>
+    </section>
+  </section>
+</div>
+
+<script>
+  $(document).ready(function() {
+    var allPanels = $('.accord-content').hide();
+    var heads = $('.accordion header');
+    $(heads).on('click', function() {
+      $this = $(this);
+      $target =  $this.parent().find('div.accord-content');
+      if (!$target.hasClass('active')) {
+        heads.removeClass('selected');
+        $this.addClass('selected');
+        $('.carrot').addClass('selected');
+        allPanels.removeClass('active').slideUp();
+        $target.addClass('active').slideDown();
+      } else {
+        heads.removeClass('selected');
+        $('.carrot').removeClass('selected');
+        allPanels.removeClass('active').slideUp();
+      }
+    });
+  });
+</script>
