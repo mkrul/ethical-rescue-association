@@ -4,9 +4,15 @@ class ContactUsController < ApplicationController
   end
 
   def create
-    if contact_params[:name].blank? || contact_params[:email].blank? || contact_params[:message].blank?
+    if params[:name].blank? || params[:email].blank? || params[:message].blank?
       flash[:error] = "Your name, email, and a message are required. Please try again."
     else
+      ContactUsMailer.contact_us(
+        name: params[:name],
+        email: params[:email],
+        message: params[:message]
+      ).deliver!
+
       flash[:notice] = "Thank you for contacting us. We will get back to you shortly."
     end
 
@@ -14,9 +20,5 @@ class ContactUsController < ApplicationController
   end
 
   private
-
-  def contact_params
-    params.permit(:name, :email, :message)
-  end
 
 end
