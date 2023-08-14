@@ -1,5 +1,3 @@
-<% tab = '&nbsp &nbsp &nbsp'.html_safe %>
-
 <div class="code-of-ethics-container mb-4">
   <div class="banner-container">
     <div class="banner-img">
@@ -29,13 +27,13 @@
             </div>
             <div class="presidents-coe-statement text-black">
               <div>
-                <%= tab %> The Code of Ethics was written as the foundation of ERA so that we can uphold a
+                <%= insert_tab %>The Code of Ethics was written as the foundation of ERA so that we can uphold a
                 standard of care for the animals in our organizations and the communities that
                 we serve. These categories are what have been shown to be lacking within the
                 rescue community in recent years.
               </div>
               <div class="pt-4">
-                <%= tab %> This is not an all inclusive or limiting guideline of ethics, but rather a reminder
+                <%= insert_tab %>This is not an all inclusive or limiting guideline of ethics, but rather a reminder
                 of the greater good we must be working towards for the betterment of animal welfare
                 and all animals in our communities. All ERA Accredited Rescues agree to uphold this
                 Code of Ethics to the best of their abilities and to work towards bettering their
@@ -70,7 +68,7 @@
           <div class="line ml-4"></div>
         </div>
         <p class="has-text-left coe-ethics-statement">
-          <%= tab %>The following is an abridged overview of the Ethical Rescue Association's Code of Ethics.
+          <%= insert_tab %>The following is an abridged overview of the Ethical Rescue Association's Code of Ethics.
           These entail a commitment to upholding and promoting ethical practices, responsible governance, and
           the welfare of animals in our care. These standards are designed to assist us in assessing and
           recognizing rescues and shelters that demonstrate this commitment. ERA strongly encourages other
@@ -96,11 +94,12 @@
                   <div class="media-content">
                     <p class="title is-4">Welfare Concepts</p>
                     <p class="is-6 has-text-left ethics-category">
-                      <%= tab %>Animal welfare advocacy is not about the singular individual in front of us, but
+                      <%= insert_tab %>
+                      Animal welfare advocacy is not about the singular individual in front of us, but
                       rather the welfare and care of all around us. We must understand the difference from Animal
                       Rights activism. While the impulse to save as many animals as possible is commendable, it is
                       vital to shift our attention from the quantity of animals saved to the quality of care provided.
-                      Acting on a deep, scientific understanding of physical, mental, and emotional health and
+                      Acting on a scientific understanding of physical, mental, and emotional health and
                       wellbeing will lead to accountability for every animal that is placed in a home.
                     </p>
                   </div>
@@ -122,7 +121,8 @@
                   <div class="media-content">
                     <p class="title is-4">Adoption and Foster Placement</p>
                     <p class="is-6 has-text-left ethics-category">
-                      <%= tab %>Equal opportunities for adoption and placement of animals should be
+                      <%= insert_tab %>
+                      Equal opportunities for adoption and placement of animals should be
                       attainable, fair, and reasonable. Permanent foster situations are appropriate for
                       hospice cases. Biosecurity should be a primary focus for any and all animals within
                       rescue care. Honesty must become a forefront consideration when placing animals in
@@ -152,11 +152,13 @@
                   <div class="media-content">
                     <p class="title is-4">Humane Care and Treatment</p>
                     <p class="is-6 has-text-left ethics-category">
-                      <%= tab %>Euthanasia is an unfortunate reality in rescue for a variety of reasons including emotional
-                      and behavioral, which must be considered as important as physical health. Providing this
-                      compassionate care is hard on us at times, but animal welfare is not easy. As such, we need
-                      to lead by example to do right by these animals no matter how it makes us feel. Not every
-                      case can be a success story, but the care of every animal can be successful and ethical.
+                      <%= insert_tab %>
+                      Animals in rescue care should be on the path to a treatment plan for any and all
+                      medical needs. Emotional health needs to be considered as important as physical health.
+                      Euthanasia is an unfortunate reality and should be considered if an animal's quality of
+                      life is in decline. While this can be hard on us at times, we need to lead by example to
+                      do right by these animals no matter how it makes us feel. Not every case can be a success
+                      story, but the care of every animal can be successful and ethical.
                     </p>
                   </div>
                 </div>
@@ -177,7 +179,8 @@
                   <div class="media-content">
                     <p class="title is-4">Public Presence</p>
                     <p class="is-6 has-text-left ethics-category">
-                      <%= tab %>Rescues should maintain a professional public presence both in person and
+                      <%= insert_tab %>
+                      Rescues should maintain a professional public presence both in person and
                       on social media. When discussing cases, there should be only factual statements presented,
                       not embellished stories to garner donor generosity. Appropriate and supportive partnerships
                       with shelters is a must.  Following all local laws, even when it is not what we want to do,
@@ -207,7 +210,8 @@
                   <div class="media-content">
                     <p class="title is-4">Funding Transparency</p>
                     <p class="is-6 has-text-left ethics-category">
-                      <%= tab %>Accountability to our donor base, who help to keep our proverbial doors open,
+                      <%= insert_tab %>
+                      Accountability to our donor base, who help to keep our proverbial doors open,
                       should not be taken lightly. Animals should not be brought into rescue care if there is a
                       large outstanding medical debt. Offering thorough explanation of needs with evidential
                       documentation such as invoices and estimates should be done without prompting or request.
@@ -233,7 +237,8 @@
                   <div class="media-content">
                     <p class="title is-4">Community Care and Support</p>
                     <p class="is-6 has-text-left ethics-category">
-                      <%= tab %>Pet retention should be a priority whenever possible within an organization’s abilities.
+                      <%= insert_tab %>
+                      Pet retention should be a priority whenever possible within an organization’s abilities.
                       Offering some sort of pet retention program, such as wellness care, emergent care support, or
                       microchipping, will strengthen our bonds with the communities that we serve. We must abide
                       by local laws and continue to educate the public on the changes and intricacies of those laws.
@@ -250,23 +255,3 @@
     </section>
   </section>
 </div>
-
-<script>
-  $(document).ready(function() {
-    var allPanels = $('.accord-content').hide();
-    var heads = $('.accordion header');
-    $(heads).on('click', function() {
-      $this = $(this);
-      $target =  $this.parent().find('div.accord-content');
-      if (!$target.hasClass('active')) {
-        heads.removeClass('selected');
-        $this.addClass('selected');
-        allPanels.removeClass('active').slideUp();
-        $target.addClass('active').slideDown();
-      } else {
-        heads.removeClass('selected');
-        allPanels.removeClass('active').slideUp();
-      }
-    });
-  });
-</script>

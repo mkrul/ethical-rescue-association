@@ -1,3 +1,5 @@
+<%= javascript_include_tag "accordion" %>
+
 <div class="faq-container">
   <div class="banner-container">
     <div class="banner-img">
@@ -20,6 +22,50 @@
         <div class="columns accordion-columns is-justify-content-center p-0">
           <div class="column">
             <article class="accordion">
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    Does ERA support animal rights?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    Animal rights advocacy is based in the belief that animals should have inherent rights, such as the
+                    right to life and the freedom to live as they wish, without being used by humans. Conversely, animal welfare
+                    emphasizes making practical improvements in the lives of animals while working within existing systems.
+                  </p>
+                  <p>
+                    While animal rights has brought attention to important ethical considerations, it has also contributed to
+                    challenges within the landscape of animal rescue. For example, the belief that animals should not be used by
+                    humans has led to the demonization of ethical preservation breeders. This has resulted in a lack of understanding
+                    of the role that ethical breeders play in animal welfare, and has contributed to the belief that all breeders
+                    are bad. Extreme animal rights positions can also lead to shelters and rescue organizations facing criticism when
+                    they must make difficult decisions about euthanasia and medical care that may not fit within an absolutist perspective.
+                  </p>
+                  <p>
+                    It's important to note that not all animal rights perspectives contribute negatively to the animal
+                    welfare crisis.  However, we believe that a more practical approach that focuses on well-being and minimizing
+                    suffering will allow us to work more effectively to improve the lives of animals in rescues and shelters.
+                  </p>
+                </div>
+              </section>
+              <section>
+                <header>
+                  <h5 class="d-flex is-justify-content-space-between">
+                    What is ERA's position on breeders?
+                  </h5>
+                  <div class="carrot"></div>
+                </header>
+                <div class="accord-content">
+                  <p>
+                    ERA believes that ethical breeders play a vital role in combating the animal welfare crisis,
+                    and that breeders who prioritize responsible practices, health, and the preservation of breed standards
+                    should be supported by the community.  We also believe that the term "breeder" should not be used as a
+                    pejorative to describe unethical puppy mills and backyard breeders.
+                  </p>
+                </div>
+              </section>
               <section>
                 <header>
                   <h5 class="d-flex is-justify-content-space-between">
@@ -231,7 +277,8 @@
           <div class="faq-inquiry">
             <p>
               <strong>Have a question about ERA</strong> that isn't listed here?
-              Please reach out to us via our contact form and share your thoughts, questions, or inquiries.
+              Please reach out to us via our <%= link_to "contact form", contact_us_path %>
+              and share your thoughts, questions, or inquiries.
             </p>
             <p>
               We value your input and look forward to hearing from you!
@@ -243,25 +290,3 @@
     </div>
   </section>
 </div>
-
-<script>
-  $(document).ready(function() {
-    var allPanels = $('.accord-content').hide();
-    var headers = $('.accordion header');
-    $(headers).on('click', function() {
-      $this = $(this);
-      $target =  $this.parent().find('div.accord-content');
-      if (!$target.hasClass('active')) {
-        headers.removeClass('selected');
-        $this.addClass('selected');
-        $('.carrot').addClass('selected');
-        allPanels.removeClass('active').slideUp();
-        $target.addClass('active').slideDown();
-      } else {
-        headers.removeClass('selected');
-        $('.carrot').removeClass('selected');
-        allPanels.removeClass('active').slideUp();
-      }
-    });
-  });
-</script>

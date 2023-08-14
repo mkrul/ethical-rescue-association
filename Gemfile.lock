@@ -161,6 +161,7 @@ GEM
     nokogiri (1.14.2-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    owlcarousel-rails (2.2.3.5)
     pg (1.4.6)
     public_suffix (5.0.1)
     puma (5.6.4)
@@ -285,6 +286,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jquery-rails (~> 4.4)
+  owlcarousel-rails
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)

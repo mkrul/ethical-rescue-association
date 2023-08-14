@@ -1,4 +1,4 @@
-<% tab = '&nbsp &nbsp &nbsp'.html_safe %>
+<%= javascript_include_tag "our_values" %>
 
 <div class="what-is-era-container mb-4">
   <div class="banner-container">
@@ -31,7 +31,9 @@
         <article class="tile is-9 is-shady notification is-white mission-statement has-text-left p-0">
           <div class="content mission-statement-content">
             <p>
-              <%= tab %><span class="font-size-22">The Ethical Rescue Association</span> (ERA) is an
+              <span class="font-size-22">
+              <%= insert_tab %>
+              The Ethical Rescue Association</span> (ERA) is an
               accrediting body that seeks to bring about much-needed grassroots reform in the world
               of animal rescue. With a team of dedicated volunteers, ERA strives to foster
               a compassionate and transparent environment within the rescue community.
@@ -43,7 +45,8 @@
               align with these values.
             </p>
             <p>
-              <%= tab %><span class="font-size-22">Our Mission</span> is to provide ethical guidelines
+              <%= insert_tab %>
+              <span class="font-size-22">Our Mission</span> is to provide ethical guidelines
               for animal welfare organizations to promote humane and ethical treatment of the animals
               in their care, as well as putting public health and safety back at the forefront.
               By distancing from animal rights activism, the Ethical Rescue Association will promote
@@ -65,7 +68,8 @@
       <div class="has-text-centered mb-4">
         <h2 class="title font-gotham">Our Values</h2>
         <p class="has-text-left core-values-statement">
-          <%= tab %>ERA's foundational principles are the bedrock on which it stands, shaping its mission
+          <%= insert_tab %>
+          ERA's foundational principles are the bedrock on which it stands, shaping its mission
           and driving its actions. These values serve as the compass that directs every aspect of
           the organization's work. An unwavering commitment to upholding these principles establishes a
           framework for meaningful reform and paves the way for a more ethical future in animal rescue.
@@ -104,15 +108,16 @@
       <div class="has-text-centered mb-4">
         <h2 class="title font-gotham">Board of Directors</h2>
         <p class="has-text-left core-values-statement">
-        <%= tab %>At the heart of ERA's mission is its Board of Directors, a collective
-        of passionate individuals with a shared vision for positive change. Drawing from diverse
-        backgrounds and expertise, the board oversees the organization's strategic direction and
-        decision-making while ensuring that ERA's accreditation process recognizes rescues and
-        shelters that exemplify ethical practices. By embracing ERA's core values and striving
-        to build a culture of partnership, accountability, trust, respect, and integrity within the
-        rescue community, our Board leads the way towards a world where welfare is prioritized,
-        transparency is the norm, and compassionate care is provided to animals in need.
-      </p>
+          <%= insert_tab %>
+          At the heart of ERA's mission is its Board of Directors, a collective
+          of passionate individuals with a shared vision for positive change. Drawing from diverse
+          backgrounds and expertise, the board oversees the organization's strategic direction and
+          decision-making while ensuring that ERA's accreditation process recognizes rescues and
+          shelters that exemplify ethical practices. By embracing ERA's core values and striving
+          to build a culture of partnership, accountability, trust, respect, and integrity within the
+          rescue community, our Board leads the way towards a world where welfare is prioritized,
+          transparency is the norm, and compassionate care is provided to animals in need.
+        </p>
       <div class="columns is-centered" style="padding: 2rem">
         <div class="column">
           <div class="card">
@@ -242,60 +247,3 @@
 <%= render "what_is_era/brittnea" %>
 <%= render "what_is_era/bri" %>
 <%= render "what_is_era/misha" %>
-
-<script>
-  $(document).ready(function() {
-    const initCoreValueFrameAnimations = () => {
-      const coreValues = [
-        ["partnership", "By fostering partnerships with ethical breeders, communities, shelters, and our fellow ethical rescues, we will create the changes that we want to see in the world."],
-        ["accountability", "Holding ourselves and those around us in animal welfare accountable to a higher standard fosters transparency and inspires confidence within the rescue community."],
-        ["trust", "Animal welfare organizations must work to regain the trust of the communities that they serve and support in the responsible placement of animals in homes."],
-        ["respect", "Respect for one another, and respect between rescues and shelters, is vital if we are to present a united front in the face of the animal welfare crisis."],
-        ["integrity", "If we are truly acting as a voice for the voiceless, striving to do right by them at all times - even when no one is watching - is paramount to behaving ethically in animal welfare."]
-      ]
-      for (const val of coreValues) {
-        const coreValue = val[0];
-        const statement = val[1];
-        $(`.core-values-container, .${coreValue}`).mouseenter(function () {
-          $(this).fadeTo(100, 0.8, function() {
-            $(`#${coreValue}-first`).fadeOut(250, function() {
-              $(this).removeClass("first-frame");
-              $(this).addClass("second-frame");
-              $(this).text(statement).fadeIn(250);
-            });
-          });
-        });
-        $(`.${coreValue}`).mouseleave(function () {
-          $(this).fadeTo(100, 1.0, function() {
-            $(`#${coreValue}-first`).fadeOut(250, function() {
-              $(this).removeClass("second-frame");
-              $(this).addClass("first-frame");
-              $(this).text(coreValue.toUpperCase()).fadeIn(250);
-            });
-          });
-        });
-
-        // MOBILE
-        $(`.core-values-container, .${coreValue}`).on("tap", function () {
-          $(this).fadeTo(100, 0.8, function() {
-            $(`#${coreValue}-first`).fadeOut(250, function() {
-              $(this).removeClass("first-frame");
-              $(this).addClass("second-frame");
-              $(this).text(statement).fadeIn(250);
-            });
-          });
-        });
-        $(`.${coreValue}`).on("tap", function () {
-          $(this).fadeTo(100, 1.0, function() {
-            $(`#${coreValue}-first`).fadeOut(250, function() {
-              $(this).removeClass("second-frame");
-              $(this).addClass("first-frame");
-              $(this).text(coreValue.toUpperCase()).fadeIn(250);
-            });
-          });
-        });
-      }
-    }
-    initCoreValueFrameAnimations();
-  });
-</script>

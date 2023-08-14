@@ -1,3 +1,4 @@
+<%= javascript_include_tag "navbar_burger" %>
 
 <div class="navbar-container">
   <div class="font-gotham">
@@ -106,14 +107,5 @@
     </nav>
   </div>
 </div>
-
-<script>
-  $(document).ready(function() {
-    $(".navbar-burger").click(function() {
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-    })
-  })
-</script>
 
 <%= render 'main/payment_prompt' %>

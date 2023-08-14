@@ -12,4 +12,11 @@ module ApplicationHelper
   def set_local_storage_key
     session[:era] = true
   end
+
+  def insert_tab
+    <<~HTML
+      <span class="tab"></span>
+    HTML
+    .html_safe
+  end
 end

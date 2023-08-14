@@ -23,7 +23,9 @@
   <body>
     <div class="body-container">
       <%= render partial: "shared/navbar" %>
-      <div class="top-bar"></div>
+      <% if !notice && !alert %>
+        <div class="top-bar"></div>
+      <% end %>
     <div>
       <% if notice %>
       <div class="notification is-success is-light has-text-centered m-0">
