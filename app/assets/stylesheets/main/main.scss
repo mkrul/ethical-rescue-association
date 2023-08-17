@@ -189,7 +189,7 @@
   }
   @media only screen and (max-width: $MOBILE) {
     font-size: 1.15em;
-    line-height: 1.8;
+    line-height: 1.75;
     width: 85vw;
   }
 }
@@ -204,21 +204,23 @@
   max-width: 8vw;
   max-height: 8vw;
 
-  @media only screen and (max-width: 1215px) {
+  @media only screen and (max-width: $TABLET-LG) {
     width: 75px;
     height: 75px;
   }
   @media only screen and (max-width: $TABLET) {
     width: 18vw;
     height: 18vw;
-    max-width: 17vw;
-    max-height: 17vw;
+    max-width: 85px;
+    max-height: 85px;
   }
   @media only screen and (max-width: $MOBILE) {
-    width: 18vw;
-    height: 18vw;
+    width: 13vw;
+    height: 13vw;
     max-width: 17vw;
     max-height: 17vw;
+    min-width: 65px;
+    min-height: 65px;
   }
 }
 
@@ -254,13 +256,13 @@
 }
 
 .step-title {
-  @media only screen and (max-width: 1215px) {
+  @media only screen and (max-width: $TABLET-LG) {
     padding: 0 1em;
   }
 }
 
 .step-subtitle {
-  @media only screen and (max-width: 1215px) {
+  @media only screen and (max-width: $TABLET-LG) {
     padding: 0 1.5em;
   }
 }
@@ -268,6 +270,19 @@
 .number-step {
   color: #373638;
   padding: 0;
+  font-size: 1.25em;
+
+  @media only screen and (max-width: $TABLET-LG) {
+    font-size: 1.4em;
+  }
+
+  @media only screen and (max-width: $TABLET) {
+    font-size: 1.7em;
+  }
+
+  @media only screen and (max-width: $MOBILE) {
+    font-size: 1.35em;
+  }
 }
 
 /* PAYMENT PROMPT MODAL */
