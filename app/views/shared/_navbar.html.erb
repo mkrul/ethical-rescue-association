@@ -14,14 +14,16 @@
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu font-size-14 navbar-container">
+      <div id="navbarBasicExample" class="navbar-menu font-size-16 navbar-container">
         <div class="navbar-end">
           <div class="navbar-item is-hoverable pr-2">
-            <div class="navbar-item">
-              <button class="modal-prompt-trigger button font-gotham font-size-14 become-a-member" style="font-size: 14px;" data-target="payment-prompt">
-                Become a Member
-              </button>
-            </div>
+            <% if false %>
+              <div class="navbar-item">
+                <button class="modal-prompt-trigger button font-gotham become-a-member" data-target="payment-prompt">
+                  Become a Member
+                </button>
+              </div>
+            <% end %>
             <div class="navbar-item">
               <%= link_to "What is ERA?", what_is_era_path, class: 'nav-link' %>
             </div>

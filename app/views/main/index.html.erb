@@ -10,9 +10,12 @@
             <h1 class="has-text-white">
               Be part of a new ERA of animal rescue
             </h1>
-            <button class="modal-prompt-trigger button is-info is-medium call-to-action" data-target="payment-prompt">
-              Apply Today
-            </button>
+            <%= button_to "Learn More", what_is_era_path, method: :get, class: "button is-info is-medium call-to-action" %>
+            <% if false %>
+              <button class="modal-prompt-trigger button is-info is-medium call-to-action" data-target="payment-prompt">
+                Apply Today
+              </button>
+            <% end %>
           </div>
         </div>
       </div>
