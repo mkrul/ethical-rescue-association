@@ -43,8 +43,6 @@ gem "jbuilder"
 
 gem 'jquery-rails', '~> 4.4'
 
-gem 'owlcarousel-rails'
-
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 
