@@ -184,11 +184,15 @@ body {
 }
 
 .main-title {
-  font-size: 16px;
+  font-size: $FONT-SIZE-16;
   color: $BRAND-BLUE;
   margin: auto 0;
   width: 100%;
   min-width: fit-content;
+
+  @media only screen and (max-width: $MOBILE) {
+    font-size: $FONT-SIZE-14;
+  }
 }
 
 .logout-btn {
