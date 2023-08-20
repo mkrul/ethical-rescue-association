@@ -4,7 +4,6 @@ import "controllers"
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require owl.carousel
 //= require turbolinks
 // require lightbox
 //= require_tree .
