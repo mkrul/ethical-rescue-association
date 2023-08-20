@@ -119,6 +119,7 @@ body {
 
 .navbar-container {
   font-style: normal;
+  font-size: $FONT-SIZE-16;
   letter-spacing: 0.005em;
 
   .negative-margin {
@@ -183,7 +184,7 @@ body {
 }
 
 .main-title {
-  font-size: 14px;
+  font-size: 16px;
   color: $BRAND-BLUE;
   margin: auto 0;
   width: 100%;
@@ -356,24 +357,6 @@ body {
   @media only screen and (max-width: $MOBILE) {
     height: fit-content;
   }
-}
-
-/* FONT STYLING */
-
-.font-size-14 {
-  font-size: 14px;
-}
-
-.font-size-16 {
-  font-size: 16px;
-}
-
-.font-size-18 {
-  font-size: 18px;
-}
-
-.font-size-22 {
-  font-size: 22px;
 }
 
 /* FOOTER */
