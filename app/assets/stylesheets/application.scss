@@ -145,6 +145,7 @@ body {
     -webkit-box-shadow: none;
     box-shadow: none;
     padding: 8px 5px;
+    font-size: $FONT-SIZE-16;
 
     @media only screen and (max-width: $TABLET-LG) {
       height: fit-content;
