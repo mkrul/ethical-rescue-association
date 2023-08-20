@@ -25,9 +25,11 @@
       <div class="column is-3">
         <h2><strong>Quick Links</strong></h2>
         <ul>
-          <li>
-            <%= link_to "Get Accredited", "https://forms.gle/MeuWpkQyCRj2ky63A", target: "_blank" %>
-          </li>
+          <% if false %>
+            <li>
+              <%= link_to "Get Accredited", "https://forms.gle/MeuWpkQyCRj2ky63A", target: "_blank" %>
+            </li>
+          <% end %>
           <li><%= link_to "Contact Us", contact_us_path %></li>
         </ul>
         <% if false %>
