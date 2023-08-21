@@ -274,7 +274,7 @@ body {
   text-align: right;
   text-shadow: $DARK-GRAY 0 0 12px;
 
-  @media only screen and (max-width: $FULLSCREEN) {
+  @media only screen and (max-width: $DESKTOP) {
     width: 100%;
   }
   @media only screen and (max-width: $TABLET-LG) {
