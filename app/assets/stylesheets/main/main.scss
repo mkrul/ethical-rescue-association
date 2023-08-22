@@ -21,12 +21,16 @@
       display: flex;
       justify-content: space-evenly;
       flex-direction: column;
-      width: 59vw;
-      max-width: 945px;
+      width: 47vw;
       height: inherit;
 
-      @media only screen and (max-width: $TABLET-LG) {
-        width: 65vw;
+      @media only screen and (max-width: 1650px) {
+        width: 740px;
+      }
+
+      @media only screen and (max-width: $TABLET) {
+        width: 100%;
+        text-align: center;
       }
 
       @media only screen and (max-width: $TABLET) {
@@ -36,29 +40,25 @@
 
       form button {
         margin-left: 5vw;
+        letter-spacing: 0.9px;
 
         @media only screen and (max-width: $TABLET) {
           width: 7em;
           height: 2.4em;
           font-size: 1.3em;
           margin: 0;
-          letter-spacing: 1px;
         }
       }
     }
 
     h1 {
       text-shadow: $BLACK 0 0 0.5em;
-      font-size: 5em;
+      font-size: 4vw;
       margin-left: 5vw;
       padding: 0.2em 0;
       line-height: 1.25;
 
-      @media only screen and (max-width: $DESKTOP) {
-        font-size: 4.2em;
-      }
-
-      @media only screen and (max-width: $TABLET-LG) {
+      @media only screen and (max-width: 1650px) {
         font-size: 4em;
       }
 
@@ -81,6 +81,7 @@
       font-weight: 500;
 
       @media only screen and (max-width: $TABLET) {
+        margin-left: 0;
         font-size: 1em;
       }
     }

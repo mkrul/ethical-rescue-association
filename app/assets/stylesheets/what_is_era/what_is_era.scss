@@ -16,23 +16,74 @@
 
   /* BANNER */
 
-  .banner-img {
-    background-image: url("what_is_era/what-is-era-banner.jpg");
-    height: 430px;
-    width: 100%;
-    position: absolute;
-    object-fit: cover;
+  .header-image {
+    background-image: linear-gradient(
+      to right,
+      rgba(24, 28, 36, 0.3),
+      rgba(0, 0, 0, 0)),
+      url("what_is_era/what-is-era-banner.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    height: 36em;
 
-    @media only screen and (max-width: $TABLET-LG) {
-      background-image: url("what_is_era/what-is-era-banner-tablet-lg.jpg");
-    }
     @media only screen and (max-width: $TABLET) {
-      background-image: url("what_is_era/what-is-era-banner-tablet-mobile.jpg");
+      background-position: 75% 0%;
+      height: 20em;
     }
-    @media only screen and (max-width: $MOBILE) {
-      background-image: url("what_is_era/what-is-era-banner-tablet-mobile.jpg");
+
+    div {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      height: inherit;
+
+      @media only screen and (max-width: $TABLET) {
+        justify-content: end;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    h1 {
+      text-shadow: $BLACK 0 0 0.4em;
+      font-size: 5em;
+      margin-left: 5vw;
+      padding: 0.2em 0;
+      line-height: 1.25;
+      letter-spacing: 2.3px;
+
+      @media only screen and (max-width: $TABLET-LG) {
+        font-size: 4.5em;
+      }
+
+      @media only screen and (max-width: $TABLET) {
+        padding: 0.25em 0.5em 0.5em;
+        font-size: 3.25em;
+        margin: 0;
+      }
+
+      @media only screen and (max-width: $TABLET-SM) {
+        font-size: 2.5em;
+        padding: 0.25em 0em 0.5em;
+      }
+    }
+
+    h5 {
+      text-shadow: $BLACK 0 0 1em;
+      font-size: 1.3em;
+      margin-left: 5vw;
+      font-weight: 400;
+      letter-spacing: 2px;
+
+      @media only screen and (max-width: $TABLET-LG) {
+        font-size: 1.2em;
+        letter-spacing: 1.4px;
+      }
+
+      @media only screen and (max-width: $TABLET) {
+        font-size: 1em;
+        margin-left: 0;
+      }
     }
   }
 
