@@ -2,121 +2,92 @@
 @import "../application_config.scss";
 
 .main-container {
-  .main-hero-content {
-    margin-left: 3em;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
-    @media only screen and (max-width: $TABLET-LG) {
-      margin-left: 0;
-    }
-    @media only screen and (max-width: $TABLET) {
-      margin-left: 0;
-      text-align: center;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      margin-left: 0;
-      text-align: center;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
-  .main-banner-container {
-    position: relative;
-    text-align: left;
-    height: 430px;
-    width: 100%;
-  }
-
-  .main-banner-img {
-    background-image: url("main/main-banner.jpg");
-    height: 430px;
-    width: 100%;
-    position: absolute;
-    object-fit: cover;
+  .header-image {
+    background-image: linear-gradient(
+      to top,
+      rgba(30, 31, 46, 0.6),
+      rgba(0, 0, 0, 0)),
+      url("main/main-banner.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-
-    @media only screen and (max-width: $TABLET-LG) {
-      background-image: url("main/main-banner-tablet-lg.jpg");
-    }
-    @media only screen and (max-width: $TABLET) {
-      background-image: url("main/main-banner-tablet-mobile.jpg");
-    }
-    @media only screen and (max-width: $MOBILE) {
-      background-image: url("main/main-banner-tablet-mobile.jpg");
-    }
-  }
-
-  .main-banner-content {
-    padding: 0 5em;
-    width: 45em;
-    height: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-shadow: $DARKER-GRAY 0 0 12px;
-    line-height: 1em;
+    background-position: 50% 0%;
+    height: 36em;
 
     @media only screen and (max-width: $TABLET) {
-      margin: 0 auto;
-      padding: 0 1em;
+      background-position: 75% 0%;
+      height: 20em;
     }
-    @media only screen and (max-width: $MOBILE) {
-      margin: 0 auto;
-      padding: 0;
+
+    div {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      width: 47vw;
+      height: inherit;
+
+      @media only screen and (max-width: 1650px) {
+        width: 740px;
+      }
+
+      @media only screen and (max-width: $TABLET) {
+        width: 100%;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: $TABLET) {
+        width: 100%;
+        text-align: center;
+      }
+
+      form button {
+        margin-left: 5vw;
+        letter-spacing: 0.9px;
+
+        @media only screen and (max-width: $TABLET) {
+          width: 7em;
+          height: 2.4em;
+          font-size: 1.3em;
+          margin: 0;
+        }
+      }
     }
 
     h1 {
-      font-weight: 600;
-      line-height: 1.15;
-      text-shadow: $DARKER-GRAY 0 0 12px;
-      font-size: 55px;
+      text-shadow: $BLACK 0 0 0.5em;
+      font-size: 4vw;
+      margin-left: 5vw;
+      padding: 0.2em 0;
+      line-height: 1.25;
+
+      @media only screen and (max-width: 1650px) {
+        font-size: 4em;
+      }
 
       @media only screen and (max-width: $TABLET) {
-        padding: 0 30px;
-        font-size: 50px;
+        padding: 0.25em 1em 0.5em;
+        margin-left: 3vw;
+        font-size: 3em;
+        margin: 0;
       }
+
+      @media only screen and (max-width: $TABLET-SM) {
+        font-size: 2.4em;
+        padding: 0.25em 0.5em 0.5em;
+      }
+
       @media only screen and (max-width: $MOBILE) {
-        padding: 0 20px;
-        font-size: 40px;
+        font-size: 2.2em;
+        padding: 0.25em 0em 0.5em;
       }
     }
 
-    h2 {
-      font-size: 20px;
-      padding-top: 20px;
-      text-shadow: $DARKER-GRAY 0 0 12px;
+    h5 {
+      text-shadow: $BLACK 0 0 1em;
+      margin-left: 5vw;
+      font-weight: 500;
 
       @media only screen and (max-width: $TABLET) {
-        font-weight: 400;
-        padding: 0;
-      }
-      @media only screen and (max-width: $MOBILE) {
-        font-weight: 400;
-        padding: 0;
-        font-size: 17px;
-      }
-    }
-
-    button {
-      width: 160px;
-      margin-top: 16px;
-
-      @media only screen and (max-width: $TABLET) {
-        align-self: center;
-      }
-
-      @media only screen and (max-width: $MOBILE) {
-        align-self: center;
+        margin-left: 0;
+        font-size: 1em;
       }
     }
   }

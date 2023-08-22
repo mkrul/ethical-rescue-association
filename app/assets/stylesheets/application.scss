@@ -210,118 +210,11 @@ body {
   height: 53vh;
 }
 
-/* BANNERS */
+/* HEADERS */
 
-.hero-content {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  @media only screen and (max-width: $TABLET-LG) {
-    margin-left: 0;
-  }
-  @media only screen and (max-width: $TABLET) {
-    margin-left: 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  @media only screen and (max-width: $MOBILE) {
-    margin-left: 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-}
-
-.banner-container {
-  position: relative;
-  text-align: left;
-  height: 430px;
-  width: 100%;
-}
-
-.banner-content {
-  display: flex;
-  position: relative;
-  height: inherit;
-  margin: 0 8em;
-  flex-direction: column;
-  justify-content: end;
-  align-items: flex-end;
-
-  @media only screen and (max-width: $TABLET-LG) {
-    margin: 0 5em;
-  }
-  @media only screen and (max-width: $TABLET) {
-    margin: 0 10px;
-  }
-  @media only screen and (max-width: $MOBILE) {
-    margin: 0;
-  }
-}
-
-.tagline-primary {
-  color: $WHITE;
-  font-size: 60px;
-  line-height: 1.25em;
-  padding: 10px 0 25px;
-  width: 900px;
-  max-width: 900px;
-  text-align: right;
-  text-shadow: $DARK-GRAY 0 0 12px;
-
-  @media only screen and (max-width: $FULLSCREEN) {
-    width: 100%;
-  }
-  @media only screen and (max-width: $TABLET-LG) {
-    font-size: 50px;
-    line-height: 1.25em;
-    width: 100%;
-  }
-  @media only screen and (max-width: $TABLET) {
-    font-size: 50px;
-    line-height: 1.25em;
-    width: 100%;
-    text-align: center;
-  }
-  @media only screen and (max-width: $MOBILE) {
-    padding: 10px 0 22px;
-    font-size: 40px;
-    width: 100%;
-    line-height: 1.25em;
-    text-align: center;
-  }
-}
-
-.tagline-secondary {
-  color: $WHITE;
-  font-size: 20px;
-  height: 40px;
-  text-align: right;
-  text-shadow: $DARKER-GRAY 0 0 12px;
-
-  @media only screen and (max-width: $TABLET-LG) {
-    height: inherit;
-    text-align: right;
-    width: 100%;
-    font-size: 18px;
-  }
-  @media only screen and (max-width: $TABLET) {
-    height: inherit;
-    text-align: center;
-    width: 100%;
-    font-size: 18px;
-  }
-  @media only screen and (max-width: $MOBILE) {
-    height: inherit;
-    text-align: center;
-    width: 100%;
-    font-size: 18px;
-  }
+.section-header {
+  line-height: 1.3em;
+  letter-spacing: 1.5px;
 }
 
 /* MAIN */
@@ -412,12 +305,20 @@ body {
     height: 50px;
   }
 
+  .line-container {
+    height: 100%;
+    margin: auto 0;
+  }
+
   .line {
     height: 1px;
     width: 100px;
     background-color: $BRAND-GOLD;
-    margin: auto 0;
-    margin-right: 0px;
-    margin-right: 15px;
+    margin-right: 1em;
+    margin-left: 1em;
+
+    @media only screen and (max-width: $MOBILE) {
+      width: 22vw;
+    }
   }
 }

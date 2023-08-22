@@ -1,18 +1,14 @@
 <div class="code-of-ethics-container mb-4">
-  <div class="banner-container">
-    <div class="banner-img">
-      <div class="hero-body hero-content">
-        <div class="banner-content">
-          <h3 class="tagline-primary font-gotham-bold">
-            Code of Ethics
-          </h3>
-          <h3 class="tagline-secondary font-gotham-regular">
-            The standards that govern ERA-accredited rescue operations
-          </h3>
-        </div>
-      </div>
+  <section class="hero is-large header-image">
+    <div class="hero-body">
+      <h1 class="title has-text-white">
+        Code of Ethics
+      </h1>
+      <h5 class="subtitle has-text-white">
+        The standards that govern ERA-accredited rescue operations
+      </h5>
     </div>
-  </div>
+  </section>
 
   <section class="section container">
     <section class="content-container pt-2">
@@ -22,7 +18,7 @@
         </div>
         <div class="column">
           <div class="coe-statement-container">
-            <div class="title coe-statement-title font-gotham">
+            <div class="title coe-statement-title">
               <strong>A Message From Our President</strong>
             </div>
             <div class="presidents-coe-statement text-black">
@@ -59,13 +55,17 @@
 
     <section class="content-container">
       <div class="container has-text-centered">
-        <h2 class="title font-gotham mb-5 coe-title">The Official ERA Code of Ethics</h2>
+        <h2 class="title mb-5 section-header">The Official ERA Code of Ethics</h2>
         <div class="logo-separator mb-4">
-          <div class="line mr-4"></div>
+          <div class="line-container">
+            <div class="line"></div>
+          </div>
           <div class="logo-simplified">
             <%= image_tag "logos/logo-simplified.jpg" %>
           </div>
-          <div class="line ml-4"></div>
+          <div class="line-container">
+            <div class="line"></div>
+          </div>
         </div>
         <p class="has-text-left coe-ethics-statement">
           <%= insert_tab %>The following is an abridged overview of the Ethical Rescue Association's Code of Ethics.
@@ -92,15 +92,15 @@
               <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4">Welfare Concepts</p>
+                    <p class="title is-4 ethics-title">Welfare Concepts</p>
                     <p class="is-6 has-text-left ethics-category">
                       <%= insert_tab %>
-                      Animal welfare advocacy is not about the singular individual in front of us, but
-                      rather the welfare and care of all around us. We must understand the difference from Animal
-                      Rights activism. While the impulse to save as many animals as possible is commendable, it is
+                      Animal welfare is not about the singular individual in front of us, but
+                      rather the welfare and care of all around us. We must understand the difference from animal
+                      rights activism. While the impulse to save as many animals as possible is commendable, it is
                       vital to shift our attention from the quantity of animals saved to the quality of care provided.
-                      Acting on a scientific understanding of physical, mental, and emotional health and
-                      wellbeing will lead to accountability for every animal that is placed in a home.
+                      Acting on an understanding of physical, mental, and emotional health and
+                      wellbeing will lead to accountability for every animal placed in a home.
                     </p>
                   </div>
                 </div>
@@ -119,7 +119,7 @@
               <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4">Adoption and Foster Placement</p>
+                    <p class="title is-4 ethics-title">Adoption and Foster Placement</p>
                     <p class="is-6 has-text-left ethics-category">
                       <%= insert_tab %>
                       Equal opportunities for adoption and placement of animals should be
@@ -150,7 +150,7 @@
               <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4">Humane Care and Treatment</p>
+                    <p class="title is-4 ethics-title">Humane Care and Treatment</p>
                     <p class="is-6 has-text-left ethics-category">
                       <%= insert_tab %>
                       Animals in rescue care should be on the path to a treatment plan for any and all
@@ -158,7 +158,7 @@
                       Euthanasia is an unfortunate reality and should be considered if an animal's quality of
                       life is in decline. While this can be hard on us at times, we need to lead by example to
                       do right by these animals no matter how it makes us feel. Not every case can be a success
-                      story, but the care of every animal can be successful and ethical.
+                      story, but the care of every animal can be ethical.
                     </p>
                   </div>
                 </div>
@@ -177,7 +177,7 @@
               <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4">Public Presence</p>
+                    <p class="title is-4 ethics-title">Public Presence</p>
                     <p class="is-6 has-text-left ethics-category">
                       <%= insert_tab %>
                       Rescues should maintain a professional public presence both in person and
@@ -208,7 +208,7 @@
               <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4">Funding Transparency</p>
+                    <p class="title is-4 ethics-title">Funding Transparency</p>
                     <p class="is-6 has-text-left ethics-category">
                       <%= insert_tab %>
                       Accountability to our donor base, who help to keep our proverbial doors open,
@@ -235,7 +235,7 @@
               <div class="card-content coe-card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4">Community Care and Support</p>
+                    <p class="title is-4 ethics-title">Community Care and Support</p>
                     <p class="is-6 has-text-left ethics-category">
                       <%= insert_tab %>
                       Pet retention should be a priority whenever possible within an organization’s abilities.

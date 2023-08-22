@@ -1,20 +1,16 @@
 <%= javascript_include_tag "our_values" %>
 
 <div class="what-is-era-container mb-4">
-  <div class="banner-container">
-    <div class="banner-img">
-      <div class="hero-body hero-content">
-        <div class="banner-content">
-          <h3 class="tagline-primary font-gotham-bold">
-            What is ERA?
-          </h3>
-          <h3 class="tagline-secondary font-gotham-regular">
-            The mission, principles, and humans who power the movement
-          </h3>
-        </div>
-      </div>
+  <section class="hero is-large header-image">
+    <div class="hero-body">
+      <h1 class="title has-text-white">
+        What is ERA?
+      </h1>
+      <h5 class="subtitle has-text-white">
+        The mission, principles, and humans who power the movement
+      </h5>
     </div>
-  </div>
+  </section>
 
   <section class="section container standard-padding mt-4">
     <div class="sandbox">
@@ -66,7 +62,18 @@
   <section class="section container standard-padding">
     <div class="sandbox">
       <div class="has-text-centered mb-4">
-        <h2 class="title font-gotham">Our Values</h2>
+        <h2 class="title mb-5 section-header">Our Values</h2>
+        <div class="logo-separator mb-4">
+          <div class="line-container">
+            <div class="line"></div>
+          </div>
+          <div class="logo-simplified">
+            <%= image_tag "logos/logo-simplified.jpg" %>
+          </div>
+          <div class="line-container">
+            <div class="line"></div>
+          </div>
+        </div>
         <p class="has-text-left core-values-statement">
           <%= insert_tab %>
           ERA's foundational principles are the bedrock on which it stands, shaping its mission
@@ -106,7 +113,18 @@
   <section class="section container standard-padding">
     <div class="sandbox">
       <div class="has-text-centered mb-4">
-        <h2 class="title font-gotham">Board of Directors</h2>
+        <h2 class="title mb-5 section-header">Board of Directors</h2>
+        <div class="logo-separator mb-4">
+          <div class="line-container">
+            <div class="line"></div>
+          </div>
+          <div class="logo-simplified">
+            <%= image_tag "logos/logo-simplified.jpg" %>
+          </div>
+          <div class="line-container">
+            <div class="line"></div>
+          </div>
+        </div>
         <p class="has-text-left core-values-statement">
           <%= insert_tab %>
           At the heart of ERA's mission is its Board of Directors, a collective
