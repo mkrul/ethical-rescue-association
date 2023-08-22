@@ -5,23 +5,71 @@
 
   /* BANNER */
 
-  .banner-img {
-    background-image: url("code_of_ethics/code-of-ethics-banner.jpg");
-    height: 430px;
-    width: 100%;
-    position: absolute;
-    object-fit: cover;
+  .header-image {
+    background-image: linear-gradient(
+      to top,
+      rgba(30, 31, 46, 0.6),
+      rgba(0, 0, 0, 0)),
+      url("code_of_ethics/code-of-ethics-banner.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    height: 36em;
 
-    @media only screen and (max-width: $TABLET-LG) {
-      background-image: url("code_of_ethics/code-of-ethics-banner-tablet-lg.jpg");
-    }
     @media only screen and (max-width: $TABLET) {
-      background-image: url("code_of_ethics/code-of-ethics-banner-tablet-mobile.jpg");
+      background-position: 40% 0%;
+      height: 20em;
     }
-    @media only screen and (max-width: $MOBILE) {
-      background-image: url("code_of_ethics/code-of-ethics-banner-tablet-mobile.jpg");
+
+    div {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      height: inherit;
+
+      @media only screen and (max-width: $TABLET) {
+        justify-content: end;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    h1 {
+      text-shadow: $BLACK 0 0 0.4em;
+      font-size: 4.5em;
+      margin-left: 5vw;
+      padding: 0.2em 0;
+      line-height: 1.25;
+      letter-spacing: 2.3px;
+      margin-top: 0.5em;
+
+      @media only screen and (max-width: $TABLET) {
+        margin-left: 0;
+        font-size: 3em;
+        margin-bottom: 1em;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        font-size: 2em;
+      }
+    }
+
+    h5 {
+      text-shadow: $BLACK 0 0 0.7em;
+      font-size: 1.3em;
+      margin-left: 5vw;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+
+      @media only screen and (max-width: $TABLET) {
+        margin-left: 0;
+        font-size: 1em;
+        letter-spacing: 1.4px;
+        line-height: 1.3em;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        font-size: 1em;
+      }
     }
   }
 
@@ -53,8 +101,9 @@
   }
 
   .coe-statement-title {
-    font-size: 22px;
+    font-size: 28px;
     line-height: 1.5em;
+    letter-spacing: 1.5px;
 
     @media only screen and (max-width: $TABLET) {
       padding-top: 1.75em;
@@ -69,10 +118,12 @@
 
   .coe-title {
     line-height: 1.3em;
+    letter-spacing: 1.5px;
   }
 
   .presidents-coe-statement {
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.5;
   }
 
   .president-sig-container {
@@ -85,13 +136,18 @@
   }
 
   .coe-ethics-statement {
+    font-size: 16px;
     margin-top: 1.5em;
     margin-bottom: 2em;
     color: $BLACK;
   }
 
+  .ethics-title {
+    letter-spacing: 1.5px;
+  }
+
   .ethics-category {
-    line-height: 1.7em;
+    font-size: 16px;
   }
 
   .ethics-category-photo {

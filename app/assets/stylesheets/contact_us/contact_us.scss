@@ -5,28 +5,72 @@
 
   /* BANNER */
 
-  .banner-img {
-    background-image: url("contact_us/contact-us-banner.jpg");
-    height: 430px;
-    width: 100%;
-    position: absolute;
-    object-fit: cover;
+  .header-image {
+    background-image: linear-gradient(
+      to top,
+      rgba(30, 31, 46, 0.5),
+      rgba(0, 0, 0, 0)),
+      url("contact_us/contact-us-banner.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    height: 36em;
 
-    @media only screen and (max-width: $TABLET-LG) {
-      background-image: url("contact_us/contact-us-banner-tablet-lg.jpg");
-    }
     @media only screen and (max-width: $TABLET) {
-      background-image: url("contact_us/contact-us-banner-tablet-mobile.jpg");
+      background-position: 55% 0%;
+      height: 20em;
     }
-    @media only screen and (max-width: $MOBILE) {
-      background-image: url("contact_us/contact-us-banner-tablet-mobile.jpg");
-    }
-  }
 
-  .tagline-secondary {
-    display: none;
+    div {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      height: inherit;
+
+      @media only screen and (max-width: $TABLET) {
+        justify-content: end;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    h1 {
+      text-shadow: $BLACK 0 0 0.4em;
+      font-size: 4.5em;
+      margin-left: 5vw;
+      padding: 0.2em 0;
+      line-height: 1.25;
+      letter-spacing: 2.3px;
+      margin-top: 0.5em;
+
+      @media only screen and (max-width: $TABLET) {
+        margin-left: 0;
+        font-size: 3em;
+        margin-bottom: 1em;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        font-size: 2em;
+      }
+    }
+
+    h5 {
+      text-shadow: $BLACK 0 0 0.7em;
+      font-size: 1.3em;
+      margin-left: 5vw;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+
+      @media only screen and (max-width: $TABLET) {
+        margin-left: 0;
+        font-size: 1em;
+        letter-spacing: 1.4px;
+        line-height: 1.3em;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        font-size: 1em;
+      }
+    }
   }
 
   .content-container {
@@ -38,29 +82,6 @@
 
     @media only screen and (max-width: $MOBILE) {
       padding: 1em 1em 3em 1em;
-    }
-  }
-
-  .contact-inquiry-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .contact-inquiry {
-    width: 60%;
-    text-align: center;
-    padding-bottom: 2em;
-
-    @media only screen and (max-width: $TABLET-LG) {
-      width: 80%;
-    }
-
-    @media only screen and (max-width: $TABLET) {
-      width: 100%;
-    }
-
-    @media only screen and (max-width: $MOBILE) {
-      width: 100%;
     }
   }
 }

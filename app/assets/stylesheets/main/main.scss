@@ -4,8 +4,8 @@
 .main-container {
   .header-image {
     background-image: linear-gradient(
-      to right,
-      rgba(24, 28, 36, 0.3),
+      to top,
+      rgba(30, 31, 46, 0.6),
       rgba(0, 0, 0, 0)),
       url("main/main-banner.jpg");
     background-size: cover;
@@ -63,14 +63,19 @@
       }
 
       @media only screen and (max-width: $TABLET) {
-        padding: 0.25em 0.5em 0.5em;
+        padding: 0.25em 1em 0.5em;
         margin-left: 3vw;
-        font-size: 3.25em;
+        font-size: 3em;
         margin: 0;
       }
 
       @media only screen and (max-width: $TABLET-SM) {
-        font-size: 2.5em;
+        font-size: 2.4em;
+        padding: 0.25em 0.5em 0.5em;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        font-size: 2.2em;
         padding: 0.25em 0em 0.5em;
       }
     }
