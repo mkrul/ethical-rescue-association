@@ -25,6 +25,10 @@
       max-width: 945px;
       height: inherit;
 
+      @media only screen and (max-width: $TABLET-LG) {
+        width: 65vw;
+      }
+
       @media only screen and (max-width: $TABLET) {
         width: 100%;
         text-align: center;
@@ -34,17 +38,17 @@
         margin-left: 5vw;
 
         @media only screen and (max-width: $TABLET) {
-          margin-left: 3vw;
-          width: 6.75em;
-          height: 2.2em;
-          font-size: 1.2em;
+          width: 7em;
+          height: 2.4em;
+          font-size: 1.3em;
           margin: 0;
+          letter-spacing: 1px;
         }
       }
     }
 
     h1 {
-      text-shadow: $DARKER-GRAY 0 0 12px;
+      text-shadow: $BLACK 0 0 0.5em;
       font-size: 5em;
       margin-left: 5vw;
       padding: 0.2em 0;
@@ -52,6 +56,10 @@
 
       @media only screen and (max-width: $DESKTOP) {
         font-size: 4.2em;
+      }
+
+      @media only screen and (max-width: $TABLET-LG) {
+        font-size: 4em;
       }
 
       @media only screen and (max-width: $TABLET) {
@@ -62,23 +70,17 @@
       }
 
       @media only screen and (max-width: $TABLET-SM) {
-        font-size: 2.8em;
-      }
-
-      @media only screen and (max-width: $TABLET-SM) {
-        font-size: 2.25em;
+        font-size: 2.5em;
         padding: 0.25em 0em 0.5em;
       }
-
     }
 
     h5 {
-      text-shadow: $DARKER-GRAY 0 0 12px;
+      text-shadow: $BLACK 0 0 1em;
       margin-left: 5vw;
       font-weight: 500;
 
       @media only screen and (max-width: $TABLET) {
-        margin-left: 3vw;
         font-size: 1em;
       }
     }
