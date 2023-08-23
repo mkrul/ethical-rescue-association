@@ -42,10 +42,6 @@
       letter-spacing: 2.3px;
       margin-top: 0.5em;
 
-      @media only screen and (max-width: $DESKTOP) {
-        font-size: 3.5em;
-      }
-
       @media only screen and (max-width: $TABLET-LG) {
         font-size: 3em;
       }
@@ -53,7 +49,7 @@
       @media only screen and (max-width: $TABLET) {
         font-size: 2.25em;
         margin-left: 0;
-        margin-bottom: 1em;
+        margin-bottom: 1.2em;
       }
 
       @media only screen and (max-width: $MOBILE) {

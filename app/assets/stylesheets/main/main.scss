@@ -233,6 +233,8 @@
 }
 
 .step-subtitle {
+  font-size: 1.15em !important;
+
   @media only screen and (max-width: $TABLET-LG) {
     padding: 0 1.5em;
   }
