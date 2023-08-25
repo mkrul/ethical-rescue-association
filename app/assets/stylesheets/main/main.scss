@@ -236,6 +236,10 @@
   @media only screen and (max-width: $TABLET-LG) {
     padding: 0 1.5em;
   }
+
+  @media only screen and (max-width: $MOBILE) {
+    padding: 0;
+  }
 }
 
 .number-step {
@@ -356,17 +360,16 @@
 }
 
 .package-card {
-  height: 36.5em;
+  height: 27em;
 }
 
 .tier-subtitle {
   text-align: center;
-  padding: 1.75em 8em 2.25em;
+  padding: 2.25em;
   font-size: 18px;
 
-  @media only screen and (max-width: $TABLET-LG) {
-    padding-top: 1.75em;
-    padding-bottom: 2.25em;
+  @media only screen and (max-width: $TABLET) {
+    padding: 2.25em 0;
   }
 }
 
@@ -377,6 +380,7 @@
 
 .disclaimer {
   font-size: 12px;
+  background-color: transparent;
 
   &.point {
     position: absolute;

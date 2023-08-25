@@ -75,7 +75,7 @@
   <section class="section mb-4 px-0">
     <div class="section is-relative steps-banner">
       <div class="has-text-centered steps-banner-content">
-        <h1 class="is-spaced steps-banner-title">
+        <h1 class="is-spaced steps-banner-title px-2">
           Join ERA and help reform the world of animal rescue
         </h1>
         <p class="steps-banner-subtitle">
@@ -185,26 +185,30 @@
             <p class="package-subtitle">
               Growth benefits package
             </p>
-            <div class="features">
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Partner portal access</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Connect with other rescues</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Mentorship opportunities</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Product and resource list</span>
-              </div>
+            <div class="features mt-2 has-text-centered">
+              <% if false %>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Partner portal access</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Connect with other rescues</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Mentorship opportunities</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Product and resource list</span>
+                </div>
+              <% else %>
+                Demonstrates ethical practices and forethought in organizational decisions.
+              <% end %>
             </div>
           </div>
         </div>
@@ -215,34 +219,38 @@
               <div class="title is-3 tier-title has-text-weight-bold mt-5 mb-3">Silver</div>
             </div>
             <p class="package-subtitle">Standard benefits package</p>
-            <div class="features">
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Partner portal access</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Connect with other rescues</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Mentorship opportunities</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Product and resource list</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span class="is-relative">
-                  Supplier discount codes
-                  <code class="has-background-white pt-0 pl-1 disclaimer point">*</code>
-                </span>
-              </div>
+            <div class="features mt-2 has-text-centered">
+              <% if false %>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Partner portal access</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Connect with other rescues</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Mentorship opportunities</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Product and resource list</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span class="is-relative">
+                    Supplier discount codes
+                    <code class="has-background-white pt-0 pl-1 disclaimer point">*</code>
+                  </span>
+                </div>
+              <% else %>
+                Goes above and beyond to consider organizational influence and elevated rescue interactions.
+              <% end %>
             </div>
           </div>
         </div>
@@ -253,48 +261,50 @@
               <div class="title is-3 tier-title has-text-weight-bold mt-5 mb-3">Gold</div>
             </div>
             <p class="package-subtitle">Exclusive benefits package</p>
-            <div class="features">
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Partner portal access</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Connect with other rescues</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Product and resource list</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span class="is-relative">
-                  Supplier discount codes
-                  <code class="has-background-white pt-0 pl-1 disclaimer point">*</code>
-                </span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span>Escalated support requests</span>
-              </div>
-              <div class="features-separator"></div>
-              <div class="features-item">
-                <%= image_tag "main/checkmark", class: "checkmark" %>
-                <span class="is-relative">
-                  Funding and grant programs
-                  <code class="has-background-white pt-0 pl-1 disclaimer point">*</code>
-                </span>
-              </div>
+            <div class="features mt-2 has-text-centered">
+              <% if false %>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Partner portal access</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Connect with other rescues</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Product and resource list</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span class="is-relative">
+                    Supplier discount codes
+                    <code class="has-background-white pt-0 pl-1 disclaimer point">*</code>
+                  </span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span>Escalated support requests</span>
+                </div>
+                <div class="features-separator"></div>
+                <div class="features-item">
+                  <%= image_tag "main/checkmark", class: "checkmark" %>
+                  <span class="is-relative">
+                    Funding and grant programs
+                    <code class="has-background-white pt-0 pl-1 disclaimer point">*</code>
+                  </span>
+                </div>
+              <% else %>
+                Demonstrates exceptionally pragmatic approaches to rescue and is a leader in practices
+                that prioritize the welfare for all involved.
+              <% end %>
             </div>
           </div>
         </div>
-        <code class="mt-5 disclaimer">
-          * These benefits are being finalized and will be available soon!
-        </code>
       </div>
     </div>
   </section>
