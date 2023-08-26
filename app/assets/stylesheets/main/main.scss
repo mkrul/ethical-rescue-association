@@ -390,17 +390,15 @@
 
 // WHY GET ACCREDITED?
 
-.process {
-  position: relative;
+.why-get-accredited-text {
+  line-height: 1.6;
+  font-size: 16px;
+  color: #6F8BA4;
 }
 
-.process:before {
-  position: absolute;
-  content: "";
-  right: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background: url("../images/bg/bg-half.png") no-repeat;
-  background-position: top right;
+.process-block {
+  line-height: 1.6;
+  font-size: 16px;
+  color: #6F8BA4;
+  font-weight: 400;
 }
