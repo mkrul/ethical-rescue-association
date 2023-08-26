@@ -35,7 +35,7 @@
 
     h1 {
       text-shadow: $BLACK 0 0 0.4em;
-      font-size: 4.5em;
+      font-size: 4em;
       margin-left: 5vw;
       padding: 0.2em 0;
       line-height: 1.25;
@@ -49,26 +49,22 @@
       }
 
       @media only screen and (max-width: $MOBILE) {
-        font-size: 2em;
+        font-size: 2.25em;
       }
     }
 
     h5 {
       text-shadow: $BLACK 0 0 0.7em;
-      font-size: 1.3em;
+      font-size: 16px;
       margin-left: 5vw;
       font-weight: 400;
       letter-spacing: 1.5px;
 
       @media only screen and (max-width: $TABLET) {
         margin-left: 0;
-        font-size: 1em;
+        font-size: 16px;
         letter-spacing: 1.4px;
         line-height: 1.3em;
-      }
-
-      @media only screen and (max-width: $MOBILE) {
-        font-size: 1em;
       }
     }
   }

@@ -7,5 +7,6 @@ import "controllers"
 //= require turbolinks
 // require lightbox
 //= require_tree .
+//= require bulma
 
 

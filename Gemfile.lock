@@ -81,6 +81,7 @@ GEM
     builder (3.2.4)
     bulma-rails (0.9.4)
       sassc (~> 2.0)
+    bulmajs-rails (0.11.0)
     byebug (11.1.3)
     capybara (3.38.0)
       addressable
@@ -274,7 +275,8 @@ DEPENDENCIES
   MailchimpMarketing (~> 3.0, >= 3.0.80)
   active_interaction (~> 5.2)
   bootsnap
-  bulma-rails (~> 0.9.4)
+  bulma-rails
+  bulmajs-rails
   byebug (~> 11.1, >= 11.1.3)
   capybara
   cloudflare-rails (~> 3.0)

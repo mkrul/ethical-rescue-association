@@ -300,6 +300,7 @@
 
 .tiers-background {
   background: linear-gradient(to left, #f7eefc, #fef7f1);
+  padding: 4em 1.5em 5.5em !important;
 }
 
 .card-background {
@@ -385,4 +386,21 @@
   &.point {
     position: absolute;
   }
+}
+
+// WHY GET ACCREDITED?
+
+.process {
+  position: relative;
+}
+
+.process:before {
+  position: absolute;
+  content: "";
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg/bg-half.png") no-repeat;
+  background-position: top right;
 }
