@@ -13,11 +13,11 @@
       url("code_of_ethics/code-of-ethics-banner.jpg");
     background-size: cover;
     background-position: 50% 0%;
-    height: 36em;
+    height: 36rem;
 
     @media only screen and (max-width: $TABLET) {
       background-position: 40% 0%;
-      height: 20em;
+      height: 20rem;
     }
 
     div {
@@ -34,27 +34,27 @@
     }
 
     h1 {
-      text-shadow: $BLACK 0 0 0.4em;
-      font-size: 4em;
+      text-shadow: $BLACK 0 0 0.4rem;
+      font-size: 4rem;
       margin-left: 5vw;
       padding: 0.2em 0;
       line-height: 1.25;
       letter-spacing: 2.3px;
-      margin-top: 0.5em;
+      margin-top: 0.5rem;
 
       @media only screen and (max-width: $TABLET) {
         margin-left: 0;
-        font-size: 3em;
-        margin-bottom: 1.2em;
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
       }
 
       @media only screen and (max-width: $MOBILE) {
-        font-size: 2.25em;
+        font-size: 2.25rem;
       }
     }
 
     h5 {
-      text-shadow: $BLACK 0 0 0.7em;
+      text-shadow: $BLACK 0 0 0.7rem;
       font-size: 16px;
       margin-left: 5vw;
       font-weight: 400;
@@ -64,7 +64,7 @@
         margin-left: 0;
         font-size: 16px;
         letter-spacing: 1.4px;
-        line-height: 1.3em;
+        line-height: 1.3rem;
       }
     }
   }
@@ -98,22 +98,22 @@
 
   .coe-statement-title {
     font-size: 28px;
-    line-height: 1.5em;
+    line-height: 1.5rem;
     letter-spacing: 1.5px;
 
     @media only screen and (max-width: $TABLET) {
-      padding-top: 1.75em;
+      padding-top: 1.75rem;
       text-align: center;
     }
 
     @media only screen and (max-width: $MOBILE) {
-      padding-top: 1.75em;
+      padding-top: 1.75rem;
       text-align: center;
     }
   }
 
   .coe-title {
-    line-height: 1.3em;
+    line-height: 1.3rem;
     letter-spacing: 1.5px;
   }
 
@@ -123,18 +123,18 @@
   }
 
   .president-sig-container {
-    margin-top: 0.25em;
-    margin-bottom: 0.5em;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
   .president-sig {
-    width: 12em;
+    width: 12rem;
   }
 
   .coe-ethics-statement {
     font-size: 16px;
-    margin-top: 1.5em;
-    margin-bottom: 2em;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
     color: $BLACK;
   }
 

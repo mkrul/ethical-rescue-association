@@ -61,7 +61,7 @@ body {
 }
 
 .tab {
-  width: 1.5em;
+  width: 1.5rem;
   display: inline-block;
 }
 
@@ -90,16 +90,16 @@ body {
 /* DISPLAY */
 
 .standard-padding {
-  padding-top: 3em !important;
-  padding-bottom: 3em !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 
   @media only screen and (max-width: $TABLET) {
-    padding-top: 2em !important;
-    padding-bottom: 2em !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
   @media only screen and (max-width: $MOBILE) {
-    padding-top: 2em !important;
-    padding-bottom: 2em !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 }
 
@@ -120,7 +120,7 @@ body {
 .navbar-container {
   font-style: normal;
   font-size: $FONT-SIZE-16;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.005rem;
 
   .negative-margin {
     margin-bottom: -25px;
@@ -186,7 +186,7 @@ body {
 
 .main-title {
   font-size: $FONT-SIZE-16;
-  color: $BRAND-BLUE;
+  color: $LIGHT-BLACK;
   margin: auto 0;
   width: 100%;
   min-width: fit-content;
@@ -213,16 +213,11 @@ body {
 /* HEADERS */
 
 .section-header {
-  line-height: 1.3em;
+  line-height: 1.3rem;
   letter-spacing: 1.5px;
 }
 
 /* MAIN */
-
-.top-bar {
-  height: 3.5em;
-  background-color: $OFFWHITE;
-}
 
 .promo-container {
   background: $BLACK;
@@ -262,14 +257,14 @@ body {
 .era-logo-container-footer {
   display: flex;
   justify-content: center;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.6rem;
 }
 
 .era-logo-footer {
   background-image: url("logos/era-logo-colored.png");
-  background-size: 9em;
-  height: 9em;
-  width: 9em;
+  background-size: 9rem;
+  height: 9rem;
+  width: 9rem;
 }
 
 .logo-and-social-media-icons-container {
@@ -278,7 +273,7 @@ body {
 
 .social-media-icons {
   text-align: center;
-  width: 8em;
+  width: 8rem;
   margin: 0 auto;
   i {
     padding: 0 4px;
@@ -290,8 +285,8 @@ body {
 }
 
 .ein-info {
-  font-size: 0.8em;
-  margin: 1.5em;
+  font-size: 0.8rem;
+  margin: 1.5rem;
 }
 
 /* LOGO SEPARATOR */
@@ -314,8 +309,8 @@ body {
     height: 1px;
     width: 100px;
     background-color: $BRAND-GOLD;
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 1rem;
+    margin-left: 1rem;
 
     @media only screen and (max-width: $MOBILE) {
       width: 22vw;
