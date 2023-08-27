@@ -4,13 +4,13 @@
 
   .standard-padding {
     @media only screen and (max-width: $TABLET-LG) {
-      padding-top: 2em;
+      padding-top: 2rem;
     }
     @media only screen and (max-width: $TABLET) {
-      padding-top: 2em;
+      padding-top: 2rem;
     }
     @media only screen and (max-width: $MOBILE) {
-      padding-top: 2em;
+      padding-top: 2rem;
     }
   }
 
@@ -24,10 +24,10 @@
       url("what_is_era/what-is-era-banner.jpg");
     background-size: cover;
     background-position: 50% 0%;
-    height: 36em;
+    height: 36rem;
 
     @media only screen and (max-width: $TABLET) {
-      height: 20em;
+      height: 20rem;
     }
 
     div {
@@ -44,41 +44,37 @@
     }
 
     h1 {
-      text-shadow: $BLACK 0 0 0.4em;
-      font-size: 4.5em;
+      text-shadow: $BLACK 0 0 0.4rem;
+      font-size: 4rem;
       margin-left: 5vw;
       padding: 0.2em 0;
       line-height: 1.25;
       letter-spacing: 2.3px;
-      margin-top: 0.5em;
+      margin-top: 0.5rem;
 
       @media only screen and (max-width: $TABLET) {
         margin-left: 0;
-        font-size: 3em;
-        margin-bottom: 1.2em;
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
       }
 
       @media only screen and (max-width: $MOBILE) {
-        font-size: 2em;
+        font-size: 2.25rem;
       }
     }
 
     h5 {
-      text-shadow: $BLACK 0 0 0.7em;
-      font-size: 1.3em;
+      text-shadow: $BLACK 0 0 0.7rem;
+      font-size: 16px;
       margin-left: 5vw;
       font-weight: 400;
       letter-spacing: 1.5px;
 
       @media only screen and (max-width: $TABLET) {
         margin-left: 0;
-        font-size: 1em;
+        font-size: 16px;
         letter-spacing: 1.4px;
-        line-height: 1.3em;
-      }
-
-      @media only screen and (max-width: $MOBILE) {
-        font-size: 1em;
+        line-height: 1.3rem;
       }
     }
   }
@@ -93,21 +89,21 @@
 
   .mission-statement-content {
     font-size: $FONT-SIZE-16;
-    padding-right: 0.75em;
-    padding-left: 1.5em;
+    padding-right: 0.75rem;
+    padding-left: 1.5rem;
 
     @media only screen and (max-width: $TABLET) {
-      padding: 2em 0.75em 0.75em;
+      padding: 2em 0.75em 0.75rem;
     }
     @media only screen and (max-width: $MOBILE) {
-      padding: 2em 0.75em 0.75em;
+      padding: 2em 0.75em 0.75rem;
     }
   }
 
   .mission-statement {
 
     @media only screen and (max-width: $TABLET) {
-      padding: 0 2em;
+      padding: 0 2rem;
     }
   }
 
@@ -116,7 +112,7 @@
   }
 
   .ethical-definition {
-    padding: 2em;
+    padding: 2rem;
   }
 
   // BOARD OF DIRECTORS
@@ -169,7 +165,7 @@
 
   .era-logo {
     width: 300px;
-    padding-right: 1.75em;
+    padding-right: 1.75rem;
 
     @media only screen and (max-width: $TABLET) {
       padding: 0;
@@ -250,20 +246,20 @@
   .first-frame {
     font-size: 30px;
     font-weight: 500;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.25rem;
 
     @media only screen and (max-width: $TABLET-LG) {
-      line-height: 1em;
+      line-height: 1rem;
     }
 
     @media only screen and (max-width: $TABLET) {
       font-size: 26px;
-      line-height: 1em;
+      line-height: 1rem;
     }
 
     @media only screen and (max-width: $MOBILE) {
       font-size: 22px;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.1rem;
     }
   }
 

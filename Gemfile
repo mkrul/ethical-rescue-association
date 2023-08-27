@@ -3,7 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-gem "bulma-rails", "~> 0.9.4"
+gem "bulma-rails"
+
+gem 'bulmajs-rails'
 
 gem 'cloudflare-rails', '~> 3.0'
 

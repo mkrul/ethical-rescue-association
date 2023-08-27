@@ -10,11 +10,11 @@
       url("main/main-banner.jpg");
     background-size: cover;
     background-position: 50% 0%;
-    height: 36em;
+    height: 36rem;
 
     @media only screen and (max-width: $TABLET) {
       background-position: 75% 0%;
-      height: 20em;
+      height: 20rem;
     }
 
     div {
@@ -28,7 +28,7 @@
       @media only screen and (max-width: $TABLET) {
         width: 100%;
         text-align: center;
-        padding: 1em;
+        padding: 1rem;
       }
 
       form button {
@@ -36,353 +36,509 @@
         letter-spacing: 0.9px;
 
         @media only screen and (max-width: $TABLET) {
-          width: 7em;
-          height: 2.4em;
-          font-size: 1.3em;
+          width: 7rem;
+          height: 2.4rem;
+          font-size: 1.3rem;
           margin: 0;
         }
       }
     }
 
     h1 {
-      text-shadow: $BLACK 0 0 0.5em;
+      text-shadow: $BLACK 0 0 0.5rem;
       font-size: 4vw;
       margin-left: 5vw;
       padding: 0.2em 0;
       line-height: 1.25;
 
       @media only screen and (max-width: 1650px) {
-        font-size: 4em;
+        font-size: 4rem;
       }
 
       @media only screen and (max-width: $TABLET) {
-        padding: 0.25em 1em 0.5em;
+        padding: 0.25em 1em 0.5rem;
         margin-left: 3vw;
-        font-size: 3.1em;
+        font-size: 3.1rem;
         margin: 0;
       }
 
       @media only screen and (max-width: $TABLET-SM) {
-        font-size: 2.4em;
-        padding: 0.25em 0.5em 0.5em;
+        font-size: 2.4rem;
+        padding: 0.25em 0.5em 0.5rem;
         font-weight: 600;
       }
 
       @media only screen and (max-width: $MOBILE) {
-        font-size: 2.2em;
-        padding: 0.25em 0em 0.5em;
+        font-size: 2.2rem;
+        padding: 0.25em 0em 0.5rem;
       }
     }
 
     h5 {
-      text-shadow: $BLACK 0 0 1em;
+      text-shadow: $BLACK 0 0 1rem;
       margin-left: 5vw;
       font-weight: 500;
 
       @media only screen and (max-width: $TABLET) {
         margin-left: 0;
-        font-size: 1em;
+        font-size: 1rem;
       }
     }
   }
-}
 
-.steps-banner {
-  background: linear-gradient(to left, #f7eefc, #fef7f1);
-  min-height: 32em;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5em 0 3em;
-}
+  .content {
+    h4 {
+      color: $LIGHT-BLACK;
+    }
 
-.steps-banner-content {
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
+    p {
+      color: $SLATE-GREY;
+      line-height: 30px;
+    }
 
-.steps-banner-title {
-  color: #363636;
-  font-size: 4.2em;
-  font-weight: 550;
-  width: 65vw;
-  max-width: 1030px;
-  line-height: 1.3;
-  text-align: center;
-  margin-bottom: 0.5em;
+    a {
+      color: $PERIWINKLE;
+    }
+  }
 
-  @media only screen and (max-width: $TABLET-LG) {
-    font-size: 3.9em;
-    width: 85vw;
+  .column {
+    h2 {
+      color: $LIGHT-BLACK;
+    }
+  }
+
+  .steps-banner {
+    background: linear-gradient(
+      to left,
+      rgba(238,241,252, 0),
+      rgba(254,247,241, 0)
+    ), url('main/bg-banner.jpg');
+    background-size: cover;
+    background-position: 0% 64%;
+    min-height: 35rem;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 0 3rem;
+  }
+
+  .steps-banner-content {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steps-banner-title {
+    color: #363636;
+    font-size: 4.2rem;
+    font-weight: 550;
+    width: 65vw;
+    max-width: 1030px;
     line-height: 1.3;
-  }
-  @media only screen and (max-width: $TABLET) {
-    font-size: 3em;
-    width: 85vw;
-    line-height: 1.3;
-    font-weight: 600;
-  }
-  @media only screen and (max-width: $MOBILE) {
-    width: 85vw;
-    font-size: 2.75em;
-    line-height: 1.3;
-  }
-}
+    text-align: center;
+    margin-bottom: 0.5rem;
 
-.steps-banner-subtitle {
-  color: #4a4a4a;
-  font-size: 1.25em;
-  font-weight: 550;
-  line-height: 1.9;
-  width: 53vw;
-  max-width: 1030px;
-  display: flex;
-  justify-content: center;
-
-  @media only screen and (max-width: $TABLET-LG) {
-    font-size: 1.2em;
-    line-height: 1.8;
-    width: 75vw;
-  }
-  @media only screen and (max-width: $TABLET) {
-    font-size: 1.15em;
-    line-height: 1.8;
-    width: 85vw;
-  }
-  @media only screen and (max-width: $MOBILE) {
-    font-size: 1.15em;
-    line-height: 1.75;
-    width: 85vw;
-  }
-}
-
-.number-circle-container {
-  width: 64px;
-  height: 64px;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  max-width: 8vw;
-  max-height: 8vw;
-
-  @media only screen and (max-width: $TABLET-LG) {
-    width: 75px;
-    height: 75px;
-  }
-  @media only screen and (max-width: $TABLET) {
-    width: 18vw;
-    height: 18vw;
-    max-width: 85px;
-    max-height: 85px;
-  }
-  @media only screen and (max-width: $MOBILE) {
-    width: 13vw;
-    height: 13vw;
-    max-width: 17vw;
-    max-height: 17vw;
-    min-width: 65px;
-    min-height: 65px;
-  }
-}
-
-.number-circle {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  border-width: 3px;
-  border-style: dashed;
-
-  &.step-1 {
-    background-color: #f2ebf9;
-    border-color: #c9bdc9;
+    @media only screen and (max-width: $TABLET-LG) {
+      font-size: 3.9rem;
+      width: 85vw;
+      line-height: 1.3;
+    }
+    @media only screen and (max-width: $TABLET) {
+      font-size: 3rem;
+      width: 85vw;
+      line-height: 1.3;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      width: 85vw;
+      font-size: 2.75rem;
+      line-height: 1.3;
+    }
   }
 
-  &.step-2 {
-    background-color: #fbecfb;
-    border-color: #c9bdc9;
+  .steps-banner-subtitle {
+    color: #4a4a4a;
+    font-size: 1.25rem;
+    font-weight: 550;
+    line-height: 1.9;
+    width: 53vw;
+    max-width: 1030px;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      width: 75vw;
+    }
+    @media only screen and (max-width: $TABLET) {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      width: 85vw;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      width: 85vw;
+    }
   }
 
-  &.step-3 {
-    background-color: #fbf3f2;
-    border-color: #c9c2c2;
-  }
-
-  &.step-4 {
-    background-color: #f5f1f9;
-    border-color: #c4c1c7;
-  }
-}
-
-.step-title {
-  font-size: 1.8rem !important;
-
-  @media only screen and (max-width: $TABLET-LG) {
-    padding: 0 1em;
-  }
-}
-
-.step-subtitle {
-  font-size: 1.15em !important;
-  color: #9c9c9c !important;
-
-  @media only screen and (max-width: $TABLET-LG) {
-    padding: 0 1.5em;
-  }
-
-  @media only screen and (max-width: $MOBILE) {
-    padding: 0;
-  }
-}
-
-.number-step {
-  color: #373638;
-  padding: 0;
-  font-size: 1.25em;
-
-  @media only screen and (max-width: $TABLET-LG) {
-    font-size: 1.4em;
-  }
-
-  @media only screen and (max-width: $TABLET) {
-    font-size: 1.7em;
-  }
-
-  @media only screen and (max-width: $MOBILE) {
-    font-size: 1.35em;
-  }
-}
-
-/* PAYMENT PROMPT MODAL */
-
-.modal-container {
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.vertical-scrollbar-hidden {
-  overflow-x: hidden;
-}
-
-.about-item {
-
-	i {
-		font-size: 50px;
-	}
-
-	a {
-		color: $BRAND-BLUE;
-		font-weight: 500;
-	}
-
-	.icon {
-		float: left;
-		height: unset;
-		width: unset;
-	}
-
-	.content{
-		padding-left:80px;
-	}
-
-}
-
-// ACCREDITATION LEVELS
-
-.tiers-background {
-  background: linear-gradient(to left, #f7eefc, #fef7f1);
-}
-
-.card-background {
-  background-color: transparent;
-}
-
-.features {
-  width: 18em;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
-.features-item {
-  padding: 10px 0;
-
-  span {
-    font-size: 18px;
-  }
-}
-
-.features-separator {
-  border-top: 1px solid lightgray;
-}
-
-.tier-title-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-  @media only screen and (max-width: $TABLET) {
-    font-size: 19px;
-  }
-}
-
-.tier-star {
-  display: flex;
-  height: 8em;
-  width: 8em;
-  margin: 0 auto;
-  margin-top: 2em;
-}
-
-.tier-title {
-  margin-bottom: 0 !important;
-}
-
-.package-subtitle {
-  color: #90A4AE;
-  padding: 4px 0 6px 0;
-  font-weight: 400;
-  font-size: 17px;
-
-  @media only screen and (max-width: $TABLET) {
-    font-size: 19px;
-  }
-}
-
-.package-card {
-  height: 27em;
-}
-
-.tier-subtitle {
-  text-align: center;
-  padding: 2.25em;
-  font-size: 18px;
-
-  @media only screen and (max-width: $TABLET) {
-    padding: 2.25em 0;
-  }
-}
-
-.checkmark {
-  height: 0.75em;
-  margin-right: 0.5em;
-}
-
-.disclaimer {
-  font-size: 12px;
-  background-color: transparent;
-
-  &.point {
+  .number-circle-container {
+    width: 64px;
+    height: 64px;
     position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    max-width: 8vw;
+    max-height: 8vw;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      width: 75px;
+      height: 75px;
+    }
+    @media only screen and (max-width: $TABLET) {
+      width: 18vw;
+      height: 18vw;
+      max-width: 85px;
+      max-height: 85px;
+    }
+    @media only screen and (max-width: $MOBILE) {
+      width: 13vw;
+      height: 13vw;
+      max-width: 17vw;
+      max-height: 17vw;
+      min-width: 65px;
+      min-height: 65px;
+    }
+  }
+
+  .number-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-width: 3px;
+    border-style: dashed;
+
+    &.step-1 {
+      background-color: #f2ebf9;
+      border-color: #c9bdc9;
+    }
+
+    &.step-2 {
+      background-color: #fbecfb;
+      border-color: #c9bdc9;
+    }
+
+    &.step-3 {
+      background-color: #fbf3f2;
+      border-color: #c9c2c2;
+    }
+
+    &.step-4 {
+      background-color: #f5f1f9;
+      border-color: #c4c1c7;
+    }
+  }
+
+  .step-title {
+    font-size: 1.5rem !important;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      padding: 0 1rem;
+    }
+
+    @media only screen and (max-width: $TABLET) {
+      font-size: 1.75rem !important;
+    }
+  }
+
+  .step-card {
+    padding-bottom: 2rem;
+
+    @media only screen and (max-width: $TABLET) {
+      padding-bottom: 3rem;
+    }
+  }
+
+  .step-subtitle {
+    font-size: 16px !important;
+    color: $SLATE-GREY !important;
+    line-height: 30px !important;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      padding: 0 1.5rem;
+    }
+
+    @media only screen and (max-width: $TABLET) {
+      font-size: 18px !important;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      padding: 0;
+    }
+  }
+
+  .number-step {
+    color: #373638;
+    padding: 0;
+    font-size: 1.25rem;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width: $TABLET) {
+      font-size: 1.7rem;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      font-size: 1.35rem;
+    }
+  }
+
+  /* PAYMENT PROMPT MODAL */
+
+  .modal-container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .vertical-scrollbar-hidden {
+    overflow-x: hidden;
+  }
+
+  .about-item {
+    i {
+      font-size: 50px;
+      color: $SLATE-GREY;
+    }
+
+    a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .icon {
+      float: left;
+      height: unset;
+      width: unset;
+
+      img {
+        width: 3.5em;
+
+        @media only screen and (max-width: $TABLET-LG) {
+          padding-left: 0.25em;
+        }
+      }
+    }
+
+    .content {
+      padding-left: 80px;
+    }
+
+  }
+
+  // ACCREDITATION LEVELS
+
+  .tiers-background {
+    background: linear-gradient(to left, $POWDER-BLUE, $CREAM);
+    padding: 4em 1.5em 5.5rem !important;
+  }
+
+  .card-background {
+    background-color: transparent;
+  }
+
+  .features {
+    width: 18rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .features-item {
+    padding: 10px 0;
+
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .features-separator {
+    border-top: 1px solid lightgray;
+  }
+
+  .tier-title-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: $TABLET) {
+      font-size: 19px;
+    }
+  }
+
+  .tier-star {
+    display: flex;
+    height: 8rem;
+    width: 8rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .tier-title {
+    margin-bottom: 0 !important;
+  }
+
+  .package-subtitle {
+    color: #90A4AE;
+    padding: 4px 0 6px 0;
+    font-weight: 400;
+    font-size: 17px;
+
+    @media only screen and (max-width: $TABLET) {
+      font-size: 19px;
+    }
+  }
+
+  .package-card {
+    height: 27rem;
+  }
+
+  .tier-subtitle {
+    text-align: center;
+    padding: 2.25rem;
+    font-size: 18px;
+
+    @media only screen and (max-width: $TABLET) {
+      padding: 2.25em 0;
+    }
+  }
+
+  .checkmark {
+    height: 0.75rem;
+    margin-right: 0.5rem;
+  }
+
+  .disclaimer {
+    font-size: 12px;
+    background-color: transparent;
+
+    &.point {
+      position: absolute;
+    }
+  }
+
+  // WHY GET ACCREDITED?
+
+  .why-get-accredited-text {
+    line-height: 1.6;
+    font-size: 16px;
+    color: $SLATE-GREY;
+    font-weight: 500;
+  }
+
+  .columns:last-child {
+    margin-bottom: -15px;
+  }
+
+  .process {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      right: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background: url("main/bg-half.png") no-repeat;
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-position: top right;
+    }
+  }
+
+  .process-block {
+    line-height: 1.6;
+    font-size: 16px;
+    color: $SLATE-GREY;
+    font-weight: 400;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      padding-bottom: 1em;
+    }
+
+    h2 {
+      font-weight: 800;
+      color: $LIGHT-BLACK;
+      font-size: 44px;
+      line-height: 1.3;
+    }
+
+    p {
+      line-height: 30px;
+    }
+  }
+
+  .icon-block {
+    padding: 50px 40px;
+    background: $WHITE;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px 0px rgba(81, 109, 191, 0.2);
+
+    i {
+      font-size: 35px;
+      background: rgba(50, 106, 239, 0.08);
+      width: 70px;
+      height: 70px;
+      text-align: center;
+      padding-top: 16px;
+      border-radius: 10px;
+      display: inline-block;
+      color: $PERIWINKLE;
+      z-index: 1;
+    }
+
+    h5 {
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: $LIGHT-BLACK;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 30px;
+      font-size: 16px;
+      color: #6F8BA4;
+      font-weight: 400;
+    }
+  }
+
+  .mt-30 {
+    margin-top: 30px;
+  }
+
+  @media (max-width: $TABLET) {
+    .custom-grid .mt-30 {
+      margin-top: 0 !important;
+    }
+    .custom-grid .pb-0 {
+      padding-bottom: 15px !important;
+    }
+    .custom-grid .pt-0 {
+      padding-top: 15px !important;
+    }
   }
 }
