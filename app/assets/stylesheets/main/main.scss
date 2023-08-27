@@ -32,7 +32,7 @@
       }
 
       form button {
-        margin-left: 5vw;
+        margin-left: 2.75vw;
         letter-spacing: 0.9px;
 
         @media only screen and (max-width: $TABLET) {
@@ -47,45 +47,50 @@
     h1 {
       text-shadow: $BLACK 0 0 2.75rem;
       font-size: 4.5rem;
-      margin-left: 5vw;
+      margin-left: 2.75vw;
       padding: 0.2em 0;
       line-height: 1.25;
-      width: 52vw;
-      max-width: 680px;
+      width: 57vw;
+      max-width: 780px;
+      letter-spacing: 2px;
 
-      @media only screen and (max-width: 1650px) {
-        font-size: 3.9rem;
-        max-width: 620px;
+      @media only screen and (max-width: 1450px) {
+        font-size: 3.8rem;
+        max-width: 650px;
       }
 
       @media only screen and (max-width: $TABLET) {
+        letter-spacing: 1.75px;
         align-self: center;
         margin-left: 0;
         width: 100%;
-        max-width: 680px;
-        padding: 0.25em 0.25em 0.5rem 0.25rem;
+        max-width: 545px;
+        padding: 0.25em 0.5em 0.5rem 1.5rem;
         font-size: 3.1rem;
         margin: 0;
       }
 
       @media only screen and (max-width: $TABLET-SM) {
-        font-size: 2.4rem;
+        font-size: 2.7rem;
         max-width: 510px;
         font-weight: 600;
       }
 
       @media only screen and (max-width: $MOBILE) {
+        padding: 0.25em 0.45em 0.5rem 1rem;
+        letter-spacing: 1.15px;
         font-size: 2.2rem;
-        padding: 0.25em 0em 0.5rem;
       }
     }
 
     h5 {
       text-shadow: $BLACK 0 0 1rem;
-      margin-left: 5vw;
+      margin-left: 2.75vw;
       font-weight: 500;
+      letter-spacing: 2.5px;
 
       @media only screen and (max-width: $TABLET) {
+        letter-spacing: 2px;
         margin-left: 0;
         font-size: 1rem;
       }
@@ -111,22 +116,6 @@
     h2 {
       color: $LIGHT-BLACK;
     }
-  }
-
-  .steps-banner {
-    background: linear-gradient(
-      to left,
-      rgba(238,241,252, 0),
-      rgba(254,247,241, 0)
-    ), url('main/bg-banner.jpg');
-    background-size: cover;
-    background-position: 0% 64%;
-    min-height: 35rem;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5em 0 3rem;
   }
 
   .steps-banner-content {
@@ -551,4 +540,53 @@
       padding-top: 15px !important;
     }
   }
+
+  // CALL TO ACTION
+
+  .cta-banner {
+    background: linear-gradient(
+      to left,
+      rgba(238,241,252, 0),
+      rgba(254,247,241, 0)
+    ), url('main/bg-banner.jpg');
+    background-size: cover;
+    background-position: 0% 64%;
+    min-height: 35rem;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0 8rem;
+    background-size: cover;
+    position: relative;
+  }
+
+  .cta-content {
+    border-radius: 0.5rem;
+    padding: 2.5em;
+    line-height: 1.6;
+    font-size: 16px;
+    color: $SLATE-GREY;
+    font-weight: 400;
+    background: $WHITE;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: $LIGHT-BLACK;
+  }
+
+  .cta-subtitle {
+    margin-bottom: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: $SLATE-GREY;
+    font-weight: 400;
+  }
+
+  .highlighted {
+    color: $PERIWINKLE;
+  }
+
 }
