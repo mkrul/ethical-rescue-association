@@ -36,8 +36,8 @@
         letter-spacing: 0.9px;
 
         @media only screen and (max-width: $TABLET) {
-          width: 7rem;
-          height: 2.4rem;
+          width: 9rem;
+          height: 3rem;
           font-size: 1.3rem;
           margin: 0;
         }
@@ -45,7 +45,7 @@
     }
 
     h1 {
-      text-shadow: $BLACK 0 0 0.5rem;
+      text-shadow: $BLACK 0 0 2.75rem;
       font-size: 4vw;
       margin-left: 5vw;
       padding: 0.2em 0;
