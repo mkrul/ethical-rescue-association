@@ -2,10 +2,7 @@
 @import "../application_config.scss";
 
 .faq-container {
-
-  /* BANNER */
-
-  .header-image {
+  .banner-container .header-image {
     background-image: linear-gradient(
       to top,
       rgba(30, 31, 46, 0.6),
@@ -13,72 +10,21 @@
       url("faq/faq-banner.jpg");
     background-size: cover;
     background-position: 50% 0%;
-    height: 36rem;
 
     @media only screen and (max-width: $TABLET) {
       background-position: 70% 0%;
-      height: 20rem;
-    }
-
-    div {
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-      height: inherit;
-
-      @media only screen and (max-width: $TABLET) {
-        justify-content: end;
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    h1 {
-      text-shadow: $BLACK 0 0 0.4rem;
-      font-size: 4.5rem;
-      margin-left: 5vw;
-      padding: 0.2em 0;
-      line-height: 1.25;
-      letter-spacing: 2.3px;
-      margin-top: 0.5rem;
-
-      @media only screen and (max-width: $TABLET-LG) {
-        font-size: 3rem;
-      }
-
-      @media only screen and (max-width: $TABLET) {
-        font-size: 2.25rem;
-        margin-left: 0;
-        margin-bottom: 1.2rem;
-      }
-
-      @media only screen and (max-width: $MOBILE) {
-        font-size: 1.6rem;
-      }
-    }
-
-    h5 {
-      text-shadow: $BLACK 0 0 0.7rem;
-      font-size: 1.3rem;
-      margin-left: 5vw;
-      font-weight: 400;
-      letter-spacing: 1.5px;
-
-      @media only screen and (max-width: $TABLET) {
-        margin-left: 0;
-        font-size: 1rem;
-        letter-spacing: 1.4px;
-        line-height: 1.3rem;
-      }
-
-      @media only screen and (max-width: $MOBILE) {
-        font-size: 1rem;
-      }
     }
   }
 
-  .tagline-secondary {
-    display: none;
+  .banner-container .header-image h1 {
+    width: 85%;
+
+    @media only screen and (max-width: $TABLET) {
+      font-size: 2.3em;
+      line-height: 1.25;
+      padding: 0 1em;
+      width: 100%;
+    }
   }
 
   /* ACCORDION */

@@ -317,3 +317,85 @@ body {
     }
   }
 }
+
+// MAIN BANNERS
+
+.banner-container {
+  section {
+    div {
+      padding: 0 !important;
+      display: flex !important;
+      justify-content: flex-end !important;
+
+      @media only screen and (max-width: $TABLET) {
+        height: 20rem;
+      }
+    }
+  }
+
+  .header-image {
+    background-size: cover;
+    height: 36rem;
+
+    @media only screen and (max-width: $TABLET) {
+      height: 20rem;
+    }
+
+    div {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      height: inherit;
+      padding: 0;
+
+      @media only screen and (max-width: $TABLET) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    h1 {
+      text-shadow: $BLACK 0 0 1rem;
+      font-size: 4rem;
+      margin-left: 7vw;
+      line-height: 1.25;
+      letter-spacing: 4.2px;
+      width: 100%;
+
+      @media only screen and (max-width: $TABLET) {
+        margin-left: 0;
+        font-size: 3rem;
+        margin-bottom: 2.25rem;
+        letter-spacing: 2.8px;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        font-size: 2.2rem;
+        line-height: 1;
+      }
+    }
+
+    h5 {
+      text-shadow: $BLACK 0 0 0.5rem;
+      font-size: 16px;
+      margin-left: 7vw;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      line-height: 2.75rem;
+      padding-bottom: 6rem;
+
+      @media only screen and (max-width: $TABLET) {
+        margin-left: 0;
+        letter-spacing: 1.4px;
+        padding: 0 2rem 4rem 2rem;
+        line-height: 1.75rem;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        font-size: 14px;
+        line-height: 1.5rem;
+        padding: 0 1rem 4rem 1rem;
+      }
+    }
+  }
+}
