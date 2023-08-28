@@ -9,6 +9,10 @@
       rgba(0, 0, 0, 0)),
       url("code_of_ethics/code-of-ethics-banner.jpg");
     background-position: 50% 0%;
+
+    @media only screen and (max-width: $MOBILE) {
+      background-position: 40% 0%;
+    }
   }
 
   .header-image {

@@ -9,6 +9,10 @@
       rgba(0, 0, 0, 0)),
       url("contact_us/contact-us-banner.jpg");
     background-position: 50% 0%;
+
+    @media only screen and (max-width: $MOBILE) {
+      background-position: 57% 0%;
+    }
   }
 
   .header-image {
