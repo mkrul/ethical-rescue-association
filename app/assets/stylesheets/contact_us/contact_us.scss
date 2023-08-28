@@ -2,73 +2,31 @@
 @import "../application_config.scss";
 
 .contact-container {
-
-  /* BANNER */
-
-  .header-image {
+  .banner-container .header-image {
     background-image: linear-gradient(
       to top,
       rgba(30, 31, 46, 0.5),
       rgba(0, 0, 0, 0)),
       url("contact_us/contact-us-banner.jpg");
-    background-size: cover;
     background-position: 50% 0%;
-    height: 36rem;
+  }
 
-    @media only screen and (max-width: $TABLET) {
-      background-position: 55% 0%;
-      height: 20rem;
-    }
-
+  .header-image {
     div {
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-      height: inherit;
-
-      @media only screen and (max-width: $TABLET) {
-        justify-content: end;
-        width: 100%;
-        text-align: center;
-      }
+      justify-content: flex-end;
+      padding: 0 1.5rem !important;
     }
 
     h1 {
-      text-shadow: $BLACK 0 0 0.4rem;
-      font-size: 4.5rem;
-      margin-left: 5vw;
-      padding: 0.2em 0;
-      line-height: 1.25;
-      letter-spacing: 2.3px;
-      margin-top: 0.5rem;
-
-      @media only screen and (max-width: $TABLET) {
-        margin-left: 0;
-        font-size: 3rem;
-        margin-bottom: 1.2rem;
-      }
-
-      @media only screen and (max-width: $MOBILE) {
-        font-size: 2rem;
-      }
+      width: 100%;
     }
 
     h5 {
-      text-shadow: $BLACK 0 0 0.7rem;
-      font-size: 1.3rem;
-      margin-left: 5vw;
-      font-weight: 400;
-      letter-spacing: 1.5px;
+      padding-top: 0.5rem;
+      padding-bottom: 5rem;
 
       @media only screen and (max-width: $TABLET) {
-        margin-left: 0;
-        font-size: 1rem;
-        letter-spacing: 1.4px;
-        line-height: 1.3rem;
-      }
-
-      @media only screen and (max-width: $MOBILE) {
-        font-size: 1rem;
+        padding-bottom: 4rem;
       }
     }
   }

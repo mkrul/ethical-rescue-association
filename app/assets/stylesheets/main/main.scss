@@ -8,78 +8,47 @@
       rgba(30, 31, 46, 0.6),
       rgba(0, 0, 0, 0)),
       url("main/main-banner.jpg");
-    background-size: cover;
     background-position: 50% 0%;
-    height: 36rem;
 
     @media only screen and (max-width: $TABLET) {
       background-position: 75% 0%;
-      height: 20rem;
     }
 
     div {
-      display: flex;
       justify-content: center;
-      flex-direction: column;
       width: 60vw;
-      height: inherit;
       padding-left: 3vw;
+      height: inherit;
 
       @media only screen and (max-width: $TABLET) {
         width: 100%;
-        text-align: center;
         padding: 1rem;
       }
 
       form button {
-        margin-left: 2.75vw;
+        margin-left: 6vw;
         letter-spacing: 0.9px;
 
         @media only screen and (max-width: $TABLET) {
-          width: 9rem;
-          height: 3rem;
-          font-size: 1.3rem;
-          margin: 0;
+          margin-left: 0;
+          width: 8.5rem;
+          height: 2.75rem;
+          font-size: 1.2rem;
         }
       }
     }
 
     h1 {
       text-shadow: $BLACK 0 0 2.75rem;
-      font-size: 4.5rem;
-      margin-left: 2.75vw;
-      padding: 0.2em 0;
-      line-height: 1.25;
+      padding-bottom: 1rem;
       width: 57vw;
-      max-width: 780px;
-      letter-spacing: 2px;
-
-      @media only screen and (max-width: 1450px) {
-        font-size: 3.8rem;
-        max-width: 650px;
-      }
+      max-width: 745px;
 
       @media only screen and (max-width: $TABLET) {
-        letter-spacing: 1.75px;
         align-self: center;
-        margin-left: 0;
-        width: 100%;
-        max-width: 545px;
-        padding: 0.25em 0.5em 0.5rem 1.5rem;
-        font-size: 3.1rem;
+        padding: 0.25rem 0.8rem 1.5rem 1rem;
+        max-width: 480px;
         margin: 0;
-      }
-
-      @media only screen and (max-width: $TABLET-SM) {
-        font-size: 2.7rem;
-        max-width: 510px;
-        font-weight: 600;
-      }
-
-      @media only screen and (max-width: $MOBILE) {
-        padding: 0.25em 0.45em 0.5rem 1rem;
-        letter-spacing: 1.15px;
-        font-size: 2.2rem;
       }
     }
 
@@ -87,10 +56,12 @@
       text-shadow: $BLACK 0 0 1rem;
       margin-left: 2.75vw;
       font-weight: 500;
-      letter-spacing: 2.5px;
+      padding-bottom: 0 !important;
+      letter-spacing: 2.25px;
+      padding-bottom: 6rem;
 
       @media only screen and (max-width: $TABLET) {
-        letter-spacing: 2px;
+        padding: 0 2rem 4rem 2rem;
         margin-left: 0;
         font-size: 1rem;
       }
