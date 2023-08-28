@@ -23,23 +23,17 @@
     h5 {
       padding-top: 0.5rem;
       padding-bottom: 5rem;
+      letter-spacing: 1.8px;
 
       @media only screen and (max-width: $TABLET) {
-        padding-bottom: 4rem;
+        padding-bottom: 3.75rem;
       }
     }
   }
 
   .standard-padding {
-    @media only screen and (max-width: $TABLET-LG) {
-      padding-top: 2rem;
-    }
-    @media only screen and (max-width: $TABLET) {
-      padding-top: 2rem;
-    }
-    @media only screen and (max-width: $MOBILE) {
-      padding-top: 2rem;
-    }
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
   }
 
   /* CONTENT */
@@ -52,19 +46,21 @@
 
   .mission-statement-content {
     font-size: $FONT-SIZE-16;
+    color: $MED-GRAY;
+    line-height: 2;
     padding-right: 0.75rem;
     padding-left: 1.5rem;
 
-    @media only screen and (max-width: $TABLET) {
-      padding: 2em 0.75em 0.75rem;
+    span {
+      color: $LIGHT-BLACK;
     }
-    @media only screen and (max-width: $MOBILE) {
+
+    @media only screen and (max-width: $TABLET) {
       padding: 2em 0.75em 0.75rem;
     }
   }
 
   .mission-statement {
-
     @media only screen and (max-width: $TABLET) {
       padding: 0 2rem;
     }
@@ -145,6 +141,7 @@
 
     @media only screen and (max-width: $TABLET) {
       border-right: 0;
+      border-right: 1px solid $WHITE;
     }
   }
 }

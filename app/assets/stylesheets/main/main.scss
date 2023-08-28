@@ -8,7 +8,11 @@
       rgba(30, 31, 46, 0.6),
       rgba(0, 0, 0, 0)),
       url("main/main-banner.jpg");
-    background-position: 50% 0%;
+    background-position: 42% 0%;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      background-position: 47% 0%;
+    }
 
     @media only screen and (max-width: $TABLET) {
       background-position: 75% 0%;
@@ -43,12 +47,15 @@
       padding-bottom: 1rem;
       width: 57vw;
       max-width: 745px;
+      min-width: 510px;
 
       @media only screen and (max-width: $TABLET) {
+        min-width: 0px;
         align-self: center;
         padding: 0.25rem 0.8rem 1.5rem 1rem;
         max-width: 480px;
         margin: 0;
+        width: 100%;
       }
     }
 
@@ -57,10 +64,11 @@
       margin-left: 2.75vw;
       font-weight: 500;
       padding-bottom: 0 !important;
-      letter-spacing: 2.25px;
+      letter-spacing: 2.5px;
       padding-bottom: 6rem;
 
       @media only screen and (max-width: $TABLET) {
+        letter-spacing: 2.25px;
         padding: 0 2rem 4rem 2rem;
         margin-left: 0;
         font-size: 1rem;
