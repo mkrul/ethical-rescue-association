@@ -56,24 +56,16 @@
     @media only screen and (max-width: $TABLET) {
       padding: 0;
     }
-
-    @media only screen and (max-width: $MOBILE) {
-      padding: 0;
-    }
   }
 
   .coe-statement-title {
-    font-size: 28px;
-    line-height: 1.5rem;
+    color: $LIGHT-BLACK;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
     letter-spacing: 1.5px;
 
     @media only screen and (max-width: $TABLET) {
-      padding-top: 1.75rem;
-      text-align: center;
-    }
-
-    @media only screen and (max-width: $MOBILE) {
-      padding-top: 1.75rem;
+      padding: 3rem 0 1rem;
       text-align: center;
     }
   }
@@ -84,13 +76,14 @@
   }
 
   .presidents-coe-statement {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 2;
   }
 
   .president-sig-container {
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
+    line-height: 1.5rem;
   }
 
   .president-sig {
@@ -101,15 +94,21 @@
     font-size: 16px;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    color: $BLACK;
+    line-height: 2;
+    color: $MED-GRAY;
   }
 
   .ethics-title {
     letter-spacing: 1px;
+    color: $LIGHT-BLACK;
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .ethics-category {
     font-size: 16px;
+    line-height: 2;
+    color: $MED-GRAY;
   }
 
   .ethics-category-photo {
