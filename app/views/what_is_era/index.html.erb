@@ -1,5 +1,3 @@
-<%= javascript_include_tag "our_values" %>
-
 <div class="what-is-era-container mb-4">
   <div class="banner-container">
     <section class="hero is-large header-image">
@@ -193,25 +191,6 @@
             </div>
           </div>
         </div>
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-2by1">
-                <button class="modal-prompt-trigger is-transparent" data-target="diane-modal-prompt">
-                  <%= image_tag "what_is_era/diane.jpg", class: "board-of-directors-photo diane" %>
-                </button>
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Diane Orenchuk</p>
-                  <p class="subtitle is-6">Communications</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="columns is-centered" style="padding: 0 2rem">
         <div class="column">
@@ -279,7 +258,8 @@
 
 <%= render "what_is_era/janelle" %>
 <%= render "what_is_era/angela" %>
-<%= render "what_is_era/diane" %>
 <%= render "what_is_era/brittnea" %>
 <%= render "what_is_era/bri" %>
 <%= render "what_is_era/misha" %>
+
+<%= javascript_include_tag "our_values" %>

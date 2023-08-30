@@ -1,11 +1,16 @@
-@import "bulma";
+
 @import "font-awesome";
+@import "bulma";
 @import url('https://fonts.cdnfonts.com/css/roboto');
 @import url('https://fonts.cdnfonts.com/css/gotham-black');
 @import url('https://fonts.cdnfonts.com/css/gotham-bold');
 @import url("https://fonts.cdnfonts.com/css/gotham-ssm");
 @import url('https://fonts.cdnfonts.com/css/gotham');
 @import "../stylesheets/main/main.scss";
+@import "../stylesheets/main/testimonials.scss";
+@import "../stylesheets/main/slick.scss";
+@import "../stylesheets/main/slick-theme.scss";
+@import "../stylesheets/main/animate.scss";
 @import "../stylesheets/code_of_ethics/code_of_ethics.scss";
 @import "../stylesheets/what_is_era/what_is_era.scss";
 @import "../stylesheets/faq/faq.scss";
@@ -23,9 +28,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- //= require jquery
- //= require jquery3
- //= require jquery_ujs
+ *= require_tree .
  *= require_self
  */
 
@@ -53,12 +56,6 @@ body {
 
 
 /* DEFULT */
-
-.body-container {
-  min-height: fit-content;
-  display: flex;
-  flex-direction: column;
-}
 
 .tab {
   width: 1.5rem;
@@ -181,6 +178,18 @@ body {
 
   .nav-link {
     color: $BRAND-BLUE;
+  }
+
+  .header-logo {
+    margin-right: 0.5rem;
+    margin-left: 2rem;
+    max-height: 3rem;
+    padding-right: 0.5rem;
+
+    @media only screen and (max-width: $TABLET) {
+      margin-left: 3vw;
+      margin-right: 0.2vw;
+    }
   }
 }
 

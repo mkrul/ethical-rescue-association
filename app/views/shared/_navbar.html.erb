@@ -1,10 +1,9 @@
-<%= javascript_include_tag "navbar_burger" %>
-
 <div class="navbar-container">
   <div class="font-gotham">
     <nav class="navbar py-2 negative-margin" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item">
+        <a class="navbar-item p-0">
+          <%= image_tag "logos/era-logo-colored", class: "header-logo" %>
           <%= link_to "ETHICAL RESCUE ASSOCIATION", root_url, class: "main-title" %>
         </a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -111,3 +110,4 @@
 </div>
 
 <%= render 'main/payment_prompt' %>
+<%= javascript_include_tag "navbar_burger" %>
