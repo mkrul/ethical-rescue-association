@@ -7,7 +7,6 @@
 @import url("https://fonts.cdnfonts.com/css/gotham-ssm");
 @import url('https://fonts.cdnfonts.com/css/gotham');
 @import "../stylesheets/main/main.scss";
-@import "../stylesheets/main/testimonials.scss";
 @import "../stylesheets/main/slick.scss";
 @import "../stylesheets/main/slick-theme.scss";
 @import "../stylesheets/main/animate.scss";
@@ -179,18 +178,6 @@ body {
   .nav-link {
     color: $BRAND-BLUE;
   }
-
-  .header-logo {
-    margin-right: 0.5rem;
-    margin-left: 2rem;
-    max-height: 3rem;
-    padding-right: 0.5rem;
-
-    @media only screen and (max-width: $TABLET) {
-      margin-left: 3vw;
-      margin-right: 0.2vw;
-    }
-  }
 }
 
 .main-title {
@@ -199,8 +186,11 @@ body {
   margin: auto 0;
   width: 100%;
   min-width: fit-content;
+  margin-right: 0.5rem;
+  margin-left: 2rem;
 
   @media only screen and (max-width: $MOBILE) {
+    margin-left: 5vw;
     font-size: $FONT-SIZE-14;
   }
 }

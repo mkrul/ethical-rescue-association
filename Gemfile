@@ -15,6 +15,10 @@ gem 'MailchimpMarketing', '~> 3.0', '>= 3.0.80'
 
 gem 'active_interaction', '~> 5.2'
 
+gem 'httparty'
+
+gem 'petfinder'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
