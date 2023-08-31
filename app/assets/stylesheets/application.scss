@@ -1,6 +1,6 @@
 
-@import "font-awesome";
 @import "bulma";
+@import "font-awesome";
 @import url('https://fonts.cdnfonts.com/css/roboto');
 @import url('https://fonts.cdnfonts.com/css/gotham-black');
 @import url('https://fonts.cdnfonts.com/css/gotham-bold');
@@ -27,6 +27,9 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ //= require jquery
+ //= require jquery3
+ //= require jquery_ujs
  *= require_tree .
  *= require_self
  */
