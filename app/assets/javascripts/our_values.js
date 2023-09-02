@@ -1,7 +1,7 @@
 $(document).ready(function () {
   const initCoreValueFrameAnimations = () => {
     const coreValues = [
-      ["partnership", "By fostering partnerships with ethical breeders, communities, shelters, and our fellow ethical rescues, we will create the changes that we want to see in the world."],
+      ["partnership", "By fostering partnerships with ethical breeders, communities, shelters, and our fellow ethical rescues, we will create the changes that we need to see in the world."],
       ["accountability", "Holding ourselves and those around us in animal welfare accountable to a higher standard fosters transparency and inspires confidence within the rescue community."],
       ["trust", "Animal welfare organizations must work to regain the trust of the communities that they serve and support in the responsible placement of animals in homes."],
       ["respect", "Respect for one another, and respect between rescues and shelters, is vital if we are to present a united front in the face of the animal welfare crisis."],
