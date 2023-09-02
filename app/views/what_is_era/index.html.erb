@@ -14,7 +14,7 @@
     </section>
   </div>
 
-  <section class="section container standard-padding my-6">
+  <section class="section container standard-padding mt-6 mb-4">
     <div class="sandbox">
       <div class="tile is-ancestor">
         <div class="tile is-parent is-shady">
@@ -27,7 +27,7 @@
           </article>
         </div>
         <article class="tile is-9 is-shady notification is-white mission-statement has-text-left p-0">
-          <div class="content mission-statement-content">
+          <div class="content mission-statement-content text-med-grey">
             <p>
               <span class="mission-statement-text-lg">
               <%= insert_tab %>
@@ -64,7 +64,7 @@
     <hr class="m-0"/>
   </section>
 
-  <section class="section container standard-padding mt-4">
+  <section class="section container standard-padding mt-2">
     <div class="sandbox">
       <div class="has-text-centered mb-4">
         <h2 class="title mb-5 section-header">Our Values</h2>
@@ -193,25 +193,6 @@
             </div>
           </div>
         </div>
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-2by1">
-                <button class="modal-prompt-trigger is-transparent" data-target="diane-modal-prompt">
-                  <%= image_tag "what_is_era/diane.jpg", class: "board-of-directors-photo diane" %>
-                </button>
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Diane Orenchuk</p>
-                  <p class="subtitle is-6">Communications</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="columns is-centered" style="padding: 0 2rem">
         <div class="column">
@@ -279,7 +260,6 @@
 
 <%= render "what_is_era/janelle" %>
 <%= render "what_is_era/angela" %>
-<%= render "what_is_era/diane" %>
 <%= render "what_is_era/brittnea" %>
 <%= render "what_is_era/bri" %>
 <%= render "what_is_era/misha" %>

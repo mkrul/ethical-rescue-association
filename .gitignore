@@ -33,4 +33,5 @@
 /config/master.key
 
 /.env
-.byebug_history
+/.byebug_history
+./byebug_history

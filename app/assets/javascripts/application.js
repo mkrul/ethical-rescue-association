@@ -8,5 +8,3 @@ import "controllers"
 // require lightbox
 //= require_tree .
 //= require bulma
-
-

@@ -15,6 +15,10 @@ gem 'MailchimpMarketing', '~> 3.0', '>= 3.0.80'
 
 gem 'active_interaction', '~> 5.2'
 
+gem 'httparty'
+
+gem 'petfinder'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
@@ -43,7 +47,9 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem 'jquery-rails', '~> 4.4'
+gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
@@ -61,7 +67,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
