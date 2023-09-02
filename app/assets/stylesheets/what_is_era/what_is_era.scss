@@ -61,6 +61,8 @@
   }
 
   .mission-statement {
+    color: $MED-GRAY !important;
+
     @media only screen and (max-width: $TABLET) {
       padding: 0 2rem;
     }
@@ -174,7 +176,7 @@
 // OUR VALUES
 
 .core-values-statement {
-  color: $LIGHT-BLACK;
+  color: $MED-GRAY;
   line-height: 2;
 }
 

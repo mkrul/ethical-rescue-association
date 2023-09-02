@@ -7,9 +7,6 @@
 @import url("https://fonts.cdnfonts.com/css/gotham-ssm");
 @import url('https://fonts.cdnfonts.com/css/gotham');
 @import "../stylesheets/main/main";
-@import "../stylesheets/main/slick";
-@import "../stylesheets/main/slick-theme";
-@import "../stylesheets/main/animate";
 @import "../stylesheets/code_of_ethics/code_of_ethics";
 @import "../stylesheets/what_is_era/what_is_era";
 @import "../stylesheets/faq/faq";
@@ -64,7 +61,7 @@ body {
   display: inline-block;
 }
 
-/* FONT */
+/* TEXT */
 
 .font-roboto {
   font-family: 'Roboto', sans-serif;
@@ -84,6 +81,14 @@ body {
 
 .text-black {
   color: $BLACK;
+}
+
+.text-med-grey {
+  color: $MED-GRAY !important;
+}
+
+.double-spaced {
+  line-height: 2 !important;
 }
 
 /* DISPLAY */

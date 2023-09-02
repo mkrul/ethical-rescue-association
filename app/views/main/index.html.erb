@@ -246,94 +246,43 @@
     </div>
   </section>
 
-  <section class="section testimonial pt-0">
-    <div class="container">
-      <div class="columns is-desktop">
-        <div class="column is-8-desktop testimonial-container">
-          <div class="testimonial-heading">
-            <h2 class="mb-5 testimonial-title">What they're saying about ERA</h2>
-            <p class="testimonial-subtitle">They are truely amazing in the industry ,molestiae expedita aspernatur officia, similique minima laudantium. Corrupti ipsa perspiciatis commodi nesciunt rerum mollitia enim voluptate!</p>
+  <section>
+    <div class="testimonial-hero is-small testimonial-container">
+      <div class="hero-body">
+        <div class="b-testimonial-rotate mt-3">
+          <div class="item">
+            <em>
+              As an ethical breeder with a deep history in rescue, I support the Ethical Rescue Association's mission to establish ethical guidelines for grass roots reform.
+            </em>
+            <br>
+            <b class="is-size-7">— Nikki L. —</b>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="fade-left"></div>
-      <div class="fade-right"></div>
-      <div class="columns is-multiline" style="height: 20rem; overflow: hidden;">
-        <div class="column is-12 testimonial-wrap" style="display: flex;">
-          <div class="testimonial-block" style="min-width: 30rem !important;">
-            <p>
-              Maiores quasi placeat harum itaque, ducimus cumque quas expedita hic. Qui ullam iste provident mollitia expedita facilis fuga repellat.
-            </p>
-
-            <div class="client-info is-flex is-align-items-center">
-              <div class="client-img">
-              </div>
-              <div class="info">
-                <h6>John Partho</h6>
-                <span>Newyork USA</span>
-              </div>
-            </div>
+          <div class="item">
+            <em>
+              An Ethical Rescue Association is needed to prevent the peddling of dangerous animals to the public by rescues with a savior complex.
+            </em>
+            <br>
+            <b class="is-size-7">— Katie W. —</b>
           </div>
-
-          <div class="testimonial-block" style="min-width: 30rem !important;">
-            <p>
-              Maiores quasi placeat harum itaque, ducimus cumque quas expedita hic. Qui ullam iste provident mollitia expedita facilis fuga repellat.
-            </p>
-
-            <div class="client-info is-flex is-align-items-center">
-              <div class="client-img">
-              </div>
-              <div class="info">
-                <h6>John Partho</h6>
-                <span>Newyork USA</span>
-              </div>
-            </div>
+          <div class="item">
+            <em>
+              This movement is crucial in preventing dogs from having long term stays in a shelter, then being placed in an unfit home.
+            </em>
+            <br><b class="is-size-7">— Lydia L. —</b>
           </div>
-          <div class="testimonial-block" style="min-width: 30rem !important;">
-            <p>
-              Maiores quasi placeat harum itaque, ducimus cumque quas expedita hic. Qui ullam iste provident mollitia expedita facilis fuga repellat.
-            </p>
-
-            <div class="client-info is-flex is-align-items-center">
-              <div class="client-img">
-              </div>
-              <div class="info">
-                <h6>John Partho</h6>
-                <span>Newyork USA</span>
-              </div>
-            </div>
+          <div class="item">
+            <em>
+              Finding an ethical rescue can be extremely difficult, especially if you're inexperienced. A group like ERA has been needed for a very long time.
+            </em>
+            <br><b class="is-size-7">— Jessica C. —</b>
           </div>
-          <div class="testimonial-block" style="min-width: 30rem !important;">
-            <p>
-              Maiores quasi placeat harum itaque, ducimus cumque quas expedita hic. Qui ullam iste provident mollitia expedita facilis fuga repellat.
-            </p>
-
-            <div class="client-info is-flex is-align-items-center">
-              <div class="client-img">
-              </div>
-              <div class="info">
-                <h6>John Partho</h6>
-                <span>Newyork USA</span>
-              </div>
-            </div>
+          <div class="item">
+            <em>
+              There is absolutely a need for an organization like this.  Too often rescues are formed and there's no one to ensure they are doing as they should.
+            </em>
+            <br><b class="is-size-7">— Ruth B. —</b>
           </div>
-          <div class="testimonial-block" style="min-width: 30rem !important;">
-            <p>
-              Maiores quasi placeat harum itaque, ducimus cumque quas expedita hic. Qui ullam iste provident mollitia expedita facilis fuga repellat.
-            </p>
-
-            <div class="client-info is-flex is-align-items-center">
-              <div class="client-img">
-              </div>
-              <div class="info">
-                <h6>John Partho</h6>
-                <span>Newyork USA</span>
-              </div>
-            </div>
-          </div>
+          <div class="dots"></div>
         </div>
       </div>
     </div>
@@ -343,3 +292,55 @@
 <%= render 'payment_prompt' %>
 <%= javascript_include_tag "main_script" %>
 
+<script>
+  function bTestimonial() {
+  let instance = document.querySelectorAll('.b-testimonial-rotate');
+  instance.forEach(function(item) {
+    initCar(item)
+  })
+
+  function initCar(el) {
+    let items = el.querySelectorAll('.item')
+    let dots = el.querySelector('.dots')
+    let slides = items.length
+
+    //Create dots
+    items.forEach(function(el) {
+      let dot = document.createElement('div')
+      dot.classList.add('dot')
+      dots.appendChild(dot)
+    })
+
+    //Play the carousel
+    function playCar( items, dotsNode ) {
+      let dots = Array.from(dotsNode.querySelectorAll('.dot'))
+      let i = 1
+      items[0].classList.add('is-active', 'init');
+      dots[0].classList.add('is-active');
+      setInterval(function() {
+          items.forEach(function(el) {
+            el.classList.remove('is-active')
+          })
+          dots.forEach(function(el) {el.classList.remove('is-active') })
+          if ( i < (items.length - 1) ) {
+            let item = items[i]
+            let dot = dots[i]
+            item.classList.add('is-active', 'init');
+            dot.classList.add('is-active');
+            i++
+          } else {
+            items[i].classList.add('is-active', 'init');
+            dots[i].classList.add('is-active');
+            i = 0
+          }
+      }, 6000)
+    }
+
+    playCar(items, dots)
+
+  }
+}
+
+document.addEventListener('DOMContentLoaded', bTestimonial() )
+
+</script>
