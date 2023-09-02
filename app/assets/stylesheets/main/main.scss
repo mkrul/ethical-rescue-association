@@ -765,7 +765,12 @@
   background-size: cover;
   color: white;
 
-  @media only screen and (max-width: $TABLET) {
+  @media only screen and (max-width: $TABLET-LG) {
+    background-position: 25% 0%;
+  }
+
+  @media only screen and (max-width: $TABLET-SM) {
     background-position: 20% 0%;
   }
+
 }
