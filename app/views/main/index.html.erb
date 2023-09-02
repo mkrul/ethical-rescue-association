@@ -73,37 +73,6 @@
     </div>
   </section>
 
-  <section class="section counter">
-    <div class="container">
-      <div class="columns is-multiline">
-        <div class="column is-3-widescreen is-6-desktop">
-          <div class="counter-item has-text-centered">
-            <h2 class="mb-0"><span class="counter-stat font-weight-bold">1730</span> +</h2>
-            <p>Project Done</p>
-          </div>
-        </div>
-        <div class="column is-3-widescreen is-6-desktop">
-          <div class="counter-item has-text-centered">
-            <h2 class="mb-0"><span class="counter-stat font-weight-bold">125 </span>M </h2>
-            <p>User Worldwide</p>
-          </div>
-        </div>
-        <div class="column is-3-widescreen is-6-desktop">
-          <div class="counter-item has-text-centered">
-            <h2 class="mb-0"><span class="counter-stat font-weight-bold">39</span></h2>
-            <p>Availble Country</p>
-          </div>
-        </div>
-        <div class="column is-3-widescreen is-6-desktop">
-          <div class="counter-item has-text-centered">
-            <h2 class="mb-0"><span class="counter-stat font-weight-bold">14</span></h2>
-            <p>Award Winner </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section process mt-6 mb-2">
     <div class="container">
       <div class="columns is-multiline is-desktop is-align-items-center">
@@ -157,6 +126,25 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-banner">
+    <div class="container">
+      <div class="columns is-desktop">
+        <div class="column is-5-widescreen is-7-desktop">
+          <div class="cta-content">
+            <h3 class="mb-5 cta-title">
+              Together, we can <span class="highlighted">reform</span> the world of animal rescue
+            </h3>
+            <p class="cta-subtitle">
+              Showcase your rescue's dedication to ethical practices and animal welfare by getting
+              accredited with the Ethical Rescue Association.
+            </p>
+            <%= link_to "Learn More", code_of_ethics_path, method: :get %><i class="fa fa-angle-right ml-2"></i>
           </div>
         </div>
       </div>
@@ -258,25 +246,6 @@
     </div>
   </section>
 
-  <section class="section cta-banner">
-    <div class="container">
-      <div class="columns is-desktop">
-        <div class="column is-5-widescreen is-7-desktop">
-          <div class="cta-content">
-            <h3 class="mb-5 cta-title">
-              Together, we can <span class="highlighted">reform</span> the world of animal rescue
-            </h3>
-            <p class="cta-subtitle">
-              Showcase your rescue's dedication to ethical practices and animal welfare by getting
-              accredited with the Ethical Rescue Association.
-            </p>
-            <%= link_to "Learn More", code_of_ethics_path, method: :get %><i class="fa fa-angle-right ml-2"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section testimonial pt-0">
     <div class="container">
       <div class="columns is-desktop">
@@ -290,6 +259,8 @@
     </div>
 
     <div class="container-fluid">
+      <div class="fade-left"></div>
+      <div class="fade-right"></div>
       <div class="columns is-multiline" style="height: 20rem; overflow: hidden;">
         <div class="column is-12 testimonial-wrap" style="display: flex;">
           <div class="testimonial-block" style="min-width: 30rem !important;">
