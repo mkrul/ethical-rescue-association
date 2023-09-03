@@ -34,4 +34,6 @@ RSpec.configure do |config|
     end
     Rails.application.load_tasks
   end
+
+  config.before { ActionMailer::Base.deliveries.clear }
 end

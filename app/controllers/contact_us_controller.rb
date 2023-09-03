@@ -6,6 +6,7 @@ class ContactUsController < ApplicationController
   def create
     if params[:name].blank? || params[:email].blank? || params[:message].blank?
       flash[:error] = "Your name, email, and a message are required. Please try again."
+      redirect_to contact_us_path
     else
       ContactUsMailer.contact_us(
         name: params[:name],
@@ -14,9 +15,8 @@ class ContactUsController < ApplicationController
       ).deliver!
 
       flash[:notice] = "Thank you for contacting us. We will get back to you shortly."
+      render :index
     end
-
-    redirect_to contact_us_path
   end
 
   private
