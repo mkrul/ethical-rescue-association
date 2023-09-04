@@ -1,5 +1,5 @@
 <div class="code-of-ethics-container mb-6">
-  <div class="banner-container">
+  <div class="banner-container" data-testid="code-of-ethics-banner">
     <section class="hero is-large header-image">
       <div class="hero-body">
         <h1 class="title has-text-white">
@@ -13,7 +13,7 @@
   </div>
 
   <section class="section container pt-6 mt-6">
-    <section class="content-container pt-4 pb-6 mb-6">
+    <section class="content-container pt-4 pb-6 mb-6" data-testid="message-from-president">
       <div class="columns is-gapless president-statement-container">
         <div class="column is-two-fifths president-photo-container">
           <%= image_tag "code_of_ethics/janelle.jpg", class: "president-img" %>
@@ -55,7 +55,7 @@
       <hr class="m-0"/>
     </section>
 
-    <section class="content-container mt-6">
+    <section class="content-container mt-6" data-testid="official-code-of-ethics">
       <div class="container has-text-centered">
         <h2 class="title mb-5 section-header">The Official ERA Code of Ethics</h2>
         <div class="logo-separator mb-4">

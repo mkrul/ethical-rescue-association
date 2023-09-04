@@ -1,7 +1,7 @@
 <%= javascript_include_tag "our_values" %>
 
 <div class="what-is-era-container mb-4">
-  <div class="banner-container">
+  <div class="banner-container" data-testid="what-is-era-banner">
     <section class="hero is-large header-image">
       <div class="hero-body">
         <h1 class="title has-text-white">
@@ -14,7 +14,7 @@
     </section>
   </div>
 
-  <section class="section container standard-padding mt-6 mb-4">
+  <section class="section container standard-padding mt-6 mb-4" data-testid="mission-statement">
     <div class="sandbox">
       <div class="tile is-ancestor">
         <div class="tile is-parent is-shady">
@@ -64,7 +64,7 @@
     <hr class="m-0"/>
   </section>
 
-  <section class="section container standard-padding mt-2">
+  <section class="section container standard-padding mt-2" data-testid="our-values">
     <div class="sandbox">
       <div class="has-text-centered mb-4">
         <h2 class="title mb-5 section-header">Our Values</h2>
@@ -100,19 +100,19 @@
 
       <div class="columns is-centered">
         <div class="column core-value-banners-container">
-          <div id="partnership" class="mb-3 core-value-banner  partnership">
+          <div id="partnership" class="mb-3 core-value-banner partnership">
             <div id="partnership-first" class="first-frame">PARTNERSHIP</div>
           </div>
           <div id="accountability" class="mb-3 core-value-banner  accountability">
             <div id="accountability-first" class="first-frame">ACCOUNTABILITY</div>
           </div>
-          <div id="trust" class="mb-3 core-value-banner  trust">
+          <div id="trust" class="mb-3 core-value-banner trust">
             <div id="trust-first" class="first-frame">TRUST</div>
           </div>
-          <div id="respect" class="mb-3 core-value-banner  respect">
+          <div id="respect" class="mb-3 core-value-banner respect">
             <div id="respect-first" class="first-frame">RESPECT</div>
           </div>
-          <div id="integrity" class="mb-3 core-value-banner  integrity">
+          <div id="integrity" class="mb-3 core-value-banner integrity">
             <div id="integrity-first" class="first-frame">INTEGRITY</div>
           </div>
         </div>
@@ -124,7 +124,7 @@
     <hr class="m-0"/>
   </section>
 
-  <section class="section container standard-padding">
+  <section class="section container standard-padding" data-testid="board-of-directors">
     <div class="sandbox">
       <div class="has-text-centered mb-4">
         <h2 class="title mb-5 section-header">Board of Directors</h2>
@@ -160,7 +160,7 @@
             <div class="card-image">
               <figure class="image is-2by1">
                 <button class="modal-prompt-trigger is-transparent" data-target="janelle-modal-prompt">
-                  <%= image_tag "what_is_era/janelle.jpg", class: "board-of-directors-photo janelle" %>
+                  <%= image_tag "what_is_era/janelle.jpg", class: "board-of-directors-photo janelle", alt: "Janelle Newton" %>
                 </button>
               </figure>
             </div>
@@ -179,7 +179,7 @@
             <div class="card-image">
               <figure class="image is-2by1">
                 <button class="modal-prompt-trigger is-transparent" data-target="angela-modal-prompt">
-                  <%= image_tag "what_is_era/angela.jpg", class: "board-of-directors-photo angela" %>
+                  <%= image_tag "what_is_era/angela.jpg", class: "board-of-directors-photo angela", alt: "Angela Curry" %>
                 </button>
               </figure>
             </div>
@@ -200,7 +200,7 @@
             <div class="card-image">
               <figure class="image is-2by1">
                 <button class="modal-prompt-trigger is-transparent" data-target="brittnea-modal-prompt">
-                  <%= image_tag "what_is_era/brittnea.jpg", class: "board-of-directors-photo brittnea" %>
+                  <%= image_tag "what_is_era/brittnea.jpg", class: "board-of-directors-photo brittnea", alt: "Brittnea Atwood" %>
                 </button>
               </figure>
             </div>
@@ -219,7 +219,7 @@
             <div class="card-image">
               <figure class="image is-2by1">
                 <button class="modal-prompt-trigger is-transparent" data-target="bri-modal-prompt">
-                  <%= image_tag "what_is_era/bri.jpg", class: "board-of-directors-photo bri" %>
+                  <%= image_tag "what_is_era/bri.jpg", class: "board-of-directors-photo bri", alt: "Bri Benton" %>
                 </button>
               </figure>
             </div>
@@ -238,7 +238,7 @@
             <div class="card-image">
               <figure class="image is-2by1">
                 <button class="modal-prompt-trigger is-transparent" data-target="misha-modal-prompt">
-                  <%= image_tag "what_is_era/misha.jpg", class: "board-of-directors-photo misha" %>
+                  <%= image_tag "what_is_era/misha.jpg", class: "board-of-directors-photo misha", alt: "Misha Krul" %>
                 </button>
               </figure>
             </div>
