@@ -22,7 +22,6 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <% if session_access_key_set? %>
   <body>
     <div>
       <%= render partial: "shared/navbar" %>
@@ -41,16 +40,4 @@
     <%= render "shared/footer" %>
     </div>
   </body>
-  <% else %>
-  <body>
-    <div class="promo-container">
-      <%= video_tag "https://i.imgur.com/RePuY5c.mp4", autoplay: true, loop: false, controls: true %>
-      <% if true %>
-        <div class="phantom" id="phantom">
-          <%= link_to "phantom", phantom_path %>
-        </div>
-      <% end %>
-    </div>
-  </body>
-  <% end %>
 </html>
