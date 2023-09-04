@@ -9,6 +9,7 @@ class ContactUsMailer < ApplicationMailer
 
     mail(
       to: 'ethicalrescueassociation@gmail.com',
+      from: @email,
       subject: "New inquiry from #{@name} (#{@email})"
     ).deliver
   end

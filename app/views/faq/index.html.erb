@@ -1,7 +1,7 @@
 <%= javascript_include_tag "accordion" %>
 
 <div class="faq-container">
-  <div class="banner-container">
+  <div class="banner-container" data-testid="faq-banner">
     <section class="hero is-large header-image">
       <div class="hero-body">
         <h1 class="title has-text-white">
@@ -14,7 +14,7 @@
     </section>
   </div>
 
-  <section class="container standard-padding">
+  <section class="container standard-padding" data-testid="faq-list">
     <div class="content-container py-0 mt-6">
       <div class="accordion-container">
         <div class="columns accordion-columns is-justify-content-center p-0">
@@ -142,7 +142,10 @@
                     Applying for ERA accreditation is a multi-step process.
                   </p>
                   <p>
-                    1) Send a one-time fee of $75 to ERA via <%= link_to 'PayPal', @paypal_url, target: '_blank' %>, <%= link_to 'Venmo', @venmo_url, target: '_blank' %>, or <%= link_to 'CashApp', @cashapp_url, target: '_blank' %>
+                    1) Send a one-time fee of $75 to ERA via
+                    <%= link_to 'PayPal', 'https://www.paypal.com/paypalme/mishakrul', target: '_blank' %>,
+                    <%= link_to 'Venmo', 'https://venmo.com/code?user_id=3314143247466496559&created=1680884229', target: '_blank' %>, or
+                    <%= link_to 'CashApp', 'https://cash.app/$mkrul', target: '_blank' %>
                   </p>
                   <p>
                     <% if false %>
@@ -323,7 +326,7 @@
     </div>
   </section>
 
-  <section class="container pb-2">
+  <section class="container pb-2" data-testid="more-questions">
     <div class="columns is-gapless">
       <div class="column">
         <div class="faq-inquiry-container">
