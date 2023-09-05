@@ -68,7 +68,7 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "ethical_rescue_association_production"
 
-  config.action_mailer.default_url_options = { host: "ethicalrescueassociation.com" }
+  config.action_mailer.default_url_options = { host: "ethicalrescueassociation.org" }
 
   config.action_mailer.perform_caching = false
 

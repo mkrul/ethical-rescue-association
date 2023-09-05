@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'main#index'
 
-  get '/phantom', to: 'main#phantom'
-
   # about pages
   get '/code_of_ethics', to: 'code_of_ethics#index'
   get '/what_is_era', to: 'what_is_era#index'
