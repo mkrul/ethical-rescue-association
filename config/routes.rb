@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get '/faq', to: 'faq#index'
   get '/contact_us', to: 'contact_us#index'
   post '/contact_us', to: 'contact_us#create'
+  get '/_flipper', to: 'flippers#index'
 
 end
