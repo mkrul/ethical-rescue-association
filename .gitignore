@@ -13,8 +13,6 @@
 !/log/.keep
 !/tmp/.keep
 
-.env*
-
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
@@ -32,7 +30,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/.env
 /.byebug_history
 ./byebug_history
 /config/credentials/production.key
