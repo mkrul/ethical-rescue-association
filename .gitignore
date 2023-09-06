@@ -32,6 +32,5 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/.env
 /.byebug_history
 ./byebug_history
