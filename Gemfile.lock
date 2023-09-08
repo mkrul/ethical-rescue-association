@@ -78,7 +78,6 @@ GEM
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
-    brow (0.4.1)
     builder (3.2.4)
     bulma-rails (0.9.4)
       sassc (~> 2.0)
@@ -119,12 +118,6 @@ GEM
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
     ffi (1.15.5)
-    flipper (1.0.0)
-      brow (~> 0.4.1)
-      concurrent-ruby (< 2)
-    flipper-active_record (1.0.0)
-      activerecord (>= 4.2, < 8)
-      flipper (~> 1.0.0)
     font-awesome-sass (6.3.0)
       sassc (~> 2.0)
     globalid (1.1.0)
@@ -324,8 +317,6 @@ DEPENDENCIES
   database_cleaner (~> 1.5, >= 1.5.3)
   devise (~> 4.9)
   dotenv-rails (~> 2.8.1)
-  flipper
-  flipper-active_record
   font-awesome-sass (~> 6.3.0)
   httparty
   importmap-rails
