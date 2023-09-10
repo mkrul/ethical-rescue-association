@@ -1,2 +1,0 @@
-module FlippersHelper
-end

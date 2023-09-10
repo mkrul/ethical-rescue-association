@@ -36,48 +36,9 @@
             <div class="navbar-item">
               <%= link_to "Contact", contact_us_path, class: 'nav-link' %>
             </div>
-
-            <% if false %>
-              <!-- TEMPORARY -->
-              <div class="navbar-dropdown">
-                <div class="navbar-item">
-                  <%= link_to "What is ERA?", what_is_era_path, class: 'nav-link' %>
-                </div>
-                <div class="navbar-item">
-                  <%= link_to "Code of Ethics", code_of_ethics_path, class: 'nav-link' %>
-                </div>
-                <div class="navbar-item">
-                  <%= link_to "FAQ", faq_path, class: 'nav-link' %>
-                </div>
-              </div>
-            <% end %>
           </div>
 
-          <% if false %>
-            <% if false %>
-              <div class="navbar-item has-dropdown is-hoverable pr-2">
-                <a class="navbar-link">
-                  Resources
-                </a>
-                <div class="navbar-dropdown">
-                  <div class="navbar-item">
-                    <%= link_to "Spay & Neuter", spay_and_neuter_path, class: 'nav-link' %>
-                  </div>
-                  <div class="navbar-item">
-                    <%= link_to "Products", products_path, class: 'nav-link' %>
-                  </div>
-                  <div class="navbar-item">
-                    <%= link_to "Microchips", microchipping_path, class: 'nav-link' %>
-                  </div>
-                  <div class="navbar-item">
-                    <%= link_to "Fencing", fencing_path, class: 'nav-link' %>
-                  </div>
-                </div>
-              </div>
-            <% end %>
-          <% end %>
-
-          <% if false %>
+          <% if user_signed_in? %>
             <div class="navbar-item has-dropdown is-hoverable pr-2">
               <a class="navbar-link" href=<%"#{edit_user_registration_path}"%>>
                 <%= current_user.email %>
@@ -88,20 +49,18 @@
                     <%= link_to "Rescues", animal_rescues_path, class: 'nav-link' %>
                   </div>
                 <% end %>
-                <a class="navbar-item">
+                <%# <a class="navbar-item main-title font-gotham">
                   Profile Settings
-                </a>
+                </a> %>
                 <div class="navbar-item">
-                  <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-btn main-title font-gotham nav-link' %>
+                  <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'dropdown-link logout-btn main-title font-gotham nav-link' %>
                 </div>
               </div>
             </div>
           <% else %>
-            <% if false %>
-              <div class="navbar-item pr-5">
-                <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
-              </div>
-            <% end %>
+            <div class="navbar-item pr-5">
+              <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
+            </div>
           <% end %>
 
         </div>

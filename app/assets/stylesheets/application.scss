@@ -83,12 +83,26 @@ body {
   color: $BLACK;
 }
 
+.text-red {
+  color: red;
+}
+
 .text-med-grey {
   color: $MED-GRAY !important;
 }
 
 .double-spaced {
   line-height: 2 !important;
+}
+
+/* POSITION */
+
+.is-absolute {
+  position: absolute;
+}
+
+.is-relative {
+  position: relative;
 }
 
 /* DISPLAY */
@@ -200,6 +214,16 @@ body {
   @media only screen and (max-width: $MOBILE) {
     margin-left: 5vw;
     font-size: $FONT-SIZE-14;
+  }
+}
+
+.dropdown-link {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  width: 11rem;
+  @media only screen and (max-width: $TABLET-MD) {
+    width: 9rem;
   }
 }
 
