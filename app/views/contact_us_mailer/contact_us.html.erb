@@ -18,18 +18,19 @@
       ---------
     </p>
     <p>
-      HTTP_CF_IPCITY: <%= @headers['HTTP_CF_IPCITY'] %><br/>
-      HTTP_CF_REGION: <%= @headers['HTTP_CF_REGION'] %><br/>
-      HTTP_CF_REGION_CODE: <%= @headers['HTTP_CF_REGION_CODE'] %><br/>
-      HTTP_CF_IPCONTINENT: <%= @headers['HTTP_CF_IPCONTINENT'] %><br/>
-      HTTP_CF_IPLATITUDE: <%= @headers['HTTP_CF_IPLATITUDE'] %><br/>
-      HTTP_CF_IPLONGITUDE: <%= @headers['HTTP_CF_IPLONGITUDE'] %><br/>
-      HTTP_CF_METRO_CODE: <%= @headers['HTTP_CF_METRO_CODE'] %><br/>
-      HTTP_CF_POSTAL_CODE: <%= @headers['HTTP_CF_POSTAL_CODE'] %><br/>
-      HTTP_CF_TIMEZONE: <%= @headers['HTTP_CF_TIMEZONE'] %><br/>
-      HTTP_CF_CONNECTING_IP: <%= @headers['HTTP_CF_CONNECTING_IP'] %><br/>
-      HTTP_X_REQUEST_ID: <%= @headers['HTTP_X_REQUEST_ID'] %><br/>
-      HTTP_X_REQUEST_START: <%= @headers['HTTP_X_REQUEST_START'] %><br/>
+      HTTP_CF_IPCITY: <%= @city %><br/>
+      HTTP_CF_REGION: <%= @region %><br/>
+      HTTP_CF_REGION_CODE: <%= @region_code %><br/>
+      HTTP_CF_IPCONTINENT: <%= @continent %><br/>
+      HTTP_CF_IPLATITUDE: <%= @lat %><br/>
+      HTTP_CF_IPLONGITUDE: <%= @long %><br/>
+      HTTP_CF_METRO_CODE: <%= @metro_code %><br/>
+      HTTP_CF_POSTAL_CODE: <%= @zip %><br/>
+      HTTP_CF_TIMEZONE: <%= @timezone %><br/>
+      HTTP_CF_CONNECTING_IP: <%= @ip %><br/>
+      HTTP_X_REQUEST_ID: <%= @x_request_id %><br/>
+      HTTP_X_REQUEST_START: <%= @x_request_start %><br/>
+      TIME_SENT_AT: <%= @sent_at %><br/>
     </p>
   </body>
 </html>
