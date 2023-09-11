@@ -18,22 +18,11 @@
       ---------
     </p>
     <p>
-      REMOTE IP: <%= @remote_ip %>
-    </p>
-    <p>
-      X FORWARDED FOR: <%= @x_forwarded_for %>
-    </p>
-    <p>
-      Remote Geo IP Lookup: <%= @remote_geo_location %>
-    </p>
-    <p>
-      X Geo IP Lookup: <%= @x_geo_localization %>
-    </p>
-    <p>
-      Remote address: <%= @remote_address %>
-    </p>
-    <p>
-      X Address: <%= @x_address %>
+      <%=
+        @headers.each do |header|
+          "#{header[0]}: #{header[1]}\n"
+        end
+      %>
     </p>
   </body>
 </html>
