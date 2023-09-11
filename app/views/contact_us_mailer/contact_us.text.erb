@@ -5,16 +5,8 @@ Email: <%= @email %>
 <%= @message %>
 ---------
 
-HTTP_CF_IPCITY: <%= @city %>
-HTTP_CF_REGION: <%= @region %>
-HTTP_CF_REGION_CODE: <%= @region_code %>
-HTTP_CF_IPCONTINENT: <%= @continent %>
-HTTP_CF_IPLATITUDE: <%= @lat %>
-HTTP_CF_IPLONGITUDE: <%= @long %>
-HTTP_CF_METRO_CODE: <%= @metro_code %>
-HTTP_CF_POSTAL_CODE: <%= @zip %>
-HTTP_CF_TIMEZONE: <%= @timezone %>
-HTTP_CF_CONNECTING_IP: <%= @ip %>
-HTTP_X_REQUEST_ID: <%= @x_request_id %>
-HTTP_X_REQUEST_START: <%= @x_request_start %>
-TIME_SENT_AT: <%= @sent_at %>
+<%=
+  @headers.each do |header|
+    "#{header[0]}: #{header[1]}"
+  end
+%>

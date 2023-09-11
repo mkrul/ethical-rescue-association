@@ -18,19 +18,11 @@
       ---------
     </p>
     <p>
-      HTTP_CF_IPCITY: <%= @city %><br/>
-      HTTP_CF_REGION: <%= @region %><br/>
-      HTTP_CF_REGION_CODE: <%= @region_code %><br/>
-      HTTP_CF_IPCONTINENT: <%= @continent %><br/>
-      HTTP_CF_IPLATITUDE: <%= @lat %><br/>
-      HTTP_CF_IPLONGITUDE: <%= @long %><br/>
-      HTTP_CF_METRO_CODE: <%= @metro_code %><br/>
-      HTTP_CF_POSTAL_CODE: <%= @zip %><br/>
-      HTTP_CF_TIMEZONE: <%= @timezone %><br/>
-      HTTP_CF_CONNECTING_IP: <%= @ip %><br/>
-      HTTP_X_REQUEST_ID: <%= @x_request_id %><br/>
-      HTTP_X_REQUEST_START: <%= @x_request_start %><br/>
-      TIME_SENT_AT: <%= @sent_at %><br/>
+      <%=
+        @headers.each do |header|
+          "#{header[0]}: #{header[1]}"
+        end
+      %>
     </p>
   </body>
 </html>
