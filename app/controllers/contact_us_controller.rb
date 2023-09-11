@@ -9,12 +9,12 @@ class ContactUsController < ApplicationController
       flash[:error] = "Your name, email, and a message are required. Please try again."
       redirect_to contact_us_path
     else
-
+      debugger
       ContactUsMailer.contact_us(
         name: params[:name],
         email: params[:email],
         message: params[:message],
-        headers: request.headers
+        headers: request.env
       ).deliver!
 
       flash[:notice] = "Thank you for contacting us. We will get back to you shortly."
