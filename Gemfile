@@ -15,6 +15,8 @@ gem 'MailchimpMarketing', '~> 3.0', '>= 3.0.80'
 
 gem 'active_interaction', '~> 5.2'
 
+gem "flipper-active_record"
+
 gem 'httparty'
 
 gem 'petfinder'
