@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :contact
+  has_many :groups_users
+  has_many :groups, through: :groups_users
 
   def admin?
     admin == true
