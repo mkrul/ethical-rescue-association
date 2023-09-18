@@ -30,6 +30,14 @@
             <div class="navbar-item">
               <%= link_to "Code of Ethics", code_of_ethics_path, class: 'nav-link' %>
             </div>
+            <% if Flipper.enabled?(:resources_tab, current_user) %>
+              <div class="navbar-dropdown">
+                <div class="navbar-item">
+                  <%# <%= link_to "Rescues", animal_rescues_path, class: 'nav-link' %>
+                  Resources
+                </div>
+              </div>
+            <% end %>
             <div class="navbar-item">
               <%= link_to "FAQ", faq_path, class: 'nav-link' %>
             </div>

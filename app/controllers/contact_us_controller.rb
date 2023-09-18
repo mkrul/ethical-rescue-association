@@ -11,15 +11,17 @@ class ContactUsController < ApplicationController
     else
       headers = request.env
 
-      ContactUsMailer.contact_us(
-        name: params[:name],
-        email: params[:email],
-        message: params[:message],
-        headers: headers
-      ).deliver!
+      unless headers["HTTP_CF_REGION_CODE"] == "CU"
+        ContactUsMailer.contact_us(
+          name: params[:name],
+          email: params[:email],
+          message: params[:message],
+          headers: headers
+        ).deliver!
 
-      flash[:notice] = "Thank you for contacting us. We will get back to you shortly."
-      render :index
+        flash[:notice] = "Thank you for contacting us. We will get back to you shortly."
+        render :index
+      end
     end
   end
 
