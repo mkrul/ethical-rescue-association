@@ -1,0 +1,30 @@
+
+<% url = "https://usa.kaspersky.com/resource-center/definitions/cookies" %>
+
+<div id="cookies" class="cookies">
+  <div id="cookies-close" class="close">
+    <i class="fa-solid fa-x"></i>
+  </div>
+  <div class="content">
+    We use cookies to make interactions with our website and services easier for you. You may
+    <a href=<% url %> target="_blank">click here</a> to read more about how cookies are used
+    and how you can manage them. By continuing to use this site, you are giving us your consent to use cookies.
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    if (!sessionStorage.getItem('useEraCookies')) {
+      $("#cookies").slideDown( "slow", function() {
+        // animate
+      });
+
+      $('#cookies-close').click(function() {
+        sessionStorage.setItem('useEraCookies', 'true');
+        $("#cookies").slideUp( "slow", function() {
+          this.style = "display: none";
+        });
+      });
+    };
+  });
+</script>
