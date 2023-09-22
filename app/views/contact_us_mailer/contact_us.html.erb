@@ -13,16 +13,8 @@
     <p>
       ---------
     </p>
-    <%= @message %>
     <p>
-      ---------
-    </p>
-    <p>
-      <%=
-        @headers.each do |header|
-          "#{header[0]}: #{header[1]}"
-        end
-      %>
+      <%= @message %>
     </p>
   </body>
 </html>
