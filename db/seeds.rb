@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Group.destroy_all
+
+Group.create!([
+  {
+    name: "Admins",
+  },
+  {
+    name: "Developers",
+  },
+  {
+    name: "Testers",
+  }
+])
+
