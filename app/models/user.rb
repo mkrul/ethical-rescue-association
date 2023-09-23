@@ -12,5 +12,13 @@ class User < ApplicationRecord
   def admin?
     admin == true
   end
+
+  def developer?
+    groups.include?(Group.find_by(name: 'Developers'))
+  end
+
+  def tester?
+    groups.include?(Group.find_by(name: 'Testers'))
+  end
 end
 
