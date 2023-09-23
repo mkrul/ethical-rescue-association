@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_23_181158) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_23_182142) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "email", null: false
+    t.string "phone"
+    t.boolean "email_is_visible", default: false
+    t.boolean "phone_is_visible", default: false
+  end
 
   create_table "flipper_features", force: :cascade do |t|
     t.string "key", null: false
