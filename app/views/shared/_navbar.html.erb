@@ -44,33 +44,31 @@
             <div class="navbar-item">
               <%= link_to "Contact", contact_us_path, class: 'nav-link' %>
             </div>
-          </div>
-
-          <% if user_signed_in? %>
-            <div class="navbar-item has-dropdown is-hoverable pr-2">
-              <a class="navbar-link" href=<%"#{edit_user_registration_path}"%>>
-                <%= current_user.email %>
-              </a>
-              <div class="navbar-dropdown">
-                <% if false %>
+            <% if user_signed_in? %>
+              <div class="navbar-item has-dropdown is-hoverable pr-2">
+                <a class="navbar-link" href=<%"#{edit_user_registration_path}"%>>
+                  <%= current_user.email %>
+                </a>
+                <div class="navbar-dropdown">
+                  <% if false %>
+                    <div class="navbar-item">
+                      <%= link_to "Rescues", animal_rescues_path, class: 'nav-link' %>
+                    </div>
+                  <% end %>
+                  <%# <a class="navbar-item main-title font-gotham">
+                    Profile Settings
+                  </a> %>
                   <div class="navbar-item">
-                    <%= link_to "Rescues", animal_rescues_path, class: 'nav-link' %>
+                    <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'dropdown-link logout-btn main-title font-gotham nav-link' %>
                   </div>
-                <% end %>
-                <%# <a class="navbar-item main-title font-gotham">
-                  Profile Settings
-                </a> %>
-                <div class="navbar-item">
-                  <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'dropdown-link logout-btn main-title font-gotham nav-link' %>
                 </div>
               </div>
-            </div>
-          <% else %>
-            <div class="navbar-item pr-4 pl-2">
-              <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
-            </div>
-          <% end %>
-
+            <% else %>
+              <div class="navbar-item">
+                <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </nav>

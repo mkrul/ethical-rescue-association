@@ -103,13 +103,32 @@ body {
   display: none;
   bottom: 0;
   z-index: 100;
-  height: 85px;
+  height: fit-content;
   background-color: $INFO-BLUE;
   text-align: center;
-  padding: 1rem 22rem;
+  padding: 1rem 12vw;
+
+  @media only screen and (max-width: $TABLET-MD) {
+    padding: 1rem 7vw;
+  }
 
   .content {
     color: $WHITE;
+    margin-bottom: 0 !important;
+
+    @media only screen and (max-width: $TABLET-MD) {
+      display: none;
+    }
+  }
+
+  .content-mobile {
+    color: $WHITE;
+    display: none;
+    margin-bottom: 0 !important;
+
+    @media only screen and (max-width: $TABLET-MD) {
+      display: inline;
+    }
   }
 
   .close {
