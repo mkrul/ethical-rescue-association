@@ -20,5 +20,9 @@ class User < ApplicationRecord
   def tester?
     groups.include?(Group.find_by(name: 'Testers'))
   end
+
+  def banned?
+    groups.include?(Group.find_by(name: 'Blacklisted'))
+  end
 end
 
