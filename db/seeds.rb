@@ -18,7 +18,7 @@ Group.create!([
     name: "Testers",
   },
   {
-    name: "Blacklisted",
+    name: "Banned",
   }
 ])
 
