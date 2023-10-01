@@ -25,9 +25,9 @@
       <div class="column is-3">
         <h2><strong>Quick Links</strong></h2>
         <ul>
-          <% if false %>
+          <% if current_user.present? && current_user.developer? %>
             <li>
-              <%= link_to "Get Accredited", "https://forms.gle/MeuWpkQyCRj2ky63A", target: "_blank" %>
+              <%= link_to "Become a Member", "https://forms.gle/MeuWpkQyCRj2ky63A", target: "_blank" %>
             </li>
           <% end %>
           <li><%= link_to "Contact Us", contact_us_path %></li>
