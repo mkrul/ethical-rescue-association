@@ -17,49 +17,46 @@
       <div id="navbarBasicExample" class="navbar-menu navbar-container">
         <div class="navbar-end">
           <div class="navbar-item is-hoverable pr-2">
-            <% if false %>
+            <% if current_user && current_user.developer? %>
               <div class="navbar-item">
-                <button class="modal-prompt-trigger button font-gotham become-a-member" style="font-size: 14px;" data-target="payment-prompt">
-                  Become a Member
-                </button>
+                <%= link_to "Become a Member", what_is_era_path, class: 'nav-link' %>
               </div>
             <% end %>
-            <div class="navbar-item">
-              <%= link_to "What is ERA?", what_is_era_path, class: 'nav-link' %>
-            </div>
-            <div class="navbar-item">
-              <%= link_to "Code of Ethics", code_of_ethics_path, class: 'nav-link' %>
-            </div>
-            <% if Flipper.enabled?(:resources_tab, current_user) %>
-              <div class="navbar-dropdown">
-                <div class="navbar-item">
-                  <%# <%= link_to "Rescues", animal_rescues_path, class: 'nav-link' %>
-                  Resources
+            <div class="dropdown has-dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <a class="navbar-link" aria-haspopup="true" aria-controls="dropdown-about">
+                  About
+                </a>
+              </div>
+              <div class="dropdown-menu" id="dropdown-about" role="menu">
+                <div class="dropdown-content">
+                  <div class="navbar-item is-16">
+                    <%= link_to "What is ERA?", what_is_era_path, class: 'nav-link' %>
+                  </div>
+                  <div class="navbar-item is-16">
+                    <%= link_to "Code of Ethics", code_of_ethics_path, class: 'nav-link' %>
+                  </div>
+                  <div class="navbar-item is-16">
+                    <%= link_to "FAQ", faq_path, class: 'nav-link' %>
+                  </div>
                 </div>
               </div>
-            <% end %>
-            <div class="navbar-item">
-              <%= link_to "FAQ", faq_path, class: 'nav-link' %>
             </div>
             <div class="navbar-item">
               <%= link_to "Contact", contact_us_path, class: 'nav-link' %>
             </div>
             <% if user_signed_in? %>
-              <div class="navbar-item has-dropdown is-hoverable pr-2">
-                <a class="navbar-link" href=<%"#{edit_user_registration_path}"%>>
-                  <%= current_user.email %>
-                </a>
-                <div class="navbar-dropdown">
-                  <% if false %>
+              <div class="dropdown has-dropdown is-hoverable pr-2">
+                <div class="dropdown-trigger">
+                  <a class="navbar-link" href=<%"#{edit_user_registration_path}"%> aria-haspopup="true" aria-controls="dropdown-email">
+                    <%= current_user.email %>
+                  </a>
+                </div>
+                <div class="dropdown-menu" id="dropdown-email" role="menu">
+                  <div class="dropdown-content">
                     <div class="navbar-item">
-                      <%= link_to "Rescues", animal_rescues_path, class: 'nav-link' %>
+                      <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'dropdown-link logout-btn main-title font-gotham nav-link' %>
                     </div>
-                  <% end %>
-                  <%# <a class="navbar-item main-title font-gotham">
-                    Profile Settings
-                  </a> %>
-                  <div class="navbar-item">
-                    <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'dropdown-link logout-btn main-title font-gotham nav-link' %>
                   </div>
                 </div>
               </div>
