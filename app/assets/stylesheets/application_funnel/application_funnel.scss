@@ -1,0 +1,13 @@
+@import "../application_config.scss";
+
+.application-funnel {
+
+  &__overflow {
+    overflow: hidden;
+    height: 5rem;
+  }
+
+  &__title {
+    line-height: 1.25
+  }
+}
