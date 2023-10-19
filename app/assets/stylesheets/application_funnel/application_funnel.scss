@@ -1,6 +1,7 @@
 @import "../application_config.scss";
 
 .application-funnel {
+  margin-bottom: 3rem;
 
   &__overflow-top {
     overflow: hidden;
@@ -8,10 +9,15 @@
   }
 
   &__overflow-bottom {
+    height: 45rem;
     overflow: hidden;
   }
 
   &__title {
     line-height: 1.25
+  }
+
+  &__step-back {
+    margin-top: 6rem !important;
   }
 }
