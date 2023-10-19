@@ -2,9 +2,13 @@
 
 .application-funnel {
 
-  &__overflow {
+  &__overflow-top {
     overflow: hidden;
     height: 4rem;
+  }
+
+  &__overflow-bottom {
+    overflow: hidden;
   }
 
   &__title {

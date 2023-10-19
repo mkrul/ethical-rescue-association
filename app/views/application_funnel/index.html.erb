@@ -1,38 +1,102 @@
 
 
 <div class="application-funnel">
-  <div class="application-funnel__overflow"></div>
-  <%= form_with do |form| %>
-    <section data-section-id="1" data-share="" data-category="headers" data-component-id="44d0b9e2_01_awz" class="section">
-      <div class="container pt-5">
-        <div class="mb-5 is-vcentered columns is-multiline">
-          <div class="column is-12 is-5-desktop mb-5 mr-auto">
-            <h2 class="mb-6 is-size-3-mobile has-text-weight-bold is-size-2 application-funnel__title" data-config-id="header">
-              Begin your Application
-            </h2>
-            <p class="subtitle has-text-grey mb-6" data-config-id="desc">
-              Are you filling out this application for a rescue or a shelter?
-            </p>
-            <div class="buttons">
-              <%= check_box :rescue, class: "hero-primary-action" %>
-              <%= check_box :shelter, class: "hero-secondary-action" %>
-              <a class="button" href="#" data-config-id="hero-primary-action">Rescue</a>
-              <a class="button" href="#" data-config-id="hero-secondary-action">Shelter</a>
+  <div class="application-funnel__overflow-top"></div>
+  <%= form_with do |f| %>
+    <div class="application-funnel__overflow-bottom">
+      <section data-section-id="1" data-share="" data-category="headers" data-component-id="44d0b9e2_01_awz" class="section" id="funnel-step-one">
+        <div class="container pt-4">
+          <div class="mb-5 is-vcentered columns is-multiline">
+            <div class="column is-12 is-5-desktop mb-5 mr-auto">
+              <h2 class="mb-6 is-size-3-mobile has-text-weight-bold is-size-2 application-funnel__title" data-config-id="header">
+                Begin your Application
+              </h2>
+              <p class="subtitle has-text-grey mb-6" data-config-id="desc">
+                Are you filling out this application for a rescue or a shelter?
+              </p>
+              <div class="buttons">
+                <%= f.check_box :rescue, checked: false, class: "is-hidden" %>
+                <%= f.check_box :shelter, checked: false, class: "is-hidden" %>
+                <a class="button" href="#" id="rescue-select" data-config-id="hero-primary-action">Rescue</a>
+                <a class="button" href="#" id="shelter-select" data-config-id="hero-secondary-action">Shelter</a>
+              </div>
+            </div>
+            <div class="column is-12 is-6-desktop">
+              <%= image_tag "application_funnel/brown-dog-on-beach.jpg", class: "image is-fullwidth" %>
             </div>
           </div>
-          <div class="column is-12 is-6-desktop">
-            <%= image_tag "application_funnel/brown-dog-on-beach.jpg", class: "image is-fullwidth" %>
+          <div class="is-block-desktop is-hidden-touch has-text-centered">
+            <button
+              class="button p-0 is-rounded"
+              style="width: 56px;height: 56px border-radius: 50% !important;"
+              id="step-one-next"
+            >
+              <svg class="has-text-grey-dark mx-auto" style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-config-id="auto-svg-1-1">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="is-block-desktop is-hidden-touch has-text-centered">
-          <button class="button p-0 is-rounded" style="width: 56px;height: 56px border-radius: 50% !important;">
-            <svg class="has-text-grey-dark mx-auto" style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-config-id="auto-svg-1-1">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
+      </section>
+
+      <section data-section-id="1" data-share="" data-category="headers" data-component-id="44d0b9e2_01_awz" class="section" id="funnel-step-two">
+        <div class="container pt-5">
+          <div class="mb-5 is-vcentered columns is-multiline">
+            <div class="column is-12 is-5-desktop mb-5 mr-auto">
+              <h2 class="mb-6 is-size-3-mobile has-text-weight-bold is-size-2 application-funnel__title" data-config-id="header">
+                Select your Specialization
+              </h2>
+              <p class="subtitle has-text-grey mb-6" data-config-id="desc">
+                What animals does your organization work with?
+              </p>
+              <div class="buttons">
+                <%= f.check_box :dogs, checked: false, class: "is-hidden" %>
+                <%= f.check_box :cats, checked: false, class: "is-hidden" %>
+                <%= f.check_box :dogs_and_cats, checked: false, class: "is-hidden" %>
+                <a class="button" href="#" id="dogs-select" data-config-id="hero-primary-action">Dogs</a>
+                <a class="button" href="#" id="cats-select" data-config-id="hero-secondary-action">Cats</a>
+                <a class="button" href="#" id="dogs-and-cats-select" data-config-id="hero-tertiary-action">Dogs and Cats</a>
+              </div>
+            </div>
+            <div class="column is-12 is-6-desktop">
+              <%= image_tag "application_funnel/brown-dog-on-beach.jpg", class: "image is-fullwidth" %>
+            </div>
+          </div>
+          <div class="is-block-desktop is-hidden-touch has-text-centered">
+            <button
+              class="button p-0 is-rounded"
+              style="width: 56px;height: 56px border-radius: 50% !important;"
+              id="step-two-next"
+            >
+              <svg class="has-text-grey-dark mx-auto" style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-config-id="auto-svg-1-1">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
   <% end %>
   <div class="application-funnel__overflow"></div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#rescue-select").click(function() {
+      $("#application_funnel_rescue").prop("checked", true);
+      $("#application_funnel_shelter").prop("checked", false);
+    });
+
+    $("#shelter-select").click(function() {
+      $("#application_funnel_rescue").prop("checked", false);
+      $("#application_funnel_shelter").prop("checked", true);
+    });
+
+    // when the user clicks the next button, scroll to the next section
+    $("#step-one-next").click(function() {
+      $('html, body').animate({
+        scrollTop: $("#funnel-step-two").offset().top
+      }, 1000);
+    });
+  });
+</script>

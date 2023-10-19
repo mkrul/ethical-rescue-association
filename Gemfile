@@ -11,7 +11,7 @@ gem 'bulmajs-rails'
 
 gem 'cloudflare-rails', '~> 3.0'
 
-gem "font-awesome-sass", "~> 6.3.0"
+gem "font-awesome-sass", "~> 6.4.2"
 
 gem 'MailchimpMarketing', '~> 3.0', '>= 3.0.80'
 
