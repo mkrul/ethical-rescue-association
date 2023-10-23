@@ -112,6 +112,9 @@
       }, 1000);
     });
 
+    $("#funnel-step-two").on("scroll", function() {
+      console.log("scrolling");
+    });
     // when the user clicks the back button, scroll to the previous section
     $("#step-back").click(function() {
       event.preventDefault();
