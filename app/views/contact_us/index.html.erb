@@ -30,9 +30,6 @@
         </section>
 
         <%= form_with url: contact_us_path, method: :post, data: {turbo: false} do |form| %>
-          <% if current_user && current_user.developer? %>
-            <%= recaptcha_tags %>
-          <% end %>
           <div class="field">
             <%= form.label :name, class: "label has-text-weight-light" %>
             <div class="control has-icons-left">
@@ -55,9 +52,10 @@
             <%= form.label :message, class: "label has-text-weight-light" %>
             <%= form.text_area :message, id: "Message", rows: 5, class: "textarea", placeholder: "Message", required: true %>
           </div>
-          <% if current_user && current_user.developer? %>
-            <%= invisible_recaptcha_tags text: 'Submit form' %>
-          <% end %>
+          <div class="field has-text-danger">
+            <%= flash[:recaptcha_error] %>
+            <%= recaptcha_tags %>
+          </div>
           <%= form.submit "Submit", class: "button is-success" %>
         <% end %>
       </div>

@@ -325,7 +325,7 @@ DEPENDENCIES
   cloudflare-rails (~> 3.0)
   database_cleaner (~> 1.5, >= 1.5.3)
   devise (~> 4.9)
-  dotenv-rails (~> 2.8.1)
+  dotenv-rails
   flipper-active_record
   font-awesome-sass (~> 6.3.0)
   geocoder (~> 1.3, >= 1.3.7)
