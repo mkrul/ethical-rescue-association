@@ -1,6 +1,8 @@
 require 'geocoder'
 require 'recaptcha'
 class ContactUsController < ApplicationController
+  before_action :check_recaptcha, only: :create
+
   include Recaptcha::Adapters::ViewMethods
   include Recaptcha::Adapters::ControllerMethods
 
@@ -8,14 +10,6 @@ class ContactUsController < ApplicationController
   end
 
   def create
-    if current_user && current_user.developer?
-      if verify_recaptcha
-        redirect_to contact_us_path
-      else
-        redirect_to root_path
-      end
-    end
-
     if params[:name].blank? || params[:email].blank? || params[:message].blank?
       flash[:error] = "Your name, email, and a message are required. Please try again."
       redirect_to contact_us_path
@@ -35,5 +29,12 @@ class ContactUsController < ApplicationController
   end
 
   private
+
+  def check_recaptcha
+    unless verify_recaptcha
+      flash[:error] = "Please check the box below to prove you're human."
+      redirect_to contact_us_path
+    end
+  end
 
 end
