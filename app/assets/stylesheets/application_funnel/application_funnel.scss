@@ -5,19 +5,135 @@
 
   &__overflow-top {
     overflow: hidden;
-    height: 4rem;
+    height: 3rem;
+
+    @media only screen and (max-width: 1215px) {
+      height: 0;
+    }
   }
 
   &__overflow-bottom {
-    height: 45rem;
+    height: 46rem;
     overflow: hidden;
+
+    @media only screen and (max-width: 1407px) {
+      height: 40rem;
+    }
+
+    @media only screen and (max-width: $TABLET-SM) {
+      height: 42rem;
+    }
+
+    @media only screen and (max-width: $MOBILE) {
+      height: 44rem;
+    }
   }
 
   &__title {
-    line-height: 1.25
+    line-height: 1.25;
+    font-weight: 700 !important;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: 1215px) {
+      font-size: 2rem !important;
+    }
   }
 
-  &__step-back {
-    margin-top: 6rem;
+  .funnel-step {
+    &__section {
+      @media only screen and (max-width: 1215px) {
+        margin-top: 5rem;
+      }
+
+      @media only screen and (max-width: 1023px) {
+        margin-top: 0;
+      }
+    }
+
+    &__container {
+      padding: 0 1rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 2.5rem !important;
+
+      @media only screen and (max-width: 1023px) {
+        margin-bottom: 1.5rem !important;
+      }
+    }
+
+    &__image {
+      @media only screen and (max-width: 1023px) {
+        height: 16rem;
+        object-fit: cover;
+        object-position: 0% 21%;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        object-position: 100% 0%;
+      }
+    }
+
+    &__step-btn {
+      width: 60px;
+      height: 44px;
+      border-radius: 10px;
+
+      &.up {
+        margin-top: 5rem;
+      }
+
+      &.down {
+        margin-top: 1rem;
+      }
+    }
+
+    &__arrow {
+      width: 20px;
+      height: 20px;
+    }
   }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    display: block;
+    position: relative;
+  }
+
+  label:hover {
+    cursor: pointer;
+    background-color: #eee;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: #ddd;
+  }
+
+  .radio-btn {
+    white-space: nowrap;
+    width: fit-content;
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+}
+
+// animations
+
+.appear {
+  transition: all 0.8s;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.appear.inview {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.3s;
 }
