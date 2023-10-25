@@ -20,25 +20,32 @@
     // when the user clicks the next button, scroll to the next section
     $("#step-next").click(function() {
       event.preventDefault();
-      $("#funnel-step-one").fadeTo("fast", 0)
+      $("#funnel-step-one").addClass("fade-out")
       $("#funnel-step-two").show();
+      $("#funnel-step-two").addClass("fade-in")
       $("div").animate({
         scrollTop: $("#funnel-step-two").offset().top
       }, 600).promise().done(function() {
         $("#funnel-step-one").hide();
+        $("#funnel-step-two").removeClass("fade-in")
+        $("#funnel-step-one").removeClass("fade-out")
       });
-      // hide the previous section
     });
 
     // when the user clicks the back button, scroll to the previous section
     $("#step-back").click(function() {
-      $("#funnel-step-one").show();
-      $("#funnel-step-one").fadeTo("fast", 1)
       event.preventDefault();
+      $("#funnel-step-one").show();
+      $("#funnel-step-one").removeClass("fade-out")
+      $("#funnel-step-one").addClass("fade-in")
+      $("#funnel-step-two").removeClass("fade-in")
+      $("#funnel-step-two").addClass("fade-out")
       $('div').animate({
         scrollTop: $("#funnel-step-one").offset().top
       }, 1000).promise().done(function() {
         $("#funnel-step-two").hide();
+        $("#funnel-step-one").removeClass("fade-in")
+        $("#funnel-step-two").removeClass("fade-out")
       });
     });
   });
