@@ -3,30 +3,11 @@
 .application-funnel {
   margin-bottom: 3rem;
 
-  &__overflow-top {
-    overflow: hidden;
-    height: 3rem;
-
-    @media only screen and (max-width: 1215px) {
-      height: 0;
-    }
-  }
-
-  &__overflow-bottom {
-    height: 46rem;
-    overflow: hidden;
-
-    @media only screen and (max-width: 1407px) {
-      height: 40rem;
-    }
-
-    @media only screen and (max-width: $TABLET-SM) {
-      height: 42rem;
-    }
-
-    @media only screen and (max-width: $MOBILE) {
-      height: 44rem;
-    }
+  &__buttons-container {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   &__title {
@@ -40,17 +21,8 @@
   }
 
   .funnel-step {
-    &__section {
-      @media only screen and (max-width: 1215px) {
-        margin-top: 5rem;
-      }
-
-      @media only screen and (max-width: 1023px) {
-        margin-top: 0;
-      }
-    }
-
     &__container {
+      margin-top: 0 !important;
       padding: 0 1rem;
     }
 
@@ -59,6 +31,10 @@
 
       @media only screen and (max-width: 1023px) {
         margin-bottom: 1.5rem !important;
+      }
+
+      @media only screen and (max-width: $TABLET) {
+        font-size: 1.15rem !important;
       }
     }
 
@@ -72,25 +48,6 @@
       @media only screen and (max-width: $MOBILE) {
         object-position: 100% 0%;
       }
-    }
-
-    &__step-btn {
-      width: 60px;
-      height: 44px;
-      border-radius: 10px;
-
-      &.up {
-        margin-top: 5rem;
-      }
-
-      &.down {
-        margin-top: 1rem;
-      }
-    }
-
-    &__arrow {
-      width: 20px;
-      height: 20px;
     }
   }
 
@@ -121,42 +78,5 @@
     width: fit-content;
     text-align: center;
     padding: 0.5rem 1rem;
-  }
-}
-
-// animations
-
-.fade-in {
-  animation: fadeIn 0.5s ease-in;
-}
-
-.fade-out {
-  animation: fadeOut 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
