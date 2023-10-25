@@ -11,7 +11,7 @@ gem 'bulmajs-rails'
 
 gem 'cloudflare-rails', '~> 3.0'
 
-gem "font-awesome-sass", "~> 6.3.0"
+gem "font-awesome-sass", "~> 6.4.2"
 
 gem 'MailchimpMarketing', '~> 3.0', '>= 3.0.80'
 
@@ -94,6 +94,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "rails_live_reload"
 end
 
 group :test do

@@ -11,6 +11,7 @@
 @import "../stylesheets/what_is_era/what_is_era";
 @import "../stylesheets/faq/faq";
 @import "../stylesheets/contact_us/contact_us";
+@import "../stylesheets/application_funnel/application_funnel";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -303,39 +304,6 @@ body {
 }
 
 /* MAIN */
-
-.promo-container {
-  background: $BLACK;
-  display: flex;
-  justify-content: center;
-  align-items: unset;
-  text-align: center;
-  position: relative;
-  min-height: 100%;
-  height: 100vh;
-}
-
-.phantom {
-  display: none;
-  height: fit-content;
-  color: transparent;
-  right: 0;
-  position: absolute;
-  opacity: 0;
-
-  a:hover {
-    cursor: default;
-  }
-}
-
-.coming-soon {
-  @media only screen and (max-width: $TABLET) {
-    height: fit-content;
-  }
-  @media only screen and (max-width: $MOBILE) {
-    height: fit-content;
-  }
-}
 
 /* FOOTER */
 

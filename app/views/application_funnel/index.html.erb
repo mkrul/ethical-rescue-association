@@ -1,0 +1,36 @@
+
+
+<div class="application-funnel">
+  <%= form_with do |f| %>
+    <div class="application-funnel__overflow-bottom">
+      <%= render partial: "step_one", locals: { f: f } %>
+      <%= render partial: "step_two", locals: { f: f } %>
+    </div>
+    <div class="application-funnel__buttons-container">
+      <%= button_tag "Next", class: "button is-primary is-medium funnel-step__button mr-3", id: "next-btn" %>
+      <%= button_tag "Back", class: "button is-secondary is-medium funnel-step__button", id: "back-btn" %>
+    </div>
+  <% end %>
+  <div class="application-funnel__overflow"></div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var stepOne = $("#funnel-step-one");
+    var stepTwo = $("#funnel-step-two");
+    var nextBtn = $("#next-btn");
+    var backBtn = $("#back-btn");
+
+    nextBtn.on("click", function() {
+      event.preventDefault();
+      stepOne.addClass("is-hidden");
+      stepTwo.removeClass("is-hidden");
+    });
+
+    backBtn.on("click", function() {\
+      event.preventDefault();
+      stepOne.removeClass("is-hidden");
+      stepTwo.addClass("is-hidden");
+    });
+  });
+</script>

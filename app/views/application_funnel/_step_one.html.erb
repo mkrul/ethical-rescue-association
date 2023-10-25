@@ -1,0 +1,24 @@
+<section class="section funnel-step is-active" id="funnel-step-one">
+  <div class="container mt-5 funnel-step__container">
+    <div class="is-vcentered columns is-multiline">
+      <div class="column is-12 is-5-desktop mb-5 mr-auto">
+        <h2 class="is-size-3-mobile is-size-3-tablet is-size-2 application-funnel__title">
+          Begin your Application
+        </h2>
+        <p class="subtitle has-text-grey funnel-step__subtitle" data-config-id="desc">
+          Are you filling out this application for a rescue or a shelter?
+        </p>
+        <div class="buttons">
+          <input id="options_rescue" name="org[options]" type="radio" value="true" />
+          <label class="collection_radio_buttons radio-btn mr-3" for="options_rescue">Rescue</label>
+
+          <input id="options_shelter" name="org[options]" type="radio" value="false" />
+          <label class="collection_radio_buttons radio-btn" for="options_shelter">Shelter</label>
+        </div>
+      </div>
+      <div class="column is-12 is-6-desktop">
+        <%= image_tag "application_funnel/brown-dog-on-beach.jpg", class: "image is-fullwidth funnel-step__image" %>
+      </div>
+    </div>
+  </div>
+</section>

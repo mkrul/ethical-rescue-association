@@ -52,10 +52,12 @@
             <%= form.label :message, class: "label has-text-weight-light" %>
             <%= form.text_area :message, id: "Message", rows: 5, class: "textarea", placeholder: "Message", required: true %>
           </div>
-          <div class="field has-text-danger">
-            <%= flash[:recaptcha_error] %>
-            <%= recaptcha_tags %>
-          </div>
+          <% if Rails.env.production? %>
+            <div class="field has-text-danger">
+              <%= flash[:recaptcha_error] %>
+              <%= recaptcha_tags %>
+            </div>
+          <% end %>
           <%= form.submit "Submit", class: "button is-success" %>
         <% end %>
       </div>

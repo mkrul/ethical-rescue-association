@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get '/contact_us', to: 'contact_us#index'
   post '/contact_us', to: 'contact_us#create'
 
+  get '/become_a_member', to: 'application_funnel#index'
+
 end
