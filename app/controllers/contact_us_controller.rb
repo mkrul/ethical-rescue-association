@@ -31,6 +31,8 @@ class ContactUsController < ApplicationController
   private
 
   def check_recaptcha
+    return true unless Rails.env.production?
+
     unless verify_recaptcha
       flash[:error] = "Please check the box below to prove you're human."
       redirect_to contact_us_path
