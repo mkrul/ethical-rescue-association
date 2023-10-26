@@ -1,0 +1,32 @@
+<section class="section is-hidden" id="funnel-step-three">
+  <div class="container mt-5 funnel-step__container">
+    <div class="is-vcentered columns is-multiline">
+      <div class="column is-12 is-5-desktop mr-auto pt-0">
+        <h2 class="is-size-3-mobile is-size-3-tablet is-size-2 application-funnel__title">
+          Support the cause
+        </h2>
+        <p class="subtitle has-text-grey funnel-step__subtitle">
+          Your one-time donation will help to reform the animal welfare
+          industry and provide support for other rescues and shelters.
+        </p>
+        <p class="subtitle has-text-grey funnel-step__subtitle">
+          Click hear to learn more about how your donation will help.
+        </p>
+        <div class="buttons">
+          <%= button_tag "Donate", type: "button", class: "button is-primary is-medium funnel-step__button mb-0", id: "next-btn", onclick: "" %>
+        </div>
+      </div>
+      <div class="column is-12 is-6-desktop">
+        <%= image_tag "application_funnel/man-playing-with-dog.jpg", class: "image is-fullwidth funnel-step__image animals" %>
+      </div>
+    </div>
+  </div>
+  <div class="application-funnel__buttons-container">
+    <%= button_tag "Next", type: "button", class: "button is-primary is-medium funnel-step__button mr-3", id: "next-btn", onclick: "goToStep('funnel-step-one', 'funnel-step-two')" %>
+    <%= button_tag "Back", type: "button", class: "button is-secondary is-medium funnel-step__button", id: "back-btn", onclick: "goToStep('funnel-step-three', 'funnel-step-two')" %>
+  </div>
+</section>
+
+<script type="text/javascript">
+
+</script>

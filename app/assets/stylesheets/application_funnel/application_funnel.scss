@@ -1,21 +1,20 @@
 @import "../application_config.scss";
 
 .application-funnel {
-  margin-bottom: 4rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
 
   @media only screen and (max-width: $TABLET-MD) {
     margin-top: 0;
   }
 
   &__buttons-container {
-    margin-top: 1rem;
+    margin-top: 3rem;
     width: 100%;
     display: flex;
     justify-content: center;
 
     @media only screen and (max-width: $TABLET-MD) {
-      margin-top: 0;
+      margin-top: 2.5rem;
     }
   }
 
@@ -33,6 +32,10 @@
     &__container {
       margin-top: 0 !important;
       padding: 0 1rem;
+
+      @media only screen and (max-width: $MOBILE) {
+        padding: 0;
+      }
     }
 
     &__subtitle {
@@ -45,12 +48,20 @@
       @media only screen and (max-width: $TABLET) {
         font-size: 1.15rem !important;
       }
+
+      @media only screen and (max-width: $MOBILE) {
+        padding-top: 0rem !important;
+      }
     }
 
     &__image {
       height: 25rem;
-      object-fit: contain;
+      object-fit: cover;
       object-position: 0% 10%;
+
+      @media only screen and (max-width: $DESKTOP-MD) {
+        object-fit: contain;
+      }
 
       @media only screen and (max-width: $TABLET-LG) {
         object-fit: cover;
@@ -58,22 +69,51 @@
 
       @media only screen and (max-width: $TABLET-MD) {
         height: 20rem;
-        object-position: 70% 20%;
+        object-position: 0% 44%;
       }
 
       @media only screen and (max-width: $MOBILE) {
-        object-position: 100% 0%;
+        height: 12rem;
+        object-position: 25% 0%;
       }
 
-      &.animals {
-        @media only screen and (max-width: $TABLET-LG) {
-          object-fit: contain;
-        }
+      &.first {
+        object-position: 50% 0;
 
         @media only screen and (max-width: $TABLET-MD) {
-          object-fit: cover;
-          object-position: 0% 42%;
+          height: 20rem;
+          object-position: 80% 20%;
         }
+
+        @media only screen and (max-width: $MOBILE) {
+          height: 12rem;
+          object-position: 80% 0%;
+        }
+      }
+
+    }
+
+    &__default-image {
+      height: 25rem;
+      object-fit: contain;
+
+      @media only screen and (max-width: $DESKTOP-MD) {
+        object-fit: contain;
+      }
+
+      @media only screen and (max-width: $TABLET-MD) {
+        height: 20rem;
+        object-fit: cover;
+        object-position: 0% 14%;
+      }
+
+      @media only screen and (max-width: $TABLET-SM) {
+        object-fit: contain;
+        object-position: center;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        height: 14rem;
       }
     }
   }

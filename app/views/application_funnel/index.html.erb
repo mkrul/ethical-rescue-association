@@ -5,10 +5,7 @@
     <div class="application-funnel__overflow-bottom">
       <%= render partial: "step_one", locals: { f: f } %>
       <%= render partial: "step_two", locals: { f: f } %>
-    </div>
-    <div class="application-funnel__buttons-container">
-      <%= button_tag "Next", type: "button", class: "button is-primary is-medium funnel-step__button mr-3", id: "next-btn", onclick: "goToStep('funnel-step-one', 'funnel-step-two')" %>
-      <%= button_tag "Back", type: "button", class: "button is-secondary is-medium funnel-step__button", id: "back-btn", onclick: "goToStep('funnel-step-two', 'funnel-step-one')" %>
+      <%= render partial: "step_three", locals: { f: f } %>
     </div>
   <% end %>
   <div class="application-funnel__overflow"></div>
