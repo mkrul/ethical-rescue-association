@@ -57,7 +57,7 @@
     &__image {
       height: 25rem;
       object-fit: cover;
-      object-position: 0% 10%;
+      object-position: 0% 33%;
 
       @media only screen and (max-width: $DESKTOP-MD) {
         object-fit: contain;
