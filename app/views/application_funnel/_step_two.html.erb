@@ -1,27 +1,43 @@
 <section class="section is-hidden" id="funnel-step-two">
-  <div class="container funnel-step__container">
+  <div class="container mt-5 funnel-step__container">
     <div class="is-vcentered columns is-multiline">
       <div class="column is-12 is-5-desktop mb-5 mr-auto">
-        <h2 class="is-size-3-mobile is-size-3-tablet has-text-weight-bold is-size-2 application-funnel__title" data-config-id="header">
-          Select your Specialization
+        <h2 class="is-size-3-mobile is-size-3-tablet is-size-2 application-funnel__title">
+          Select your specialization
         </h2>
-        <p class="subtitle has-text-grey funnel-step__subtitle" data-config-id="desc">
+        <p class="subtitle has-text-grey funnel-step__subtitle">
           What animals does your organization work with?
         </p>
         <div class="buttons">
-          <input id="options_dogs" name="spec[options]" type="radio" value="true" />
+          <input id="options_dogs" name="spec[options]" type="radio" value="true" onClick="changeAnimal('dogs')" />
           <label class="collection_radio_buttons radio-btn mr-3" for="options_dogs">Dogs</label>
 
-          <input id="options_cats" name="spec[options]" type="radio" value="true" />
+          <input id="options_cats" name="spec[options]" type="radio" value="true" onClick="changeAnimal('cats')" />
           <label class="collection_radio_buttons radio-btn mr-3" for="options_cats">Cats</label>
 
-          <input id="options_dogs_and_cats" name="spec[options]" type="radio" value="true" />
+          <input id="options_dogs_and_cats" name="spec[options]" type="radio" value="true" onClick="changeAnimal('dogs-and-cats')" />
           <label class="collection_radio_buttons radio-btn" for="options_dogs_and_cats">Dogs and Cats</label>
         </div>
       </div>
-      <div class="column is-12 is-6-desktop pt-6">
-        <%= image_tag "application_funnel/brown-dog-on-beach.jpg", class: "image is-fullwidth" %>
+      <div class="column is-12 is-6-desktop">
+        <%= image_tag "application_funnel/choose-animals.jpg", class: "image is-fullwidth funnel-step__image animals", id: "selection-img" %>
       </div>
     </div>
   </div>
 </section>
+
+<script type="text/javascript">
+  // change image based on selection
+  const changeAnimal = (selection) => {
+    const img = document.getElementById("selection-img");
+    if (selection === "dogs") {
+      img.src = "/assets/application_funnel/choose-dogs.jpg";
+    } else if (selection === "cats") {
+      img.src = "/assets/application_funnel/choose-cats.jpg";
+    } else if (selection === "dogs-and-cats"){
+      img.src = "/assets/application_funnel/choose-dogs-and-cats.jpg";
+    } else {
+      img.src = "/assets/application_funnel/choose-animals.jpg";
+    }
+  }
+</script>
