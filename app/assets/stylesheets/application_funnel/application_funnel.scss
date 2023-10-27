@@ -18,6 +18,10 @@
     }
   }
 
+  &__donate-btn {
+    width: 107px;
+  }
+
   &__title {
     line-height: 1.25;
     font-weight: 700 !important;
@@ -57,7 +61,7 @@
     &__image {
       height: 25rem;
       object-fit: cover;
-      object-position: 0% 33%;
+      object-position: 0% 52%;
 
       @media only screen and (max-width: $DESKTOP-MD) {
         object-fit: contain;
@@ -69,7 +73,7 @@
 
       @media only screen and (max-width: $TABLET-MD) {
         height: 20rem;
-        object-position: 0% 44%;
+        object-position: 65% 44%;
       }
 
       @media only screen and (max-width: $MOBILE) {
@@ -89,31 +93,6 @@
           height: 12rem;
           object-position: 80% 0%;
         }
-      }
-
-    }
-
-    &__default-image {
-      height: 25rem;
-      object-fit: contain;
-
-      @media only screen and (max-width: $DESKTOP-MD) {
-        object-fit: contain;
-      }
-
-      @media only screen and (max-width: $TABLET-MD) {
-        height: 20rem;
-        object-fit: cover;
-        object-position: 0% 14%;
-      }
-
-      @media only screen and (max-width: $TABLET-SM) {
-        object-fit: contain;
-        object-position: center;
-      }
-
-      @media only screen and (max-width: $MOBILE) {
-        height: 14rem;
       }
     }
   }

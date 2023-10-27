@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   post '/contact_us', to: 'contact_us#create'
 
   get '/become_a_member', to: 'application_funnel#index'
+  get '/application_redirect', to: 'application_funnel#show'
 
 end

@@ -6,6 +6,11 @@
           Start your application
         </h2>
         <p class="subtitle has-text-grey funnel-step__subtitle">
+          Applying for accreditation requires a one-time fee of $75.
+          This fee is non-refundable and will help to provide support
+          for other rescues and shelters.
+        </p>
+        <p class="subtitle has-text-grey funnel-step__subtitle">
           Are you filling out this application for a rescue or a shelter?
         </p>
         <div class="buttons">
@@ -22,7 +27,7 @@
     </div>
   </div>
   <div class="application-funnel__buttons-container">
-    <%= button_tag "Next", type: "button", class: "button is-primary is-medium funnel-step__button mr-3", id: "next-btn", onclick: "goToStep('funnel-step-one', 'funnel-step-two')" %>
-    <%= button_tag "Back", type: "button", class: "button is-secondary is-medium funnel-step__button", id: "back-btn", onclick: "goToStep('funnel-step-two', 'funnel-step-one')" %>
+    <%= button_tag "Back", type: "button", class: "button is-light is-medium funnel-step__button mr-4", id: "back-btn", disabled: true %>
+    <%= button_tag "Next", type: "button", class: "button is-primary is-medium funnel-step__button", id: "next-btn", onclick: "goToStep('funnel-step-one', 'funnel-step-two')" %>
   </div>
 </section>
