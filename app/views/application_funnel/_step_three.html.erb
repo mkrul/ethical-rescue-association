@@ -35,6 +35,15 @@
     src:'https://pics-v2.sandbox.paypal.com/00/s/ZGM2ZjE1YTItNTQxZi00ODM1LTg3NTMtYzU5MDBhNGVkMzgw/file.PNG',
     alt:'Donate with PayPal button',
     title:'PayPal - The safer, easier way to pay online!',
+  },
+  onApprove: async (data) => {
+    const response = await fetch('/application_redirect', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ data: data })
+    });
   }
   }).render('#donate-button');
 </script>
