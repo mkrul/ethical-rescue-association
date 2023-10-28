@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log('accordion.js loaded')
   var allPanels = $('.accord-content').hide();
   var heads = $('.accordion header');
   $(heads).on('click', function() {
