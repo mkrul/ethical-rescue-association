@@ -17,4 +17,8 @@ class ApplicationController < ActionController::Base
 
     redirect_to "https://www.google.com" if COUNTRY_BLACKLIST.include?(headers['HTTP_CF_IPCOUNTRY'])
   end
+
+  def beta_testing_guard
+    redirect_to root_url unless current_user && current_user.developer?
+  end
 end

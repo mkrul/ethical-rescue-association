@@ -2,7 +2,7 @@ class DonationsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    redirect_to root_url unless current_user && current_user.developer?
+    beta_testing_guard
   end
 
   def show
@@ -10,7 +10,9 @@ class DonationsController < ApplicationController
   end
 
   def create
-    # redirect_to root_url unless current_user && current_user.developer?
+    beta_testing_guard
+
+    @donation = Donation.new(donation_params)
   end
 
   private
