@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_23_184153) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_28_094400) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_23_184153) do
     t.string "phone"
     t.boolean "email_is_visible", default: false
     t.boolean "phone_is_visible", default: false
+  end
+
+  create_table "donations", force: :cascade do |t|
+    t.integer "amount", null: false
+    t.string "category", null: false
+    t.string "payment_method", null: false
+    t.bigint "user_id"
+    t.string "custom_var"
+    t.string "transaction", null: false
+    t.string "currency", null: false
+    t.string "status", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_donations_on_user_id"
   end
 
   create_table "flipper_features", force: :cascade do |t|
