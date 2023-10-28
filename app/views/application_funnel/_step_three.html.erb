@@ -27,23 +27,25 @@
   </div>
 </section>
 
+<% env = ENV['PAYPAL_CLIENT_ID'] || "" %>
+<script src="https://www.paypal.com/sdk/js?client-id=<%= env %>"></script>
 <script type="text/javascript">
   PayPal.Donation.Button({
-  env:'sandbox',
-  hosted_button_id:'YTVLSWVUB6CBC',
-  image: {
-    src:'https://pics-v2.sandbox.paypal.com/00/s/ZGM2ZjE1YTItNTQxZi00ODM1LTg3NTMtYzU5MDBhNGVkMzgw/file.PNG',
-    alt:'Donate with PayPal button',
-    title:'PayPal - The safer, easier way to pay online!',
-  },
-  onApprove: async (data) => {
-    const response = await fetch('/application_redirect', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ data: data })
-    });
-  }
+    env: 'sandbox',
+    hosted_button_id: 'YTVLSWVUB6CBC',
+    image: {
+      src: 'https://pics-v2.sandbox.paypal.com/00/s/ZGM2ZjE1YTItNTQxZi00ODM1LTg3NTMtYzU5MDBhNGVkMzgw/file.PNG',
+      alt: 'Donate with PayPal button',
+      title: 'Donate with PayPal',
+    },
+    onComplete: async (data) => {
+      const response = await fetch('/donate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ data: data })
+      });
+    }
   }).render('#donate-button');
 </script>

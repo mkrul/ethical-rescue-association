@@ -15,5 +15,6 @@ Rails.application.routes.draw do
 
   get '/become_a_member', to: 'application_funnel#index'
   get '/application_redirect', to: 'application_funnel#show'
+  post '/donate', to: 'donations#create'
 
 end
