@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :groups_users
   has_many :groups, through: :groups_users
+  has_many :donations
 
   validates_uniqueness_of :email, case_sensitive: false
 
