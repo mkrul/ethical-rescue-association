@@ -39,7 +39,7 @@
       title: 'Donate with PayPal',
     },
     onComplete: async (data) => {
-      const response = await fetch('/donate', {
+      const response = await fetch('/application_submission', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

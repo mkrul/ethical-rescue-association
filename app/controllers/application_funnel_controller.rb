@@ -5,8 +5,4 @@ class ApplicationFunnelController < ApplicationController
     beta_testing_guard
   end
 
-  def show
-    beta_testing_guard
-  end
-
 end

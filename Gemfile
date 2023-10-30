@@ -17,9 +17,7 @@ gem 'MailchimpMarketing', '~> 3.0', '>= 3.0.80'
 
 gem 'money-rails', '~> 1.7'
 
-gem 'active_interaction', '~> 5.2'
-
-gem "flipper-active_record"
+gem 'active_interaction', '~> 5.3'
 
 gem 'httparty'
 
