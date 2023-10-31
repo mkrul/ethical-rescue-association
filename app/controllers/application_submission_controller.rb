@@ -5,9 +5,7 @@ class ApplicationSubmissionController < ApplicationController
     beta_testing_guard
   end
 
-  def show
-
-  end
+  def show; end
 
   def create
     beta_testing_guard
@@ -16,20 +14,22 @@ class ApplicationSubmissionController < ApplicationController
       txn: payload[:tx],
       status: payload[:st],
       amount: payload[:amt],
+      category: 'application_fee',
       currency: payload[:cc],
-      custom_var: payload[:cm],
-      user_id: current_user&.id,
+      user: current_user,
       payment_method: 'paypal'
     )
 
     if outcome.valid?
-      # Applications::ProcessSubmission.run(
-      #   user_id: current_user&.id,
-      #   custom_var: payload[:cm],
-      #   donation_id: outcome.result.id
-      # )
+      ApplicationSubmissions::Create.run(
+        user: current_user,
+        donation: outcome.result,
+        organization: payload[:org],
+        specialization: payload[:spec],
+        status: 'pending_submission'
+      )
 
-      redirect_to root_path, notice: 'Thank you for submitting your application! ERA will contact you soon with your results.'
+      # ApplicationSubmissionMailer.confirmation_email(current_user, outcome.result).deliver_now
     else
       errors = outcome.errors.full_messages.join(', ')
       redirect_to become_a_member_path, alert: "There was an error processing your application: #{errors}. Please try again or contact ERA for support."
@@ -39,13 +39,13 @@ class ApplicationSubmissionController < ApplicationController
   private
 
   def donation_params
-    params.require(:data).permit(:donation, :tx, :st, :amt, :cc, :cm, :item_number, :item_name)
+    params.require(:data).permit(:donation, :tx, :st, :amt, :cc, :cm, :item_number, :item_name, :org, :spec)
   end
 
   def payload
     @payload ||= donation_params.as_json.deep_symbolize_keys.merge!({
       user_id: current_user&.id,
-      payment_method: 'paypal'
+      payment_method: 'paypal',
     })
   end
 
