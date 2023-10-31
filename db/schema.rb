@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_28_104623) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_31_102217) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "application_submissions", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "donation_id", null: false
+    t.string "organization", null: false
+    t.string "specialization", null: false
+    t.string "status", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["donation_id"], name: "index_application_submissions_on_donation_id"
+    t.index ["user_id"], name: "index_application_submissions_on_user_id"
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "first_name", null: false
@@ -27,7 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_28_104623) do
     t.string "category", null: false
     t.string "payment_method", null: false
     t.bigint "user_id"
-    t.string "custom_var"
     t.string "status", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

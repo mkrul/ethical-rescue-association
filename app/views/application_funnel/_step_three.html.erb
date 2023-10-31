@@ -1,3 +1,5 @@
+<% env = ENV['PAYPAL_CLIENT_ID'] || "" %>
+
 <section class="section is-hidden" id="funnel-step-three">
   <div class="container mt-5 funnel-step__container">
     <div class="is-vcentered columns is-multiline">
@@ -13,7 +15,7 @@
           Click here to learn more about how your contribution will make a difference.
         </p>
         <div id="donate-button-container">
-          <div id="donate-button" class="application-funnel__donate-btn"></div>
+          <div id="donate-button" class="application-funnel__donate-btn", onClick="setSelectionData(selectionData)"></div>
         </div>
       </div>
       <div class="column is-12 is-6-desktop">
@@ -27,13 +29,28 @@
   </div>
 </section>
 
-<% env = ENV['PAYPAL_CLIENT_ID'] || "" %>
 <script src="https://www.paypal.com/sdk/js?client-id=<%= env %>"></script>
 <script type="text/javascript">
+  const selectionData = {};
+  const getSelectionValue = (name) => {
+    var options = document.getElementsByName(name);
+    for (i = 0; i < options.length; i++) {
+      if (options[i].checked) {
+        return options[i].value;
+      }
+    }
+    return null;
+  }
+
+  const setSelectionData = (selectionData) => {
+    selectionData.org = getSelectionValue("org[options]");
+    selectionData.spec = getSelectionValue("spec[options]");
+  }
+
   PayPal.Donation.Button({
     env: 'sandbox',
-    hosted_button_id: 'YTVLSWVUB6CBC',
-    image: {
+    hosted_button_id:'YTVLSWVUB6CBC',
+      image: {
       src: 'https://pics-v2.sandbox.paypal.com/00/s/ZGM2ZjE1YTItNTQxZi00ODM1LTg3NTMtYzU5MDBhNGVkMzgw/file.PNG',
       alt: 'Donate with PayPal button',
       title: 'Donate with PayPal',
@@ -44,8 +61,10 @@
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ data: data })
+        body: JSON.stringify({ data: { ...data, ...selectionData } })
       });
+      // when request to application_submission is completed, redirect to /application_submitted
+      window.location.replace('/application_submitted');
     }
   }).render('#donate-button');
 </script>
