@@ -3,12 +3,12 @@ class ApplicationSubmissionMailer < ApplicationMailer
   layout 'mailer'
   ERA_EMAIL = "ethicalrescueassociation@gmail.com"
 
-  def confirmation(user, submission)
-    @user = user
-    @submission = submission
+  def send_confirmation(email, form_url)
+    @email = email
+    @form_url = form_url
 
     mail(
-      to: @user.email,
+      to: @email,
       from: ERA_EMAIL,
       reply_to: ERA_EMAIL,
       subject: "Steps for completing your ERA membership application"

@@ -21,15 +21,25 @@ class ApplicationSubmissionController < ApplicationController
     )
 
     if outcome.valid?
-      ApplicationSubmissions::Create.run(
-        user: current_user,
-        donation: outcome.result,
+      form_url = ApplicationSubmissions::DetermineFormUrl.run(
         organization: payload[:org],
         specialization: payload[:spec],
-        status: 'pending_submission'
+        email: current_user.email
       )
 
-      # ApplicationSubmissionMailer.confirmation_email(current_user, outcome.result).deliver_now
+      ApplicationSubmissions::Create.run(
+        user_id: current_user.id,
+        donation_id: outcome.result.id,
+        organization: payload[:org],
+        specialization: payload[:spec],
+        status: 'pending_submission',
+        form_url: form_url
+      )
+
+      ApplicationSubmissionMailer.send_confirmation(
+        email: current_user.email,
+        form_url: form_url,
+      ).deliver_now
     else
       errors = outcome.errors.full_messages.join(', ')
       redirect_to become_a_member_path, alert: "There was an error processing your application: #{errors}. Please try again or contact ERA for support."

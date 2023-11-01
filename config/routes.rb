@@ -17,4 +17,11 @@ Rails.application.routes.draw do
   get '/become_a_member', to: 'application_funnel#index'
   get '/application_submitted', to: 'application_funnel#show'
   post '/application_submission', to: 'application_submission#create'
+
+  # user profile
+  get '/profile', to: 'profile#index'
+  get '/profile/edit', to: 'profile#edit'
+  put '/profile', to: 'profile#update'
+  delete '/profile', to: 'profile#destroy'
+
 end
