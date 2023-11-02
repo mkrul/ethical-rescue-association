@@ -1,15 +1,15 @@
-class ProfileController < ApplicationController
+# class ProfileController < ApplicationController
 
-  def index
-  end
+#   def index
+#   end
 
-  def edit
-  end
+#   def edit
+#   end
 
-  def update
-  end
+#   def update
+#   end
 
-  def destroy
-  end
+#   def destroy
+#   end
 
-end
+# end
