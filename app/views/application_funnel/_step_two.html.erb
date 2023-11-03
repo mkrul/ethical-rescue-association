@@ -25,16 +25,13 @@
     </div>
   </div>
   <div class="application-funnel__buttons-container">
-    <%= button_tag "Back", type: "button", class: "button is-secondary is-medium funnel-step__button mr-4", id: "back-btn", onclick: "goBackFromStepTwo()" %>
-    <%= button_tag "Next", type: "button", class: "button is-primary is-medium funnel-step__button", id: "next-btn-step-two", onclick: "getNextStepFromStepTwo()" %>
+    <%= button_tag "Back", type: "button", class: "button is-secondary is-medium funnel-step__button mr-4", id: "back-btn", onclick: "goToStep('funnel-step-two', 'funnel-step-one')" %>
+    <%= button_tag "Next", type: "button", class: "button is-primary is-medium funnel-step__button", id: "next-btn", onclick: "goToStep('funnel-step-two', 'funnel-step-three')" %>
   </div>
 </section>
 
 <script type="text/javascript">
-  document.getElementById("next-btn-step-two").disabled = true;
-
   const changeAnimal = (selection) => {
-    document.getElementById("next-btn-step-two").disabled = false;
     const img = document.getElementById("selection-img");
 
     $("selection-img").fadeOut("fast", function() {
