@@ -12,12 +12,77 @@
 </div>
 
 <script type="text/javascript">
-  const goToStep = (fromId, toId) => {
-    const currentStep = document.getElementById(fromId);
-    const nextStep = document.getElementById(toId);
+  document.getElementById("next-btn-step-one").disabled = true;
+
+  const getNextStepFromStepOne = () => {
+    const org = getSelectionValue("org[options]");
+    if (org === "rescue") {
+      goToStepTwo();
+    }
+    if (org === "shelter") {
+      goToStepThree();
+    }
+  }
+
+  const getNextStepFromStepTwo = () => {
+    const currentStep = document.getElementById('funnel-step-two');
+    const nextStep = document.getElementById("funnel-step-three");
 
     currentStep.classList.add("is-hidden");
     nextStep.classList.remove("is-hidden");
     nextStep.classList.add("is-active");
   }
+
+  const goToStepTwo = () => {
+    const currentStep = document.getElementById('funnel-step-one');
+    const nextStep = document.getElementById("funnel-step-two");
+
+    currentStep.classList.add("is-hidden");
+    nextStep.classList.remove("is-hidden");
+    nextStep.classList.add("is-active");
+  }
+
+  const goToStepThree = () => {
+    const currentStep = document.getElementById('funnel-step-one');
+    const nextStep = document.getElementById("funnel-step-three");
+
+    currentStep.classList.add("is-hidden");
+    nextStep.classList.remove("is-hidden");
+    nextStep.classList.add("is-active");
+
+    // shelters are required to work with both dogs and cats
+    changeAnimal("dogs-and-cats");
+  }
+
+  const goBackFromStepTwo = () => {
+    const currentStep = document.getElementById('funnel-step-two');
+    const previousStep = document.getElementById("funnel-step-one");
+
+    currentStep.classList.add("is-hidden");
+    previousStep.classList.remove("is-hidden");
+    previousStep.classList.add("is-active");
+  }
+
+  const goBackFromStepThree = () => {
+    const currentStep = document.getElementById('funnel-step-three');
+    // check if shelter was selected
+    // if shelter was selected, previous step is step one
+    // if rescue was selected, previous step is step two
+
+    var org = getSelectionValue("org[options]");
+
+    if (org === "shelter") {
+      const previousStep = document.getElementById("funnel-step-one");
+      currentStep.classList.add("is-hidden");
+      previousStep.classList.remove("is-hidden");
+      previousStep.classList.add("is-active");
+    }
+    if (org === "rescue") {
+      const previousStep = document.getElementById("funnel-step-two");
+      currentStep.classList.add("is-hidden");
+      previousStep.classList.remove("is-hidden");
+      previousStep.classList.add("is-active");
+    }
+  }
+
 </script>

@@ -16,14 +16,12 @@ module ApplicationSubmissions
     end
 
     def execute
-      create_donation
       create_application_submission
-      send_confirmation_email
     end
 
     private
 
-    def create_donation
+    def donation
       @donation ||=
         begin
           ActiveRecord::Base.transaction do
@@ -51,33 +49,15 @@ module ApplicationSubmissions
     end
 
     def create_application_submission
-      @application_submission ||=
-        begin
-          ActiveRecord::Base.transaction do
-            ApplicationSubmissions::Create.run!(
-              user_id: current_user.id,
-              donation_id: @donation.id,
-              organization: payload[:org],
-              specialization: payload[:spec],
-              status: 'pending_submission',
-              form_url: form_url
-            )
-          end
-        rescue StandardError
-          errors.add(:application_submission, "could not be processed")
-        end
+      ApplicationSubmissions::Create.run!(
+        user_id: current_user.id,
+        donation_id: @donation.id,
+        organization: payload[:org],
+        specialization: payload[:spec],
+        status: 'pending_submission',
+        form_url: form_url
+      )
     end
 
-    def send_confirmation_email
-      begin
-        ApplicationConfirmationMailer.application_confirmation(
-          email: current_user.email,
-          form_url: form_url,
-        ).deliver!
-      rescue StandardError => e
-        Rails.logger.error(e)
-        errors.add(:confirmation_email, "could not be sent")
-      end
-    end
   end
 end

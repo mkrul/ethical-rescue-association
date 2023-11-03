@@ -2,7 +2,7 @@ class ApplicationConfirmationMailer < ApplicationMailer
   default from: "ethicalrescueassociation@gmail.com"
   layout 'mailer'
 
-  def application_confirmation(email:, form_url:)
+  def confirmation(email:, form_url:)
     @email = email
     @form_url = form_url
 

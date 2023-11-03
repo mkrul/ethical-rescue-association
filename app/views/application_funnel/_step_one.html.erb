@@ -14,10 +14,10 @@
           Are you filling out this application for a private rescue or a municipal shelter?
         </p>
         <div class="buttons">
-          <input id="options_rescue" name="org[options]" type="radio" value="rescue" />
+          <input id="options_rescue" name="org[options]" type="radio" value="rescue" onclick="removeRequired('options_rescue', 'next-btn-step-one')"/>
           <label class="collection_radio_buttons radio-btn mr-3" for="options_rescue">Rescue</label>
 
-          <input id="options_shelter" name="org[options]" type="radio" value="shelter" />
+          <input id="options_shelter" name="org[options]" type="radio" value="shelter" onclick="removeRequired('options_shelter', 'next-btn-step-one')"/>
           <label class="collection_radio_buttons radio-btn" for="options_shelter">Shelter</label>
         </div>
       </div>
@@ -28,6 +28,17 @@
   </div>
   <div class="application-funnel__buttons-container">
     <%= button_tag "Back", type: "button", class: "button is-light is-medium funnel-step__button mr-4", id: "back-btn", disabled: true %>
-    <%= button_tag "Next", type: "button", class: "button is-primary is-medium funnel-step__button", id: "next-btn", onclick: "goToStep('funnel-step-one', 'funnel-step-two')" %>
+    <%= button_tag "Next", type: "button", class: "button is-primary is-medium funnel-step__button", id: "next-btn-step-one", onclick: "getNextStepFromStepOne()" %>
   </div>
 </section>
+
+<script type="text/javascript">
+  const removeRequired = (selectionId, btnId) => {
+    var selection = document.getElementById(selectionId);
+    if (selection.checked === true) {
+      document.getElementById(btnId).disabled = false;
+    }
+  }
+  removeRequired('options_rescue', 'next-btn-step-one');
+  removeRequired('options_shelter', 'next-btn-step-one');
+</script>

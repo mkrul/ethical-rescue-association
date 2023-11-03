@@ -15,8 +15,7 @@ class ApplicationFunnelController < ApplicationController
   def create
     beta_testing_guard
 
-    debugger
-payload = {:tx=>"1YP53482MY463650F", :st=>"Completed", :amt=>"1.00", :cc=>"USD", :cm=>"", :item_number=>"", :item_name=>"Help support the movement to reform animal rescue.", :org=>"shelter", :spec=>"dogs_and_cats", :user_id=>4, :payment_method=>"paypal"}
+    # payload = {:tx=>"1YP53482MY463650F", :st=>"Completed", :amt=>"1.00", :cc=>"USD", :cm=>"", :item_number=>"", :item_name=>"Help support the movement to reform animal rescue.", :org=>"shelter", :spec=>"dogs_and_cats", :user_id=>4, :payment_method=>"paypal"}
     # current_user = User.first
     #
     outcome = ApplicationSubmissions::BeginNewApplication.run!(
@@ -24,6 +23,11 @@ payload = {:tx=>"1YP53482MY463650F", :st=>"Completed", :amt=>"1.00", :cc=>"USD",
       payload: payload
     )
     if outcome.valid?
+      ApplicationConfirmationMailer.confirmation(
+        email: current_user.email,
+        form_url: outcome.result.form_url
+      ).deliver!
+
       redirect_to application_submitted_path
     else
       errors = outcome.errors.full_messages.join(', ')
