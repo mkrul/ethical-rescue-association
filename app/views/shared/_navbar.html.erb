@@ -54,6 +54,9 @@
                 </div>
                 <div class="dropdown-menu" id="dropdown-email" role="menu">
                   <div class="dropdown-content">
+                    <%# <div class="navbar-item"> %>
+                      <%#= button_to 'My Profile', profile_path, method: :get, class: 'dropdown-link main-title font-gotham nav-link' %>
+                    <%# </div> %>
                     <div class="navbar-item">
                       <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'dropdown-link logout-btn main-title font-gotham nav-link' %>
                     </div>

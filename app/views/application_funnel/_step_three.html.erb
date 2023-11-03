@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="application-funnel__buttons-container">
-    <%= button_tag "Back", type: "button", class: "button is-secondary is-medium funnel-step__button mr-4", id: "back-btn", onclick: "goToStep('funnel-step-three', 'funnel-step-two')" %>
+    <%= button_tag "Back", type: "button", class: "button is-secondary is-medium funnel-step__button mr-4", id: "back-btn", onclick: "goBackFromStepThree()" %>
     <%= button_tag "Next", type: "button", class: "button is-light is-medium funnel-step__button", id: "next-btn", disabled: true %>
   </div>
 </section>
@@ -56,7 +56,7 @@
       title: 'Donate with PayPal',
     },
     onComplete: async (data) => {
-      const response = await fetch('/application_submission', {
+      const response = await fetch('/create_new_application', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
