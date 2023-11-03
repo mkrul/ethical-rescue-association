@@ -34,6 +34,8 @@
   }
 
   const goToStepTwo = () => {
+    // clear spec[options] radio buttons
+    clearAnimalSelection();
     const currentStep = document.getElementById('funnel-step-one');
     const nextStep = document.getElementById("funnel-step-two");
 
@@ -83,6 +85,15 @@
       previousStep.classList.remove("is-hidden");
       previousStep.classList.add("is-active");
     }
+  }
+
+  const clearAnimalSelection = () => {
+    var options = document.getElementsByName("spec[options]");
+    for (i = 0; i < options.length; i++) {
+      options[i].checked = false;
+    }
+    const img = document.getElementById("selection-img");
+    img.src = "/assets/application_funnel/choose-animals.jpg";
   }
 
 </script>
