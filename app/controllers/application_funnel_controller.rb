@@ -25,7 +25,7 @@ class ApplicationFunnelController < ApplicationController
     if outcome.valid?
       ApplicationConfirmationMailer.confirmation(
         email: current_user.email,
-        form_url: outcome.result.form_url
+        form_url: outcome.form_url
       ).deliver!
 
       redirect_to application_submitted_path

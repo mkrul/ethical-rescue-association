@@ -15,7 +15,7 @@
           Click here to learn more about how your contribution will make a difference.
         </p>
         <div id="donate-button-container">
-          <div id="donate-button" class="application-funnel__donate-btn", onClick="setSelectionData(selectionData)"></div>
+          <div id="donate-button" class="application-funnel__donate-btn", onclick="setSelectionData(selectionData)"></div>
         </div>
       </div>
       <div class="column is-12 is-6-desktop">
@@ -32,19 +32,10 @@
 <script src="https://www.paypal.com/sdk/js?client-id=<%= env %>"></script>
 <script type="text/javascript">
   const selectionData = {};
-  const getSelectionValue = (name) => {
-    var options = document.getElementsByName(name);
-    for (i = 0; i < options.length; i++) {
-      if (options[i].checked) {
-        return options[i].value;
-      }
-    }
-    return null;
-  }
 
   const setSelectionData = (selectionData) => {
-    selectionData.org = getSelectionValue("org[options]");
-    selectionData.spec = getSelectionValue("spec[options]");
+    selectionData.org = document.querySelector('input[name="org[options]"]:checked').value;
+    selectionData.spec = document.querySelector('input[name="spec[options]"]:checked').value;
   }
 
   PayPal.Donation.Button({
