@@ -7,7 +7,7 @@ class ApplicationConfirmationMailer < ApplicationMailer
     @form_url = form_url
 
     mail(
-      to: @email,
+      to: [@email],
       from: "ethicalrescueassociation@gmail.com",
       reply_to: "ethicalrescueassociation@gmail.com",
       subject: "Complete your ERA membership application"

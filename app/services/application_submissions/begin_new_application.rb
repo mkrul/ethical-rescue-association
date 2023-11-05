@@ -34,7 +34,6 @@ module ApplicationSubmissions
             payment_method: 'paypal'
           )
         rescue StandardError => e
-          debugger
           Rails.logger.error(e)
           errors.add(:donation, "could not be processed")
         end
@@ -59,7 +58,6 @@ module ApplicationSubmissions
           form_url: form_url
         )
       rescue StandardError => e
-        debugger
         Rails.logger.error(e)
         errors.add(:application_submission, "could not be processed")
       end

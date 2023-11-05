@@ -7,6 +7,7 @@ module ApplicationSubmissions
     string :organization
     string :specialization
     string :status, default: "pending_submission"
+    string :form_url
 
     APPLICATION_FEE = "application_fee"
     DONATION = "donation"
@@ -24,7 +25,8 @@ module ApplicationSubmissions
         donation_id: donation.id,
         organization: organization,
         specialization: specialization,
-        status: status
+        status: status,
+        form_url: form_url
       )
     end
   end
