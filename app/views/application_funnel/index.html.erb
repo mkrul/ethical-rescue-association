@@ -12,30 +12,36 @@
 </div>
 
 <script type="text/javascript">
-  document.getElementById("next-btn-step-one").disabled = true;
-
   const getNextStepFromStepOne = () => {
-    const org = getSelectionValue("org[options]");
-    if (org === "rescue") {
-      goToStepTwo();
-    }
-    if (org === "shelter") {
-      goToStepThree();
+    changeAnimal();
+    var isSelected = validateRadioButtons("next-btn-step-one", "org[options]")
+
+    if (isSelected === true) {
+      const org = document.querySelector('input[name="org[options]"]:checked').value;
+
+      if (org === "rescue") {
+        goToStepTwo();
+      }
+      if (org === "shelter") {
+        goToStepThree();
+      }
     }
   }
 
   const getNextStepFromStepTwo = () => {
-    const currentStep = document.getElementById('funnel-step-two');
-    const nextStep = document.getElementById("funnel-step-three");
+    var isSelected = validateRadioButtons("next-btn-step-two", "spec[options]")
 
-    currentStep.classList.add("is-hidden");
-    nextStep.classList.remove("is-hidden");
-    nextStep.classList.add("is-active");
+    if (isSelected === true) {
+      const currentStep = document.getElementById('funnel-step-two');
+      const nextStep = document.getElementById("funnel-step-three");
+
+      currentStep.classList.add("is-hidden");
+      nextStep.classList.remove("is-hidden");
+      nextStep.classList.add("is-active");
+    }
   }
 
   const goToStepTwo = () => {
-    // clear spec[options] radio buttons
-    clearAnimalSelection();
     const currentStep = document.getElementById('funnel-step-one');
     const nextStep = document.getElementById("funnel-step-two");
 
@@ -53,10 +59,12 @@
     nextStep.classList.add("is-active");
 
     // shelters are required to work with both dogs and cats
-    changeAnimal("dogs-and-cats");
+    document.getElementById("options_dogs_and_cats").checked = true;
+    changeAnimal("dogs_and_cats");
   }
 
   const goBackFromStepTwo = () => {
+    clearAnimalSelection();
     const currentStep = document.getElementById('funnel-step-two');
     const previousStep = document.getElementById("funnel-step-one");
 
@@ -67,10 +75,6 @@
 
   const goBackFromStepThree = () => {
     const currentStep = document.getElementById('funnel-step-three');
-    // check if shelter was selected
-    // if shelter was selected, previous step is step one
-    // if rescue was selected, previous step is step two
-
     var org = getSelectionValue("org[options]");
 
     if (org === "shelter") {
@@ -96,4 +100,41 @@
     img.src = "/assets/application_funnel/choose-animals.jpg";
   }
 
+  // when next button is clicked, validate that at least one radio button is selected
+  const validateRadioButtons = (btnId, optionsName) => {
+    var options = document.getElementsByName(optionsName);
+    var selected = false;
+    for (i = 0; i < options.length; i++) {
+      if (options[i].checked === true) {
+        selected = true;
+      }
+    }
+    if (selected === true) {
+      return true
+    } else {
+      alert("Please select an option")
+      return false
+    }
+  }
+
+  const changeAnimal = (selection) => {
+    const img = document.getElementById("selection-img");
+
+    $("selection-img").fadeOut("fast", function() {
+      $(this).removeClass("funnel-step__default-image");
+      $(this).addClass("funnel-step__image");
+    });
+
+    if (selection) {
+      if (selection === "dogs") {
+        img.src = "/assets/application_funnel/choose-dogs.jpg";
+      } else if (selection === "cats") {
+        img.src = "/assets/application_funnel/choose-cats.jpg";
+      } else if (selection === "dogs_and_cats") {
+        img.src = "/assets/application_funnel/choose-dogs-and-cats.jpg";
+      } else {
+        img.src = "/assets/application_funnel/choose-animals.jpg";
+      }
+    };
+  }
 </script>
