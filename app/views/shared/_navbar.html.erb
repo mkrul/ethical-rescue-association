@@ -48,7 +48,7 @@
             <% if user_signed_in? %>
               <div class="dropdown has-dropdown is-hoverable pr-2">
                 <div class="dropdown-trigger">
-                  <a class="navbar-link" href=<%"#{edit_user_registration_path}"%> aria-haspopup="true" aria-controls="dropdown-email">
+                  <div class="navbar-link" aria-haspopup="true" aria-controls="dropdown-email">
                     <%= current_user.email %>
                   </a>
                 </div>
