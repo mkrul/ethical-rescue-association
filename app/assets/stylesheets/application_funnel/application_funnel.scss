@@ -30,6 +30,10 @@
     @media only screen and (max-width: $TABLET-LG) {
       font-size: 2rem !important;
     }
+
+    @media only screen and (max-width: $TABLET-LG) {
+      font-size: 2rem !important;
+    }
   }
 
   .funnel-step {
@@ -44,13 +48,11 @@
 
     &__subtitle {
       margin-bottom: 2.5rem !important;
+      font-size: 1.15rem !important;
+      line-height: 1.4;
 
       @media only screen and (max-width: $TABLET-MD) {
         margin-bottom: 1.5rem !important;
-      }
-
-      @media only screen and (max-width: $TABLET) {
-        font-size: 1.15rem !important;
       }
 
       @media only screen and (max-width: $MOBILE) {
@@ -58,7 +60,56 @@
       }
     }
 
-    &__image {
+    &__thank-you-title {
+      font-size: 2.8rem;
+
+      @media only screen and (max-width: $TABLET-MD) {
+        font-size: 2.6rem;
+      }
+
+      @media only screen and (max-width: $TABLET) {
+        font-size: 2.3rem;
+        line-height: 1.4;
+      }
+
+      @media only screen and (max-width: $TABLET-SM) {
+        font-size: 2rem;
+        line-height: 1.4;
+      }
+    }
+
+    &__thank-you-subtitle {
+      font-size: 1.15rem !important;
+      line-height: 1.5 !important;
+      padding: 0.7rem 2rem;
+
+      @media only screen and (max-width: $TABLET-SM) {
+        font-size: 1rem;
+        line-height: 1.35;
+        padding: 0.25rem 0;
+      }
+
+      @media only screen and (max-width: $MOBILE) {
+        font-size: 1rem;
+      }
+    }
+
+    &__thank-you-email {
+      white-space: nowrap;
+    }
+
+    &__thank-you-image {
+      height: 30rem;
+      object-fit: cover;
+      object-position: 0 15%;
+
+      @media only screen and (max-width: $TABLET-SM) {
+        height: 20rem;
+      object-position: 22% 0%;
+      }
+    }
+
+    &__funnel-image {
       height: 25rem;
       object-fit: cover;
       object-position: 0% 52%;

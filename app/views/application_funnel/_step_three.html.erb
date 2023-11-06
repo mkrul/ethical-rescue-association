@@ -12,19 +12,19 @@
           industry by supporting rescues and shelters that uphold ethical values.
         </p>
         <p class="subtitle has-text-grey funnel-step__subtitle">
-          Click here to learn more about how your contribution will make a difference.
+          <%= link_to "Learn more", faq_path, target: "_blank" %> about how your contribution will make a difference.
         </p>
         <div id="donate-button-container">
           <div id="donate-button" class="application-funnel__donate-btn", onclick="setSelectionData(selectionData)"></div>
         </div>
       </div>
       <div class="column is-12 is-6-desktop">
-        <%= image_tag "application_funnel/man-playing-with-dog.jpg", class: "image is-fullwidth funnel-step__image" %>
+        <%= image_tag "application_funnel/man-playing-with-dog.jpg", class: "image is-fullwidth funnel-step__funnel-image" %>
       </div>
     </div>
   </div>
   <div class="application-funnel__buttons-container">
-    <%= button_tag "Back", type: "button", class: "button is-secondary is-medium funnel-step__button mr-4", id: "back-btn", onclick: "goBackFromStepThree()" %>
+    <%= button_tag "Back", type: "button", class: "button is-secondary is-medium funnel-step__button mr-4", id: "back-btn", onclick: "goBackFromStepThree(getOrgType())" %>
     <%= button_tag "Next", type: "button", class: "button is-light is-medium funnel-step__button", id: "next-btn", disabled: true %>
   </div>
 </section>
@@ -33,9 +33,17 @@
 <script type="text/javascript">
   const selectionData = {};
 
+  const getOrgType = () => {
+    return document.querySelector('input[name="org[options]"]:checked').value;
+  }
+
+  const getSpecType = () => {
+    return document.querySelector('input[name="spec[options]"]:checked').value;
+  }
+
   const setSelectionData = (selectionData) => {
-    selectionData.org = document.querySelector('input[name="org[options]"]:checked').value;
-    selectionData.spec = document.querySelector('input[name="spec[options]"]:checked').value;
+    selectionData.org = getOrgType();
+    selectionData.spec = getSpecType();
   }
 
   PayPal.Donation.Button({

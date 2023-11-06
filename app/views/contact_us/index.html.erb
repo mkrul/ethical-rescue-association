@@ -18,48 +18,47 @@
         <h2 class="title mb-4 section-header has-text-centered">Your Feedback Matters</h2>
 
         <section class="container">
-          <div class="columns is-gapless">
-            <div class="column">
+          <div class="columns is-centered is-gapless">
+            <div class="column is-9">
               <div class="has-text-centered mt-2 mb-5 text-med-grey">
                 <p>
                   Our team is here to help and answer any questions you might have.  We look forward to hearing from you. 😊
                 <p>
               </div>
+              <%= form_with url: contact_us_path, method: :post, data: {turbo: false} do |form| %>
+                <div class="field">
+                  <%= form.label :name, class: "label has-text-weight-light" %>
+                  <div class="control has-icons-left">
+                    <%= form.text_field :name, id: "name", class: "input", placeholder: "Name", autofocus: false, required: true %>
+                    <span class="icon is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                  <%= form.label :email, class: "label has-text-weight-light" %>
+                  <div class="control has-icons-left">
+                    <%= form.email_field :email, id: "email", class: "input", placeholder: "Email", required: true %>
+                    <span class="icon is-left">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                  <%= form.label :message, class: "label has-text-weight-light" %>
+                  <%= form.text_area :message, id: "Message", rows: 5, class: "textarea", placeholder: "Message", required: true %>
+                </div>
+                <% if Rails.env.production? %>
+                  <div class="field has-text-danger">
+                    <%= flash[:recaptcha_error] %>
+                    <%= recaptcha_tags %>
+                  </div>
+                <% end %>
+                <%= form.submit "Submit", class: "button is-success" %>
+              <% end %>
             </div>
           </div>
         </section>
-
-        <%= form_with url: contact_us_path, method: :post, data: {turbo: false} do |form| %>
-          <div class="field">
-            <%= form.label :name, class: "label has-text-weight-light" %>
-            <div class="control has-icons-left">
-              <%= form.text_field :name, id: "name", class: "input", placeholder: "Name", autofocus: false, required: true %>
-              <span class="icon is-left">
-                <i class="fa fa-user"></i>
-              </span>
-            </div>
-          </div>
-          <div class="field">
-            <%= form.label :email, class: "label has-text-weight-light" %>
-            <div class="control has-icons-left">
-              <%= form.email_field :email, id: "email", class: "input", placeholder: "Email", required: true %>
-              <span class="icon is-left">
-                <i class="fa fa-envelope"></i>
-              </span>
-            </div>
-          </div>
-          <div class="field">
-            <%= form.label :message, class: "label has-text-weight-light" %>
-            <%= form.text_area :message, id: "Message", rows: 5, class: "textarea", placeholder: "Message", required: true %>
-          </div>
-          <% if Rails.env.production? %>
-            <div class="field has-text-danger">
-              <%= flash[:recaptcha_error] %>
-              <%= recaptcha_tags %>
-            </div>
-          <% end %>
-          <%= form.submit "Submit", class: "button is-success" %>
-        <% end %>
       </div>
     </section>
   </section>

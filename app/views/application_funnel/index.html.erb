@@ -14,6 +14,7 @@
 <script type="text/javascript">
   const getNextStepFromStepOne = () => {
     changeAnimal();
+    clearAnimalSelection();
     var isSelected = validateRadioButtons("next-btn-step-one", "org[options]")
 
     if (isSelected === true) {
@@ -42,6 +43,7 @@
   }
 
   const goToStepTwo = () => {
+    clearAnimalSelection();
     const currentStep = document.getElementById('funnel-step-one');
     const nextStep = document.getElementById("funnel-step-two");
 
@@ -73,9 +75,8 @@
     previousStep.classList.add("is-active");
   }
 
-  const goBackFromStepThree = () => {
+  const goBackFromStepThree = (org) => {
     const currentStep = document.getElementById('funnel-step-three');
-    var org = getSelectionValue("org[options]");
 
     if (org === "shelter") {
       const previousStep = document.getElementById("funnel-step-one");
