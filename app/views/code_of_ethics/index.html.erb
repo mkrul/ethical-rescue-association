@@ -58,17 +58,7 @@
     <section class="content-container mt-6" data-testid="official-code-of-ethics">
       <div class="container has-text-centered">
         <h2 class="title mb-5 section-header">The Official ERA Code of Ethics</h2>
-        <div class="logo-separator mb-4">
-          <div class="line-container">
-            <div class="line"></div>
-          </div>
-          <div class="logo-simplified">
-            <%= image_tag "logos/logo-simplified.jpg" %>
-          </div>
-          <div class="line-container">
-            <div class="line"></div>
-          </div>
-        </div>
+        <%= render "shared/logo-separator" %>
         <div class="has-text-left coe-ethics-statement mb-0">
           <p>
             <%= insert_tab %>The following is an abridged overview of the Ethical Rescue Association's Code of Ethics.
