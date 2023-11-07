@@ -8,7 +8,7 @@
         <h1 class="title has-text-white">
           Be part of a new ERA of animal rescue
         </h1>
-        <% if current_user && current_user.developer? %>
+        <% if current_user && (current_user.developer? || current_user.tester?) %>
           <%= button_to "Apply Today", become_a_member_path, method: :get, class: "button is-info is-large call-to-action" %>
         <% else %>
           <%= button_to "Learn More", what_is_era_path, method: :get, class: "button is-info is-large call-to-action" %>

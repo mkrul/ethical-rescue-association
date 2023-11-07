@@ -17,7 +17,7 @@
       <div id="navbarBasicExample" class="navbar-menu navbar-container">
         <div class="navbar-end">
           <div class="navbar-item is-hoverable pr-2">
-            <% if current_user && current_user.developer? %>
+            <% if current_user && (current_user.developer? || current_user.tester?) %>
               <div class="navbar-item">
                 <%= link_to "Become a Member", become_a_member_path, class: 'nav-link' %>
               </div>

@@ -19,6 +19,6 @@ class ApplicationController < ActionController::Base
   end
 
   def beta_testing_guard
-    redirect_to root_url unless current_user && current_user.developer?
+    redirect_to root_url unless current_user && (current_user.developer? || current_user.tester?)
   end
 end

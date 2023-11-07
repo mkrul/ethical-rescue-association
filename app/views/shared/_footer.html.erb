@@ -25,7 +25,7 @@
       <div class="column is-3">
         <h2><strong>Quick Links</strong></h2>
         <ul>
-          <% if current_user && current_user.developer? %>
+          <% if current_user && (current_user.developer? || current_user.tester?) %>
             <li>
               <%= link_to "Become a Member", become_a_member_path %>
             </li>
