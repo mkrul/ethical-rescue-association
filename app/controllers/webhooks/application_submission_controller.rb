@@ -18,7 +18,7 @@ module Webhooks
     private
 
     def application_submission_params
-      params.require(:application_submission).permit(:email, :remote_form_id)
+      params.permit(:email, :remote_form_id)
     end
 
     def remote_form_id
