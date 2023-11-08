@@ -1,5 +1,5 @@
 
-class Webhooks
+module Webhooks
   class ApplicationSubmissionController < ApplicationController
 
     def update
