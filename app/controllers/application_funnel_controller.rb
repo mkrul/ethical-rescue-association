@@ -5,7 +5,7 @@ class ApplicationFunnelController < ApplicationController
     beta_testing_guard
 
     if current_user.nil?
-      redirect_to new_user_session_path, alert: "Please log in or create an account before submitting an application."
+      redirect_to new_user_session_path, alert: "Please log in before submitting an application."
     end
   end
 
