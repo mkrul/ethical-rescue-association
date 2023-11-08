@@ -1,5 +1,5 @@
 class ApplicationFunnelController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:create]
+
 
   def index
     beta_testing_guard

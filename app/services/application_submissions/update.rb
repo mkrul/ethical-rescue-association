@@ -2,7 +2,8 @@ require 'active_interaction'
 
 module ApplicationSubmissions
   class Update < ActiveInteraction::Base
-    object :payload, class: Hash
+    string :email
+    string :remote_form_id
 
     def execute
       update_application_submission
@@ -11,7 +12,7 @@ module ApplicationSubmissions
     private
 
     def user
-      User.find_by(email: payload[:email])
+      User.find_by(email: email)
     end
 
     def application_submission
@@ -25,7 +26,7 @@ module ApplicationSubmissions
       application_submission.update!(
         status: "pending_review",
         submitted_at: Time.now,
-        remote_form_id: payload[:remote_form_id]
+        remote_form_id: remote_form_id
       )
     end
   end
