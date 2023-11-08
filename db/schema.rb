@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_01_115520) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_08_121531) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_01_115520) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "form_url"
+    t.string "remote_form_id"
+    t.datetime "submitted_at"
     t.index ["donation_id"], name: "index_application_submissions_on_donation_id"
     t.index ["user_id"], name: "index_application_submissions_on_user_id"
   end
