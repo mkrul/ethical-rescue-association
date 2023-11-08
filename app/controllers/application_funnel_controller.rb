@@ -10,6 +10,7 @@ class ApplicationFunnelController < ApplicationController
   end
 
   def show
+    beta_testing_guard
   end
 
   def create
