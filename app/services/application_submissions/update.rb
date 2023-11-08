@@ -7,6 +7,8 @@ module ApplicationSubmissions
 
     def execute
       update_application_submission
+
+      application_submission
     end
 
     private
