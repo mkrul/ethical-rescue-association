@@ -1,4 +1,4 @@
-require File.expand_path("../../../spec_helper", __FILE__)
+require File.expand_path("../../spec_helper", __FILE__)
 
 RSpec.describe "View a core value", type: :feature, js: true do
   scenario 'hovering over a core value' do

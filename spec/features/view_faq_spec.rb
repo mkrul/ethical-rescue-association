@@ -1,4 +1,4 @@
-require File.expand_path("../../../spec_helper", __FILE__)
+require File.expand_path("../../spec_helper", __FILE__)
 
 RSpec.describe "View FAQ", type: :feature, js: true do
   scenario 'clicking on an faq' do

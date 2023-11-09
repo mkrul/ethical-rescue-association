@@ -1,4 +1,4 @@
-require File.expand_path("../../../spec_helper", __FILE__)
+require File.expand_path("../../spec_helper", __FILE__)
 
 RSpec.describe "Submit feedback", type: :feature, js: true do
   scenario 'filling out and submitting the contact form' do

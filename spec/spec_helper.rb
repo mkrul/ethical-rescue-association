@@ -20,6 +20,10 @@ end
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Devise::Test::ControllerHelpers, type: :view
+  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :routing
+  config.include Devise::TestHelpers, type: :routing
+  config.infer_spec_type_from_file_location!
 
   DEFAULT_CLEANER_STRATEGY = :transaction
 
