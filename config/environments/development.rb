@@ -46,7 +46,7 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     user_name:            'ethicalrescueassociation@gmail.com',
-    password:             ENV['GMAIL_PASSWORD'],
+    password:             'vcqy pafy xhzh abet',
     authentication:       'plain',
     enable_starttls_auto: true
   }
