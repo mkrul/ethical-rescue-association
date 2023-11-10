@@ -1,10 +1,10 @@
 class ApplicationFunnelController < ApplicationController
 
   def index
-    beta_testing_guard
-
     if current_user.nil?
       redirect_to new_user_session_path, alert: "Please log in before submitting an application."
+    else
+      beta_testing_guard
     end
   end
 
@@ -19,6 +19,7 @@ class ApplicationFunnelController < ApplicationController
       current_user: current_user,
       payload: payload
     )
+
     if outcome.valid?
       ApplicationConfirmationMailer.confirmation(
         email: current_user.email,

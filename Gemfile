@@ -28,6 +28,8 @@ gem 'geocoder', '~> 1.3', '>= 1.3.7'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
+gem 'rollbar'
+
 gem "recaptcha"
 
 gem 'devise', '~> 4.9'

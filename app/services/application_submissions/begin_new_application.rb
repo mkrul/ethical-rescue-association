@@ -1,5 +1,4 @@
 require 'active_interaction'
-
 module ApplicationSubmissions
   class BeginNewApplication < ActiveInteraction::Base
     record :current_user, class: User
@@ -16,27 +15,21 @@ module ApplicationSubmissions
     end
 
     def execute
-      create_application_submission
+      create_application_submission unless errors.any?
     end
 
     private
 
     def donation
-      @donation ||=
-        begin
-          Donations::Create.run!(
-            txn: payload[:tx],
-            status: payload[:st],
-            amount: payload[:amt],
-            category: 'application_fee',
-            currency: payload[:cc],
-            user: current_user,
-            payment_method: 'paypal'
-          )
-        rescue StandardError => e
-          Rails.logger.error(e)
-          errors.add(:donation, "could not be processed")
-        end
+      Donation.create(
+        txn: payload[:tx],
+        status: status_lowercase,
+        amount_cents: amount_in_cents,
+        category: 'application_fee',
+        amount_currency: payload[:cc],
+        user_id: current_user.id,
+        payment_method: 'paypal'
+      )
     end
 
     def form_url
@@ -49,18 +42,42 @@ module ApplicationSubmissions
 
     def create_application_submission
       begin
-        ApplicationSubmissions::Create.run!(
-          user: current_user,
-          donation: donation,
+        ApplicationSubmission.create(
+          user_id: current_user.id,
+          donation_id: donation.id,
           organization: payload[:org],
           specialization: payload[:spec],
           status: 'pending_submission',
           form_url: form_url
         )
       rescue StandardError => e
-        Rails.logger.error(e)
         errors.add(:application_submission, "could not be processed")
+        Utils::ReportError.run!(
+          error: e.message,
+          context: {
+            controller: 'ApplicationSubmissionsController',
+            action: 'create',
+            service: 'ApplicationSubmissions::Create',
+            payload: payload,
+            user_id: current_user.id,
+            backtrace: e.backtrace
+          },
+        )
       end
+    end
+
+    def amount_in_cents
+      amount = payload.dig(:amt)
+
+      return amount.to_money(currency).cents if amount.present?
+    end
+
+    def currency
+      @currency ||= payload.dig(:cc)
+    end
+
+    def status_lowercase
+      payload.dig(:st)&.downcase
     end
 
   end
