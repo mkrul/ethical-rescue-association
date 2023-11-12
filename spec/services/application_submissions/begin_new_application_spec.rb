@@ -7,7 +7,7 @@ RSpec.describe ApplicationSubmissions::BeginNewApplication do
         user = FactoryBot.create(:user)
         payload = {
           tx: '12345',
-          st: 'Completed'
+          st: 'Completed',
           amt: '100.00',
           cc: 'USD',
           cm: 'Application Fee',
@@ -16,25 +16,179 @@ RSpec.describe ApplicationSubmissions::BeginNewApplication do
           org: 'rescue',
           spec: 'dogs'
         }
+
+        outcome = ApplicationSubmissions::BeginNewApplication.run(
+          current_user: user,
+          payload: payload
+        )
+
+        expect(outcome).to be_valid
       end
 
-      it 'creates a new donation' do
+      it 'calls ApplicationSubmissions::DetermineFormUrl' do
+        user = FactoryBot.create(:user)
+        payload = {
+          tx: '12345',
+          st: 'Completed',
+          amt: '100.00',
+          cc: 'USD',
+          cm: 'Application Fee',
+          item_number: '12345',
+          item_name: 'Application Fee',
+          org: 'rescue',
+          spec: 'dogs'
+        }
+
+        allow(ApplicationSubmissions::DetermineFormUrl).to receive(:run).and_return('https://example.com')
+
+        ApplicationSubmissions::BeginNewApplication.run(
+          current_user: user,
+          payload: payload
+        )
+
+        expect(ApplicationSubmissions::DetermineFormUrl).to have_received(:run).once
       end
     end
 
     context 'when given an invalid payload' do
       it 'does not create a new application submission' do
+        user = FactoryBot.create(:user)
+        payload = {
+          tx: '',
+          st: '',
+          amt: '',
+          cc: 'USD',
+          cm: 'Application Fee',
+          item_number: '12345',
+          item_name: 'Application Fee',
+          org: 'rescue',
+          spec: 'dogs'
+        }
+
+        expect { ApplicationSubmissions::BeginNewApplication.run(
+          current_user: user,
+          payload: payload
+        ) }.to change { ApplicationSubmission.count }.by(0)
+      end
+    end
+
+    context 'when donation creation fails' do
+      it 'adds an error' do
+        user = FactoryBot.create(:user)
+        payload = {
+          tx: '',
+          st: '',
+          amt: '100.00',
+          cc: '',
+          cm: 'Application Fee',
+          item_number: '12345',
+          item_name: 'Application Fee',
+          org: 'rescue',
+          spec: 'dogs'
+        }
+
+        result = ApplicationSubmissions::BeginNewApplication.run(
+          current_user: user,
+          payload: payload
+        )
+
+        expect(result.errors.full_messages).to include("Application submission could not be processed")
       end
 
-      it 'does not create a new donation' do
+      it 'calls ReportError' do
+        user = FactoryBot.create(:user)
+        payload = {
+          tx: '12345',
+          st: 'Completed',
+          amt: '100.00',
+          cc: '',
+          cm: 'Application Fee',
+          item_number: '12345',
+          item_name: 'Application Fee',
+          org: 'rescue',
+          spec: 'dogs'
+        }
+
+        allow(Donation).to receive(:create).and_raise(StandardError.new('error'))
+        allow(Utils::ReportError).to receive(:run!)
+
+        ApplicationSubmissions::BeginNewApplication.run(
+          current_user: user,
+          payload: payload
+        )
+
+        expect(Utils::ReportError).to have_received(:run!).once
+      end
+    end
+
+    context 'when application submission creation fails' do
+      it 'adds an error' do
+        user = FactoryBot.create(:user)
+        payload = {
+          tx: '12345',
+          st: 'Completed',
+          amt: '100.00',
+          cc: 'USD',
+          cm: 'Application Fee',
+          item_number: '12345',
+          item_name: 'Application Fee',
+          org: '',
+          spec: 'dogs'
+        }
+
+        result = ApplicationSubmissions::BeginNewApplication.run(
+          current_user: user,
+          payload: payload
+        )
+
+        expect(result.errors.full_messages).to include("Application submission could not be processed")
+      end
+
+      it 'calls ReportError' do
+        user = FactoryBot.create(:user)
+        payload = {
+          tx: '12345',
+          st: 'Completed',
+          amt: '100.00',
+          cc: 'USD',
+          cm: 'Application Fee',
+          item_number: '12345',
+          item_name: 'Application Fee',
+          org: 'rescue',
+          spec: 'dogs'
+        }
+
+        allow(ApplicationSubmission).to receive(:create).and_raise(StandardError.new('error'))
+        allow(Utils::ReportError).to receive(:run!).and_return(true)
+
+        ApplicationSubmissions::BeginNewApplication.run(
+          current_user: user,
+          payload: payload
+        )
+
+        expect(Utils::ReportError).to have_received(:run!).once
       end
     end
 
     context 'not provided with a user' do
       it 'does not create a new application submission' do
-      end
+        user = FactoryBot.build_stubbed(:user)
+        payload = {
+          tx: '',
+          st: '',
+          amt: '',
+          cc: 'USD',
+          cm: 'Application Fee',
+          item_number: '12345',
+          item_name: 'Application Fee',
+          org: 'rescue',
+          spec: 'dogs'
+        }
 
-      it 'does not create a new donation' do
+        expect { ApplicationSubmissions::BeginNewApplication.run(
+          current_user: user,
+          payload: payload
+        ) }.to change { Donation.count }.by(0)
       end
     end
   end
