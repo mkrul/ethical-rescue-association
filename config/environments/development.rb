@@ -34,7 +34,7 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  config.active_storage.service = :amazon
 
   config.action_controller.action_on_unpermitted_parameters = :raise
   config.action_mailer.raise_delivery_errors = true

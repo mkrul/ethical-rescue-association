@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   get '/application_submitted', to: 'application_funnel#show'
   post '/create_new_application', to: 'application_funnel#create'
 
+  # resources
+  get '/rescues', to: 'rescues#index'
+  get '/rescues/:id', to: 'rescues#show', as: 'rescue'
+
   # webhooks
   post '/webhooks/application_submitted', to: 'webhooks/application_submission#update'
 

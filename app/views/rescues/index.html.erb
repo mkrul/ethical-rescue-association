@@ -1,0 +1,59 @@
+<section>
+  <% if current_user && current_user.admin? %>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-12 is-10-desktop">
+
+        </div>
+      </div>
+    </div>
+  <% end %>
+</section>
+
+<section class="section mb-6">
+  <div class="container">
+    <div class="columns mb-6 is-multiline is-centered">
+      <div class="column is-8 has-text-centered">
+        <h2 class="mt-2 mb-3 is-size-1 is-size-3-mobile has-text-weight-bold">
+          Accredited Rescues
+        </h2>
+        <p class="subtitle has-text-grey">
+          Our ethical rescue partners are the driving force behind ERA's mission to bring
+          accountability and transparency to animal rescue. Each of these organizations has
+          been thoroughly vetted and awarded an accreditation level based on their alignment
+          with the <%= link_to "Code of Ethics", code_of_ethics_path %>.
+        </p>
+      </div>
+    </div>
+    <div class="columns is-multiline is-centered">
+      <div class="column is-12 is-10-desktop">
+        <div class="columns is-multiline">
+          <div class="column mb-4">
+            <% @rescues.each do |r| %>
+              <div class="box has-background-light">
+                <div class="is-vcentered columns is-multiline">
+                  <div class="column is-5">
+                    <% if r.main_photo.attached? %>
+                      <img src=<%= url_for r.main_photo %> style="height: 208px; object-fit: cover;" class="image is-fullwidth">
+                    <% end %>
+                  </div>
+                  <div class="column is-7">
+                    <h4 class="mb-2 is-size-4 has-text-weight-bold">
+                      <%= r.name %>
+                    </h4>
+                    <% r.tags.each do |t| %>
+                      <span class="tag is-success is-light"><%= t.name.titleize %></span>
+                    <% end %>
+                    <p class="mb-4 mt-3 has-text-grey">
+                      <%= r.description %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
