@@ -22,7 +22,23 @@
                 <%= link_to "Become a Member", become_a_member_path, class: 'nav-link' %>
               </div>
             <% end %>
-            <div class="dropdown has-dropdown is-hoverable">
+            <% if current_user && (current_user.developer? || current_user.tester?) %>
+              <div class="navbar-item dropdown has-dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                  <a class="navbar-link" aria-haspopup="true" aria-controls="dropdown-about">
+                    Resources
+                  </a>
+                </div>
+                <div class="dropdown-menu" id="dropdown-about" role="menu">
+                  <div class="dropdown-content">
+                    <div class="navbar-item is-16">
+                      <%= link_to "Rescues", rescues_path, class: 'nav-link' %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+            <div class="navbar-item dropdown has-dropdown is-hoverable">
               <div class="dropdown-trigger">
                 <a class="navbar-link" aria-haspopup="true" aria-controls="dropdown-about">
                   About
@@ -39,11 +55,11 @@
                   <div class="navbar-item is-16">
                     <%= link_to "FAQ", faq_path, class: 'nav-link' %>
                   </div>
+                  <div class="navbar-item is-16">
+                    <%= link_to "Contact", contact_us_path, class: 'nav-link' %>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="navbar-item">
-              <%= link_to "Contact", contact_us_path, class: 'nav-link' %>
             </div>
             <% if user_signed_in? %>
               <div class="dropdown has-dropdown is-hoverable pr-2">

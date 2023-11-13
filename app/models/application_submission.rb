@@ -6,4 +6,5 @@ class ApplicationSubmission < ApplicationRecord
   validates :organization, presence: true, inclusion: { in: %w(rescue shelter) }
   validates :specialization, presence: true, inclusion: { in: %w(dogs cats dogs_and_cats) }
   validates :status, presence: true, inclusion: { in: %w(pending_submission pending_review approved declined) }
+
 end
