@@ -25,4 +25,11 @@ Rails.application.routes.draw do
   # webhooks
   post '/webhooks/application_submitted', to: 'webhooks/application_submission#update'
 
+  # admin namespace
+  namespace :admin do
+    get '/', to: 'dashboard#index'
+
+    # resources
+    resources :organizations
+  end
 end

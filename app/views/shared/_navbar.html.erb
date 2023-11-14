@@ -70,6 +70,11 @@
                 </div>
                 <div class="dropdown-menu" id="dropdown-email" role="menu">
                   <div class="dropdown-content">
+                    <% if current_user.admin? %>
+                      <div class="navbar-item">
+                        <%= button_to 'Admin Dashboard', admin_path, method: :get, class: 'dropdown-link logout-btn main-title font-gotham nav-link' %>
+                      </div>
+                    <% end %>
                     <div class="navbar-item">
                       <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'dropdown-link logout-btn main-title font-gotham nav-link' %>
                     </div>
