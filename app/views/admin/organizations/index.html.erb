@@ -1,0 +1,25 @@
+<%
+  controller = request.path_parameters&.dig(:controller)
+  action = request.path_parameters&.dig(:action)
+  @active_link = "#{controller}##{action}"
+%>
+
+<div class="section">
+  <div class="columns">
+
+    <%= render "shared/admin/sidebar", locals: { active_link: @active_link } %>
+
+    <main class="column pl-6">
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <div class="title">Organizations</div>
+          </div>
+        </div>
+        <div class="level-item">
+          <%# <%= link_to "New Organization", new_admin_organization_path, class: "button is-primary" %>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
