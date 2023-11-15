@@ -5,7 +5,7 @@
     <nav class="navbar py-2 negative-margin" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item p-0">
-          <%= link_to "ETHICAL RESCUE ASSOCIATION", root_url, class: "main-title" %>
+          <%= link_to "ETHICAL RESCUE ASSOCIATION", root_url, class: "main-title is-14" %>
         </a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
@@ -19,19 +19,19 @@
           <div class="navbar-item is-hoverable pr-2">
             <% if current_user && (current_user.developer? || current_user.tester?) %>
               <div class="navbar-item">
-                <%= link_to "Become a Member", become_a_member_path, class: 'nav-link' %>
+                <%= link_to "Become a Member", become_a_member_path, class: 'nav-link is-14' %>
               </div>
             <% end %>
             <% if current_user && (current_user.developer? || current_user.tester?) %>
               <div class="navbar-item dropdown has-dropdown is-hoverable">
                 <div class="dropdown-trigger">
-                  <a class="navbar-link" aria-haspopup="true" aria-controls="dropdown-about">
+                  <a class="navbar-link is-14" aria-haspopup="true" aria-controls="dropdown-about">
                     Resources
                   </a>
                 </div>
                 <div class="dropdown-menu" id="dropdown-about" role="menu">
                   <div class="dropdown-content">
-                    <div class="navbar-item is-16">
+                    <div class="navbar-item is-14">
                       <%= link_to "Rescues", rescues_path, class: 'nav-link' %>
                     </div>
                   </div>
@@ -40,23 +40,26 @@
             <% end %>
             <div class="navbar-item dropdown has-dropdown is-hoverable">
               <div class="dropdown-trigger">
-                <a class="navbar-link" aria-haspopup="true" aria-controls="dropdown-about">
+                <a class="navbar-link is-14" aria-haspopup="true" aria-controls="dropdown-about">
                   About
                 </a>
               </div>
               <div class="dropdown-menu" id="dropdown-about" role="menu">
                 <div class="dropdown-content">
-                  <div class="navbar-item is-16">
+                  <div class="navbar-item is-14">
                     <%= link_to "What is ERA?", what_is_era_path, class: 'nav-link' %>
                   </div>
-                  <div class="navbar-item is-16">
+                  <div class="navbar-item is-14">
                     <%= link_to "Code of Ethics", code_of_ethics_path, class: 'nav-link' %>
                   </div>
-                  <div class="navbar-item is-16">
+                  <div class="navbar-item is-14">
                     <%= link_to "FAQ", faq_path, class: 'nav-link' %>
                   </div>
-                  <div class="navbar-item is-16">
+                  <div class="navbar-item is-14">
                     <%= link_to "Contact", contact_us_path, class: 'nav-link' %>
+                  </div>
+                  <div class="navbar-item is-14">
+                    <%= link_to "Donate", root_url(anchor: 'donate'), class: 'font-gotham nav-link' %>
                   </div>
                 </div>
               </div>
@@ -64,19 +67,19 @@
             <% if user_signed_in? %>
               <div class="dropdown has-dropdown is-hoverable pr-2">
                 <div class="dropdown-trigger">
-                  <div class="navbar-link" aria-haspopup="true" aria-controls="dropdown-email">
+                  <div class="navbar-link is-14" aria-haspopup="true" aria-controls="dropdown-email">
                     <%= current_user.email %>
                   </a>
                 </div>
                 <div class="dropdown-menu" id="dropdown-email" role="menu">
                   <div class="dropdown-content">
                     <% if current_user.admin? %>
-                      <div class="navbar-item">
-                        <%= button_to 'Admin Dashboard', admin_path, method: :get, class: 'dropdown-link logout-btn main-title font-gotham nav-link' %>
+                      <div class="navbar-item is-14">
+                        <%= button_to 'Admin Dashboard', admin_path, method: :get, class: 'is-14 dropdown-link logout-btn main-title font-gotham nav-link' %>
                       </div>
                     <% end %>
-                    <div class="navbar-item">
-                      <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'dropdown-link logout-btn main-title font-gotham nav-link' %>
+                    <div class="navbar-item is-14">
+                      <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'is-14 dropdown-link logout-btn main-title font-gotham nav-link' %>
                     </div>
                   </div>
                 </div>

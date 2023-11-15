@@ -250,6 +250,12 @@
     </div>
   </section>
 
+  <section>
+    <div class="container" id="donate">
+      <div id="MC-donation-form"></div>
+    </div>
+  </section>
+
   <section data-testid="testimonials">
     <div class="testimonial-hero is-small testimonial-container mb-6">
       <div class="hero-body">
@@ -295,6 +301,16 @@
 
 <%= render 'payment_prompt' %>
 <%= javascript_include_tag "main_script" %>
+
+<script src="https://downloads.mightycause.com/widgets/v1/embed.js"></script>
+<script> window.onload = function() {
+  window.MCForms.createEmbedForm(
+    {
+      elementID: "MC-donation-form",
+      url: "https://givingtuesday.mightycause.com/forms/Ethical-Rescue-Association/?embed=embeddable_form"
+    }
+  );
+};</script>
 
 <script>
   function bTestimonial() {
