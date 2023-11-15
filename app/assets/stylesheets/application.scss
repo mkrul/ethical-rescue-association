@@ -95,8 +95,12 @@ body {
   line-height: 2 !important;
 }
 
+.is-14 {
+  font-size: $FONT-SIZE-14 !important;
+}
+
 .is-16 {
-  font-size: $FONT-SIZE-16;
+  font-size: $FONT-SIZE-16 !important;
 }
 
 /* COOKIES BAR */
