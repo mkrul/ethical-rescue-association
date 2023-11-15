@@ -1,0 +1,56 @@
+<div class="section">
+  <div class="columns">
+
+    <%= render "shared/admin/sidebar" %>
+
+    <main class="column px-6">
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <div class="title">
+              <%= @organization.name %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <table class="table">
+          <tbody>
+            <p class="mb-3">
+              <strong>Code:</strong> <%= @organization.code %>
+            </p>
+            <p class="mb-3">
+              <strong>Category:</strong> <%= @organization.category %>
+            </p>
+            <p class="mb-3">
+              <strong>Level:</strong> <%= @organization.level %>
+            </p>
+            <p class="mb-3">
+              <strong>EIN:</strong> <%= @organization.ein %>
+            </p>
+            <div style="max-width: 50rem !important;">
+              <p class="mb-3">
+                <strong>Description:</strong> <%= @organization.description %>
+              </p>
+            </div>
+            <p class="mb-3">
+              <strong>Updated At:</strong> <%= @organization.updated_at %>
+            </p>
+            <p class="mb-3">
+              <strong>Created At:</strong> <%= @organization.created_at %>
+            </p>
+            <p class="mb-3">
+              <strong>Main Photo:</strong>
+              <% if @organization.main_photo.attached? %>
+                <p>
+                  <img src=<%= url_for @organization.main_photo %> class="mt-2 org-photo">
+                </p>
+              <% end %>
+            </p>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
