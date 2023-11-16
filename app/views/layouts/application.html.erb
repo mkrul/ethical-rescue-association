@@ -38,8 +38,10 @@
       </div>
       <% end %>
       <%= yield %>
-      <%= render "shared/cookies_modal" %>
-      <%= render "shared/footer" unless controller_path&.split("/")&.first == "admin" %>
+      <% unless controller_path&.split("/")&.first == "admin" %>
+        <%= render "shared/cookies_modal" %>
+        <%= render "shared/footer" %>
+      <% end %>
     </div>
   </body>
 </html>
