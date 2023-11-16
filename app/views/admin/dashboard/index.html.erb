@@ -1,19 +1,16 @@
 <%
-  rollbar_url = "https://rollbar.com/mishakrul/?sort=total&environments=development&environments=production&levels=40&levels=50&duration=24h&tz=US%2FEastern&projects=673053&from=2023-11-12T05%3A00%3A00-05%3A00&to=2023-11-14T05%3A21%3A48-05%3A00&order=desc"
+  rollbar_url = "https://rollbar.com/mishakrul/?sort=total&environments=development&environments=production&levels=40&levels=50&duration=7d&tz=US%2FEastern&projects=673053&from=2023-11-14T05%3A00%3A00-05%3A00&to=2023-11-16T05%3A07%3A50-05%3A00&order=desc"
 %>
 
 <div class="section">
   <div class="columns">
+    <div class="column is-2 pl-5 mr-5 sidebar-container">
+      <%= render "shared/admin/sidebar", locals: { active_link: @active_link } %>
+    </div>
 
-    <%= render "shared/admin/sidebar" %>
-
-    <main class="column pl-6">
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <div class="title">Admin Dashboard</div>
-          </div>
-        </div>
+    <div class="column">
+      <div class="title">
+        Admin Dashboard
       </div>
 
       <div class="columns is-multiline">
@@ -33,7 +30,7 @@
         </div>
         <div class="column">
           <div class="box">
-            <div class="heading">Active Error Occurrances</div>
+            <div class="heading">Errors (last 7 days)</div>
             <div class="title">
               <%= link_to @active_error_occurrances, rollbar_url, target: "_blank" %>
             </div>
@@ -46,32 +43,6 @@
           </div>
         </div>
       </div>
-      <div class="columns is-multiline" style="opacity: 0;">
-        <div class="column is-6">
-          <div class="panel">
-            <p class="panel-heading">
-              Expenses: Daily - $700
-            </p>
-            <div class="panel-block">
-              <figure class="image is-16x9">
-                <img src="https://placehold.it/1280x720">
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div class="column is-6">
-          <div class="panel">
-            <p class="panel-heading">
-              Refunds: Daily - $200
-            </p>
-            <div class="panel-block">
-              <figure class="image is-16x9">
-                <img src="https://placehold.it/1280x720">
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    </div>
   </div>
 </div>

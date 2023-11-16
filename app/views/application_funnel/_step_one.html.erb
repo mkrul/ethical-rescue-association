@@ -11,14 +11,16 @@
           for other rescues and shelters.
         </p>
         <p class="subtitle has-text-grey funnel-step__subtitle">
-          Are you filling out this application for a private rescue or a municipal shelter?
+          <%# Are you filling out this application for a private rescue or a municipal shelter? %>
+          At this time, we are only accepting applications from private rescues.
         </p>
         <div class="buttons">
           <input id="options_rescue" name="org[options]" type="radio" value="rescue"/>
           <label id="rescue" class="collection_radio_buttons radio-btn mr-3" for="options_rescue">Rescue</label>
 
+          <%# TODO: finalize shelter application before enabling these buttons %>
           <input id="options_shelter" name="org[options]" type="radio" value="shelter"/>
-          <label id="shelter" class="collection_radio_buttons radio-btn" for="options_shelter">Shelter</label>
+          <label id="shelter" class="collection_radio_buttons radio-btn" for="options_shelter" style="pointer-events: none; opacity: 0.5;">Shelter</label>
         </div>
       </div>
       <div class="column is-12 is-6-desktop">

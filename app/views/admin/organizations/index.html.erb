@@ -1,25 +1,58 @@
 <%
-  controller = request.path_parameters&.dig(:controller)
-  action = request.path_parameters&.dig(:action)
-  @active_link = "#{controller}##{action}"
+  @active_link = "#{controller_path}##{action_name}"
 %>
 
 <div class="section">
   <div class="columns">
+    <div class="column is-2 pl-5 mr-5 sidebar-container">
+      <%= render "shared/admin/sidebar", locals: { active_link: @active_link } %>
+    </div>
 
-    <%= render "shared/admin/sidebar", locals: { active_link: @active_link } %>
+    <div class="column">
+      <div class="title mb-4">
+        Organizations
+      </div>
 
-    <main class="column pl-6">
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <div class="title">Organizations</div>
-          </div>
-        </div>
-        <div class="level-item">
-          <%# <%= link_to "New Organization", new_admin_organization_path, class: "button is-primary" %>
+      <div>
+        <%= link_to "New Organization", new_admin_organization_path %>
+      </div>
+
+      <div class="column">
+        <div class="mt-3">
+          <% @organizations.each do |organization| %>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Code</th>
+                  <th>Category</th>
+                  <th>Level</th>
+                  <th>EIN</th>
+                  <th>Created At</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><%= organization.id %></td>
+                  <td><%= organization.name %></td>
+                  <td><%= organization.code %></td>
+                  <td><%= organization.category %></td>
+                  <td><%= organization.level %></td>
+                  <td><%= organization.ein %></td>
+                  <td><%= organization.created_at %></td>
+                  <td>
+                    <%= link_to "show", admin_organization_path(organization), class: "ml-3" %>
+                  </td>
+                  <td>
+                    <%= link_to "edit", edit_admin_organization_path(organization) %>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          <% end %>
         </div>
       </div>
-    </main>
+    </div>
   </div>
 </div>

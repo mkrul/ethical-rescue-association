@@ -33,14 +33,27 @@
               <div class="box has-background-light">
                 <div class="is-vcentered columns is-multiline">
                   <div class="column is-5">
-                    <% if r.main_photo.attached? %>
-                      <img src=<%= url_for r.main_photo %> style="height: 208px; object-fit: cover;" class="image is-fullwidth">
+                    <% if r.main_photo.attached?  %>
+                      <a href=<%= r.website_url %>>
+                        <img src=<%= url_for r.main_photo %> style="height: 208px; object-fit: cover;" class="image is-fullwidth">
+                      </a>
                     <% end %>
                   </div>
                   <div class="column is-7">
                     <h4 class="mb-2 is-size-4 has-text-weight-bold">
                       <%= r.name %>
                     </h4>
+                    <div>
+                      <a href=<%= r.facebook_url %>>
+                        <i class="fa-brands fa-facebook mr-1"></i>
+                      </a>
+                      <a href=<%= r.instagram_url %>>
+                        <i class="fa-brands fa-instagram mr-1"></i>
+                      </a>
+                      <a href=<%= r.tiktok_url %>>
+                        <i class="fa-brands fa-tiktok mr-1"></i>
+                      </a>
+                    </div>
                     <% r.tags.each do |t| %>
                       <span class="tag is-success is-light"><%= t.name.titleize %></span>
                     <% end %>
