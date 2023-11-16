@@ -1,17 +1,20 @@
+<%
+  @active_link = "#{controller_path}##{action_name}"
+%>
+
 <div class="section">
   <div class="columns">
+    <div class="column is-2 pl-5 mr-5 sidebar-container">
+      <%= render "shared/admin/sidebar", locals: { active_link: @active_link } %>
+    </div>
 
-    <%= render "shared/admin/sidebar" %>
+    <div class="column">
+      <div class="title mb-4">
+        <%= @organization.name %>
+      </div>
 
-    <main class="column px-6">
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <div class="title">
-              <%= @organization.name %>
-            </div>
-          </div>
-        </div>
+      <div class="mb-4">
+        <%= link_to "Back", admin_organizations_path %>
       </div>
 
       <div>
@@ -51,6 +54,6 @@
           </tbody>
         </table>
       </div>
-    </main>
+    </div>
   </div>
 </div>

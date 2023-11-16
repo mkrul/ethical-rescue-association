@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_13_121558) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_16_122559) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -132,10 +132,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_13_121558) do
     t.text "description"
     t.string "level", null: false
     t.string "ein"
-    t.string "main_photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "code"
+    t.string "website_url"
+    t.string "facebook_url"
+    t.string "instagram_url"
+    t.string "tiktok_url"
   end
 
   create_table "organizations_tags", force: :cascade do |t|

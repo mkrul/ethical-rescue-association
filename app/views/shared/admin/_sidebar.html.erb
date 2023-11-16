@@ -1,26 +1,24 @@
-<aside class="column is-2">
-  <nav class="menu">
-    <p class="menu-label">
-      General
-    </p>
-    <ul class="menu-list">
-      <li>
-        <%= link_to "Dashboard", admin_path, class: set_active_link("admin/dashboard") %>
-      </li>
-      <li>
-        <%= link_to "Applications", admin_path, class: set_active_link("admin/applications") %>
-      </li>
-      <li>
-        <%= link_to "Organizations", admin_organizations_path, class: set_active_link("admin/organizations") %>
-      </li>
-    </ul>
-    <p class="menu-label">
-      Administration
-    </p>
-    <ul class="menu-list">
-      <li><a>Users</a></li>
-      <li><a>Groups</a></li>
-      <li><a>Permissions</a></li>
-    </ul>
-  </nav>
-</aside>
+<nav class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li>
+      <%= link_to "Dashboard", admin_path, class: set_active_link("admin/dashboard") %>
+    </li>
+    <li>
+      <%= link_to "Applications", admin_path, class: set_active_link("admin/applications") %>
+    </li>
+    <li>
+      <%= link_to "Organizations", admin_organizations_path, class: set_active_link("admin/organizations") %>
+    </li>
+  </ul>
+  <p class="menu-label">
+    Administration
+  </p>
+  <ul class="menu-list">
+    <li><a>Users</a></li>
+    <li><a>Groups</a></li>
+    <li><a>Permissions</a></li>
+  </ul>
+</nav>

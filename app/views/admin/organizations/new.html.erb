@@ -1,0 +1,64 @@
+<%
+  @active_link = "#{controller_path}##{action_name}"
+%>
+
+<div class="section">
+  <div class="columns">
+    <div class="column is-2 pl-5 mr-5 sidebar-container">
+      <%= render "shared/admin/sidebar", locals: { active_link: @active_link } %>
+    </div>
+
+    <div class="column">
+      <div class="title mb-4">
+        New Organization
+      </div>
+
+      <div>
+        <%= link_to "Organizations", admin_organizations_path %>
+      </div>
+
+      <div class="column is-5">
+        <div class="mt-3">
+          <%= form_with model: [:admin, @organization] do |form| %>
+            <% if @organization.errors.any? %>
+              <div style="color: red">
+                <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
+
+                <ul>
+                  <% @organization.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <%= form.label :name, class: "label" %>
+            <%= form.text_field :name, class: "input mb-4" %>
+
+            <%= form.label :code, class: "label" %>
+            <%= form.text_field :code, class: "input mb-4" %>
+
+            <%= form.label :category, class: "label" %>
+            <%= form.text_field :category, class: "input mb-4" %>
+
+            <%= form.label :description, class: "label" %>
+            <%= form.text_area :description, class: "input mb-4", style: "height: 7rem;" %>
+
+            <%= form.label :level, class: "label" %>
+            <%= form.text_field :level, class: "input mb-4" %>
+
+            <%= form.label :ein, class: "label" %>
+            <%= form.text_field :ein, class: "input mb-4" %>
+
+            <%= form.label :main_photo, class: "label" %>
+            <%= form.file_field :main_photo, class: "mb-4" %>
+
+            <div class="mt-4">
+              <%= form.submit "Save", class: "button is-primary" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

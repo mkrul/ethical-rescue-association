@@ -6,17 +6,19 @@
           Select your specialization
         </h2>
         <p class="subtitle has-text-grey funnel-step__subtitle">
-          What animals does your organization work with?
+          What animals does your organization work with? <br /><br />
+          At the moment, we are only accepting applications from rescues that work with dogs.
         </p>
         <div class="buttons">
           <input id="options_dogs" name="spec[options]" type="radio" value="dogs" onclick="changeAnimal('dogs')" />
           <label id="dogs" class="collection_radio_buttons radio-btn mr-3" for="options_dogs">Dogs</label>
 
-          <input id="options_cats" name="spec[options]" type="radio" value="cats" onclick="changeAnimal('cats')" />
-          <label id="cats" class="collection_radio_buttons radio-btn mr-3" for="options_cats">Cats</label>
+          <%# TODO: finalize cats and dogs_and_cats applications before enabling these buttons %>
+          <input id="options_cats" name="spec[options]" type="radio" value="cats" disabled onclick="changeAnimal('cats')" />
+          <label id="cats" class="collection_radio_buttons radio-btn mr-3" for="options_cats" style="pointer-events: none; opacity: 0.5;">Cats</label>
 
-          <input id="options_dogs_and_cats" name="spec[options]" type="radio" value="dogs_and_cats" onclick="changeAnimal('dogs_and_cats')" />
-          <label id="dogs-and-cats" class="collection_radio_buttons radio-btn" for="options_dogs_and_cats">Dogs and Cats</label>
+          <input id="options_dogs_and_cats" name="spec[options]" type="radio" value="dogs_and_cats" disabled onclick="changeAnimal('dogs_and_cats')" />
+          <label id="dogs-and-cats" class="collection_radio_buttons radio-btn" for="options_dogs_and_cats" style="pointer-events: none; opacity: 0.5;">Dogs and Cats</label>
         </div>
       </div>
       <div class="column is-12 is-6-desktop">
