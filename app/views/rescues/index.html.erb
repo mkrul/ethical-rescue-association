@@ -44,15 +44,20 @@
                       <%= r.name %>
                     </h4>
                     <div>
-                      <a href=<%= r.facebook_url %> target="_blank">
-                        <i class="fa-brands fa-facebook mr-1"></i>
-                      </a>
-                      <a href=<%= r.instagram_url %> target="_blank">
-                        <i class="fa-brands fa-instagram mr-1"></i>
-                      </a>
-                      <a href=<%= r.tiktok_url %> target="_blank">
-                        <i class="fa-brands fa-tiktok mr-1"></i>
-                      </a>
+                      <% if r.facebook_url %>
+                        <a href=<%= r.facebook_url %> target="_blank">
+                          <i class="fa-brands fa-facebook mr-1"></i>
+                        </a>
+                      <% end %>
+                      <% if r.instagram_url %>
+                        <a href=<%= r.instagram_url %> target="_blank">
+                          <i class="fa-brands fa-instagram mr-1"></i>
+                        </a>
+                      <% if r.tiktok_url %>
+                        <a href=<%= r.tiktok_url %> target="_blank">
+                          <i class="fa-brands fa-tiktok mr-1"></i>
+                        </a>
+                      <% end %>
                     </div>
                     <% r.tags.each do |t| %>
                       <span class="tag is-success is-light"><%= t.name.titleize %></span>
