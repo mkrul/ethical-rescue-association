@@ -50,11 +50,23 @@
             <%= form.label :ein, class: "label" %>
             <%= form.text_field :ein, class: "input mb-4" %>
 
+            <%= form.label :website_url, class: "label" %>
+            <%= form.text_field :website_url, class: "input mb-4" %>
+
+            <%= form.label :facebook_url, class: "label" %>
+            <%= form.text_field :facebook_url, class: "input mb-4" %>
+
+            <%= form.label :instagram_url, class: "label" %>
+            <%= form.text_field :instagram_url, class: "input mb-4" %>
+
+            <%= form.label :tiktok_url, class: "label" %>
+            <%= form.text_field :tiktok_url, class: "input mb-4" %>
+
             <%= form.label :main_photo, class: "label" %>
             <%= form.file_field :main_photo, class: "mb-4" %>
 
             <div class="mt-4">
-              <%= form.submit "Save", class: "button is-primary" %>
+              <%= form.submit "Create", class: "button is-primary" %>
             </div>
           <% end %>
         </div>

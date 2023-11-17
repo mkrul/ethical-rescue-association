@@ -68,7 +68,19 @@ class Admin::OrganizationsController < ApplicationController
   end
 
   def organization_params
-    params.fetch(:organization, {}).permit(:name, :code, :category, :description, :level, :ein, :main_photo)
+    params.fetch(:organization, {}).permit(
+      :name,
+      :code,
+      :category,
+      :description,
+      :level,
+      :ein,
+      :website_url,
+      :facebook_url,
+      :instagram_url,
+      :tiktok_url,
+      :main_photo
+    )
   end
 
 end
