@@ -55,6 +55,8 @@ class Admin::OrganizationsController < ApplicationController
   def destroy
     authorize :destroy?, policy_class: AdminDashboardPolicy
 
+    @organization.destroy
+
     respond_to do |format|
       format.html { redirect_to admin_organizations_url, notice: "Organization was successfully destroyed." }
       format.json { head :no_content }

@@ -2,9 +2,9 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
 // require lightbox
-//= require_tree .
 //= require bulma
+//= require_tree .

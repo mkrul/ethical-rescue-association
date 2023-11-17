@@ -42,10 +42,22 @@
                   <td><%= organization.ein %></td>
                   <td><%= organization.created_at %></td>
                   <td>
-                    <%= link_to "show", admin_organization_path(organization), class: "ml-3" %>
+                    <%= button_to "show", admin_organization_path(organization), class: "button is-small is-light ml-3" %>
                   </td>
                   <td>
-                    <%= link_to "edit", edit_admin_organization_path(organization) %>
+                    <%= button_to "edit", edit_admin_organization_path(organization), class: "button is-small is-light" %>
+                  </td>
+                  <td>
+                    <%= button_to "Delete",
+                      admin_organization_path(organization),
+                      method: :delete,
+                      form: {
+                        data: {
+                          turbo_confirm: "Are you sure you want to delete #{organization.name}?"
+                        }
+                      },
+                      class: "button is-small is-danger"
+                    %>
                   </td>
                 </tr>
               </tbody>
