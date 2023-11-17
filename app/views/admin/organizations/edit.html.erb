@@ -22,8 +22,7 @@
           <%= form_with model: [:admin, @organization] do |form| %>
             <% if @organization.errors.any? %>
               <div style="color: red">
-                <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
-
+                <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being edited:</h2>
                 <ul>
                   <% @organization.errors.each do |error| %>
                     <li><%= error.full_message %></li>
@@ -63,7 +62,7 @@
             <%= form.text_field :tiktok_url, class: "input mb-4" %>
 
             <%= form.label :main_photo, class: "label" %>
-            <%= form.file_field :main_photo, class: "mb-4" %>
+            <%= form.file_field :main_photo, direct_upload: true, class: "mb-4" %>
 
             <div class="mt-4">
               <%= form.submit "Save", class: "button is-primary" %>
