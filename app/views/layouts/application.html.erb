@@ -37,7 +37,9 @@
         <%= alert %>
       </div>
       <% end %>
+
       <%= yield %>
+
       <% unless controller_path&.split("/")&.first == "admin" %>
         <%= render "shared/cookies_modal" %>
         <%= render "shared/footer" %>
