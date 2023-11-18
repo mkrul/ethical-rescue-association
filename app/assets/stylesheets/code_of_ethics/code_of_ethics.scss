@@ -60,13 +60,14 @@
   }
 
   .coe-statement-title {
-    color: $LIGHT-BLACK;
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-    letter-spacing: 1.5px;
+    font-size: 28px;
+
+    @media only screen and (max-width: $TABLET-LG) {
+      font-size: 24px;
+    }
 
     @media only screen and (max-width: $TABLET) {
-      padding: 3rem 0 1rem;
+      padding: 2.5rem 0 0.5rem;
       text-align: center;
     }
   }
@@ -96,7 +97,7 @@
     margin-top: 1.5rem;
     margin-bottom: 2rem;
     line-height: 2;
-    color: $MED-GRAY;
+    color: $MED-GREY;
   }
 
   .ethics-title {
@@ -109,7 +110,7 @@
   .ethics-category {
     font-size: 16px;
     line-height: 2;
-    color: $MED-GRAY;
+    color: $MED-GREY;
   }
 
   .ethics-category-photo {

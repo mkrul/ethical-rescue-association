@@ -21,54 +21,54 @@
         <table class="table">
           <tbody>
             <p class="mb-3">
-              <strong>Code:</strong> <%= @organization.code %>
+              <span class="has-text-weight-bold">Code:</span> <%= @organization.code %>
             </p>
             <p class="mb-3">
-              <strong>Category:</strong> <%= @organization.category %>
+              <span class="has-text-weight-bold">Category:</span> <%= @organization.category %>
             </p>
             <p class="mb-3">
-              <strong>Level:</strong> <%= @organization.level %>
+              <span class="has-text-weight-bold">Level:</span> <%= @organization.level %>
             </p>
             <p class="mb-3">
-              <strong>EIN:</strong> <%= @organization.ein %>
+              <span class="has-text-weight-bold">EIN:</span> <%= @organization.ein %>
             </p>
             <div style="max-width: 50rem !important;">
               <p class="mb-3">
-                <strong>Description:</strong> <%= @organization.description %>
+                <span class="has-text-weight-bold">Description:</span> <%= @organization.description %>
               </p>
             </div>
             <p class="mb-3">
-              <strong>Website URL:</strong>
+              <span class="has-text-weight-bold">Website URL:</span>
               <a href=<%= @organization.website_url %> target="_blank">
                 <%= @organization.website_url %>
               </a>
             </p>
             <p class="mb-3">
-              <strong>Facebook URL:</strong>
+              <span class="has-text-weight-bold">Facebook URL:</span>
               <a href=<%= @organization.facebook_url %> target="_blank">
                 <%= @organization.facebook_url %>
               </a>
             </p>
             <p class="mb-3">
-              <strong>Instagram URL:</strong>
+              <span class="has-text-weight-bold">Instagram URL:</span>
               <a href=<%= @organization.instagram_url %> target="_blank">
                 <%= @organization.instagram_url %>
               </a>
             </p>
             <p class="mb-3">
-              <strong>TikTok URL:</strong>
+              <span class="has-text-weight-bold">TikTok URL:</span>
               <a href=<%= @organization.tiktok_url %> target="_blank">
                 <%= @organization.tiktok_url %>
               </a>
             </p>
             <p class="mb-3">
-              <strong>Updated At:</strong> <%= @organization.updated_at %>
+              <span class="has-text-weight-bold">Updated At:</span> <%= @organization.updated_at %>
             </p>
             <p class="mb-3">
-              <strong>Created At:</strong> <%= @organization.created_at %>
+              <span class="has-text-weight-bold">Created At:</span> <%= @organization.created_at %>
             </p>
             <p class="mb-3">
-              <strong>Main Photo:</strong>
+              <span class="has-text-weight-bold">Main Photo:</span>
               <% if @organization.main_photo.attached? %>
                 <p>
                   <img src=<%= url_for @organization.main_photo %> class="mt-2 org-photo">

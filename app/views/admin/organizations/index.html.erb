@@ -42,10 +42,10 @@
                   <td><%= organization.ein %></td>
                   <td><%= organization.created_at %></td>
                   <td>
-                    <%= button_to "show", admin_organization_path(organization), class: "button is-small is-light ml-3" %>
+                    <%= button_to "show", admin_organization_path(organization), method: :get, class: "button is-small is-light ml-3" %>
                   </td>
                   <td>
-                    <%= button_to "edit", edit_admin_organization_path(organization), class: "button is-small is-light" %>
+                    <%= button_to "edit", edit_admin_organization_path(organization), method: :get, class: "button is-small is-light" %>
                   </td>
                   <td>
                     <%= button_to "Delete",
