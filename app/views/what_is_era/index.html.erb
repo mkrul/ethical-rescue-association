@@ -28,25 +28,58 @@
         </div>
         <article class="tile is-9 is-shady notification is-white mission-statement has-text-left p-0">
           <div class="content mission-statement-content text-med-grey">
-            <p>
-              <span class="mission-statement-text-lg">
-              <%= insert_tab %>
-              The Ethical Rescue Association</span> (ERA) is an accrediting body that aims to promote
-              grassroots reform in the world of animal rescue. Our accreditation process assesses
-              and recognizes rescues and shelters that demonstrate a commitment to ethical practices,
-              responsible governance, and animal welfare. Additionally, ERA seeks to educate
-              the public on ethical rescue principles so that individuals are empowered to make informed
-              decisions and support reputable organizations that align with these values.
-            </p>
-            <p>
-              <%= insert_tab %>
-              <span class="mission-statement-text-lg">Our Mission</span> is to provide ethical guidelines
-              for animal welfare organizations to promote humane and ethical treatment of the animals
-              in their care, as well as putting public health and safety back at the forefront.
-              By distancing from animal rights activism, the Ethical Rescue Association will promote
-              true progress in the battle against the animal welfare crisis that is spreading
-              across the United States.
-            </p>
+            <% if request.headers['HTTP_CF_REGION'] != "Texas" %>
+              <p>
+                <span class="mission-statement-text-lg">
+                <%= insert_tab %>
+
+                The Ethical Rescue Association</span> (ERA) is an accrediting body which seeks to promote
+                meaningful reform in the world of animal rescue. By offering an assortment of advantages through
+                our membership program, including grants, networking opportunities, educational resources, and
+                other benefits, we aim to encourage animal rescue organizations to adopt a code of ethics that
+                is grounded in animal welfare. Our accredited rescue partners pledge to uphold these standards
+                to the best of their abilities for the benefit of the animals in their care and the communities
+                they serve.
+              </p>
+              <p>
+                <%= insert_tab %>
+                While ERA concentrates on addressing ethical concerns within the animal rescue industry, accomplishing
+                this goal hinges on the support of an informed and educated public.  By providing educational resources
+                and opportunities for engagement, ERA aims to empower individuals to make informed decisions about the
+                organizations that they choose to support. The presence of the ERA Seal of Approval on a rescue's website
+                or social media serves as an indicator that the organization has undergone a comprehensive vetting process.
+                Accreditation stands as symbol of a rescue or shelter's dedication to ethical practices, responsible
+                governance, and animal welfare.
+              </p>
+              <p>
+                <%= insert_tab %>
+                <span class="mission-statement-text-lg">Our Mission</span> is to establish ethical guidelines for
+                animal rescue organizations, emphasizing humane and ethical treatment of the animals in their care
+                while prioritizing public health and safety. By focusing on making practical improvements and promoting
+                responsible and ethical practices, we can make meaningful contributions to the well-being of animals
+                and the communities they are a part of.
+              </p>
+            <% else %>
+              <p>
+                <span class="mission-statement-text-lg">
+                <%= insert_tab %>
+                The Ethical Rescue Association</span> (ERA) is an accrediting body that aims to promote
+                grassroots reform in the world of animal rescue. Our accreditation process assesses
+                and recognizes rescues and shelters that demonstrate a commitment to ethical practices,
+                responsible governance, and animal welfare. Additionally, ERA seeks to educate
+                the public on ethical rescue principles so that individuals are empowered to make informed
+                decisions and support reputable organizations that align with these values.
+              </p>
+              <p>
+                <%= insert_tab %>
+                <span class="mission-statement-text-lg">Our Mission</span> is to provide ethical guidelines
+                for animal welfare organizations to promote humane and ethical treatment of the animals
+                in their care, as well as putting public health and safety back at the forefront.
+                By distancing from animal rights activism, the Ethical Rescue Association will promote
+                true progress in the battle against the animal welfare crisis that is spreading
+                across the United States.
+              </p>
+            <% end %>
           </div>
         </article>
       </div>
