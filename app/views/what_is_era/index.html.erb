@@ -28,7 +28,7 @@
         </div>
         <article class="tile is-9 is-shady notification is-white mission-statement has-text-left p-0">
           <div class="content mission-statement-content text-med-grey">
-            <% if request.headers['HTTP_CF_REGION'] != "Texas" %>
+            <% if request.headers['HTTP_CF_REGION'] != "Texas" && request.headers['HTTP_CF_REGION'] != "Oklahoma" && request.headers['HTTP_CF_REGION'] != "West Virginia" %>
               <p>
                 <span class="mission-statement-text-lg">
                 <%= insert_tab %>

@@ -21,7 +21,7 @@
           <div class="column pt-0">
             <article class="accordion">
 
-              <% if request.headers['HTTP_CF_REGION'] != "Texas" %>
+              <% if request.headers['HTTP_CF_REGION'] != "Texas" && request.headers['HTTP_CF_REGION'] != "Oklahoma" && request.headers['HTTP_CF_REGION'] != "West Virginia" %>
                 <section>
                   <header>
                     <h5 class="d-flex is-justify-content-space-between">
