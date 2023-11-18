@@ -27,10 +27,10 @@
           </article>
         </div>
         <article class="tile is-9 is-shady notification is-white mission-statement has-text-left p-0">
-          <div class="content mission-statement-content text-med-grey">
+          <div class="content mission-statement-content has-text-grey is-font-18">
             <% if request.headers['HTTP_CF_REGION'] != "Texas" && request.headers['HTTP_CF_REGION'] != "Oklahoma" && request.headers['HTTP_CF_REGION'] != "West Virginia" %>
               <p>
-                <span class="mission-statement-text-lg">
+                <span class="text-med-grey mission-statement-text-lg">
                 <%= insert_tab %>
 
                 The Ethical Rescue Association</span> (ERA) is an accrediting body which seeks to promote
@@ -53,7 +53,7 @@
               </p>
               <p>
                 <%= insert_tab %>
-                <span class="mission-statement-text-lg">Our Mission</span> is to establish ethical guidelines for
+                <span class="text-med-grey mission-statement-text-lg">Our Mission</span> is to establish ethical guidelines for
                 animal rescue organizations, emphasizing humane and ethical treatment of the animals in their care
                 while prioritizing public health and safety. By focusing on making practical improvements and promoting
                 responsible and ethical practices, we can make meaningful contributions to the well-being of animals
@@ -93,9 +93,9 @@
   <section class="section container standard-padding mt-2" data-testid="our-values">
     <div class="sandbox">
       <div class="has-text-centered mb-4">
-        <h2 class="title mb-5 section-header">Our Values</h2>
+        <h2 class="mb-3 is-size-2 is-size-3-mobile has-text-weight-bold letter-spacing-half">Our Values</h2>
         <%= render "shared/logo-separator" %>
-        <p class="has-text-left core-values-statement">
+        <p class="has-text-left core-values-statement has-text-grey is-font-18">
           <%= insert_tab %>
           ERA's foundational principles are the bedrock on which it stands, shaping its mission
           and driving its actions. These values serve as the compass which directs every aspect of
@@ -104,7 +104,7 @@
           the interconnectedness of animal welfare and human society, we can prioritize the well-being
           of both animals and the communities that they impact.
         </p>
-        <p class="has-text-left core-values-statement mt-3 mb-6">
+        <p class="has-text-left core-values-statement mt-3 mb-6 has-text-grey is-font-18">
           <%= insert_tab %>
           As we navigate the complexities of fulfilling our mission, ERA remains committed to the continuous
           refinement of these methods, taking into account new research, evolving ethical considerations,
@@ -143,7 +143,7 @@
   <section class="section container standard-padding" data-testid="board-of-directors">
     <div class="sandbox">
       <div class="has-text-centered mb-4">
-        <h2 class="title mb-5 section-header">Board of Directors</h2>
+        <h2 class="mb-3 is-size-2 is-size-3-mobile has-text-weight-bold letter-spacing-half">Board of Directors</h2>
         <div class="logo-separator mb-4">
           <div class="line-container">
             <div class="line"></div>
@@ -155,7 +155,7 @@
             <div class="line"></div>
           </div>
         </div>
-        <p class="has-text-left core-values-statement">
+        <p class="has-text-left core-values-statement has-text-grey is-font-18">
           <%= insert_tab %>
           At the heart of ERA's mission is its Board of Directors, a group of passionate individuals
           with a shared vision for change. Drawing from diverse backgrounds and expertise, the board
@@ -180,8 +180,12 @@
             <div class="card-content has-text-centered">
               <div class="media">
                 <div class="media-content">
-                  <p class="title is-4">Janelle Newton</p>
-                  <p class="subtitle is-6">President</p>
+                  <p class="mb-0 is-size-4 has-text-weight-bold">
+                    Janelle Newton
+                  </p>
+                  <p class="is-6 has-text-centered has-text-grey is-font-18">
+                    President
+                  </p>
                 </div>
               </div>
             </div>
@@ -199,8 +203,12 @@
             <div class="card-content has-text-centered">
               <div class="media">
                 <div class="media-content">
-                  <p class="title is-4">Angela Curry</p>
-                  <p class="subtitle is-6">Vice President</p>
+                  <p class="mb-0 is-size-4 has-text-weight-bold">
+                    Angela Curry
+                  </p>
+                  <p class="is-6 has-text-centered has-text-grey is-font-18">
+                    Vice President
+                  </p>
                 </div>
               </div>
             </div>
@@ -220,8 +228,12 @@
             <div class="card-content has-text-centered">
               <div class="media">
                 <div class="media-content">
-                  <p class="title is-4">Brittnea Atwood</p>
-                  <p class="subtitle is-6">Conduct Enforcement</p>
+                  <p class="mb-0 is-size-4 has-text-weight-bold">
+                    Brittnea Atwood
+                  </p>
+                  <p class="is-6 has-text-centered has-text-grey is-font-18">
+                    Conduct Enforcement
+                  </p>
                 </div>
               </div>
             </div>
@@ -239,8 +251,10 @@
             <div class="card-content has-text-centered">
               <div class="media">
                 <div class="media-content">
-                  <p class="title is-4">Misha Krul</p>
-                  <p class="subtitle is-6">Secretary</p>
+                  <p class="mb-0 is-size-4 has-text-weight-bold">
+                    Misha Krul
+                  </p>
+                  <p class="is-6 has-text-centered has-text-grey is-font-18">Secretary</p>
                 </div>
               </div>
             </div>

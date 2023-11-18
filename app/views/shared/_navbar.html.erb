@@ -65,7 +65,7 @@
               <%= link_to "Donate", donate_path, class: 'font-gotham nav-link' %>
             </div>
             <% if user_signed_in? %>
-              <div class="dropdown has-dropdown is-hoverable">
+              <div class="navbar-item dropdown has-dropdown is-hoverable">
                 <div class="dropdown-trigger">
                   <div class="navbar-link is-font-14" aria-haspopup="true" aria-controls="dropdown-email">
                     <%= current_user.email %>

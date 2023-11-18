@@ -2,7 +2,7 @@
   <div class="container">
     <div class="columns m-0">
       <div class="column is-3 is-offset-1 logo-and-social-media-icons-container">
-        <h2><strong></strong></h2>
+        <h2><span class="has-text-weight-bold"></span></h2>
         <ul>
           <li class="era-logo-container-footer">
             <%= link_to image_tag(""), root_url, class: "era-logo-footer" %>
@@ -23,7 +23,7 @@
         </ul>
       </div>
       <div class="column is-2">
-        <h2><strong>Quick Links</strong></h2>
+        <h2><span class="has-text-weight-bold">Quick Links</span></h2>
         <ul>
           <% if current_user && (current_user.developer? || current_user.tester?) %>
             <li><%= link_to "Become a Member", become_a_member_path %></li>
@@ -38,7 +38,7 @@
         </ul>
       </div>
       <div class="column is-2">
-        <h2><strong>Information</strong></h2>
+        <h2><span class="has-text-weight-bold">Information</span></h2>
         <ul>
           <li><%= link_to "What is ERA?", what_is_era_path %></li>
           <li><%= link_to "Code of Ethics", code_of_ethics_path %></li>
@@ -48,7 +48,7 @@
       </div>
       <% if current_user && (current_user.developer? || current_user.tester?) %>
         <div class="column is-2">
-          <h2><strong>Resources</strong></h2>
+          <h2><span class="has-text-weight-bold">Resources</span></h2>
           <ul>
             <li><%= link_to "Rescues", rescues_path %></li>
           </ul>
