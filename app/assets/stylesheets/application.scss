@@ -9,6 +9,7 @@
 @import "../stylesheets/main/main";
 @import "../stylesheets/code_of_ethics/code_of_ethics";
 @import "../stylesheets/what_is_era/what_is_era";
+@import "../stylesheets/donate/donate";
 @import "../stylesheets/faq/faq";
 @import "../stylesheets/contact_us/contact_us";
 @import "../stylesheets/application_funnel/application_funnel";
@@ -97,12 +98,16 @@ body {
   line-height: 2 !important;
 }
 
-.is-14 {
+.is-font-14 {
   font-size: $FONT-SIZE-14 !important;
 }
 
-.is-16 {
+.is-font-16 {
   font-size: $FONT-SIZE-16 !important;
+}
+
+.is-font-18 {
+  font-size: $FONT-SIZE-18 !important;
 }
 
 /* COOKIES BAR */
@@ -369,6 +374,29 @@ body {
     background-color: $BRAND-GOLD;
     margin-right: 1rem;
     margin-left: 1rem;
+
+    @media only screen and (max-width: $MOBILE) {
+      width: 22vw;
+    }
+  }
+}
+
+// LINE SEPARATOR
+
+.line-separator {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+
+  .line-container {
+    height: 100%;
+    margin: auto 0;
+  }
+
+  .line {
+    height: 1px;
+    width: 100px;
+    background-color: $BRAND-GOLD;
 
     @media only screen and (max-width: $MOBILE) {
       width: 22vw;

@@ -1,0 +1,81 @@
+<div class="donate-container mb-4">
+  <div class="banner-container" data-testid="donate-banner">
+    <section class="hero is-large header-image">
+      <div class="hero-body">
+        <h1 class="title has-text-white">
+          Donate
+        </h1>
+        <h5 class="subtitle has-text-white">
+          Support our mission to reform the animal rescue industry
+        </h5>
+      </div>
+    </section>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline is-centered">
+      <div class="column is-8 has-text-centered">
+        <h2 class="mt-2 mb-4 is-size-1 is-size-3-mobile has-text-weight-bold">
+          Take a Stand for Rescue Reform
+        </h2>
+        <p class="subtitle has-text-grey mb-5">
+          Change is coming, but it cannot happen without <strong class="has-text-grey">you</strong>.
+        </p>
+        <p class="has-text-grey mb-6 is-font-18">
+          By supporting the Ethical Rescue Association, you are showing your support for rescue reform.
+          Each donation will help to provide important services to our accredited rescue partners,
+          including shelter workers and animal control officers. As ERA grows, our program is slated
+          to offer the following benefits:
+        </p>
+        <%= render "shared/line-separator" %>
+        <p>
+          <ul class="has-text-grey mb-5 is-font-18">
+            <li class="mb-2">
+              Access to mental health services
+            </li>
+            <li class="mb-2">
+              Mentorships for struggling rescues
+            </li>
+            <li class="mb-2">
+              Opportunities for networking
+            </li>
+            <li class="mb-2">
+              Access to educational materials
+            </li>
+            <li class="mb-5">
+              Increased social media exposure
+            </li>
+          </ul>
+        </p>
+        <%= render "shared/line-separator" %>
+        <p class="has-text-grey mb-4 mt-6 is-font-18">
+          None of this is possible without generous support from the community.
+        </p>
+        <p class="has-text-grey mb-5 is-font-18">
+          Please join us in our efforts to bring meaningful reform to the world of
+          rescue by providing these important services to rescues and shelters that
+          stand for change.
+        </p>
+        <div class="mb-6"></div>
+        <section>
+          <div class="container" id="donate">
+            <div id="MC-donation-form"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://downloads.mightycause.com/widgets/v1/embed.js"></script>
+<script>
+  window.onload = function() {
+    window.MCForms.createEmbedForm(
+      {
+        elementID: "MC-donation-form",
+        url: "https://givingtuesday.mightycause.com/forms/Ethical-Rescue-Association/?embed=embeddable_form"
+      }
+    );
+  };
+</script>

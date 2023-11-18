@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   get '/rescues', to: 'rescues#index'
   get '/rescues/:id', to: 'rescues#show', as: 'rescue'
 
+  #donate
+  get '/donate', to: 'donate#index'
+
   # webhooks
   post '/webhooks/application_submitted', to: 'webhooks/application_submission#update'
 

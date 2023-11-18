@@ -1,0 +1,38 @@
+@import "../application_config.scss";
+
+.donate-container {
+  .banner-container .header-image {
+    background-image: linear-gradient(
+      to top,
+      rgba(30, 31, 46, 0.4),
+      rgba(0, 0, 0, 0)),
+      url("donate/donate-banner.jpg");
+    background-position: 66% 0%;
+  }
+
+  .header-image {
+    div {
+      justify-content: flex-end;
+      padding: 0 1.5rem !important;
+    }
+
+    h1 {
+      width: 100%;
+    }
+
+    h5 {
+      padding-top: 0.5rem;
+      padding-bottom: 5rem;
+      letter-spacing: 1.8px;
+
+      @media only screen and (max-width: $TABLET) {
+        padding-bottom: 3.75rem;
+      }
+    }
+  }
+
+  .standard-padding {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
