@@ -74,6 +74,7 @@ class Admin::OrganizationsController < ApplicationController
       :name,
       :code,
       :category,
+      :specialization,
       :description,
       :level,
       :ein,

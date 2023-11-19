@@ -27,6 +27,7 @@
                   <th>Name</th>
                   <th>Code</th>
                   <th>Category</th>
+                  <th>Specialization</th>
                   <th>Level</th>
                   <th>EIN</th>
                   <th>Created At</th>
@@ -38,6 +39,7 @@
                   <td><%= organization.name %></td>
                   <td><%= organization.code %></td>
                   <td><%= organization.category %></td>
+                  <td><%= organization.specialization.humanize.downcase %></td>
                   <td><%= organization.level %></td>
                   <td><%= organization.ein %></td>
                   <td><%= organization.created_at %></td>

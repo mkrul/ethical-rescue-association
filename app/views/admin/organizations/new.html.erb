@@ -38,8 +38,23 @@
             <%= form.label :code, class: "label" %>
             <%= form.text_field :code, class: "input mb-4" %>
 
-            <%= form.label :category, class: "label" %>
-            <%= form.text_field :category, class: "input mb-4" %>
+            <div class="field">
+              <%= form.label :category, class: "label" %>
+              <p class="control">
+                <span class="select">
+                  <%= form.select :category, options_for_select(%w(rescue shelter)), class: "select mb-4" %>
+                </span>
+              </p>
+            </div>
+
+            <div class="field">
+              <%= form.label :specialization, class: "label" %>
+              <p class="control">
+                <span class="select">
+                  <%= form.select :specialization, options_for_select(%w(dogs cats dogs_and_cats)), class: "mb-4" %>
+                </span>
+              </p>
+            </div>
 
             <%= form.label :description, class: "label" %>
             <%= form.text_area :description, class: "input mb-4", style: "height: 7rem;" %>

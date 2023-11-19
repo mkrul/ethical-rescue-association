@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_16_122559) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_19_112946) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -139,6 +139,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_16_122559) do
     t.string "facebook_url"
     t.string "instagram_url"
     t.string "tiktok_url"
+    t.string "specialization"
   end
 
   create_table "organizations_tags", force: :cascade do |t|

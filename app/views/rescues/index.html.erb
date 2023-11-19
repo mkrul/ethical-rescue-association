@@ -46,26 +46,26 @@
                     <div>
                       <% if r.facebook_url %>
                         <a href=<%= r.facebook_url %> target="_blank">
-                          <i class="fa-brands fa-facebook mr-1"></i>
+                          <i class="fab fa-facebook-f fa-lg mr-2 sm-icon"></i>
                         </a>
                       <% end %>
                       <% if r.instagram_url %>
                         <a href=<%= r.instagram_url %> target="_blank">
-                          <i class="fa-brands fa-instagram mr-1"></i>
+                          <i class="fab fa-instagram fa-lg mr-2"></i>
                         </a>
                       <% end %>
                       <% if r.tiktok_url %>
                         <a href=<%= r.tiktok_url %> target="_blank">
-                          <i class="fa-brands fa-tiktok mr-1"></i>
+                          <i class="fab fa-tiktok fa-lg mr-2"></i>
                         </a>
                       <% end %>
                     </div>
-                    <% r.tags.each do |t| %>
-                      <span class="tag is-success is-light"><%= t.name.titleize %></span>
-                    <% end %>
                     <p class="mb-4 mt-3 has-text-grey">
                       <%= r.description %>
                     </p>
+                    <% r.tags.each do |t| %>
+                      <span class="tag is-success is-light"><%= t.name.titleize %></span>
+                    <% end %>
                   </div>
                 </div>
               </div>
