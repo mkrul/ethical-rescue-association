@@ -14,6 +14,7 @@
 @import "../stylesheets/contact_us/contact_us";
 @import "../stylesheets/application_funnel/application_funnel";
 @import "../stylesheets/admin/organizations/organizations.scss";
+@import "../stylesheets/admin/application_submissions/application_submissions.scss";
 @import "../stylesheets/admin/sidebar.scss";
 @import "../stylesheets/rescues/rescues.scss";
 
@@ -59,6 +60,10 @@ body {
 
 
 /* DEFULT */
+
+.no-wrap {
+  white-space: nowrap;
+}
 
 .tab {
   width: 1.5rem;

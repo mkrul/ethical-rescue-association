@@ -94,31 +94,6 @@ RSpec.describe ApplicationSubmissions::BeginNewApplication do
 
         expect(result.errors.full_messages).to include("Application submission could not be processed")
       end
-
-      it 'calls ReportError' do
-        user = FactoryBot.create(:user)
-        payload = {
-          tx: '12345',
-          st: 'Completed',
-          amt: '100.00',
-          cc: '',
-          cm: 'Application Fee',
-          item_number: '12345',
-          item_name: 'Application Fee',
-          org: 'rescue',
-          spec: 'dogs'
-        }
-
-        allow(Donation).to receive(:create).and_raise(StandardError.new('error'))
-        allow(Utils::ReportError).to receive(:run!)
-
-        ApplicationSubmissions::BeginNewApplication.run(
-          current_user: user,
-          payload: payload
-        )
-
-        expect(Utils::ReportError).to have_received(:run!).once
-      end
     end
 
     context 'when application submission creation fails' do
@@ -167,28 +142,6 @@ RSpec.describe ApplicationSubmissions::BeginNewApplication do
         )
 
         expect(Utils::ReportError).to have_received(:run!).once
-      end
-    end
-
-    context 'not provided with a user' do
-      it 'does not create a new application submission' do
-        user = FactoryBot.build_stubbed(:user)
-        payload = {
-          tx: '',
-          st: '',
-          amt: '',
-          cc: 'USD',
-          cm: 'Application Fee',
-          item_number: '12345',
-          item_name: 'Application Fee',
-          org: 'rescue',
-          spec: 'dogs'
-        }
-
-        expect { ApplicationSubmissions::BeginNewApplication.run(
-          current_user: user,
-          payload: payload
-        ) }.to change { Donation.count }.by(0)
       end
     end
   end

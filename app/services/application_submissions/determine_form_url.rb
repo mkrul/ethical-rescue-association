@@ -2,7 +2,7 @@ require 'active_interaction'
 
 module ApplicationSubmissions
   class DetermineFormUrl < ActiveInteraction::Base
-    string :organization
+    string :category
     string :specialization
     string :email
 
@@ -44,8 +44,8 @@ module ApplicationSubmissions
     end
 
     def form_type
-      return 'shelter' if organization === 'shelter'
-      if organization === 'rescue'
+      return 'shelter' if category === 'shelter'
+      if category === 'rescue'
         return 'dog_rescue' if specialization === 'dogs'
         return 'cat_rescue' if specialization === 'cats'
         return 'dog_cat_rescue' if specialization === 'dogs_and_cats'

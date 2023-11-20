@@ -20,21 +20,9 @@ module ApplicationSubmissions
 
     private
 
-    def donation
-      Donation.create(
-        txn: payload[:tx],
-        status: status_lowercase,
-        amount_cents: amount_in_cents,
-        category: 'application_fee',
-        amount_currency: payload[:cc],
-        user_id: current_user.id,
-        payment_method: 'paypal'
-      )
-    end
-
     def form_url
       @form_url ||= ApplicationSubmissions::DetermineFormUrl.run(
-        organization: payload[:org],
+        category: payload[:org],
         specialization: payload[:spec],
         email: current_user.email
       ).result
@@ -44,8 +32,7 @@ module ApplicationSubmissions
       begin
         ApplicationSubmission.create(
           user_id: current_user.id,
-          donation_id: donation.id,
-          organization: payload[:org],
+          category: payload[:org],
           specialization: payload[:spec],
           status: 'pending_submission',
           form_url: form_url
