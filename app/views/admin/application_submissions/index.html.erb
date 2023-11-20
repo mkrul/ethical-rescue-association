@@ -24,7 +24,7 @@
                 <th>Specialization</th>
                 <th>Status</th>
                 <th class="no-wrap">Form URL</th>
-                <th class="no-wrap">Remote Form ID</th>
+                <th class="no-wrap">Response ID</th>
                 <th class="no-wrap">Submitted At</th>
                 <th>Updated At</th>
                 <th>Created At</th>
@@ -41,7 +41,7 @@
                   <td>
                     <%= link_to 'Click here', application_submission.form_url, target: '_blank' %>
                   </td>
-                  <td><%= application_submission.remote_form_id&.truncate(15) %></td>
+                  <td><%= application_submission.response_id&.truncate(15) %></td>
                   <td><%= strip_utc(application_submission.submitted_at) %></td>
                   <td><%= strip_utc(application_submission.updated_at) %></td>
                   <td><%= strip_utc(application_submission.created_at) %></td>

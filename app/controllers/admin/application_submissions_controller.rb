@@ -75,7 +75,7 @@ class Admin::ApplicationSubmissionsController < ApplicationController
       :specialization,
       :status,
       :form_url,
-      :remote_form_id
+      :response_id
     )
   end
 
