@@ -25,7 +25,7 @@ module ApplicationSubmissions
     end
 
     def update_application_submission
-      application_submission.update!(
+      application_submission.update(
         status: "pending_review",
         submitted_at: Time.now,
         remote_form_id: remote_form_id
