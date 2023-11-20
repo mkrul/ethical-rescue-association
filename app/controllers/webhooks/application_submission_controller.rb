@@ -4,7 +4,6 @@ module Webhooks
     skip_before_action :verify_authenticity_token, only: [:update]
 
     def update
-      debugger
       outcome = ApplicationSubmissions::Update.run!(
         email: email,
         remote_form_id: remote_form_id
