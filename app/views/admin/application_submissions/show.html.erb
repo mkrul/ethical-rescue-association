@@ -1,0 +1,67 @@
+<%
+  @active_link = "#{controller_path}##{action_name}"
+%>
+
+<div class="section">
+  <div class="columns">
+    <div class="column is-2 pl-5 mr-5 sidebar-container">
+      <%= render "shared/admin/sidebar", locals: { active_link: @active_link } %>
+    </div>
+
+    <div class="column">
+      <div class="title mb-4">
+        Application Submission
+      </div>
+
+      <div class="mb-4">
+        <%= link_to "Back", admin_application_submissions_path %>
+      </div>
+
+      <div>
+        <table class="table">
+          <tbody>
+            <p class="mb-3">
+              <span class="has-text-weight-bold">ID:</span> <%= @application_submission.id %>
+            </p>
+            <p class="mb-3">
+              <span class="has-text-weight-bold">User ID:</span> <%= @application_submission.user_id %>
+            </p>
+            <p class="mb-3">
+              <span class="has-text-weight-bold">Category:</span> <%= @application_submission.category %>
+            </p>
+            <p class="mb-3">
+              <span class="has-text-weight-bold">Specialization:</span> <%= @application_submission.specialization.humanize.downcase %>
+            </p>
+            <p class="mb-3">
+              <span class="has-text-weight-bold">Status:</span> <%= @application_submission.status %>
+            </p>
+            <p class="mb-3">
+              <span class="has-text-weight-bold">Form URL:</span>
+              <%= link_to 'Click to view', @application_submission.form_url, target: '_blank' %>
+            </p>
+            <div style="max-width: 50rem !important;">
+              <p class="mb-3">
+                <span class="has-text-weight-bold">Remote Form ID:</span> <%= @application_submission.remote_form_id %>
+              </p>
+            </div>
+            <div style="max-width: 50rem !important;">
+              <p class="mb-3">
+                <span class="has-text-weight-bold">Submitted At:</span> <%= @application_submission.submitted_at %>
+              </p>
+            </div>
+            <div style="max-width: 50rem !important;">
+              <p class="mb-3">
+                <span class="has-text-weight-bold">Updated At:</span> <%= strip_utc(@application_submission.updated_at) %>
+              </p>
+            </div>
+            <div style="max-width: 50rem !important;">
+              <p class="mb-3">
+                <span class="has-text-weight-bold">Created At:</span> <%= strip_utc(@application_submission.created_at) %>
+              </p>
+            </div>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

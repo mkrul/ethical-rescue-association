@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_19_112946) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_20_121146) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -44,8 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_19_112946) do
 
   create_table "application_submissions", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "donation_id", null: false
-    t.string "organization", null: false
+    t.string "category", null: false
     t.string "specialization", null: false
     t.string "status", null: false
     t.datetime "created_at", null: false
@@ -53,7 +52,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_19_112946) do
     t.string "form_url"
     t.string "remote_form_id"
     t.datetime "submitted_at"
-    t.index ["donation_id"], name: "index_application_submissions_on_donation_id"
     t.index ["user_id"], name: "index_application_submissions_on_user_id"
   end
 
@@ -64,19 +62,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_19_112946) do
     t.string "phone"
     t.boolean "email_is_visible", default: false
     t.boolean "phone_is_visible", default: false
-  end
-
-  create_table "donations", force: :cascade do |t|
-    t.string "category", null: false
-    t.string "payment_method", null: false
-    t.bigint "user_id"
-    t.string "status", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "amount_cents", default: 0, null: false
-    t.string "amount_currency", default: "USD", null: false
-    t.string "txn", null: false
-    t.index ["user_id"], name: "index_donations_on_user_id"
   end
 
   create_table "flipper_features", force: :cascade do |t|

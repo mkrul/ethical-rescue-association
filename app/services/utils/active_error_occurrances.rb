@@ -6,7 +6,7 @@ module Utils
     PROJECT_ACCESS_TOKEN = '72dc737826494da9aad8b1cc5e4d9204'
 
     def execute
-      url = URI('https://api.rollbar.com/api/1/reports/occurrence_counts?min_level=error&bucket_size=604800')
+      url = URI('https://api.rollbar.com/api/1/reports/occurrence_counts?min_level=error&bucket_size=86400')
       headers = {
         'X-Rollbar-Access-Token' => PROJECT_ACCESS_TOKEN
       }
@@ -18,7 +18,7 @@ module Utils
 
       response = http.request(request)
 
-      JSON.parse(response.read_body)["err"]
+      JSON.parse(response.body)['result'].map { |a| a[1] }.sum
     end
   end
 end

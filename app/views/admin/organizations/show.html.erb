@@ -21,6 +21,9 @@
         <table class="table">
           <tbody>
             <p class="mb-3">
+              <span class="has-text-weight-bold">ID:</span> <%= @organization.id %>
+            </p>
+            <p class="mb-3">
               <span class="has-text-weight-bold">Code:</span> <%= @organization.code %>
             </p>
             <p class="mb-3">
@@ -65,10 +68,10 @@
               </a>
             </p>
             <p class="mb-3">
-              <span class="has-text-weight-bold">Updated At:</span> <%= @organization.updated_at %>
+              <span class="has-text-weight-bold">Updated At:</span> <%= strip_utc(@organization.updated_at) %>
             </p>
             <p class="mb-3">
-              <span class="has-text-weight-bold">Created At:</span> <%= @organization.created_at %>
+              <span class="has-text-weight-bold">Created At:</span> <%= strip_utc(@organization.created_at) %>
             </p>
             <p class="mb-3">
               <span class="has-text-weight-bold">Main Photo:</span>

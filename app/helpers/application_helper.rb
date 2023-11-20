@@ -18,4 +18,10 @@ module ApplicationHelper
     HTML
     .html_safe
   end
+
+  def strip_utc(t)
+    return unless t
+
+    t.strftime("%Y-%m-%d %H:%M:%S")
+  end
 end

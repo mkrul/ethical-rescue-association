@@ -19,21 +19,22 @@
 
       <div class="column">
         <div class="mt-3">
-          <% @organizations.each do |organization| %>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Code</th>
-                  <th>Category</th>
-                  <th>Specialization</th>
-                  <th>Level</th>
-                  <th>EIN</th>
-                  <th>Created At</th>
-                </tr>
-              </thead>
-              <tbody>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Category</th>
+                <th>Specialization</th>
+                <th>Level</th>
+                <th>EIN</th>
+                <th>Updated At</th>
+                <th>Created At</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @organizations.each do |organization| %>
                 <tr>
                   <td><%= organization.id %></td>
                   <td><%= organization.name %></td>
@@ -42,7 +43,8 @@
                   <td><%= organization.specialization.humanize.downcase %></td>
                   <td><%= organization.level %></td>
                   <td><%= organization.ein %></td>
-                  <td><%= organization.created_at %></td>
+                  <td><%= strip_utc(organization.updated_at) %></td>
+                  <td><%= strip_utc(organization.created_at) %></td>
                   <td>
                     <%= button_to "show", admin_organization_path(organization), method: :get, class: "button is-small is-light ml-3" %>
                   </td>
@@ -62,9 +64,9 @@
                     %>
                   </td>
                 </tr>
-              </tbody>
-            </table>
-          <% end %>
+              <% end %>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

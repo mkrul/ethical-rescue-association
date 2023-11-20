@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get '/', to: 'dashboard#index'
 
-    # resources
     resources :organizations
+    resources :application_submissions
   end
 end

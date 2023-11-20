@@ -23,4 +23,5 @@ class Organization < ApplicationRecord
 
   scope :rescues, -> { where(category: 'rescue') }
   scope :shelters, -> { where(category: 'shelter') }
+
 end
