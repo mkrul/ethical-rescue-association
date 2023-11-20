@@ -6,7 +6,7 @@ module Webhooks
     def update
       outcome = ApplicationSubmissions::Update.run!(
         email: email,
-        remote_form_id: remote_form_id
+        response_id: response_id
       )
       if outcome.valid?
         render json: { status: :ok }
@@ -18,11 +18,11 @@ module Webhooks
     private
 
     def application_submission_params
-      params.permit(:email, :remote_form_id)
+      params.permit(:email, :response_id)
     end
 
-    def remote_form_id
-      application_submission_params[:remote_form_id]
+    def response_id
+      application_submission_params[:response_id]
     end
 
     def email

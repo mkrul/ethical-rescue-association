@@ -3,7 +3,7 @@ require 'active_interaction'
 module ApplicationSubmissions
   class Update < ActiveInteraction::Base
     string :email
-    string :remote_form_id
+    string :response_id
 
     def execute
       update_application_submission
@@ -28,7 +28,7 @@ module ApplicationSubmissions
       application_submission.update(
         status: "pending_review",
         submitted_at: Time.now,
-        remote_form_id: remote_form_id
+        response_id: response_id
       )
     end
   end
