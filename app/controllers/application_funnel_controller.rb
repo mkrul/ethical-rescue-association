@@ -14,7 +14,6 @@ class ApplicationFunnelController < ApplicationController
 
   def create
     beta_testing_guard
-    debugger
 
     outcome = ApplicationSubmissions::BeginNewApplication.run!(
       current_user: current_user,
