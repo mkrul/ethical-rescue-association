@@ -5,11 +5,11 @@ module ApplicationHelper
   ERA_TIKTOK_URL = "https://www.tiktok.com/@ethicalrescueassociation"
 
   def session_access_key_set?
-    session[:era] == true
+    session[:phantom] == true
   end
 
   def set_local_storage_key
-    session[:era] = true
+    session[:phantom] = true
   end
 
   def insert_tab

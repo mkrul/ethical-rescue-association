@@ -58,6 +58,26 @@ body {
   position: relative;
 }
 
+.phantom {
+  height: fit-content;
+  color: transparent;
+  right: 0;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  a:hover {
+    cursor: default;
+  }
+}
+
+.promo-container {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
 
 /* DEFULT */
 

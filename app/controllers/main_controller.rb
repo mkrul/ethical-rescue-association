@@ -7,4 +7,10 @@ class MainController < ApplicationController
   def home
   end
 
+  def phantom
+    session[:phantom] = true
+
+    redirect_to root_url
+  end
+
 end
