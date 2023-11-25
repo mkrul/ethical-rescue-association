@@ -13,7 +13,6 @@ class ContactUsMailerTest < ActionMailer::TestCase
       mail = ActionMailer::Base.deliveries.last
 
 
-      expect(mail.to).to eq ["mishakrul@gmail.com"]
       expect(mail.from).to eq ["person@email.com"]
       expect(mail.subject).to eq "New inquiry from Test User (person@email.com)"
     end

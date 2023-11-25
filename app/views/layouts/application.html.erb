@@ -24,38 +24,27 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <% if session_access_key_set? %>
-    <body>
-      <div>
-        <%= render partial: "shared/navbar" %>
-      <div>
-        <% if notice %>
-        <div class="notification is-success is-light has-text-centered m-0">
-          <%= notice %>
-        </div>
-        <% end %>
-        <% if alert %>
-        <div class="notification is-danger is-light has-text-centered m-0">
-          <%= alert %>
-        </div>
-        <% end %>
-
-        <%= yield %>
-
-        <% unless controller_path&.split("/")&.first == "admin" %>
-          <%= render "shared/cookies_modal" %>
-          <%= render "shared/footer" %>
-        <% end %>
+  <body>
+    <div>
+      <%= render partial: "shared/navbar" %>
+    <div>
+      <% if notice %>
+      <div class="notification is-success is-light has-text-centered m-0">
+        <%= notice %>
       </div>
-    </body>
-  <% else %>
-    <body>
-      <div class="promo-container">
-        <%= video_tag "https://i.imgur.com/fZrCDH2.mp4", autoplay: true, loop: false, controls: true %>
-        <div class="phantom" id="phantom">
-          <%= link_to "phantom", phantom_path %>
-        </div>
+      <% end %>
+      <% if alert %>
+      <div class="notification is-danger is-light has-text-centered m-0">
+        <%= alert %>
       </div>
-    </body>
-  <% end %>
+      <% end %>
+
+      <%= yield %>
+
+      <% unless controller_path&.split("/")&.first == "admin" %>
+        <%= render "shared/cookies_modal" %>
+        <%= render "shared/footer" %>
+      <% end %>
+    </div>
+  </body>
 </html>
