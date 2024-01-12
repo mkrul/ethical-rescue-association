@@ -3,18 +3,13 @@ class ApplicationFunnelController < ApplicationController
   def index
     if current_user.nil?
       redirect_to new_user_session_path, alert: "Please log in before submitting an application."
-    else
-      beta_testing_guard
     end
   end
 
   def show
-    beta_testing_guard
   end
 
   def create
-    beta_testing_guard
-
     outcome = ApplicationSubmissions::BeginNewApplication.run!(
       current_user: current_user,
       payload: payload

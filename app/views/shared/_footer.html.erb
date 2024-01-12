@@ -25,9 +25,7 @@
       <div class="column is-2">
         <h2><span class="has-text-weight-bold">Quick Links</span></h2>
         <ul>
-          <% if current_user && (current_user.developer? || current_user.tester?) %>
-            <li><%= link_to "Become a Member", become_a_member_path %></li>
-          <% end %>
+          <li><%= link_to "Become a Member", become_a_member_path %></li>
         </ul>
         <ul>
           <li><%= link_to "Donate", donate_path %></li>
@@ -46,14 +44,12 @@
           <li><%= link_to "FAQ", faq_path %></li>
         </ul>
       </div>
-      <% if current_user && (current_user.developer? || current_user.tester?) %>
-        <div class="column is-2">
-          <h2><span class="has-text-weight-bold">Resources</span></h2>
-          <ul>
-            <li><%= link_to "Rescues", rescues_path %></li>
-          </ul>
-        </div>
-      <% end %>
+      <div class="column is-2">
+        <h2><span class="has-text-weight-bold">Resources</span></h2>
+        <ul>
+          <li><%= link_to "Rescues", rescues_path %></li>
+        </ul>
+      </div>
     </div>
     <div class="content has-text-centered">
       <p class="mb-1">
