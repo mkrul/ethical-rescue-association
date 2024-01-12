@@ -17,27 +17,23 @@
       <div id="navbarBasicExample" class="navbar-menu navbar-container">
         <div class="navbar-end">
           <div class="navbar-item is-hoverable pr-2">
-            <% if current_user && (current_user.developer? || current_user.tester?) %>
-              <div class="navbar-item">
-                <%= link_to "Become a Member", become_a_member_path, class: 'nav-link is-font-14' %>
+            <div class="navbar-item">
+              <%= link_to "Become a Member", become_a_member_path, class: 'nav-link is-font-14' %>
+            </div>
+            <div class="navbar-item dropdown has-dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <a class="navbar-link is-font-14" aria-haspopup="true" aria-controls="dropdown-about">
+                  Resources
+                </a>
               </div>
-            <% end %>
-            <% if current_user && (current_user.developer? || current_user.tester?) %>
-              <div class="navbar-item dropdown has-dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                  <a class="navbar-link is-font-14" aria-haspopup="true" aria-controls="dropdown-about">
-                    Resources
-                  </a>
-                </div>
-                <div class="dropdown-menu" id="dropdown-about" role="menu">
-                  <div class="dropdown-content">
-                    <div class="navbar-item is-font-14">
-                      <%= link_to "Rescues", rescues_path, class: 'nav-link' %>
-                    </div>
+              <div class="dropdown-menu" id="dropdown-about" role="menu">
+                <div class="dropdown-content">
+                  <div class="navbar-item is-font-14">
+                    <%= link_to "Rescues", rescues_path, class: 'nav-link' %>
                   </div>
                 </div>
               </div>
-            <% end %>
+            </div>
             <div class="navbar-item dropdown has-dropdown is-hoverable">
               <div class="dropdown-trigger">
                 <a class="navbar-link is-font-14" aria-haspopup="true" aria-controls="dropdown-about">

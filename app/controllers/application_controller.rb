@@ -6,10 +6,6 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-  def beta_testing_guard
-    redirect_to root_url unless current_user && (current_user.developer? || current_user.tester?)
-  end
-
   private
 
   def user_not_authorized
