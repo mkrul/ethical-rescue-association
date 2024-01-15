@@ -86,24 +86,25 @@
     object-fit: none;
     cursor: pointer;
 
-    &.janelle {
+    &.jessica {
       object-position: 50% 30%;
-    }
-    &.angela {
       object-fit: cover;
-      object-position: 50% 70%;
     }
-    &.brittnea {
+    &.alexis {
       object-fit: cover;
-      object-position: 50% 25%;
+      object-position: 50% 37%;
+    }
+    &.bonnie {
+      object-fit: cover;
+      object-position: 50% 34%;
     }
     &.bri {
       object-fit: cover;
       object-position: 50% 12%;
     }
-    &.misha {
+    &.mikayla {
       object-fit: cover;
-      object-position: 50% 60%;
+      object-position: 50% 40%;
     }
   }
 
