@@ -1,8 +1,8 @@
 module ApplicationHelper
 
   ERA_FACEBOOK_URL = "https://www.facebook.com/EthicalRescueAssociation"
-  ERA_INSTAGRAM_URL = "https://www.instagram.com/ethicalrescueassociation/"
-  ERA_TIKTOK_URL = "https://www.tiktok.com/@ethicalrescueassociation"
+  ERA_INSTAGRAM_URL = "https://www.instagram.com/ethicalrescuealliance/"
+  ERA_TIKTOK_URL = "https://www.tiktok.com/@ethicalrescuealliance"
 
   def session_access_key_set?
     session[:era] == true

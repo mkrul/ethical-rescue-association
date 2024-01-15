@@ -11,7 +11,7 @@ class ApplicationConfirmationMailerTest < ActionMailer::TestCase
       mail = ActionMailer::Base.deliveries.last
 
       expect(mail.to).to eq ["test@email.com"]
-      expect(mail.from).to eq ["ethicalrescueassociation@gmail.com"]
+      expect(mail.from).to eq ["ethicalrescuealliance@gmail.com"]
       expect(mail.subject).to eq "Complete your ERA membership application"
     end
   end

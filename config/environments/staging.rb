@@ -68,7 +68,7 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "ethical_rescue_association_production"
 
-  config.action_mailer.default_url_options = { host: "ethicalrescueassociation.org" }
+  config.action_mailer.default_url_options = { host: "ethicalrescuealliance.org" }
 
   config.action_mailer.perform_caching = false
 
@@ -76,7 +76,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    user_name:            'ethicalrescueassociation@gmail.com',
+    user_name:            'ethicalrescuealliance@gmail.com',
     password:             'vcqy pafy xhzh abet',
     authentication:       'plain',
     enable_starttls_auto: true,

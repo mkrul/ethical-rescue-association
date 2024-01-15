@@ -1,5 +1,5 @@
 class ContactUsMailer < ApplicationMailer
-  default from: 'ethicalrescueassociation@gmail.com'
+  default from: 'ethicalrescuealliance@gmail.com'
   layout 'mailer'
 
   def contact_us(name:, email:, message:, headers:)
@@ -10,7 +10,7 @@ class ContactUsMailer < ApplicationMailer
 
     @message_with_headers = "Message: #{@message}\n\nHeaders: #{@headers}"
     mail(
-      to: ['ethicalrescueassociation@gmail.com'],
+      to: ['ethicalrescuealliance@gmail.com'],
       from: @email,
       reply_to: @email,
       subject: "New inquiry from #{@name} (#{@email})"

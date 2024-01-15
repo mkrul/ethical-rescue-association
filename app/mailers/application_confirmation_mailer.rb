@@ -1,5 +1,5 @@
 class ApplicationConfirmationMailer < ApplicationMailer
-  default from: "ethicalrescueassociation@gmail.com"
+  default from: "ethicalrescuealliance@gmail.com"
   layout 'mailer'
 
   def confirmation(email:, form_url:)
@@ -8,8 +8,8 @@ class ApplicationConfirmationMailer < ApplicationMailer
 
     mail(
       to: [@email],
-      from: "ethicalrescueassociation@gmail.com",
-      reply_to: "ethicalrescueassociation@gmail.com",
+      from: "ethicalrescuealliance@gmail.com",
+      reply_to: "ethicalrescuealliance@gmail.com",
       subject: "Complete your ERA membership application"
     ).deliver
   end

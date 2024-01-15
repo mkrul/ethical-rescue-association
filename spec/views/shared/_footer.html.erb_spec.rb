@@ -21,7 +21,7 @@ RSpec.describe "shared/_footer", type: :view do
     TEXT
 
     expected_link = <<-TEXT.squish
-      <a target=\"_blank\" href=\"https://www.instagram.com/ethicalrescueassociation/\">\n
+      <a target=\"_blank\" href=\"https://www.instagram.com/ethicalrescuealliance/\">\n
     TEXT
 
     render
@@ -36,7 +36,7 @@ RSpec.describe "shared/_footer", type: :view do
     TEXT
 
     expected_link = <<-TEXT.squish
-      <a target=\"_blank\" href=\"https://www.tiktok.com/@ethicalrescueassociation\">\n
+      <a target=\"_blank\" href=\"https://www.tiktok.com/@ethicalrescuealliance\">\n
     TEXT
 
     render
