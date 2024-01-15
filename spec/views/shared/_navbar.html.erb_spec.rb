@@ -3,7 +3,7 @@ require File.expand_path("../../../spec_helper", __FILE__)
 RSpec.describe "shared/_navbar", type: :view do
   it 'renders a link to the home page' do
     expected = <<-TEXT.squish
-      <a class="main-title" href="http://test.host/">ETHICAL RESCUE ALLIANCE</a>
+      <a class="main-title" href="http://test.host/">ETHICAL RESCUE ASSOCIATION</a>
     TEXT
 
     render
