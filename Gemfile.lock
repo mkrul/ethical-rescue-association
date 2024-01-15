@@ -123,6 +123,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    dogapi (1.45.0)
+      multi_json
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
@@ -192,6 +194,7 @@ GEM
       money (~> 6.13)
       railties (>= 3.0)
     msgpack (1.6.1)
+    multi_json (1.15.0)
     multi_xml (0.6.0)
     net-imap (0.3.4)
       date
@@ -364,6 +367,7 @@ DEPENDENCIES
   cloudflare-rails (~> 3.0)
   database_cleaner (~> 1.5, >= 1.5.3)
   devise (~> 4.9)
+  dogapi (~> 1.30)
   dotenv-rails
   factory_bot_rails (~> 6.2)
   font-awesome-sass (~> 6.4.2)

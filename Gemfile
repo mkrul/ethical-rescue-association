@@ -15,6 +15,8 @@ gem 'pundit', '~> 2.3.1'
 
 gem 'aws-sdk-s3'
 
+gem 'dogapi', '~> 1.30'
+
 gem "font-awesome-sass", "~> 6.4.2"
 
 gem 'MailchimpMarketing', '~> 3.0', '>= 3.0.80'
