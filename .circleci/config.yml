@@ -8,18 +8,34 @@ jobs:
     # Install gems, run rspec tests
     docker:
       - image: cimg/ruby:3.1.2-node
+        environment:
+          RAILS_ENV: test
+          PGHOST: 127.0.0.1
+          PGUSER: root
       - image: circleci/postgres:9.5-alpine
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: era_test
     environment:
       RAILS_ENV: test
+      PGHOST: 127.0.0.1
+      PGUSER: root
     steps:
       - checkout
-      - ruby/install-deps
+      - run:
+          name: Install dependencies
+          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+
+      - run: sudo apt install -y postgresql-client || true
       - run:
           name: wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run:
           name: Database setup
-          command: bundle exec rake db:test:prepare
+          command: |
+            bundle exec rake db:test:prepare
+            bundle exec rake db:create
+            bundle exec rake db:schema:load
       - run:
           name: rspec test
           command: bundle exec rspec

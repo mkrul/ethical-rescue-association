@@ -1,4 +1,4 @@
-<% env = ENV('PAYPAL_CLIENT_ID') || "" %>
+<% client_id = Rails.application.credentials[Rails.env.to_sym][:paypal][:client_id] %>
 
 <section class="section is-hidden" id="funnel-step-three">
   <div class="container mt-5 funnel-step__container">
@@ -29,7 +29,7 @@
   </div>
 </section>
 
-<script src="https://www.paypal.com/sdk/js?client-id=<%= env %>"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=<%= client_id %>"></script>
 <script type="text/javascript">
   const selectionData = {};
 
