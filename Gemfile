@@ -15,7 +15,7 @@ gem 'pundit', '~> 2.3.1'
 
 gem 'aws-sdk-s3'
 
-gem 'dogapi', '~> 1.30'
+gem 'dogapi'
 
 gem "font-awesome-sass", "~> 6.4.2"
 

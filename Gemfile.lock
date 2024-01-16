@@ -367,7 +367,7 @@ DEPENDENCIES
   cloudflare-rails (~> 3.0)
   database_cleaner (~> 1.5, >= 1.5.3)
   devise (~> 4.9)
-  dogapi (~> 1.30)
+  dogapi
   dotenv-rails
   factory_bot_rails (~> 6.2)
   font-awesome-sass (~> 6.4.2)
