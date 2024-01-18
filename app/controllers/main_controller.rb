@@ -9,6 +9,7 @@ class MainController < ApplicationController
     @client ||= Dogapi::Client.new(api_key)
 
     Rails.logger.info "DataDog client initialized"
+
     @client.emit_point('test.metric', 100)
   end
 
