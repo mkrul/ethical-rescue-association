@@ -5,14 +5,12 @@ class MainController < ApplicationController
   include MainHelper
 
   def index
-    # api_key = Rails.application.credentials[Rails.env.to_sym][:datadog][:dd_api_key]
-    # @client ||= Dogapi::Client.new(api_key)
-    testcred = Rails.application.credentials[Rails.env.to_sym][:mycred][:test]
-    Rails.logger.info testcred
+    api_key = Rails.application.credentials[Rails.env.to_sym][:datadog][:dd_api_key]
+    @client ||= Dogapi::Client.new(api_key)
 
-    # Rails.logger.info "DataDog client initialized"
+    Rails.logger.info "DataDog client initialized"
 
-    # @client.emit_point('test.metric', 100)
+    @client.emit_point('test.metric', 100)
   end
 
 end
