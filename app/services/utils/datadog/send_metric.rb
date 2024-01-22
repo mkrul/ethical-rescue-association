@@ -14,7 +14,7 @@ module Utils
       private
 
       def api_key
-        Rails.application.credentials[Rails.env.to_sym][:datadog][:dd_app_key]
+        Rails.application.credentials[Rails.env.to_sym][:datadog][:dd_api_key]
       end
 
       def client
