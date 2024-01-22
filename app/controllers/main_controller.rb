@@ -1,15 +1,9 @@
-require 'rubygems'
-require 'dogapi'
-
 class MainController < ApplicationController
   include MainHelper
+  include Utils::DataDog
 
   def index
-    api_key = Rails.application.credentials[Rails.env.to_sym][:datadog][:dd_app_key]
-    @client ||= Dogapi::Client.new(api_key)
-    Rails.logger.info "DataDog client initialized"
-
-    @client.emit_point('test.metric', 100)
+    DataDog.run(metric: 'test.metric', value: 1)
   end
 
 end
