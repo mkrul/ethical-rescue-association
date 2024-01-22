@@ -16,8 +16,6 @@ module Datadog
       @client = api_key.nil? ? nil : Dogapi::Client.new(api_key)
     end
 
-    private
-
     def send_metric
       @client.emit_point(@metric, @value)
     end
