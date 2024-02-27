@@ -45,8 +45,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    user_name:            'ethicalrescuealliance@gmail.com',
-    password:             'vcqy pafy xhzh abet',
+    user_name:            'mishakrul@gmail.com',
+    password:             "#{ENV['GOTCHA']}",
     authentication:       'plain',
     enable_starttls_auto: true
   }
