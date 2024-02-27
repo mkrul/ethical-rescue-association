@@ -35,4 +35,8 @@ Rails.application.routes.draw do
     resources :organizations
     resources :application_submissions
   end
+
+  namespace :alumni do
+    get "/class2007/:id", to: "student#show"
+  end
 end
