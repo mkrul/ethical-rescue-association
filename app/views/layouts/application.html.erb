@@ -25,31 +25,26 @@
   </head>
 
   <body>
-    <% if true %>
-
-    <% end %>
-    <% if false %>
-      <div>
-        <%= render partial: "shared/navbar" %>
-      <div>
-        <% if notice %>
-        <div class="notification is-success is-light has-text-centered m-0">
-          <%= notice %>
-        </div>
-        <% end %>
-        <% if alert %>
-        <div class="notification is-danger is-light has-text-centered m-0">
-          <%= alert %>
-        </div>
-        <% end %>
-
-        <%= yield %>
-
-        <% unless controller_path&.split("/")&.first == "admin" %>
-          <%= render "shared/cookies_modal" %>
-          <%= render "shared/footer" %>
-        <% end %>
+    <div>
+      <%= render partial: "shared/navbar" %>
+    <div>
+      <% if notice %>
+      <div class="notification is-success is-light has-text-centered m-0">
+        <%= notice %>
       </div>
-    <% end %>
+      <% end %>
+      <% if alert %>
+      <div class="notification is-danger is-light has-text-centered m-0">
+        <%= alert %>
+      </div>
+      <% end %>
+
+      <%= yield %>
+
+      <% unless controller_path&.split("/")&.first == "admin" %>
+        <%= render "shared/cookies_modal" %>
+        <%= render "shared/footer" %>
+      <% end %>
+    </div>
   </body>
 </html>
